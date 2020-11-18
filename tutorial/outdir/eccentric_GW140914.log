@@ -1,0 +1,56 @@
+23:14 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_eccentric_binary_black_hole_no_spins
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+23:14 INFO    : Injected signal in H1:
+23:14 INFO    :   optimal SNR = 66.39
+23:14 INFO    :   matched filter SNR = 67.49-0.58j
+23:14 INFO    :   mass_1 = 35.0
+23:14 INFO    :   mass_2 = 30.0
+23:14 INFO    :   eccentricity = 0.1
+23:14 INFO    :   luminosity_distance = 440.0
+23:14 INFO    :   theta_jn = 0.4
+23:14 INFO    :   psi = 0.1
+23:14 INFO    :   phase = 1.2
+23:14 INFO    :   geocent_time = 1180002601.0
+23:14 INFO    :   ra = 45
+23:14 INFO    :   dec = 5.73
+23:14 INFO    : Injected signal in L1:
+23:14 INFO    :   optimal SNR = 39.04
+23:14 INFO    :   matched filter SNR = 40.49+0.18j
+23:14 INFO    :   mass_1 = 35.0
+23:14 INFO    :   mass_2 = 30.0
+23:14 INFO    :   eccentricity = 0.1
+23:14 INFO    :   luminosity_distance = 440.0
+23:14 INFO    :   theta_jn = 0.4
+23:14 INFO    :   psi = 0.1
+23:14 INFO    :   phase = 1.2
+23:14 INFO    :   geocent_time = 1180002601.0
+23:14 INFO    :   ra = 45
+23:14 INFO    :   dec = 5.73
+23:16 INFO    : Injected signal in H1:
+23:16 INFO    :   optimal SNR = 66.39
+23:16 INFO    :   matched filter SNR = 66.72+1.40j
+23:16 INFO    :   mass_1 = 35.0
+23:16 INFO    :   mass_2 = 30.0
+23:16 INFO    :   eccentricity = 0.1
+23:16 INFO    :   luminosity_distance = 440.0
+23:16 INFO    :   theta_jn = 0.4
+23:16 INFO    :   psi = 0.1
+23:16 INFO    :   phase = 1.2
+23:16 INFO    :   geocent_time = 1180002601.0
+23:16 INFO    :   ra = 45
+23:16 INFO    :   dec = 5.73
+23:16 INFO    : Injected signal in L1:
+23:16 INFO    :   optimal SNR = 39.04
+23:16 INFO    :   matched filter SNR = 39.83-1.44j
+23:16 INFO    :   mass_1 = 35.0
+23:16 INFO    :   mass_2 = 30.0
+23:16 INFO    :   eccentricity = 0.1
+23:16 INFO    :   luminosity_distance = 440.0
+23:16 INFO    :   theta_jn = 0.4
+23:16 INFO    :   psi = 0.1
+23:16 INFO    :   phase = 1.2
+23:16 INFO    :   geocent_time = 1180002601.0
+23:16 INFO    :   ra = 45
+23:16 INFO    :   dec = 5.73

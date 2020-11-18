@@ -1,0 +1,423 @@
+20:18 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_eccentric_binary_black_hole_no_spins
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+20:36 INFO    : Injected signal in H1:
+20:36 INFO    :   optimal SNR = 66.39
+20:36 INFO    :   matched filter SNR = 67.49-0.58j
+20:36 INFO    :   mass_1 = 35.0
+20:36 INFO    :   mass_2 = 30.0
+20:36 INFO    :   eccentricity = 0.1
+20:36 INFO    :   luminosity_distance = 440.0
+20:36 INFO    :   theta_jn = 0.4
+20:36 INFO    :   psi = 0.1
+20:36 INFO    :   phase = 1.2
+20:36 INFO    :   geocent_time = 1180002601.0
+20:36 INFO    :   ra = 45
+20:36 INFO    :   dec = 5.73
+20:36 INFO    : Injected signal in L1:
+20:36 INFO    :   optimal SNR = 39.04
+20:36 INFO    :   matched filter SNR = 40.49+0.18j
+20:36 INFO    :   mass_1 = 35.0
+20:36 INFO    :   mass_2 = 30.0
+20:36 INFO    :   eccentricity = 0.1
+20:36 INFO    :   luminosity_distance = 440.0
+20:36 INFO    :   theta_jn = 0.4
+20:36 INFO    :   psi = 0.1
+20:36 INFO    :   phase = 1.2
+20:36 INFO    :   geocent_time = 1180002601.0
+20:36 INFO    :   ra = 45
+20:36 INFO    :   dec = 5.73
+20:38 INFO    : Running for label 'eccentric_GW140914', output will be saved to 'outdir'
+20:38 INFO    : Using lal version 7.0.0
+20:38 INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.76;Id: 384ac5e4b9c95803607658118ba361dfc353dade;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+20:38 INFO    : Using lalsimulation version 2.2.0
+20:38 INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.76;Id: 384ac5e4b9c95803607658118ba361dfc353dade;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+20:39 INFO    : Running for label 'eccentric_GW140914', output will be saved to 'outdir'
+20:39 INFO    : Using lal version 7.0.0
+20:39 INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.76;Id: 384ac5e4b9c95803607658118ba361dfc353dade;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+20:39 INFO    : Using lalsimulation version 2.2.0
+20:39 INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.76;Id: 384ac5e4b9c95803607658118ba361dfc353dade;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+20:39 INFO    : Search parameters:
+20:39 INFO    :   mass_1 = Uniform(minimum=5, maximum=60, name='mass_1', latex_label='$m_1$', unit='$M_{\\odot}$', boundary=None)
+20:39 INFO    :   mass_2 = Uniform(minimum=5, maximum=60, name='mass_2', latex_label='$m_2$', unit='$M_{\\odot}$', boundary=None)
+20:39 INFO    :   eccentricity = LogUniform(minimum=0.0001, maximum=0.4, name='eccentricity', latex_label='$e$', unit=None, boundary=None)
+20:39 INFO    :   luminosity_distance = UniformComovingVolume(minimum=100.0, maximum=2000.0, cosmology=FlatLambdaCDM(name="Planck15", H0=67.7 km / (Mpc s), Om0=0.307, Tcmb0=2.725 K, Neff=3.05, m_nu=[0.   0.   0.06] eV, Ob0=0.0486), name='luminosity_distance', latex_label='$d_L$', unit=Unit("Mpc"), boundary=None)
+20:39 INFO    :   dec = Cosine(name='dec', latex_label='$\\mathrm{DEC}$', unit=None, minimum=-1.5707963267948966, maximum=1.5707963267948966, boundary=None)
+20:39 INFO    :   ra = Uniform(minimum=0, maximum=6.283185307179586, name='ra', latex_label='$\\mathrm{RA}$', unit=None, boundary=None)
+20:39 INFO    :   theta_jn = Sine(name='theta_jn', latex_label='$\\theta_{JN}$', unit=None, minimum=0, maximum=3.141592653589793, boundary=None)
+20:39 INFO    :   psi = Uniform(minimum=0, maximum=3.141592653589793, name='psi', latex_label='$\\psi$', unit=None, boundary=None)
+20:39 INFO    :   phase = Uniform(minimum=0, maximum=6.283185307179586, name='phase', latex_label='$\\phi$', unit=None, boundary=None)
+20:39 INFO    :   geocent_time = Uniform(minimum=1180002600.9, maximum=1180002601.1, name='geocent_time', latex_label='$t_c$', unit='s', boundary=None)
+20:39 INFO    : Single likelihood evaluation took 4.664e-02 s
+20:39 INFO    : Using sampler Dynesty with kwargs {'bound': 'multi', 'sample': 'rwalk', 'verbose': True, 'periodic': None, 'reflective': None, 'check_point_delta_t': 600, 'nlive': 1000, 'first_update': None, 'walks': 100, 'npdim': None, 'rstate': None, 'queue_size': 1, 'pool': None, 'use_pool': None, 'live_points': None, 'logl_args': None, 'logl_kwargs': None, 'ptform_args': None, 'ptform_kwargs': None, 'enlarge': 1.5, 'bootstrap': None, 'vol_dec': 0.5, 'vol_check': 8.0, 'facc': 0.2, 'slices': 5, 'update_interval': 600, 'print_func': <bound method Dynesty._print_func of <bilby.core.sampler.dynesty.Dynesty object at 0x7f9678beb940>>, 'dlogz': 0.1, 'maxiter': None, 'maxcall': None, 'logl_max': inf, 'add_live': True, 'print_progress': True, 'save_bounds': False, 'n_effective': None, 'maxmcmc': 5000, 'nact': 5}
+20:39 INFO    : Checkpoint every check_point_delta_t = 600s
+20:39 INFO    : Using dynesty version 1.0.1
+20:39 INFO    : Generating initial points from the prior
+20:40 INFO    : Using the bilby-implemented rwalk sample method with ACT estimated walks
+20:40 INFO    : Resume file outdir/eccentric_GW140914_resume.pickle does not exist.
+20:50 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+20:50 WARNING : Axis limits cannot be NaN or Inf
+20:50 WARNING : Failed to create dynesty run plot at checkpoint
+21:00 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+21:00 WARNING : Axis limits cannot be NaN or Inf
+21:00 WARNING : Failed to create dynesty run plot at checkpoint
+21:11 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+21:11 WARNING : Axis limits cannot be NaN or Inf
+21:11 WARNING : Failed to create dynesty run plot at checkpoint
+21:21 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+21:22 WARNING : Axis limits cannot be NaN or Inf
+21:22 WARNING : Failed to create dynesty run plot at checkpoint
+21:32 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+21:32 WARNING : Axis limits cannot be NaN or Inf
+21:32 WARNING : Failed to create dynesty run plot at checkpoint
+21:42 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+21:42 WARNING : Axis limits cannot be NaN or Inf
+21:42 WARNING : Failed to create dynesty run plot at checkpoint
+21:53 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+21:53 WARNING : Axis limits cannot be NaN or Inf
+21:53 WARNING : Failed to create dynesty run plot at checkpoint
+22:03 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+22:03 WARNING : Axis limits cannot be NaN or Inf
+22:03 WARNING : Failed to create dynesty run plot at checkpoint
+22:14 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+22:14 WARNING : Axis limits cannot be NaN or Inf
+22:14 WARNING : Failed to create dynesty run plot at checkpoint
+22:24 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+22:24 WARNING : Axis limits cannot be NaN or Inf
+22:24 WARNING : Failed to create dynesty run plot at checkpoint
+22:35 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+22:35 WARNING : Axis limits cannot be NaN or Inf
+22:35 WARNING : Failed to create dynesty run plot at checkpoint
+22:46 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+22:46 WARNING : Axis limits cannot be NaN or Inf
+22:46 WARNING : Failed to create dynesty run plot at checkpoint
+22:57 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+22:57 WARNING : Axis limits cannot be NaN or Inf
+22:57 WARNING : Failed to create dynesty run plot at checkpoint
+23:07 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+23:07 WARNING : singular matrix
+23:07 WARNING : Failed to create dynesty state plot at checkpoint
+23:07 WARNING : Axis limits cannot be NaN or Inf
+23:07 WARNING : Failed to create dynesty run plot at checkpoint
+23:18 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+23:18 WARNING : Axis limits cannot be NaN or Inf
+23:18 WARNING : Failed to create dynesty run plot at checkpoint
+23:28 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+23:28 WARNING : Axis limits cannot be NaN or Inf
+23:28 WARNING : Failed to create dynesty run plot at checkpoint
+23:39 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+23:39 WARNING : Axis limits cannot be NaN or Inf
+23:39 WARNING : Failed to create dynesty run plot at checkpoint
+23:49 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+23:49 WARNING : singular matrix
+23:49 WARNING : Failed to create dynesty state plot at checkpoint
+23:49 WARNING : singular matrix
+23:49 WARNING : Failed to create dynesty run plot at checkpoint
+23:59 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+23:59 WARNING : singular matrix
+23:59 WARNING : Failed to create dynesty state plot at checkpoint
+23:59 WARNING : singular matrix
+23:59 WARNING : Failed to create dynesty run plot at checkpoint
+00:09 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+00:09 WARNING : Axis limits cannot be NaN or Inf
+00:09 WARNING : Failed to create dynesty run plot at checkpoint
+00:20 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+00:20 WARNING : Axis limits cannot be NaN or Inf
+00:20 WARNING : Failed to create dynesty run plot at checkpoint
+00:30 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+00:30 WARNING : Axis limits cannot be NaN or Inf
+00:30 WARNING : Failed to create dynesty run plot at checkpoint
+00:40 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+00:40 WARNING : Axis limits cannot be NaN or Inf
+00:40 WARNING : Failed to create dynesty run plot at checkpoint
+00:50 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+00:50 WARNING : Axis limits cannot be NaN or Inf
+00:50 WARNING : Failed to create dynesty run plot at checkpoint
+00:57 INFO    : Run interrupted by signal 2: checkpoint and exit on 130
+00:57 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+00:58 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_eccentric_binary_black_hole_no_spins
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+00:58 INFO    : Injected signal in H1:
+00:58 INFO    :   optimal SNR = 66.39
+00:58 INFO    :   matched filter SNR = 67.49-0.58j
+00:58 INFO    :   mass_1 = 35.0
+00:58 INFO    :   mass_2 = 30.0
+00:58 INFO    :   eccentricity = 0.1
+00:58 INFO    :   luminosity_distance = 440.0
+00:58 INFO    :   theta_jn = 0.4
+00:58 INFO    :   psi = 0.1
+00:58 INFO    :   phase = 1.2
+00:58 INFO    :   geocent_time = 1180002601.0
+00:58 INFO    :   ra = 45
+00:58 INFO    :   dec = 5.73
+00:58 INFO    : Injected signal in L1:
+00:58 INFO    :   optimal SNR = 39.04
+00:58 INFO    :   matched filter SNR = 40.49+0.18j
+00:58 INFO    :   mass_1 = 35.0
+00:58 INFO    :   mass_2 = 30.0
+00:58 INFO    :   eccentricity = 0.1
+00:58 INFO    :   luminosity_distance = 440.0
+00:58 INFO    :   theta_jn = 0.4
+00:58 INFO    :   psi = 0.1
+00:58 INFO    :   phase = 1.2
+00:58 INFO    :   geocent_time = 1180002601.0
+00:58 INFO    :   ra = 45
+00:58 INFO    :   dec = 5.73
+00:58 INFO    : Injected signal in H1:
+00:58 INFO    :   optimal SNR = 66.39
+00:58 INFO    :   matched filter SNR = 133.87-0.58j
+00:58 INFO    :   mass_1 = 35.0
+00:58 INFO    :   mass_2 = 30.0
+00:58 INFO    :   eccentricity = 0.1
+00:58 INFO    :   luminosity_distance = 440.0
+00:58 INFO    :   theta_jn = 0.4
+00:58 INFO    :   psi = 0.1
+00:58 INFO    :   phase = 1.2
+00:58 INFO    :   geocent_time = 1180002601.0
+00:58 INFO    :   ra = 45
+00:58 INFO    :   dec = 5.73
+00:58 INFO    : Injected signal in L1:
+00:58 INFO    :   optimal SNR = 39.04
+00:58 INFO    :   matched filter SNR = 79.53+0.18j
+00:58 INFO    :   mass_1 = 35.0
+00:58 INFO    :   mass_2 = 30.0
+00:58 INFO    :   eccentricity = 0.1
+00:58 INFO    :   luminosity_distance = 440.0
+00:58 INFO    :   theta_jn = 0.4
+00:58 INFO    :   psi = 0.1
+00:58 INFO    :   phase = 1.2
+00:58 INFO    :   geocent_time = 1180002601.0
+00:58 INFO    :   ra = 45
+00:58 INFO    :   dec = 5.73
+00:59 INFO    : Injected signal in H1:
+00:59 INFO    :   optimal SNR = 66.39
+00:59 INFO    :   matched filter SNR = 200.26-0.58j
+00:59 INFO    :   mass_1 = 35.0
+00:59 INFO    :   mass_2 = 30.0
+00:59 INFO    :   eccentricity = 0.1
+00:59 INFO    :   luminosity_distance = 440.0
+00:59 INFO    :   theta_jn = 0.4
+00:59 INFO    :   psi = 0.1
+00:59 INFO    :   phase = 1.2
+00:59 INFO    :   geocent_time = 1180002601.0
+00:59 INFO    :   ra = 45
+00:59 INFO    :   dec = 5.73
+00:59 INFO    : Injected signal in L1:
+00:59 INFO    :   optimal SNR = 39.04
+00:59 INFO    :   matched filter SNR = 118.57+0.18j
+00:59 INFO    :   mass_1 = 35.0
+00:59 INFO    :   mass_2 = 30.0
+00:59 INFO    :   eccentricity = 0.1
+00:59 INFO    :   luminosity_distance = 440.0
+00:59 INFO    :   theta_jn = 0.4
+00:59 INFO    :   psi = 0.1
+00:59 INFO    :   phase = 1.2
+00:59 INFO    :   geocent_time = 1180002601.0
+00:59 INFO    :   ra = 45
+00:59 INFO    :   dec = 5.73
+00:59 INFO    : Injected signal in H1:
+00:59 INFO    :   optimal SNR = 66.39
+00:59 INFO    :   matched filter SNR = 266.64-0.58j
+00:59 INFO    :   mass_1 = 35.0
+00:59 INFO    :   mass_2 = 30.0
+00:59 INFO    :   eccentricity = 0.1
+00:59 INFO    :   luminosity_distance = 440.0
+00:59 INFO    :   theta_jn = 0.4
+00:59 INFO    :   psi = 0.1
+00:59 INFO    :   phase = 1.2
+00:59 INFO    :   geocent_time = 1180002601.0
+00:59 INFO    :   ra = 45
+00:59 INFO    :   dec = 5.73
+00:59 INFO    : Injected signal in L1:
+00:59 INFO    :   optimal SNR = 39.04
+00:59 INFO    :   matched filter SNR = 157.61+0.18j
+00:59 INFO    :   mass_1 = 35.0
+00:59 INFO    :   mass_2 = 30.0
+00:59 INFO    :   eccentricity = 0.1
+00:59 INFO    :   luminosity_distance = 440.0
+00:59 INFO    :   theta_jn = 0.4
+00:59 INFO    :   psi = 0.1
+00:59 INFO    :   phase = 1.2
+00:59 INFO    :   geocent_time = 1180002601.0
+00:59 INFO    :   ra = 45
+00:59 INFO    :   dec = 5.73
+01:13 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_eccentric_binary_black_hole_no_spins
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+01:13 INFO    : Injected signal in H1:
+01:13 INFO    :   optimal SNR = 66.39
+01:13 INFO    :   matched filter SNR = 67.49-0.58j
+01:13 INFO    :   mass_1 = 35.0
+01:13 INFO    :   mass_2 = 30.0
+01:13 INFO    :   eccentricity = 0.1
+01:13 INFO    :   luminosity_distance = 440.0
+01:13 INFO    :   theta_jn = 0.4
+01:13 INFO    :   psi = 0.1
+01:13 INFO    :   phase = 1.2
+01:13 INFO    :   geocent_time = 1180002601.0
+01:13 INFO    :   ra = 45
+01:13 INFO    :   dec = 5.73
+01:13 INFO    : Injected signal in L1:
+01:13 INFO    :   optimal SNR = 39.04
+01:13 INFO    :   matched filter SNR = 40.49+0.18j
+01:13 INFO    :   mass_1 = 35.0
+01:13 INFO    :   mass_2 = 30.0
+01:13 INFO    :   eccentricity = 0.1
+01:13 INFO    :   luminosity_distance = 440.0
+01:13 INFO    :   theta_jn = 0.4
+01:13 INFO    :   psi = 0.1
+01:13 INFO    :   phase = 1.2
+01:13 INFO    :   geocent_time = 1180002601.0
+01:13 INFO    :   ra = 45
+01:13 INFO    :   dec = 5.73
+01:16 INFO    : Running for label 'eccentric_GW140914', output will be saved to 'outdir'
+01:16 INFO    : Using lal version 7.0.0
+01:16 INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.76;Id: 384ac5e4b9c95803607658118ba361dfc353dade;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+01:16 INFO    : Using lalsimulation version 2.2.0
+01:16 INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.76;Id: 384ac5e4b9c95803607658118ba361dfc353dade;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+01:16 INFO    : Search parameters:
+01:16 INFO    :   eccentricity = LogUniform(minimum=0.0001, maximum=0.4, name='eccentricity', latex_label='$e$', unit=None, boundary=None)
+01:16 INFO    :   mass_1 = 35.0
+01:16 INFO    :   mass_2 = 30.0
+01:16 INFO    :   luminosity_distance = 440.0
+01:16 INFO    :   dec = 5.73
+01:16 INFO    :   ra = 45
+01:16 INFO    :   theta_jn = 0.4
+01:16 INFO    :   psi = 0.1
+01:16 INFO    :   phase = 1.2
+01:16 INFO    :   geocent_time = 1180002601.0
+01:16 INFO    : Single likelihood evaluation took 4.590e-02 s
+01:16 INFO    : Using sampler Dynesty with kwargs {'bound': 'multi', 'sample': 'rwalk', 'verbose': True, 'periodic': None, 'reflective': None, 'check_point_delta_t': 600, 'nlive': 500, 'first_update': None, 'walks': 100, 'npdim': None, 'rstate': None, 'queue_size': 1, 'pool': None, 'use_pool': None, 'live_points': None, 'logl_args': None, 'logl_kwargs': None, 'ptform_args': None, 'ptform_kwargs': None, 'enlarge': 1.5, 'bootstrap': None, 'vol_dec': 0.5, 'vol_check': 8.0, 'facc': 0.2, 'slices': 5, 'update_interval': 300, 'print_func': <bound method Dynesty._print_func of <bilby.core.sampler.dynesty.Dynesty object at 0x7fba04250b38>>, 'dlogz': 0.1, 'maxiter': None, 'maxcall': None, 'logl_max': inf, 'add_live': True, 'print_progress': True, 'save_bounds': False, 'n_effective': None, 'maxmcmc': 5000, 'nact': 5}
+01:16 INFO    : Checkpoint every check_point_delta_t = 600s
+01:16 INFO    : Using dynesty version 1.0.1
+01:16 INFO    : Generating initial points from the prior
+01:16 INFO    : Using the bilby-implemented rwalk sample method with ACT estimated walks
+01:16 INFO    : Reading resume file outdir/eccentric_GW140914_resume.pickle
+01:16 INFO    : Resume file successfully loaded.
+01:17 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+01:18 INFO    : Running for label 'eccentric_GW140914', output will be saved to 'outdir'
+01:18 INFO    : Using lal version 7.0.0
+01:18 INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.76;Id: 384ac5e4b9c95803607658118ba361dfc353dade;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+01:18 INFO    : Using lalsimulation version 2.2.0
+01:18 INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.76;Id: 384ac5e4b9c95803607658118ba361dfc353dade;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+01:18 INFO    : Search parameters:
+01:18 INFO    :   eccentricity = LogUniform(minimum=0.01, maximum=0.4, name='eccentricity', latex_label='$e$', unit=None, boundary=None)
+01:18 INFO    :   mass_1 = 35.0
+01:18 INFO    :   mass_2 = 30.0
+01:18 INFO    :   luminosity_distance = 440.0
+01:18 INFO    :   dec = 5.73
+01:18 INFO    :   ra = 45
+01:18 INFO    :   theta_jn = 0.4
+01:18 INFO    :   psi = 0.1
+01:18 INFO    :   phase = 1.2
+01:18 INFO    :   geocent_time = 1180002601.0
+01:18 INFO    : Single likelihood evaluation took 4.601e-02 s
+01:18 INFO    : Using sampler Dynesty with kwargs {'bound': 'multi', 'sample': 'unif', 'verbose': True, 'periodic': None, 'reflective': None, 'check_point_delta_t': 600, 'nlive': 1000, 'first_update': None, 'walks': 100, 'npdim': None, 'rstate': None, 'queue_size': 1, 'pool': None, 'use_pool': None, 'live_points': None, 'logl_args': None, 'logl_kwargs': None, 'ptform_args': None, 'ptform_kwargs': None, 'enlarge': 1.5, 'bootstrap': None, 'vol_dec': 0.5, 'vol_check': 8.0, 'facc': 0.2, 'slices': 5, 'update_interval': 600, 'print_func': <bound method Dynesty._print_func of <bilby.core.sampler.dynesty.Dynesty object at 0x7fba0424c358>>, 'dlogz': 0.1, 'maxiter': None, 'maxcall': None, 'logl_max': inf, 'add_live': True, 'print_progress': True, 'save_bounds': False, 'n_effective': None, 'maxmcmc': 5000, 'nact': 5}
+01:18 INFO    : Checkpoint every check_point_delta_t = 600s
+01:18 INFO    : Using dynesty version 1.0.1
+01:18 INFO    : Generating initial points from the prior
+01:28 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+01:28 INFO    : Writing 1090 current samples to outdir/eccentric_GW140914_samples.dat
+01:28 WARNING : Axis limits cannot be NaN or Inf
+01:28 WARNING : Failed to create dynesty run plot at checkpoint
+01:38 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+01:38 INFO    : Writing 2097 current samples to outdir/eccentric_GW140914_samples.dat
+01:38 WARNING : Axis limits cannot be NaN or Inf
+01:38 WARNING : Failed to create dynesty run plot at checkpoint
+01:47 INFO    : Written checkpoint file outdir/eccentric_GW140914_resume.pickle
+01:47 INFO    : Writing 2134 current samples to outdir/eccentric_GW140914_samples.dat
+01:47 WARNING : Axis limits cannot be NaN or Inf
+01:47 WARNING : Failed to create dynesty run plot at checkpoint
+01:47 INFO    : Sampling time: 0:27:49.063898
+01:47 INFO    : Summary of results:
+nsamples: 5716
+ln_noise_evidence: -18215.241
+ln_evidence: -15122.444 +/-  0.056
+ln_bayes_factor: 3092.797 +/-  0.056
+
+08:45 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_eccentric_binary_black_hole_no_spins
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+08:45 INFO    : Injected signal in H1:
+08:45 INFO    :   optimal SNR = 66.39
+08:45 INFO    :   matched filter SNR = 67.49-0.58j
+08:45 INFO    :   mass_1 = 35.0
+08:45 INFO    :   mass_2 = 30.0
+08:45 INFO    :   eccentricity = 0.1
+08:45 INFO    :   luminosity_distance = 440.0
+08:45 INFO    :   theta_jn = 0.4
+08:45 INFO    :   psi = 0.1
+08:45 INFO    :   phase = 1.2
+08:45 INFO    :   geocent_time = 1180002601.0
+08:45 INFO    :   ra = 45
+08:45 INFO    :   dec = 5.73
+08:45 INFO    : Injected signal in L1:
+08:45 INFO    :   optimal SNR = 39.04
+08:45 INFO    :   matched filter SNR = 40.49+0.18j
+08:45 INFO    :   mass_1 = 35.0
+08:45 INFO    :   mass_2 = 30.0
+08:45 INFO    :   eccentricity = 0.1
+08:45 INFO    :   luminosity_distance = 440.0
+08:45 INFO    :   theta_jn = 0.4
+08:45 INFO    :   psi = 0.1
+08:45 INFO    :   phase = 1.2
+08:45 INFO    :   geocent_time = 1180002601.0
+08:45 INFO    :   ra = 45
+08:45 INFO    :   dec = 5.73
+08:46 INFO    : Injected signal in H1:
+08:46 INFO    :   optimal SNR = 66.39
+08:46 INFO    :   matched filter SNR = 133.87-0.58j
+08:46 INFO    :   mass_1 = 35.0
+08:46 INFO    :   mass_2 = 30.0
+08:46 INFO    :   eccentricity = 0.1
+08:46 INFO    :   luminosity_distance = 440.0
+08:46 INFO    :   theta_jn = 0.4
+08:46 INFO    :   psi = 0.1
+08:46 INFO    :   phase = 1.2
+08:46 INFO    :   geocent_time = 1180002601.0
+08:46 INFO    :   ra = 45
+08:46 INFO    :   dec = 5.73
+08:46 INFO    : Injected signal in L1:
+08:46 INFO    :   optimal SNR = 39.04
+08:46 INFO    :   matched filter SNR = 79.53+0.18j
+08:46 INFO    :   mass_1 = 35.0
+08:46 INFO    :   mass_2 = 30.0
+08:46 INFO    :   eccentricity = 0.1
+08:46 INFO    :   luminosity_distance = 440.0
+08:46 INFO    :   theta_jn = 0.4
+08:46 INFO    :   psi = 0.1
+08:46 INFO    :   phase = 1.2
+08:46 INFO    :   geocent_time = 1180002601.0
+08:46 INFO    :   ra = 45
+08:46 INFO    :   dec = 5.73
+08:48 INFO    : Injected signal in H1:
+08:48 INFO    :   optimal SNR = 66.39
+08:48 INFO    :   matched filter SNR = 200.26-0.58j
+08:48 INFO    :   mass_1 = 35.0
+08:48 INFO    :   mass_2 = 30.0
+08:48 INFO    :   eccentricity = 0.1
+08:48 INFO    :   luminosity_distance = 440.0
+08:48 INFO    :   theta_jn = 0.4
+08:48 INFO    :   psi = 0.1
+08:48 INFO    :   phase = 1.2
+08:48 INFO    :   geocent_time = 1180002601.0
+08:48 INFO    :   ra = 45
+08:48 INFO    :   dec = 5.73
+08:48 INFO    : Injected signal in L1:
+08:48 INFO    :   optimal SNR = 39.04
+08:48 INFO    :   matched filter SNR = 118.57+0.18j
+08:48 INFO    :   mass_1 = 35.0
+08:48 INFO    :   mass_2 = 30.0
+08:48 INFO    :   eccentricity = 0.1
+08:48 INFO    :   luminosity_distance = 440.0
+08:48 INFO    :   theta_jn = 0.4
+08:48 INFO    :   psi = 0.1
+08:48 INFO    :   phase = 1.2
+08:48 INFO    :   geocent_time = 1180002601.0
+08:48 INFO    :   ra = 45
+08:48 INFO    :   dec = 5.73
