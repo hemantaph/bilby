@@ -153,7 +153,7 @@ class Fn:
         beta = self.beta
         iota = self.iota
         eta = self.eta
-        Sx = np.zeros((11,7))
+        Sx = np.zeros((10,7))
         
         Sx[0,2]=e**5*(-(44/9)*np.cos(iota)*np.cos(2*beta)+(665*eta*np.cos(iota)*np.cos(2*beta))/1152+(131*np.cos(iota)*np.cos(2*beta)*np.sin(iota)**2)/4608-(131*eta*np.cos(iota)*np.cos(2*beta)*np.sin(iota)**2)/1536)+e**3*(-(433/72)*np.cos(iota)*np.cos(2*beta)+8/9*eta*np.cos(iota)*np.cos(2*beta)+5/288*np.cos(iota)*np.cos(2*beta)*np.sin(iota)**2-5/96*eta*np.cos(iota)*np.cos(2*beta)*np.sin(iota)**2)
         Sx[1,2]=e**6*(-(83/24)*np.cos(iota)*np.cos(2*beta)+337/720*eta*np.cos(iota)*np.cos(2*beta)+1/60*np.cos(iota)*np.cos(2*beta)*np.sin(iota)**2-1/20*eta*np.cos(iota)*np.cos(2*beta)*np.sin(iota)**2)+e**4*(-(109/18)*np.cos(iota)*np.cos(2*beta)+23/24*eta*np.cos(iota)*np.cos(2*beta)-1/18*np.cos(iota)*np.cos(2*beta)*np.sin(iota)**2+1/6*eta*np.cos(iota)*np.cos(2*beta)*np.sin(iota)**2)

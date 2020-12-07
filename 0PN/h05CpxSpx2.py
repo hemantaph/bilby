@@ -29,9 +29,6 @@ class Fn:
         Cp[4,-1]=e**6 * ((41875*np.cos(beta)*np.sin(iota))/1536-(25625*np.cos(iota)**2*np.cos(beta)*np.sin(iota))/1536)+e**4 * (-(6875/512)*np.cos(beta)*np.sin(iota)+(11875*np.cos(iota)**2*np.cos(beta)*np.sin(iota))/1536)
         Cp[5,-1]=e**5 * (-(81/4)*np.cos(beta)*np.sin(iota)+243/20*np.cos(iota)**2*np.cos(beta)*np.sin(iota))
         Cp[6,-1]=e**6 * (-((5529503*np.cos(beta)*np.sin(iota))/184320)+(3411821*np.cos(iota)**2*np.cos(beta)*np.sin(iota))/184320)
-        Cp[7,-1]=0
-        Cp[8,-1]=0
-        Cp[9,-1]=0
         
         
         Cp[0,3]=e**4 * (-(25/512)*np.cos(3*beta)*np.sin(iota)-25/512*np.cos(iota)**2*np.cos(3*beta)*np.sin(iota))+e**6 * (-((179*np.cos(3*beta)*np.sin(iota))/7680)-(179*np.cos(iota)**2*np.cos(3*beta)*np.sin(iota))/7680)

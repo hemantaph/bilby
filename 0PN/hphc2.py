@@ -23,19 +23,15 @@ class Fn:
         self.phic_ = phic_
         self.tc_ = tc_
         self.f_ = f_
-        '''
-        if f_ == 0:
-            self.f_ = 0.0001
-        else:
-            self.f_ = f_
-        '''
+
     #defining unit-step function 
     def unitstep(self,lp,ff,f):
         if lp*ff-2*f>=0:
             return(1)
         else:
             return(0)
-
+    
+    #check which of the harmonics at a particular frequency (2*Pi*Omega=f/l) exceeds the  
     def uniarray(self, l, ff, f):
         lx = np.arange(1,11,1)
         for i in range(10):
@@ -109,8 +105,11 @@ class Fn:
         
         return(xil)
  
-    def htilde(self):
-        xil = self.xi_l()
+    def htilde0(self):
+        
+        k = 
+        
+        xil = self.xi_l0()
         psi = self.psi_l()
         l = np.arange(1,11,1)
         f = self.f_
@@ -122,13 +121,13 @@ class Fn:
         eta = (m1*m2)/(M**2)
         
         #frequency domain waveform
-        s = np.sum( xil[:,0]*((l/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi) )*self.uniarray(l,ff,f) ) + \
-        np.sum( xil[:,-2]*((l/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi) )*self.uniarray(l,ff,f) ) + \
-        np.sum( xil[:,2]*((l/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi) )*self.uniarray(l,ff,f) )
+        s = np.sum( xil[:,0]*((l/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi(l,0)) )*self.uniarray( (l-(l+0)*(k/(1+k))) ,ff,f) ) + \
+        np.sum( xil[:,-2]*((l/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi(l,-2)) )*self.uniarray( (l-(l-2)*(k/(1+k))) ,ff,f) ) + \
+        np.sum( xil[:,2]*((l/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi(l,2)) )*self.uniarray( (l-(l+2)*(k/(1+k))) ,ff,f) )
         
-        hf = ((5*np.pi*eta)/384)**(1/2) * (G**2*M**2)/(C**5*D)*( ((G*M*np.pi*f)/C**3)**(-7/6) )*np.sum(s)
+        hf0 = ((5*np.pi*eta)/384)**(1/2) * (G**2*M**2)/(C**5*D)*( ((G*M*np.pi*f)/C**3)**(-7/6) )*np.sum(s)
         
-        return(hf)
+        return(hf0)
     
     
 '''   
