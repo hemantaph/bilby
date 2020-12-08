@@ -110,8 +110,9 @@ et0**6 * ((1/(chi**(23/3)))*(79743280932801358583/35798465743552512 + (470729745
         
         #note dtype=object will appear because it is dealing with number>=10^20 or number<=10^20
         #this is due to log
+        #change the dtype of the array to float64 
         
-        return(psi)
+        return(psi.astype('float64'))
     ###################COMMON_END######################
     
     ##################0PN_START######################
@@ -168,6 +169,44 @@ et0**6 * ((1/(chi**(23/3)))*(79743280932801358583/35798465743552512 + (470729745
         hf0 = ((5*np.pi*eta)/384)**(1/2) * (G**2*M**2)/(C**5*D)*( ((G*M*np.pi*f)/C**3)**(-7/6) )*np.sum(s)
         
         return(hf0)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
          
         
