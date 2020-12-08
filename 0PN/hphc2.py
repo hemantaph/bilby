@@ -1,7 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-import h0CpxSpx
+import h0CpxSpx2
+import h05CpxSpx2
+import h1CpxSpx2
 
 C = 299792458.
 G = 6.67408*1e-11
@@ -89,9 +91,10 @@ class Fn:
         et0 = self.et0_
         chi = f/f0     
         
-        x = ((G*M*2*np.pi*f)/( C**3*(l - (l + n)*k/(1 + k))))**(2/3)
+        try:
+            x = np.power(((G*M*2*np.pi*f)/( C**3*(l - (l + n)*k/(1 + k)))),(2/3))
 
-        psi = - 2*np.pi*f*tc + (l - (l + n)*k/(1 + k))*phic - 1/(256*x**(5/2)*eta)*3*l * \
+            psi = - 2*np.pi*f*tc + (l - (l + n)*k/(1 + k))*phic - 1/(256*x**(5/2)*eta)*3*l * \
 (1 + \
 \
 x**(3/2) * ( - 16*np.pi + et0**2 * ( - ((295945*np.pi)/(35088*chi**(28/9))) + (65561*np.pi)/(4080*chi**(19/9))) + et0**4 * ((1968982405*np.pi)/(35961984*chi**(47/9)) - (6211173025*np.pi)/(102085632*chi**(38/9)) - (3048212305*np.pi)/(64000512*chi**(28/9)) + (217859203*np.pi)/(3720960*chi**(19/9))) + et0**6 * ( - ((28409259125*np.pi)/(79847424*chi**(22/3))) + (30628811474315*np.pi)/(97254162432*chi**(19/3)) + (33366234820475*np.pi)/(65594658816*chi**(47/9)) - (20639727962075*np.pi)/(46551048192*chi**(38/9)) - (126468066221755*np.pi)/(846342770688*chi**(28/9)) + (22156798877*np.pi)/(169675776*chi**(19/9)))) + \
@@ -111,8 +114,10 @@ et0**6 * ((1/(chi**(23/3)))*(79743280932801358583/35798465743552512 + (470729745
         #note dtype=object will appear because it is dealing with number>=10^20 or number<=10^20
         #this is due to log
         #change the dtype of the array to float64 
+        except Exception:
+            print("")
         
-        return(psi.astype('float64'))
+        return( np.nan_to_num(psi.astype('float64')) )
     ###################COMMON_END######################
     
     ##################0PN_START######################
@@ -124,7 +129,7 @@ et0**6 * ((1/(chi**(23/3)))*(79743280932801358583/35798465743552512 + (470729745
         Fc = self.Fc_
         
          #calling class for Cx C+ Sx S+
-        fn = h0CpxSpx.Fn(et,iota,beta)
+        fn = h0CpxSpx2.Fn(et,iota,beta)
 
         #to find Xi
         Gamma_l = Fp*fn.cplus() + Fc*fn.ccross()
@@ -166,11 +171,12 @@ et0**6 * ((1/(chi**(23/3)))*(79743280932801358583/35798465743552512 + (470729745
         np.sum( xil[:,-2]*((l/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi(-2)) )*self.uniarray( (l-(l-2)*(k/(1+k))) ,ff,f) ) + \
         np.sum( xil[:,2]*((l/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi(2)) )*self.uniarray( (l-(l+2)*(k/(1+k))) ,ff,f) )
         
-        hf0 = ((5*np.pi*eta)/384)**(1/2) * (G**2*M**2)/(C**5*D)*( ((G*M*np.pi*f)/C**3)**(-7/6) )*np.sum(s)
+        hf0 = ((5*np.pi*eta)/384)**(1/2) * (G**2*M**2)/(C**5*D)*( ((G*M*np.pi*f)/C**3)**(-7/6) )*s
         
         return(hf0)
     
-    
+    ##################0PN_END######################
+
     
     
     
