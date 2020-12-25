@@ -58,8 +58,7 @@ class Fn:
         Cp[3,0]=e**6*(272/15+(472*eta)/45-(272*sp.cos(iota)**2)/15-472/45*eta*sp.cos(iota)**2+(16*sp.sin(iota)**2)/5-48/5*eta*sp.sin(iota)**2+16/5*sp.cos(iota)**2*sp.sin(iota)**2-48/5*eta*sp.cos(iota)**2*sp.sin(iota)**2)+e**4*(-18-(70*eta)/9+18*sp.cos(iota)**2+70/9*eta*sp.cos(iota)**2-(7*sp.sin(iota)**2)/3+7*eta*sp.sin(iota)**2-7/3*sp.cos(iota)**2*sp.sin(iota)**2+7*eta*sp.cos(iota)**2*sp.sin(iota)**2)
         Cp[4,0]=e**5*(-(6875/256)-(29375*eta)/2304+(6875*sp.cos(iota)**2)/256+(29375*eta*sp.cos(iota)**2)/2304-(11875*sp.sin(iota)**2)/3072+(11875*eta*sp.sin(iota)**2)/1024-(11875*sp.cos(iota)**2*sp.sin(iota)**2)/3072+(11875*eta*sp.cos(iota)**2*sp.sin(iota)**2)/1024)
         Cp[5,0]=e**6*(-(3159/80)-(1593*eta)/80+(3159*sp.cos(iota)**2)/80+1593/80*eta*sp.cos(iota)**2-(243*sp.sin(iota)**2)/40+729/40*eta*sp.sin(iota)**2-243/40*sp.cos(iota)**2*sp.sin(iota)**2+729/40*eta*sp.cos(iota)**2*sp.sin(iota)**2)
-
-        
+            
         return(Cp[a-1,b])
     
     

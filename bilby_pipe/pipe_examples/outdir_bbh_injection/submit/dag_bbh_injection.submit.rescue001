@@ -1,0 +1,10 @@
+# Rescue DAG file, created after running
+#   the outdir_bbh_injection/submit/dag_bbh_injection.submit DAG file
+# Created 12/21/2020 23:29:41 UTC
+# Rescue DAG version: 2.0.1 (partial)
+#
+# Total number of Nodes: 2
+# Nodes premarked DONE: 0
+# Nodes that failed: 1
+#   bbh_injection_data0_0_generation_arg_0,<ENDLIST>
+

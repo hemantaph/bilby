@@ -1,0 +1,232 @@
+12/21/20 15:28:56 ******************************************************
+12/21/20 15:28:56 ** condor_scheduniv_exec.154220533.0 (CONDOR_DAGMAN) STARTING UP
+12/21/20 15:28:56 ** /cvmfs/oasis.opensciencegrid.org/ligo/deploy/sw/conda/envs/igwn-py37-20201027/bin/condor_dagman
+12/21/20 15:28:56 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+12/21/20 15:28:56 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+12/21/20 15:28:56 ** $CondorVersion: 8.9.8 Aug 06 2020 $
+12/21/20 15:28:56 ** $CondorPlatform: X86_64-CentOS_7.8 $
+12/21/20 15:28:56 ** PID = 714537
+12/21/20 15:28:56 ** Log last touched time unavailable (No such file or directory)
+12/21/20 15:28:56 ******************************************************
+12/21/20 15:28:56 Using config source: /etc/condor/condor_config
+12/21/20 15:28:56 Using local config sources: 
+12/21/20 15:28:56    /etc/condor/config.d/00-batch_gahp_blahp.config
+12/21/20 15:28:56    /etc/condor/config.d/00-ldas
+12/21/20 15:28:56    /etc/condor/config.d/02-scheduler
+12/21/20 15:28:56    /etc/condor/config.d/10-cgroup
+12/21/20 15:28:56    /etc/condor/config.d/10-security
+12/21/20 15:28:56    /etc/condor/config.d/30-scratch-mount
+12/21/20 15:28:56    /etc/condor/config.d/99-cpuinfo
+12/21/20 15:28:56    /etc/condor/config.d/99-facter
+12/21/20 15:28:56    /etc/condor/config.d/99-memory
+12/21/20 15:28:56    /etc/condor/config.d/99-transform
+12/21/20 15:28:56    /etc/condor/config.d/debug
+12/21/20 15:28:56    /etc/condor/condor_config.local
+12/21/20 15:28:56 config Macros = 155, Sorted = 155, StringBytes = 6773, TablesBytes = 5708
+12/21/20 15:28:56 CLASSAD_CACHING is ENABLED
+12/21/20 15:28:56 Daemon Log is logging: D_ALWAYS D_ERROR
+12/21/20 15:28:56 DaemonCore: No command port requested.
+12/21/20 15:28:56 DAGMAN_USE_STRICT setting: 1
+12/21/20 15:28:56 DAGMAN_VERBOSITY setting: 3
+12/21/20 15:28:56 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+12/21/20 15:28:56 DAGMAN_DEBUG_CACHE_ENABLE setting: True
+12/21/20 15:28:56 DAGMAN_SUBMIT_DELAY setting: 0
+12/21/20 15:28:56 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+12/21/20 15:28:56 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+12/21/20 15:28:56 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 100
+12/21/20 15:28:56 DAGMAN_AGGRESSIVE_SUBMIT setting: False
+12/21/20 15:28:56 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+12/21/20 15:28:56 DAGMAN_QUEUE_UPDATE_INTERVAL setting: 300
+12/21/20 15:28:56 DAGMAN_DEFAULT_PRIORITY setting: 0
+12/21/20 15:28:56 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+12/21/20 15:28:56 allow_events (DAGMAN_ALLOW_EVENTS) setting: 114
+12/21/20 15:28:56 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+12/21/20 15:28:56 DAGMAN_RETRY_NODE_FIRST setting: False
+12/21/20 15:28:56 DAGMAN_MAX_JOBS_IDLE setting: 1000
+12/21/20 15:28:56 DAGMAN_MAX_JOBS_SUBMITTED setting: 12000
+12/21/20 15:28:56 DAGMAN_MAX_PRE_SCRIPTS setting: 20
+12/21/20 15:28:56 DAGMAN_MAX_POST_SCRIPTS setting: 20
+12/21/20 15:28:56 DAGMAN_MUNGE_NODE_NAMES setting: True
+12/21/20 15:28:56 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+12/21/20 15:28:56 DAGMAN_SUBMIT_DEPTH_FIRST setting: True
+12/21/20 15:28:56 DAGMAN_ALWAYS_RUN_POST setting: False
+12/21/20 15:28:56 DAGMAN_CONDOR_SUBMIT_EXE setting: /usr/bin/condor_submit
+12/21/20 15:28:56 DAGMAN_USE_CONDOR_SUBMIT setting: True
+12/21/20 15:28:56 DAGMAN_ABORT_DUPLICATES setting: True
+12/21/20 15:28:56 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+12/21/20 15:28:56 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+12/21/20 15:28:56 DAGMAN_AUTO_RESCUE setting: True
+12/21/20 15:28:56 DAGMAN_MAX_RESCUE_NUM setting: 100
+12/21/20 15:28:56 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+12/21/20 15:28:56 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+12/21/20 15:28:56 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+12/21/20 15:28:56 DAGMAN_MAX_JOB_HOLDS setting: 100
+12/21/20 15:28:56 DAGMAN_HOLD_CLAIM_TIME setting: 20
+12/21/20 15:28:56 ALL_DEBUG setting: 
+12/21/20 15:28:56 DAGMAN_DEBUG setting: 
+12/21/20 15:28:56 DAGMAN_SUPPRESS_JOB_LOGS setting: False
+12/21/20 15:28:56 DAGMAN_REMOVE_NODE_JOBS setting: True
+12/21/20 15:28:56 DAGMAN will adjust edges after parsing
+12/21/20 15:28:56 Enabling log line cache for increased NFS performance.
+12/21/20 15:28:56 argv[0] == "condor_scheduniv_exec.154220533.0"
+12/21/20 15:28:56 argv[1] == "-Lockfile"
+12/21/20 15:28:56 argv[2] == "outdir_bbh_injection/submit/dag_bbh_injection.submit.lock"
+12/21/20 15:28:56 argv[3] == "-AutoRescue"
+12/21/20 15:28:56 argv[4] == "1"
+12/21/20 15:28:56 argv[5] == "-DoRescueFrom"
+12/21/20 15:28:56 argv[6] == "0"
+12/21/20 15:28:56 argv[7] == "-Dag"
+12/21/20 15:28:56 argv[8] == "outdir_bbh_injection/submit/dag_bbh_injection.submit"
+12/21/20 15:28:56 argv[9] == "-Suppress_notification"
+12/21/20 15:28:56 argv[10] == "-CsdVersion"
+12/21/20 15:28:56 argv[11] == "$CondorVersion: 8.9.8 Aug 06 2020 $"
+12/21/20 15:28:56 argv[12] == "-Dagman"
+12/21/20 15:28:56 argv[13] == "/cvmfs/oasis.opensciencegrid.org/ligo/sw/conda/envs/igwn-py37/bin/condor_dagman"
+12/21/20 15:28:56 Workflow batch-name: <dag_bbh_injection.submit+154220533>
+12/21/20 15:28:56 Workflow accounting_group: <>
+12/21/20 15:28:56 Workflow accounting_group_user: <>
+12/21/20 15:28:56 Warning: failed to get attribute DAGNodeName
+12/21/20 15:28:56 DAGMAN_LOG_ON_NFS_IS_ERROR setting: False
+12/21/20 15:28:56 Default node log file is: </home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log>
+12/21/20 15:28:56 DAG Lockfile will be written to outdir_bbh_injection/submit/dag_bbh_injection.submit.lock
+12/21/20 15:28:56 DAG Input file is outdir_bbh_injection/submit/dag_bbh_injection.submit
+12/21/20 15:28:56 Parsing 1 dagfiles
+12/21/20 15:28:56 Parsing outdir_bbh_injection/submit/dag_bbh_injection.submit ...
+12/21/20 15:28:56 Adjusting edges
+12/21/20 15:28:56 Dag contains 2 total jobs
+12/21/20 15:28:56 Bootstrapping...
+12/21/20 15:28:56 Number of pre-completed nodes: 0
+12/21/20 15:28:56 MultiLogFiles: truncating log file /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log
+12/21/20 15:28:56 DAG status: 0 (DAG_STATUS_OK)
+12/21/20 15:28:56 Of 2 nodes total:
+12/21/20 15:28:56  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+12/21/20 15:28:56   ===     ===      ===     ===     ===        ===      ===
+12/21/20 15:28:56     0       0        0       0       1          1        0
+12/21/20 15:28:56 0 job proc(s) currently held
+12/21/20 15:28:56 DAGMan Runtime Statistics: [ EventCycleTimeCount = 0.0; EventCycleTimeSum = 0.0; LogProcessCycleTimeCount = 0.0; LogProcessCycleTimeSum = 0.0; SleepCycleTimeCount = 0.0; SleepCycleTimeSum = 0.0; SubmitCycleTimeCount = 0.0; SubmitCycleTimeSum = 0.0; ]
+12/21/20 15:28:56 Registering condor_event_timer...
+12/21/20 15:28:57 Submitting HTCondor Node bbh_injection_data0_0_generation_arg_0 job(s)...
+12/21/20 15:28:57 Adding a DAGMan workflow log /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log
+12/21/20 15:28:57 Masking the events recorded in the DAGMAN workflow log
+12/21/20 15:28:57 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36
+12/21/20 15:28:57 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:28:58 From submit: Submitting job(s).
+12/21/20 15:28:58 From submit: ERROR: Failed to commit job submission into the queue.
+12/21/20 15:28:58 From submit: ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:28:58 failed while reading from pipe.
+12/21/20 15:28:58 Read so far: Submitting job(s).ERROR: Failed to commit job submission into the queue.ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:28:58 ERROR: submit attempt failed
+12/21/20 15:28:58 submit command was: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:28:58 Job submit try 1/6 failed, will try again in >= 1 second.
+12/21/20 15:28:58 DAG status: 0 (DAG_STATUS_OK)
+12/21/20 15:28:58 Of 2 nodes total:
+12/21/20 15:28:58  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+12/21/20 15:28:58   ===     ===      ===     ===     ===        ===      ===
+12/21/20 15:28:58     0       0        0       0       1          1        0
+12/21/20 15:28:58 0 job proc(s) currently held
+12/21/20 15:28:58 DAGMan Runtime Statistics: [ EventCycleTimeCount = 0.0; EventCycleTimeSum = 0.0; LogProcessCycleTimeCount = 0.0; LogProcessCycleTimeSum = 0.0; SleepCycleTimeCount = 0.0; SleepCycleTimeSum = 0.0; SubmitCycleTimeAvg = 0.1244490146636963; SubmitCycleTimeCount = 1.0; SubmitCycleTimeMax = 0.1244490146636963; SubmitCycleTimeMin = 0.1244490146636963; SubmitCycleTimeStd = 0.1244490146636963; SubmitCycleTimeSum = 0.1244490146636963; ]
+12/21/20 15:29:03 Submitting HTCondor Node bbh_injection_data0_0_generation_arg_0 job(s)...
+12/21/20 15:29:03 Adding a DAGMan workflow log /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log
+12/21/20 15:29:03 Masking the events recorded in the DAGMAN workflow log
+12/21/20 15:29:03 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36
+12/21/20 15:29:03 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:29:03 From submit: Submitting job(s).
+12/21/20 15:29:03 From submit: ERROR: Failed to commit job submission into the queue.
+12/21/20 15:29:03 From submit: ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:29:03 failed while reading from pipe.
+12/21/20 15:29:03 Read so far: Submitting job(s).ERROR: Failed to commit job submission into the queue.ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:29:03 ERROR: submit attempt failed
+12/21/20 15:29:03 submit command was: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:29:03 Job submit try 2/6 failed, will try again in >= 2 seconds.
+12/21/20 15:29:08 Submitting HTCondor Node bbh_injection_data0_0_generation_arg_0 job(s)...
+12/21/20 15:29:08 Adding a DAGMan workflow log /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log
+12/21/20 15:29:08 Masking the events recorded in the DAGMAN workflow log
+12/21/20 15:29:08 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36
+12/21/20 15:29:08 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:29:08 From submit: Submitting job(s).
+12/21/20 15:29:08 From submit: ERROR: Failed to commit job submission into the queue.
+12/21/20 15:29:08 From submit: ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:29:08 failed while reading from pipe.
+12/21/20 15:29:08 Read so far: Submitting job(s).ERROR: Failed to commit job submission into the queue.ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:29:08 ERROR: submit attempt failed
+12/21/20 15:29:08 submit command was: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:29:08 Job submit try 3/6 failed, will try again in >= 4 seconds.
+12/21/20 15:29:13 Submitting HTCondor Node bbh_injection_data0_0_generation_arg_0 job(s)...
+12/21/20 15:29:13 Adding a DAGMan workflow log /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log
+12/21/20 15:29:13 Masking the events recorded in the DAGMAN workflow log
+12/21/20 15:29:13 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36
+12/21/20 15:29:13 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:29:13 From submit: Submitting job(s).
+12/21/20 15:29:13 From submit: ERROR: Failed to commit job submission into the queue.
+12/21/20 15:29:13 From submit: ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:29:13 failed while reading from pipe.
+12/21/20 15:29:13 Read so far: Submitting job(s).ERROR: Failed to commit job submission into the queue.ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:29:13 ERROR: submit attempt failed
+12/21/20 15:29:13 submit command was: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:29:13 Job submit try 4/6 failed, will try again in >= 8 seconds.
+12/21/20 15:29:24 Submitting HTCondor Node bbh_injection_data0_0_generation_arg_0 job(s)...
+12/21/20 15:29:24 Adding a DAGMan workflow log /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log
+12/21/20 15:29:24 Masking the events recorded in the DAGMAN workflow log
+12/21/20 15:29:24 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36
+12/21/20 15:29:24 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:29:24 From submit: Submitting job(s).
+12/21/20 15:29:24 From submit: ERROR: Failed to commit job submission into the queue.
+12/21/20 15:29:24 From submit: ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:29:24 failed while reading from pipe.
+12/21/20 15:29:24 Read so far: Submitting job(s).ERROR: Failed to commit job submission into the queue.ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:29:24 ERROR: submit attempt failed
+12/21/20 15:29:24 submit command was: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:29:24 Job submit try 5/6 failed, will try again in >= 16 seconds.
+12/21/20 15:29:41 Submitting HTCondor Node bbh_injection_data0_0_generation_arg_0 job(s)...
+12/21/20 15:29:41 Adding a DAGMan workflow log /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log
+12/21/20 15:29:41 Masking the events recorded in the DAGMAN workflow log
+12/21/20 15:29:41 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36
+12/21/20 15:29:41 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:29:41 From submit: Submitting job(s).
+12/21/20 15:29:41 From submit: ERROR: Failed to commit job submission into the queue.
+12/21/20 15:29:41 From submit: ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:29:41 failed while reading from pipe.
+12/21/20 15:29:41 Read so far: Submitting job(s).ERROR: Failed to commit job submission into the queue.ERROR: Invalid value for search tag: FILL_THIS_IN
+12/21/20 15:29:41 ERROR: submit attempt failed
+12/21/20 15:29:41 submit command was: /usr/bin/condor_submit -a dag_node_name' '=' 'bbh_injection_data0_0_generation_arg_0 -a +DAGManJobId' '=' '154220533 -a DAGManJobId' '=' '154220533 -batch-name dag_bbh_injection.submit+154220533 -a submit_event_notes' '=' 'DAG' 'Node:' 'bbh_injection_data0_0_generation_arg_0 -a dagman_log' '=' '/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/submit/dag_bbh_injection.submit.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=bbh_injection_data0_0_generation_arg_0 -a ARGS' '=' 'outdir_bbh_injection/bbh_injection_config_complete.ini' '--submit' '--label' 'bbh_injection_data0_0_generation' '--idx' '0' '--trigger-time' '0' '--injection-file' 'outdir_bbh_injection/data/bbh_injection_injection_file.dat -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:29:41 Job submit failed after 6 tries.
+12/21/20 15:29:41 Shortcutting node bbh_injection_data0_0_generation_arg_0 retries because of submit failure(s)
+12/21/20 15:29:41 DAG status: 2 (DAG_STATUS_NODE_FAILED)
+12/21/20 15:29:41 Of 2 nodes total:
+12/21/20 15:29:41  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+12/21/20 15:29:41   ===     ===      ===     ===     ===        ===      ===
+12/21/20 15:29:41     0       0        0       0       0          1        1
+12/21/20 15:29:41 0 job proc(s) currently held
+12/21/20 15:29:41 DAGMan Runtime Statistics: [ EventCycleTimeAvg = 0.4288966059684753; EventCycleTimeCount = 8.0; EventCycleTimeMax = 1.001175880432129; EventCycleTimeMin = 0.03083086013793945; EventCycleTimeStd = 0.4769972345550595; EventCycleTimeSum = 3.431172847747803; LogProcessCycleTimeCount = 0.0; LogProcessCycleTimeSum = 0.0; SleepCycleTimeAvg = 5.00473490357399; SleepCycleTimeCount = 8.0; SleepCycleTimeMax = 5.005105018615723; SleepCycleTimeMin = 5.004163026809692; SleepCycleTimeStd = 0.0004125542034417438; SleepCycleTimeSum = 40.03787922859192; SubmitCycleTimeAvg = 0.4046024746365017; SubmitCycleTimeCount = 9.0; SubmitCycleTimeMax = 1.001067876815796; SubmitCycleTimeMin = 0.03061389923095703; SubmitCycleTimeStd = 0.4520922949126157; SubmitCycleTimeSum = 3.641422271728516; ]
+12/21/20 15:29:41 ERROR: the following job(s) failed:
+12/21/20 15:29:41 ---------------------- Job ----------------------
+12/21/20 15:29:41       Node Name: bbh_injection_data0_0_generation_arg_0
+12/21/20 15:29:41            Noop: false
+12/21/20 15:29:41          NodeID: 0
+12/21/20 15:29:41     Node Status: STATUS_ERROR    
+12/21/20 15:29:41 Node return val: -1
+12/21/20 15:29:41           Error: Job submit failed
+12/21/20 15:29:41 Job Submit File: outdir_bbh_injection/submit/bbh_injection_data0_0_generation.submit
+12/21/20 15:29:41  HTCondor Job ID: [not yet submitted]
+12/21/20 15:29:41 PARENTS:  WAITING: 0 CHILDREN: bbh_injection_data0_0_analysis_H1L1_dynesty_arg_0
+12/21/20 15:29:41 ---------------------------------------	<END>
+12/21/20 15:29:41 Aborting DAG...
+12/21/20 15:29:41 Writing Rescue DAG to outdir_bbh_injection/submit/dag_bbh_injection.submit.rescue001...
+12/21/20 15:29:41 Removing submitted jobs...
+12/21/20 15:29:41 Removing any/all submitted HTCondor jobs...
+12/21/20 15:29:41 Running: /usr/bin/condor_rm -const DAGManJobId==154220533
+12/21/20 15:29:41 Note: 0 total job deferrals because of -MaxJobs limit (12000)
+12/21/20 15:29:41 Note: 0 total job deferrals because of -MaxIdle limit (1000)
+12/21/20 15:29:41 Note: 0 total job deferrals because of node category throttles
+12/21/20 15:29:41 Note: 0 total PRE script deferrals because of -MaxPre limit (20) or DEFER
+12/21/20 15:29:41 Note: 0 total POST script deferrals because of -MaxPost limit (20) or DEFER
+12/21/20 15:29:41 DAG status: 2 (DAG_STATUS_NODE_FAILED)
+12/21/20 15:29:41 Of 2 nodes total:
+12/21/20 15:29:41  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+12/21/20 15:29:41   ===     ===      ===     ===     ===        ===      ===
+12/21/20 15:29:41     0       0        0       0       0          1        1
+12/21/20 15:29:41 0 job proc(s) currently held
+12/21/20 15:29:41 DAGMan Runtime Statistics: [ EventCycleTimeAvg = 0.4288966059684753; EventCycleTimeCount = 8.0; EventCycleTimeMax = 1.001175880432129; EventCycleTimeMin = 0.03083086013793945; EventCycleTimeStd = 0.4769972345550595; EventCycleTimeSum = 3.431172847747803; LogProcessCycleTimeCount = 0.0; LogProcessCycleTimeSum = 0.0; SleepCycleTimeAvg = 5.00473490357399; SleepCycleTimeCount = 8.0; SleepCycleTimeMax = 5.005105018615723; SleepCycleTimeMin = 5.004163026809692; SleepCycleTimeStd = 0.0004125542034417438; SleepCycleTimeSum = 40.03787922859192; SubmitCycleTimeAvg = 0.4046024746365017; SubmitCycleTimeCount = 9.0; SubmitCycleTimeMax = 1.001067876815796; SubmitCycleTimeMin = 0.03061389923095703; SubmitCycleTimeStd = 0.4520922949126157; SubmitCycleTimeSum = 3.641422271728516; ]
+12/21/20 15:29:41 Wrote metrics file outdir_bbh_injection/submit/dag_bbh_injection.submit.metrics.
+12/21/20 15:29:41 DAGMan Runtime Statistics: [ EventCycleTimeAvg = 0.4288966059684753; EventCycleTimeCount = 8.0; EventCycleTimeMax = 1.001175880432129; EventCycleTimeMin = 0.03083086013793945; EventCycleTimeStd = 0.4769972345550595; EventCycleTimeSum = 3.431172847747803; LogProcessCycleTimeCount = 0.0; LogProcessCycleTimeSum = 0.0; SleepCycleTimeAvg = 5.00473490357399; SleepCycleTimeCount = 8.0; SleepCycleTimeMax = 5.005105018615723; SleepCycleTimeMin = 5.004163026809692; SleepCycleTimeStd = 0.0004125542034417438; SleepCycleTimeSum = 40.03787922859192; SubmitCycleTimeAvg = 0.4046024746365017; SubmitCycleTimeCount = 9.0; SubmitCycleTimeMax = 1.001067876815796; SubmitCycleTimeMin = 0.03061389923095703; SubmitCycleTimeStd = 0.4520922949126157; SubmitCycleTimeSum = 3.641422271728516; ]
+12/21/20 15:29:41 **** condor_scheduniv_exec.154220533.0 (condor_DAGMAN) pid 714537 EXITING WITH STATUS 1

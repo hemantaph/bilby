@@ -28,6 +28,11 @@ class Fn:
         self.phic_ = phic_
         self.tc_ = tc_
         self.f_ = f_
+        self.M_ = (m1_+m2_)*Mo
+        self.eta_ = (m1_*m2_)/((m1_+m2_)**2)
+        self.chi_ = f_/f0_
+        self.ff_ = C**3/(G*(m1_+m2_)*Mo*np.pi*6**(3/2))
+        self.delta_ = (m1_-m2_)*Mo
 
     #defining unit-step function 
     def unitstep(self,lp,ff,f):
@@ -45,14 +50,12 @@ class Fn:
     
     ################COMMON_START#########################
     def k_(self, l):
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
-        eta = (m1*m2)/(M**2)
+        M = self.M_
+        eta = self.eta_
         f = self.f_
         f0 = self.f0_
         et0 = self.et0_
-        chi = f/f0  
+        chi = self.chi_
         
         x = ((G*M*2*np.pi*f)/( C**3 * l))**(2/3)
         
@@ -64,21 +67,19 @@ class Fn:
     def eccn(self, l, n):
         k = self.k_(l)
         
-        phic = self.phic_
-        tc = self.tc_ 
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
-        eta = (m1*m2)/(M**2)
+        M = self.M_
+        eta = self.eta_
         f = self.f_
         f0 = self.f0_
         et0 = self.et0_
-        chi = f/f0     
+        chi = self.chi_
+        phic = self.phic_
+        tc = self.tc_  
         
         #below abs is put because 2/3 power of a negative value is NaN.
         #this value will be taken care by the unistep function. 
         #negative value correspond to 0 of unistep function
-        x = np.power( np.abs((G*M*2*np.pi*f)/( C**3*(l - (l + n)*k/(1 + k)))),2/3 )
+        x = np.abs((G*M*2*np.pi*f)/( C**3*(l - (l + n)*k/(1 + k))))**(2/3)
 
         et = (x**(3/2) * (et0**5 * ((94739615555*np.pi)/(958169088*chi**(113/18))-(1586634546601*np.pi)/(27786903552*chi**(95/18))-(1422200801*np.pi)/(13307904*chi**(25/6))+(1318556431*np.pi)/(26615808*chi**(19/6))+(607032981553*np.pi)/(27786903552*chi**(37/18))-(6029825087*np.pi)/(958169088*chi**(19/18)))+et0**3 * (-((1252771*np.pi)/(87552*chi**(25/6)))+(396797*np.pi)/(43776*chi**(19/6))+(1315151*np.pi)/(131328*chi**(37/18))-(1252771*np.pi)/(262656*chi**(19/18)))+et0 * ((377*np.pi)/(144*chi**(37/18))-(377*np.pi)/(144*chi**(19/18))))+\
     \
@@ -97,28 +98,26 @@ class Fn:
         #change the dtype of the array to float64 
         
         
-        return( np.nan_to_num(et.astype('float64')) )
+        return( et.astype('float64') )
         #return( np.nan_to_num(et.astype('float64')) )
     
         #fourier phase
     def psi_l(self, l, n):
         k = self.k_(l)
         
-        phic = self.phic_
-        tc = self.tc_ 
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
-        eta = (m1*m2)/(M**2)
+        M = self.M_
+        eta = self.eta_
         f = self.f_
         f0 = self.f0_
         et0 = self.et0_
-        chi = f/f0     
+        chi = self.chi_
+        phic = self.phic_
+        tc = self.tc_      
         
         #here below, abs is put because 2/3 power of a negative value is NaN.
         #this value will be taken care by the unistep function. 
         #negative value correspond to 0 of unistep function
-        x = np.power( np.abs((G*M*2*np.pi*f)/( C**3*(l - (l + n)*k/(1 + k)))),2/3 )
+        x = np.abs((G*M*2*np.pi*f)/( C**3*(l - (l + n)*k/(1 + k))))**(2/3)
 
         psi = ( - 2*np.pi*f*tc + (l - (l + n)*k/(1 + k))*phic - 1/(256*x**(5/2)*eta)*3*l * (1 +\
     \
@@ -139,22 +138,25 @@ class Fn:
         #this is due to log
         #change the dtype of the array to float64 
         
-        return( np.nan_to_num(psi.astype('float64')) ) 
+        return( psi.astype('float64') ) 
     ###################COMMON_END######################
     
     ##################0PN_START######################
     def xi_l0(self, l, n):
         et = self.eccn(l,n)
+        k = self.k_(l)
+        
+        M = self.M_
+        eta = self.eta_
+        f = self.f_
+        f0 = self.f0_
+        et0 = self.et0_
+        chi = self.chi_
         iota = self.iota_
         beta = self.beta_
         Fp = self.Fp_
         Fc = self.Fc_
-        f = self.f_
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
-        ff = C**3/(G*M*np.pi*6**(3/2))
-        k = self.k_(l)
+        ff = self.ff_
 
         if self.uniarray( (l-(l+n)*(k/(1+k))) ,ff,f)==0:
             xil = 0.0
@@ -179,18 +181,15 @@ class Fn:
         return(xil)
  
     def htilde0(self):
-        
         k = self.k_
         
         xil = self.xi_l0
         psi = self.psi_l
         f = self.f_
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
+        M = self.M_
         D = self.D_
-        ff = C**3/(G*M*np.pi*6**(3/2))
-        eta = (m1*m2)/(M**2)
+        ff = self.ff_
+        eta = self.eta_
         
         s1 = 0
         s2 = 0
@@ -217,16 +216,19 @@ class Fn:
 
     def xi_l05(self, l, n):
         et = self.eccn(l,n)
+        k = self.k_(l)
+        
+        M = self.M_
+        eta = self.eta_
+        f = self.f_
+        f0 = self.f0_
+        et0 = self.et0_
+        chi = self.chi_
         iota = self.iota_
         beta = self.beta_
         Fp = self.Fp_
         Fc = self.Fc_
-        f = self.f_
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
-        ff = C**3/(G*M*np.pi*6**(3/2))
-        k = self.k_(l)
+        ff = self.ff_
 
         if self.uniarray( (l-(l+n)*(k/(1+k))) ,ff,f)==0:
             xil = 0.0
@@ -251,20 +253,16 @@ class Fn:
         return(xil)
  
     def htilde05(self):
-        
         k = self.k_
         
         xil = self.xi_l05
         psi = self.psi_l
         f = self.f_
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
+        M = self.M_
         D = self.D_
-        ff = C**3/(G*M*np.pi*6**(3/2))
-        eta = (m1*m2)/(M**2)
-        
-        
+        ff = self.ff_
+        eta = self.eta_
+
         s1 = 0
         s2 = 0
         s3 = 0 
@@ -292,17 +290,19 @@ class Fn:
 
     def xi_l1(self, l, n):
         et = self.eccn(l,n)
+        k = self.k_(l)
+        
+        M = self.M_
+        eta = self.eta_
+        f = self.f_
+        f0 = self.f0_
+        et0 = self.et0_
+        chi = self.chi_
         iota = self.iota_
         beta = self.beta_
         Fp = self.Fp_
         Fc = self.Fc_
-        f = self.f_
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
-        eta = (m1*m2)/(M**2)
-        ff = C**3/(G*M*np.pi*6**(3/2))
-        k = self.k_(l)
+        ff = self.ff_
 
         if self.uniarray( (l-(l+n)*(k/(1+k))) ,ff,f)==0:
             xil = 0.0
@@ -325,19 +325,22 @@ class Fn:
             xil = (numerator/denomitor)*al*np.exp(-1j*phil)    
         
         return(xil)
+    
     def xi_pn(self, l, n):
         et = self.eccn(l,n)
+        k = self.k_(l)
+        
+        M = self.M_
+        eta = self.eta_
+        f = self.f_
+        f0 = self.f0_
+        et0 = self.et0_
+        chi = self.chi_
         iota = self.iota_
         beta = self.beta_
         Fp = self.Fp_
         Fc = self.Fc_
-        f = self.f_
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
-        eta = (m1*m2)/(M**2)
-        ff = C**3/(G*M*np.pi*6**(3/2))
-        k = self.k_(l)
+        ff = self.ff_
 
         if self.uniarray( (l-(l+n)*(k/(1+k))) ,ff,f)==0:
             xil = 0.0
@@ -361,54 +364,19 @@ class Fn:
             xil = (numerator/denomitor)*al*np.exp(-1j*phil)    
         
         return(xil)
-    '''
-    def xi_pn(self, l, nn):
-        n = -2
-        et = self.eccn(l,nn)
-        iota = self.iota_
-        beta = self.beta_
-        Fp = self.Fp_
-        Fc = self.Fc_
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
-        eta = (m1*m2)/(M**2)
 
-        #calling class for Cx C+ Sx S+
-        fn = h0CpxSpx4.Fn(et,iota,beta)                                                                                                                                                          
-        #to find Xi                                                                   
-        Gamma_l = Fp*fn.cplus(l,n) + Fc*fn.ccross(l,n)
-        Sigma_l = Fp*fn.splus(l,n) + Fc*fn.scross(l,n)
-
-        al = np.sign(Gamma_l)*np.sqrt(Gamma_l**2 + Sigma_l**2)
-
-        if Gamma_l==0:
-            phil = -np.sign(Sigma_l)*np.pi/2 
-        else:
-            phil = np.arctan(- (Sigma_l/Gamma_l))            
-        
-        numerator = (1-et**2)**(3/4)*(11888 + 14784*eta - et**2*(87720-159600*eta) - et**4*(171038-141708*eta) - et**6*(11717-8288*eta))
-        denomitor = ( 1 + (73/24)*et**2 + (37/96)*et**4 )**(3/2) * 10752
-         
-        xil = (numerator/denomitor)*al*np.exp(-1j*phil)    
-        
-        return(xil)
-    '''                                                                                  
- 
+    
     def htilde1(self):
-        
         k = self.k_
         
         xil = self.xi_l1
         xipn = self.xi_pn 
         psi = self.psi_l
         f = self.f_
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
+        M = self.M_
         D = self.D_
-        ff = C**3/(G*M*np.pi*6**(3/2))
-        eta = (m1*m2)/(M**2)
+        ff = self.ff_
+        eta = self.eta_
         
         s1 = 0
         s2 = 0
@@ -442,16 +410,14 @@ class Fn:
         hf05 = self.htilde05()
         hf1 = self.htilde1()
         f = self.f_
-        m1 = self.m1_
-        m2 = self.m2_
-        M = m1 + m2
+        M = self.M_
         D = self.D_
-        eta = (m1*m2)/(M**2)
-        delta = m1-m2
+        eta = self.eta_
+        delta = self.delta_
         
         #hf = ((5*np.pi*eta)/384)**(1/2) * (G**2*M**2)/(C**5*D)*( (((G*M*np.pi*f)/C**3)**(-7/6))*hf0 + (((G*M*np.pi*f)/C**3)**(-5/6))*(delta/M)*hf05 )
         
-        hf = np.power(((5*np.pi*eta)/384),(1/2)) * (G**2*M**2)/(C**5*D)*( np.power(((G*M*np.pi*f)/C**3),(-7/6))*hf0 + np.power(((G*M*np.pi*f)/C**3),(-5/6))*(delta/M)*hf05 + np.power(((G*M*np.pi*f)/C**3),(-1/2))*hf1 )
+        hf = (((5*np.pi*eta)/384)**(1/2)) * (G**2*M**2)/(C**5*D)*( (((G*M*np.pi*f)/C**3)**(-7/6))*hf0 + (((G*M*np.pi*f)/C**3)**(-5/6))*(delta/M)*hf05 + (((G*M*np.pi*f)/C**3)**(-1/2))*hf1 )
         
         return(hf)
                                                                                       
