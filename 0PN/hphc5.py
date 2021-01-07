@@ -415,9 +415,8 @@ class Fn:
         eta = self.eta_
         delta = self.delta_
         
-        #hf = ((5*np.pi*eta)/384)**(1/2) * (G**2*M**2)/(C**5*D)*( (((G*M*np.pi*f)/C**3)**(-7/6))*hf0 + (((G*M*np.pi*f)/C**3)**(-5/6))*(delta/M)*hf05 )
-        
         hf = (((5*np.pi*eta)/384)**(1/2)) * (G**2*M**2)/(C**5*D)*( (((G*M*np.pi*f)/C**3)**(-7/6))*hf0 + (((G*M*np.pi*f)/C**3)**(-5/6))*(delta/M)*hf05 + (((G*M*np.pi*f)/C**3)**(-1/2))*hf1 )
+        #hf = (((5*np.pi*eta)/384)**(1/2)) * (G**2*M**2)/(C**5*D)*( (((G*M*np.pi*f)/C**3)**(-7/6))*hf0)
         
         return(hf)
                                                                                       
