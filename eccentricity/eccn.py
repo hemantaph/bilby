@@ -1,6 +1,6 @@
 import numpy as np
 import bilby
-import hphc8
+import hphc
 
 duration = 2.
 sampling_frequency = 1024.
