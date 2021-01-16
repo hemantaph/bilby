@@ -2,6 +2,11 @@ import numpy as np
 import bilby
 import hphc
 
+C = 299792458.
+G = 6.67408*1e-11
+Mo = 1.989*1e30
+Mpc = 3.086*1e22
+
 duration = 2.
 sampling_frequency = 1024.
 
