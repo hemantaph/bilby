@@ -31,7 +31,7 @@ def eccentric_waveform(frequency_array, mass_1, mass_2, eccentricity, luminosity
         if f>=fmin and f<=fmax:        
             arg_plus = {'iota_':theta_jn, 'beta_':psi, 'D_':luminosity_distance , 'm1_':mass_1, 'm2_':mass_2, 'f_':f, 'f0_':20.0, 'Fp_':1.0, 'Fc_':0.0, 'et0_':eccentricity, 'phic_':phase, 'tc_':geocent_time}
 
-            fplus = hphc8.Fn(**arg_plus)
+            fplus = hphc.Fn(**arg_plus)
             
             h_plus[k] = fplus.htilde()[0]
             h_cross[k] = fplus.htilde()[1]
