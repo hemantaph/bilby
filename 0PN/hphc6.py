@@ -102,440 +102,440 @@ class Fn:
         #I could have used a transpose but I am saving computation time
 
         ###################cplus0_start####################
-        #Cp05[l-1,n]
+        #Cp0[l-1,n]
         Cp0=np.zeros((10,3))
     
-        Cp0[0,-2]=et[-2,0]**3*(-(13/16)*cosine(2*beta)-13/16*cosine(iota)**2*cosine(2*beta))+et[-2,0]**5*(-(5/384)*cosine(2*beta)-5/384*cosine(iota)**2*cosine(2*beta))+et[-2,0]*(3/2*cosine(2*beta)+3/2*cosine(iota)**2*cosine(2*beta))
+        Cp0[0,-2]=et[0,-2]**3*(-(13/16)*cosine(2*beta)-13/16*cosine(iota)**2*cosine(2*beta))+et[0,-2]**5*(-(5/384)*cosine(2*beta)-5/384*cosine(iota)**2*cosine(2*beta))+et[0,-2]*(3/2*cosine(2*beta)+3/2*cosine(iota)**2*cosine(2*beta))
 
-        Cp0[1,-2]=-2*cosine(2*beta)-2*cosine(iota)**2*cosine(2*beta)+et[-2,1]**4*(-(23/8)*cosine(2*beta)-23/8*cosine(iota)**2*cosine(2*beta))+et[-2,1]**6*(65/144*cosine(2*beta)+65/144*cosine(iota)**2*cosine(2*beta))+et[-2,1]**2*(5*cosine(2*beta)+5*cosine(iota)**2*cosine(2*beta))
+        Cp0[1,-2]=-2*cosine(2*beta)-2*cosine(iota)**2*cosine(2*beta)+et[1,-2]**4*(-(23/8)*cosine(2*beta)-23/8*cosine(iota)**2*cosine(2*beta))+et[1,-2]**6*(65/144*cosine(2*beta)+65/144*cosine(iota)**2*cosine(2*beta))+et[1,-2]**2*(5*cosine(2*beta)+5*cosine(iota)**2*cosine(2*beta))
 
-        Cp0[2,-2]=et[-2,2]**5*(-(963/128)*cosine(2*beta)-963/128*cosine(iota)**2*cosine(2*beta))+et[-2,2]*(-(9/2)*cosine(2*beta)-9/2*cosine(iota)**2*cosine(2*beta))+et[-2,2]**3*(171/16*cosine(2*beta)+171/16*cosine(iota)**2*cosine(2*beta))
+        Cp0[2,-2]=et[2,-2]**5*(-(963/128)*cosine(2*beta)-963/128*cosine(iota)**2*cosine(2*beta))+et[2,-2]*(-(9/2)*cosine(2*beta)-9/2*cosine(iota)**2*cosine(2*beta))+et[2,-2]**3*(171/16*cosine(2*beta)+171/16*cosine(iota)**2*cosine(2*beta))
 
-        Cp0[3,-2]=et[-2,3]**6*(-(101/6)*cosine(2*beta)-101/6*cosine(iota)**2*cosine(2*beta))+et[-2,3]**2*(-8*cosine(2*beta)-8*cosine(iota)**2*cosine(2*beta))+et[-2,3]**4*(20*cosine(2*beta)+20*cosine(iota)**2*cosine(2*beta))
+        Cp0[3,-2]=et[3,-2]**6*(-(101/6)*cosine(2*beta)-101/6*cosine(iota)**2*cosine(2*beta))+et[3,-2]**2*(-8*cosine(2*beta)-8*cosine(iota)**2*cosine(2*beta))+et[3,-2]**4*(20*cosine(2*beta)+20*cosine(iota)**2*cosine(2*beta))
 
-        Cp0[4,-2]=et[-2,4]**3*(-(625/48)*cosine(2*beta)-625/48*cosine(iota)**2*cosine(2*beta))+et[-2,4]**5*(26875/768*cosine(2*beta)+26875/768*cosine(iota)**2*cosine(2*beta))
+        Cp0[4,-2]=et[4,-2]**3*(-(625/48)*cosine(2*beta)-625/48*cosine(iota)**2*cosine(2*beta))+et[4,-2]**5*(26875/768*cosine(2*beta)+26875/768*cosine(iota)**2*cosine(2*beta))
 
-        Cp0[5,-2]=et[-2,5]**4*(-(81/4)*cosine(2*beta)-81/4*cosine(iota)**2*cosine(2*beta))+et[-2,5]**6*(2349/40*cosine(2*beta)+2349/40*cosine(iota)**2*cosine(2*beta))
+        Cp0[5,-2]=et[5,-2]**4*(-(81/4)*cosine(2*beta)-81/4*cosine(iota)**2*cosine(2*beta))+et[5,-2]**6*(2349/40*cosine(2*beta)+2349/40*cosine(iota)**2*cosine(2*beta))
 
-        Cp0[6,-2]=et[-2,6]**5*(-((117649*cosine(2*beta))/3840)-(117649*cosine(iota)**2*cosine(2*beta))/3840)
+        Cp0[6,-2]=et[6,-2]**5*(-((117649*cosine(2*beta))/3840)-(117649*cosine(iota)**2*cosine(2*beta))/3840)
 
-        Cp0[7,-2]=et[-2,7]**6*(-(2048/45)*cosine(2*beta)-2048/45*cosine(iota)**2*cosine(2*beta))
+        Cp0[7,-2]=et[7,-2]**6*(-(2048/45)*cosine(2*beta)-2048/45*cosine(iota)**2*cosine(2*beta))
 
 
         Cp0[0,0]=et[0,0]*sine(iota)**2-1/8*et[0,0]**3*sine(iota)**2+1/192*et[0,0]**5*sine(iota)**2
 
-        Cp0[1,0]=et[0,1]**2*sine(iota)**2-1/3*et[0,1]**4*sine(iota)**2+1/24*et[0,1]**6*sine(iota)**2
+        Cp0[1,0]=et[1,0]**2*sine(iota)**2-1/3*et[1,0]**4*sine(iota)**2+1/24*et[1,0]**6*sine(iota)**2
 
-        Cp0[2,0]=9/8*et[0,2]**3*sine(iota)**2-81/128*et[0,2]**5*sine(iota)**2
+        Cp0[2,0]=9/8*et[2,0]**3*sine(iota)**2-81/128*et[2,0]**5*sine(iota)**2
 
-        Cp0[3,0]=4/3*et[0,3]**4*sine(iota)**2-16/15*et[0,3]**6*sine(iota)**2
+        Cp0[3,0]=4/3*et[3,0]**4*sine(iota)**2-16/15*et[3,0]**6*sine(iota)**2
 
-        Cp0[4,0]=625/384*et[0,4]**5*sine(iota)**2
+        Cp0[4,0]=625/384*et[4,0]**5*sine(iota)**2
 
-        Cp0[5,0]=81/40*et[0,5]**6*sine(iota)**2
+        Cp0[5,0]=81/40*et[5,0]**6*sine(iota)**2
 
 
-        Cp0[0,2]=et[2,0]**5*(47/768*cosine(2*beta)+47/768*cosine(iota)**2*cosine(2*beta))+et[2,0]**3*(7/48*cosine(2*beta)+7/48*cosine(iota)**2*cosine(2*beta))
+        Cp0[0,2]=et[0,2]**5*(47/768*cosine(2*beta)+47/768*cosine(iota)**2*cosine(2*beta))+et[0,2]**3*(7/48*cosine(2*beta)+7/48*cosine(iota)**2*cosine(2*beta))
 
-        Cp0[1,2]=et[2,1]**6*(11/240*cosine(2*beta)+11/240*cosine(iota)**2*cosine(2*beta))+et[2,1]**4*(1/8*cosine(2*beta)+1/8*cosine(iota)**2*cosine(2*beta))
+        Cp0[1,2]=et[1,2]**6*(11/240*cosine(2*beta)+11/240*cosine(iota)**2*cosine(2*beta))+et[1,2]**4*(1/8*cosine(2*beta)+1/8*cosine(iota)**2*cosine(2*beta))
 
         Cp0[2,2]=et[2,2]**5*((153*cosine(2*beta))/1280+(153*cosine(iota)**2*cosine(2*beta))/1280)
 
-        Cp0[3,2]=et[2,3]**6*(11/90*cosine(2*beta)+11/90*cosine(iota)**2*cosine(2*beta))
+        Cp0[3,2]=et[3,2]**6*(11/90*cosine(2*beta)+11/90*cosine(iota)**2*cosine(2*beta))
         
         ###################splus0_start####################
         Sp0=np.zeros((10,3))
 
-        Sp0[0,-2]=et[-2,0]**3*(-(13/16)*sine(2*beta)-13/16*cosine(iota)**2*sine(2*beta))+et[-2,0]**5*(-(5/384)*sine(2*beta)-5/384*cosine(iota)**2*sine(2*beta))+et[-2,0]*(3/2*sine(2*beta)+3/2*cosine(iota)**2*sine(2*beta))
+        Sp0[0,-2]=et[0,-2]**3*(-(13/16)*sine(2*beta)-13/16*cosine(iota)**2*sine(2*beta))+et[0,-2]**5*(-(5/384)*sine(2*beta)-5/384*cosine(iota)**2*sine(2*beta))+et[0,-2]*(3/2*sine(2*beta)+3/2*cosine(iota)**2*sine(2*beta))
 
-        Sp0[1,-2]=-2*sine(2*beta)-2*cosine(iota)**2*sine(2*beta)+et[-2,1]**4*(-(23/8)*sine(2*beta)-23/8*cosine(iota)**2*sine(2*beta))+et[-2,1]**6*(65/144*sine(2*beta)+65/144*cosine(iota)**2*sine(2*beta))+et[-2,1]**2*(5*sine(2*beta)+5*cosine(iota)**2*sine(2*beta))
+        Sp0[1,-2]=-2*sine(2*beta)-2*cosine(iota)**2*sine(2*beta)+et[1,-2]**4*(-(23/8)*sine(2*beta)-23/8*cosine(iota)**2*sine(2*beta))+et[1,-2]**6*(65/144*sine(2*beta)+65/144*cosine(iota)**2*sine(2*beta))+et[1,-2]**2*(5*sine(2*beta)+5*cosine(iota)**2*sine(2*beta))
 
-        Sp0[2,-2]=et[-2,2]**5*(-(963/128)*sine(2*beta)-963/128*cosine(iota)**2*sine(2*beta))+et[-2,2]*(-(9/2)*sine(2*beta)-9/2*cosine(iota)**2*sine(2*beta))+et[-2,2]**3*(171/16*sine(2*beta)+171/16*cosine(iota)**2*sine(2*beta))
+        Sp0[2,-2]=et[2,-2]**5*(-(963/128)*sine(2*beta)-963/128*cosine(iota)**2*sine(2*beta))+et[2,-2]*(-(9/2)*sine(2*beta)-9/2*cosine(iota)**2*sine(2*beta))+et[2,-2]**3*(171/16*sine(2*beta)+171/16*cosine(iota)**2*sine(2*beta))
 
-        Sp0[3,-2]=et[-2,3]**6*(-(101/6)*sine(2*beta)-101/6*cosine(iota)**2*sine(2*beta))+et[-2,3]**2*(-8*sine(2*beta)-8*cosine(iota)**2*sine(2*beta))+et[-2,3]**4*(20*sine(2*beta)+20*cosine(iota)**2*sine(2*beta))
+        Sp0[3,-2]=et[3,-2]**6*(-(101/6)*sine(2*beta)-101/6*cosine(iota)**2*sine(2*beta))+et[3,-2]**2*(-8*sine(2*beta)-8*cosine(iota)**2*sine(2*beta))+et[3,-2]**4*(20*sine(2*beta)+20*cosine(iota)**2*sine(2*beta))
 
-        Sp0[4,-2]=et[-2,4]**3*(-(625/48)*sine(2*beta)-625/48*cosine(iota)**2*sine(2*beta))+et[-2,4]**5*(26875/768*sine(2*beta)+26875/768*cosine(iota)**2*sine(2*beta))
+        Sp0[4,-2]=et[4,-2]**3*(-(625/48)*sine(2*beta)-625/48*cosine(iota)**2*sine(2*beta))+et[4,-2]**5*(26875/768*sine(2*beta)+26875/768*cosine(iota)**2*sine(2*beta))
 
-        Sp0[5,-2]=et[-2,5]**4*(-(81/4)*sine(2*beta)-81/4*cosine(iota)**2*sine(2*beta))+et[-2,5]**6*(2349/40*sine(2*beta)+2349/40*cosine(iota)**2*sine(2*beta))
+        Sp0[5,-2]=et[5,-2]**4*(-(81/4)*sine(2*beta)-81/4*cosine(iota)**2*sine(2*beta))+et[5,-2]**6*(2349/40*sine(2*beta)+2349/40*cosine(iota)**2*sine(2*beta))
 
-        Sp0[6,-2]=et[-2,6]**5*(-((117649*sine(2*beta))/3840)-(117649*cosine(iota)**2*sine(2*beta))/3840)
+        Sp0[6,-2]=et[6,-2]**5*(-((117649*sine(2*beta))/3840)-(117649*cosine(iota)**2*sine(2*beta))/3840)
 
-        Sp0[7,-2]=et[-2,7]**6*(-(2048/45)*sine(2*beta)-2048/45*cosine(iota)**2*sine(2*beta))
+        Sp0[7,-2]=et[7,-2]**6*(-(2048/45)*sine(2*beta)-2048/45*cosine(iota)**2*sine(2*beta))
 
 
-        Sp0[0,2]=et[2,0]**3*(-(7/48)*sine(2*beta)-7/48*cosine(iota)**2*sine(2*beta))+et[2,0]**5*(-(47/768)*sine(2*beta)-47/768*cosine(iota)**2*sine(2*beta))
+        Sp0[0,2]=et[0,2]**3*(-(7/48)*sine(2*beta)-7/48*cosine(iota)**2*sine(2*beta))+et[0,2]**5*(-(47/768)*sine(2*beta)-47/768*cosine(iota)**2*sine(2*beta))
 
-        Sp0[1,2]=et[2,1]**4*(-(1/8)*sine(2*beta)-1/8*cosine(iota)**2*sine(2*beta))+et[2,1]**6*(-(11/240)*sine(2*beta)-11/240*cosine(iota)**2*sine(2*beta))
+        Sp0[1,2]=et[1,2]**4*(-(1/8)*sine(2*beta)-1/8*cosine(iota)**2*sine(2*beta))+et[1,2]**6*(-(11/240)*sine(2*beta)-11/240*cosine(iota)**2*sine(2*beta))
 
         Sp0[2,2]=et[2,2]**5*(-((153*sine(2*beta))/1280)-(153*cosine(iota)**2*sine(2*beta))/1280)
 
-        Sp0[3,2]=et[2,3]**6*(-(11/90)*sine(2*beta)-11/90*cosine(iota)**2*sine(2*beta))
+        Sp0[3,2]=et[3,2]**6*(-(11/90)*sine(2*beta)-11/90*cosine(iota)**2*sine(2*beta))
         
         ###################ccross0_start####################
         Cx0=np.zeros((10,3))
 
-        Cx0[0,-2]=-3*et[-2,0]*cosine(iota)*sine(2*beta)+13/8*et[-2,0]**3*cosine(iota)*sine(2*beta)+5/192*et[-2,0]**5*cosine(iota)*sine(2*beta)
+        Cx0[0,-2]=-3*et[0,-2]*cosine(iota)*sine(2*beta)+13/8*et[0,-2]**3*cosine(iota)*sine(2*beta)+5/192*et[0,-2]**5*cosine(iota)*sine(2*beta)
 
-        Cx0[1,-2]=4*cosine(iota)*sine(2*beta)-10*et[-2,1]**2*cosine(iota)*sine(2*beta)+23/4*et[-2,1]**4*cosine(iota)*sine(2*beta)-65/72*et[-2,1]**6*cosine(iota)*sine(2*beta)
+        Cx0[1,-2]=4*cosine(iota)*sine(2*beta)-10*et[1,-2]**2*cosine(iota)*sine(2*beta)+23/4*et[1,-2]**4*cosine(iota)*sine(2*beta)-65/72*et[1,-2]**6*cosine(iota)*sine(2*beta)
 
-        Cx0[2,-2]=9*et[-2,2]*cosine(iota)*sine(2*beta)-171/8*et[-2,2]**3*cosine(iota)*sine(2*beta)+963/64*et[-2,2]**5*cosine(iota)*sine(2*beta)
+        Cx0[2,-2]=9*et[2,-2]*cosine(iota)*sine(2*beta)-171/8*et[2,-2]**3*cosine(iota)*sine(2*beta)+963/64*et[2,-2]**5*cosine(iota)*sine(2*beta)
 
-        Cx0[3,-2]=16*et[-2,3]**2*cosine(iota)*sine(2*beta)-40*et[-2,3]**4*cosine(iota)*sine(2*beta)+101/3*et[-2,3]**6*cosine(iota)*sine(2*beta)
+        Cx0[3,-2]=16*et[3,-2]**2*cosine(iota)*sine(2*beta)-40*et[3,-2]**4*cosine(iota)*sine(2*beta)+101/3*et[3,-2]**6*cosine(iota)*sine(2*beta)
 
-        Cx0[4,-2]=625/24*et[-2,4]**3*cosine(iota)*sine(2*beta)-26875/384*et[-2,4]**5*cosine(iota)*sine(2*beta)
+        Cx0[4,-2]=625/24*et[4,-2]**3*cosine(iota)*sine(2*beta)-26875/384*et[4,-2]**5*cosine(iota)*sine(2*beta)
 
-        Cx0[5,-2]=81/2*et[-2,5]**4*cosine(iota)*sine(2*beta)-2349/20*et[-2,5]**6*cosine(iota)*sine(2*beta)
+        Cx0[5,-2]=81/2*et[5,-2]**4*cosine(iota)*sine(2*beta)-2349/20*et[5,-2]**6*cosine(iota)*sine(2*beta)
 
-        Cx0[6,-2]=(117649*et[-2,6]**5*cosine(iota)*sine(2*beta))/1920
+        Cx0[6,-2]=(117649*et[6,-2]**5*cosine(iota)*sine(2*beta))/1920
 
-        Cx0[7,-2]=4096/45*et[-2,7]**6*cosine(iota)*sine(2*beta)
+        Cx0[7,-2]=4096/45*et[7,-2]**6*cosine(iota)*sine(2*beta)
 
 
-        Cx0[0,2]=-(7/24)*et[2,0]**3*cosine(iota)*sine(2*beta)-47/384*et[2,0]**5*cosine(iota)*sine(2*beta)
+        Cx0[0,2]=-(7/24)*et[0,2]**3*cosine(iota)*sine(2*beta)-47/384*et[0,2]**5*cosine(iota)*sine(2*beta)
 
-        Cx0[1,2]=-(1/4)*et[2,1]**4*cosine(iota)*sine(2*beta)-11/120*et[2,1]**6*cosine(iota)*sine(2*beta)
+        Cx0[1,2]=-(1/4)*et[1,2]**4*cosine(iota)*sine(2*beta)-11/120*et[1,2]**6*cosine(iota)*sine(2*beta)
 
         Cx0[2,2]=-(153/640)*et[2,2]**5*cosine(iota)*sine(2*beta)
 
-        Cx0[3,2]=-(11/45)*et[2,3]**6*cosine(iota)*sine(2*beta)
+        Cx0[3,2]=-(11/45)*et[3,2]**6*cosine(iota)*sine(2*beta)
         
         ###################scross0_start####################
         Sx0=np.zeros((10,3))
         
-        Sx0[0,-2]=3*et[-2,0]*cosine(iota)*cosine(2*beta)-13/8*et[-2,0]**3*cosine(iota)*cosine(2*beta)-5/192*et[-2,0]**5*cosine(iota)*cosine(2*beta)
+        Sx0[0,-2]=3*et[0,-2]*cosine(iota)*cosine(2*beta)-13/8*et[0,-2]**3*cosine(iota)*cosine(2*beta)-5/192*et[0,-2]**5*cosine(iota)*cosine(2*beta)
 
-        Sx0[1,-2]=-4*cosine(iota)*cosine(2*beta)+10*et[-2,1]**2*cosine(iota)*cosine(2*beta)-23/4*et[-2,1]**4*cosine(iota)*cosine(2*beta)+65/72*et[-2,1]**6*cosine(iota)*cosine(2*beta)
+        Sx0[1,-2]=-4*cosine(iota)*cosine(2*beta)+10*et[1,-2]**2*cosine(iota)*cosine(2*beta)-23/4*et[1,-2]**4*cosine(iota)*cosine(2*beta)+65/72*et[1,-2]**6*cosine(iota)*cosine(2*beta)
 
-        Sx0[2,-2]=-9*et[-2,2]*cosine(iota)*cosine(2*beta)+171/8*et[-2,2]**3*cosine(iota)*cosine(2*beta)-963/64*et[-2,2]**5*cosine(iota)*cosine(2*beta)
+        Sx0[2,-2]=-9*et[2,-2]*cosine(iota)*cosine(2*beta)+171/8*et[2,-2]**3*cosine(iota)*cosine(2*beta)-963/64*et[2,-2]**5*cosine(iota)*cosine(2*beta)
 
-        Sx0[3,-2]=-16*et[-2,3]**2*cosine(iota)*cosine(2*beta)+40*et[-2,3]**4*cosine(iota)*cosine(2*beta)-101/3*et[-2,3]**6*cosine(iota)*cosine(2*beta)
+        Sx0[3,-2]=-16*et[3,-2]**2*cosine(iota)*cosine(2*beta)+40*et[3,-2]**4*cosine(iota)*cosine(2*beta)-101/3*et[3,-2]**6*cosine(iota)*cosine(2*beta)
 
-        Sx0[4,-2]=-(625/24)*et[-2,4]**3*cosine(iota)*cosine(2*beta)+26875/384*et[-2,4]**5*cosine(iota)*cosine(2*beta)
+        Sx0[4,-2]=-(625/24)*et[4,-2]**3*cosine(iota)*cosine(2*beta)+26875/384*et[4,-2]**5*cosine(iota)*cosine(2*beta)
 
-        Sx0[5,-2]=-(81/2)*et[-2,5]**4*cosine(iota)*cosine(2*beta)+2349/20*et[-2,5]**6*cosine(iota)*cosine(2*beta)
+        Sx0[5,-2]=-(81/2)*et[5,-2]**4*cosine(iota)*cosine(2*beta)+2349/20*et[5,-2]**6*cosine(iota)*cosine(2*beta)
 
-        Sx0[6,-2]=-((117649*et[-2,6]**5*cosine(iota)*cosine(2*beta))/1920)
+        Sx0[6,-2]=-((117649*et[6,-2]**5*cosine(iota)*cosine(2*beta))/1920)
 
-        Sx0[7,-2]=-(4096/45)*et[-2,7]**6*cosine(iota)*cosine(2*beta)
+        Sx0[7,-2]=-(4096/45)*et[7,-2]**6*cosine(iota)*cosine(2*beta)
 
 
-        Sx0[0,2]=-(7/24)*et[2,0]**3*cosine(iota)*cosine(2*beta)-47/384*et[2,0]**5*cosine(iota)*cosine(2*beta)
+        Sx0[0,2]=-(7/24)*et[0,2]**3*cosine(iota)*cosine(2*beta)-47/384*et[0,2]**5*cosine(iota)*cosine(2*beta)
 
-        Sx0[1,2]=-(1/4)*et[2,1]**4*cosine(iota)*cosine(2*beta)-11/120*et[2,1]**6*cosine(iota)*cosine(2*beta)
+        Sx0[1,2]=-(1/4)*et[1,2]**4*cosine(iota)*cosine(2*beta)-11/120*et[1,2]**6*cosine(iota)*cosine(2*beta)
 
         Sx0[2,2]=-(153/640)*et[2,2]**5*cosine(iota)*cosine(2*beta)
 
-        Sx0[3,2]=-(11/45)*et[2,3]**6*cosine(iota)*cosine(2*beta)
+        Sx0[3,2]=-(11/45)*et[3,2]**6*cosine(iota)*cosine(2*beta)
         
 
         ###################cplus05_start####################
         Cp05 = np.zeros((10,5))
 
-        Cp05[0,1]=et[1,0]**6*((109*cosine(beta)*sine(iota))/12288+(265*cosine(iota)**2*cosine(beta)*sine(iota))/12288)+et[1,0]**4*(1/64*cosine(beta)*sine(iota)+7/192*cosine(iota)**2*cosine(beta)*sine(iota))+et[1,0]**2*(-(9/32)*cosine(beta)*sine(iota)+11/32*cosine(iota)**2*cosine(beta)*sine(iota))
+        Cp05[0,1]=et[0,1]**6*((109*cosine(beta)*sine(iota))/12288+(265*cosine(iota)**2*cosine(beta)*sine(iota))/12288)+et[0,1]**4*(1/64*cosine(beta)*sine(iota)+7/192*cosine(iota)**2*cosine(beta)*sine(iota))+et[0,1]**2*(-(9/32)*cosine(beta)*sine(iota)+11/32*cosine(iota)**2*cosine(beta)*sine(iota))
         Cp05[1,1]=et[1,1]**5*(1/16*cosine(beta)*sine(iota)-1/48*cosine(iota)**2*cosine(beta)*sine(iota))+et[1,1]**3*(-(1/3)*cosine(beta)*sine(iota)+1/3*cosine(iota)**2*cosine(beta)*sine(iota))
-        Cp05[2,1]=et[1,2]**6*((369*cosine(beta)*sine(iota))/2560-(243*cosine(iota)**2*cosine(beta)*sine(iota))/2560)+et[1,2]**4*(-(207/512)*cosine(beta)*sine(iota)+189/512*cosine(iota)**2*cosine(beta)*sine(iota))
-        Cp05[3,1]=et[1,3]**5*(-(1/2)*cosine(beta)*sine(iota)+13/30*cosine(iota)**2*cosine(beta)*sine(iota))
-        Cp05[4,1]=et[1,4]**6*(-((23125*cosine(beta)*sine(iota))/36864)+(19375*cosine(iota)**2*cosine(beta)*sine(iota))/36864)
+        Cp05[2,1]=et[2,1]**6*((369*cosine(beta)*sine(iota))/2560-(243*cosine(iota)**2*cosine(beta)*sine(iota))/2560)+et[2,1]**4*(-(207/512)*cosine(beta)*sine(iota)+189/512*cosine(iota)**2*cosine(beta)*sine(iota))
+        Cp05[3,1]=et[3,1]**5*(-(1/2)*cosine(beta)*sine(iota)+13/30*cosine(iota)**2*cosine(beta)*sine(iota))
+        Cp05[4,1]=et[4,1]**6*(-((23125*cosine(beta)*sine(iota))/36864)+(19375*cosine(iota)**2*cosine(beta)*sine(iota))/36864)
 
 
-        Cp05[0,-1]=-(5/4)*cosine(beta)*sine(iota)-1/4*cosine(iota)**2*cosine(beta)*sine(iota)+et[-1,0]**2*(3/2*cosine(beta)*sine(iota)-1/2*cosine(iota)**2*cosine(beta)*sine(iota))+et[-1,0]**6*((41*cosine(beta)*sine(iota))/2304+(37*cosine(iota)**2*cosine(beta)*sine(iota))/2304)+et[-1,0]**4*(-(51/256)*cosine(beta)*sine(iota)+41/256*cosine(iota)**2*cosine(beta)*sine(iota))
-        Cp05[1,-1]=et[-1,1]**3*(4*cosine(beta)*sine(iota)-2*cosine(iota)**2*cosine(beta)*sine(iota))+et[-1,1]**5*(-(19/16)*cosine(beta)*sine(iota)+35/48*cosine(iota)**2*cosine(beta)*sine(iota))+et[-1,1]*(-3*cosine(beta)*sine(iota)+cosine(iota)**2*cosine(beta)*sine(iota))
-        Cp05[2,-1]=et[-1,2]**4*(531/64*cosine(beta)*sine(iota)-297/64*cosine(iota)**2*cosine(beta)*sine(iota))+et[-1,2]**6*(-((15399*cosine(beta)*sine(iota))/4096)+(9477*cosine(iota)**2*cosine(beta)*sine(iota))/4096)+et[-1,2]**2*(-(171/32)*cosine(beta)*sine(iota)+81/32*cosine(iota)**2*cosine(beta)*sine(iota))
-        Cp05[3,-1]=et[-1,3]**5*(31/2*cosine(beta)*sine(iota)-55/6*cosine(iota)**2*cosine(beta)*sine(iota))+et[-1,3]**3*(-(26/3)*cosine(beta)*sine(iota)+14/3*cosine(iota)**2*cosine(beta)*sine(iota))
-        Cp05[4,-1]=et[-1,4]**6*((41875*cosine(beta)*sine(iota))/1536-(25625*cosine(iota)**2*cosine(beta)*sine(iota))/1536)+et[-1,4]**4*(-(6875/512)*cosine(beta)*sine(iota)+(11875*cosine(iota)**2*cosine(beta)*sine(iota))/1536)
-        Cp05[5,-1]=et[-1,5]**5*(-(81/4)*cosine(beta)*sine(iota)+243/20*cosine(iota)**2*cosine(beta)*sine(iota))
-        Cp05[6,-1]=et[-1,6]**6*(-((5529503*cosine(beta)*sine(iota))/184320)+(3411821*cosine(iota)**2*cosine(beta)*sine(iota))/184320)
+        Cp05[0,-1]=-(5/4)*cosine(beta)*sine(iota)-1/4*cosine(iota)**2*cosine(beta)*sine(iota)+et[0,-1]**2*(3/2*cosine(beta)*sine(iota)-1/2*cosine(iota)**2*cosine(beta)*sine(iota))+et[0,-1]**6*((41*cosine(beta)*sine(iota))/2304+(37*cosine(iota)**2*cosine(beta)*sine(iota))/2304)+et[0,-1]**4*(-(51/256)*cosine(beta)*sine(iota)+41/256*cosine(iota)**2*cosine(beta)*sine(iota))
+        Cp05[1,-1]=et[1,-1]**3*(4*cosine(beta)*sine(iota)-2*cosine(iota)**2*cosine(beta)*sine(iota))+et[1,-1]**5*(-(19/16)*cosine(beta)*sine(iota)+35/48*cosine(iota)**2*cosine(beta)*sine(iota))+et[1,-1]*(-3*cosine(beta)*sine(iota)+cosine(iota)**2*cosine(beta)*sine(iota))
+        Cp05[2,-1]=et[2,-1]**4*(531/64*cosine(beta)*sine(iota)-297/64*cosine(iota)**2*cosine(beta)*sine(iota))+et[2,-1]**6*(-((15399*cosine(beta)*sine(iota))/4096)+(9477*cosine(iota)**2*cosine(beta)*sine(iota))/4096)+et[2,-1]**2*(-(171/32)*cosine(beta)*sine(iota)+81/32*cosine(iota)**2*cosine(beta)*sine(iota))
+        Cp05[3,-1]=et[3,-1]**5*(31/2*cosine(beta)*sine(iota)-55/6*cosine(iota)**2*cosine(beta)*sine(iota))+et[3,-1]**3*(-(26/3)*cosine(beta)*sine(iota)+14/3*cosine(iota)**2*cosine(beta)*sine(iota))
+        Cp05[4,-1]=et[4,-1]**6*((41875*cosine(beta)*sine(iota))/1536-(25625*cosine(iota)**2*cosine(beta)*sine(iota))/1536)+et[4,-1]**4*(-(6875/512)*cosine(beta)*sine(iota)+(11875*cosine(iota)**2*cosine(beta)*sine(iota))/1536)
+        Cp05[5,-1]=et[5,-1]**5*(-(81/4)*cosine(beta)*sine(iota)+243/20*cosine(iota)**2*cosine(beta)*sine(iota))
+        Cp05[6,-1]=et[6,-1]**6*(-((5529503*cosine(beta)*sine(iota))/184320)+(3411821*cosine(iota)**2*cosine(beta)*sine(iota))/184320)
         
         
-        Cp05[0,3]=et[3,0]**4*(-(25/512)*cosine(3*beta)*sine(iota)-25/512*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[3,0]**6*(-((179*cosine(3*beta)*sine(iota))/7680)-(179*cosine(iota)**2*cosine(3*beta)*sine(iota))/7680)
-        Cp05[1,3]=et[3,1]**5*(-(13/240)*cosine(3*beta)*sine(iota)-13/240*cosine(iota)**2*cosine(3*beta)*sine(iota))
-        Cp05[2,3]=et[3,2]**6*(-((1233*cosine(3*beta)*sine(iota))/20480)-(1233*cosine(iota)**2*cosine(3*beta)*sine(iota))/20480)
+        Cp05[0,3]=et[0,3]**4*(-(25/512)*cosine(3*beta)*sine(iota)-25/512*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[0,3]**6*(-((179*cosine(3*beta)*sine(iota))/7680)-(179*cosine(iota)**2*cosine(3*beta)*sine(iota))/7680)
+        Cp05[1,3]=et[1,3]**5*(-(13/240)*cosine(3*beta)*sine(iota)-13/240*cosine(iota)**2*cosine(3*beta)*sine(iota))
+        Cp05[2,3]=et[2,3]**6*(-((1233*cosine(3*beta)*sine(iota))/20480)-(1233*cosine(iota)**2*cosine(3*beta)*sine(iota))/20480)
       
     
-        Cp05[0,-3]=et[-3,0]**4*(-(65/192)*cosine(3*beta)*sine(iota)-65/192*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[-3,0]**6*(-((19*cosine(3*beta)*sine(iota))/12288)-(19*cosine(iota)**2*cosine(3*beta)*sine(iota))/12288)+et[-3,0]**2*(19/32*cosine(3*beta)*sine(iota)+19/32*cosine(iota)**2*cosine(3*beta)*sine(iota))
-        Cp05[1,-3]=et[-3,1]*(-3*cosine(3*beta)*sine(iota)-3*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[-3,1]**5*(-(133/48)*cosine(3*beta)*sine(iota)-133/48*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[-3,1]**3*(11/2*cosine(3*beta)*sine(iota)+11/2*cosine(iota)**2*cosine(3*beta)*sine(iota))
-        Cp05[2,-3]=9/4*cosine(3*beta)*sine(iota)+9/4*cosine(iota)**2*cosine(3*beta)*sine(iota)+et[-3,2]**2*(-(27/2)*cosine(3*beta)*sine(iota)-27/2*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[-3,2]**6*(-(3141/256)*cosine(3*beta)*sine(iota)-3141/256*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[-3,2]**4*(5319/256*cosine(3*beta)*sine(iota)+5319/256*cosine(iota)**2*cosine(3*beta)*sine(iota))
-        Cp05[3,-3]=et[-3,3]**3*(-38*cosine(3*beta)*sine(iota)-38*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[-3,3]*(8*cosine(3*beta)*sine(iota)+8*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[-3,3]**5*(176/3*cosine(3*beta)*sine(iota)+176/3*cosine(iota)**2*cosine(3*beta)*sine(iota))
-        Cp05[4,-3]=et[-3,4]**4*(-(5625/64)*cosine(3*beta)*sine(iota)-5625/64*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[-3,4]**2*(625/32*cosine(3*beta)*sine(iota)+625/32*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[-3,4]**6*((1746875*cosine(3*beta)*sine(iota))/12288+(1746875*cosine(iota)**2*cosine(3*beta)*sine(iota))/12288)
-        Cp05[5,-3]=et[-3,5]**5*(-(729/4)*cosine(3*beta)*sine(iota)-729/4*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[-3,5]**3*(81/2*cosine(3*beta)*sine(iota)+81/2*cosine(iota)**2*cosine(3*beta)*sine(iota))
-        Cp05[6,-3]=et[-3,6]**6*(-((2705927*cosine(3*beta)*sine(iota))/7680)-(2705927*cosine(iota)**2*cosine(3*beta)*sine(iota))/7680)+et[-3,6]**4*((117649*cosine(3*beta)*sine(iota))/1536+(117649*cosine(iota)**2*cosine(3*beta)*sine(iota))/1536)
-        Cp05[7,-3]=et[-3,7]**5*(2048/15*cosine(3*beta)*sine(iota)+2048/15*cosine(iota)**2*cosine(3*beta)*sine(iota))
-        Cp05[8,-3]=et[-3,8]**6*((4782969*cosine(3*beta)*sine(iota))/20480+(4782969*cosine(iota)**2*cosine(3*beta)*sine(iota))/20480)  
+        Cp05[0,-3]=et[0,-3]**4*(-(65/192)*cosine(3*beta)*sine(iota)-65/192*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[0,-3]**6*(-((19*cosine(3*beta)*sine(iota))/12288)-(19*cosine(iota)**2*cosine(3*beta)*sine(iota))/12288)+et[0,-3]**2*(19/32*cosine(3*beta)*sine(iota)+19/32*cosine(iota)**2*cosine(3*beta)*sine(iota))
+        Cp05[1,-3]=et[1,-3]*(-3*cosine(3*beta)*sine(iota)-3*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[1,-3]**5*(-(133/48)*cosine(3*beta)*sine(iota)-133/48*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[1,-3]**3*(11/2*cosine(3*beta)*sine(iota)+11/2*cosine(iota)**2*cosine(3*beta)*sine(iota))
+        Cp05[2,-3]=9/4*cosine(3*beta)*sine(iota)+9/4*cosine(iota)**2*cosine(3*beta)*sine(iota)+et[2,-3]**2*(-(27/2)*cosine(3*beta)*sine(iota)-27/2*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[2,-3]**6*(-(3141/256)*cosine(3*beta)*sine(iota)-3141/256*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[2,-3]**4*(5319/256*cosine(3*beta)*sine(iota)+5319/256*cosine(iota)**2*cosine(3*beta)*sine(iota))
+        Cp05[3,-3]=et[3,-3]**3*(-38*cosine(3*beta)*sine(iota)-38*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[3,-3]*(8*cosine(3*beta)*sine(iota)+8*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[3,-3]**5*(176/3*cosine(3*beta)*sine(iota)+176/3*cosine(iota)**2*cosine(3*beta)*sine(iota))
+        Cp05[4,-3]=et[4,-3]**4*(-(5625/64)*cosine(3*beta)*sine(iota)-5625/64*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[4,-3]**2*(625/32*cosine(3*beta)*sine(iota)+625/32*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[4,-3]**6*((1746875*cosine(3*beta)*sine(iota))/12288+(1746875*cosine(iota)**2*cosine(3*beta)*sine(iota))/12288)
+        Cp05[5,-3]=et[5,-3]**5*(-(729/4)*cosine(3*beta)*sine(iota)-729/4*cosine(iota)**2*cosine(3*beta)*sine(iota))+et[5,-3]**3*(81/2*cosine(3*beta)*sine(iota)+81/2*cosine(iota)**2*cosine(3*beta)*sine(iota))
+        Cp05[6,-3]=et[6,-3]**6*(-((2705927*cosine(3*beta)*sine(iota))/7680)-(2705927*cosine(iota)**2*cosine(3*beta)*sine(iota))/7680)+et[6,-3]**4*((117649*cosine(3*beta)*sine(iota))/1536+(117649*cosine(iota)**2*cosine(3*beta)*sine(iota))/1536)
+        Cp05[7,-3]=et[7,-3]**5*(2048/15*cosine(3*beta)*sine(iota)+2048/15*cosine(iota)**2*cosine(3*beta)*sine(iota))
+        Cp05[8,-3]=et[8,-3]**6*((4782969*cosine(3*beta)*sine(iota))/20480+(4782969*cosine(iota)**2*cosine(3*beta)*sine(iota))/20480)  
 
         ###################splus05_start####################
         Sp05 = np.zeros((10,5))
 
-        Sp05[0,-1] =  - (5/4)*sine(iota)*sine(beta) - 1/4*cosine(iota)**2*sine(iota)*sine(beta) + et[-1,0]**2*(3/2*sine(iota)*sine(beta) - 1/2*cosine(iota)**2*sine(iota)*sine(beta)) + et[-1,0]**6*((41*sine(iota)*sine(beta))/2304 + (37*cosine(iota)**2*sine(iota)*sine(beta))/2304) + et[-1,0]**4*( - (51/256)*sine(iota)*sine(beta) + 41/256*cosine(iota)**2*sine(iota)*sine(beta))
+        Sp05[0,-1] =  - (5/4)*sine(iota)*sine(beta) - 1/4*cosine(iota)**2*sine(iota)*sine(beta) + et[0,-1]**2*(3/2*sine(iota)*sine(beta) - 1/2*cosine(iota)**2*sine(iota)*sine(beta)) + et[0,-1]**6*((41*sine(iota)*sine(beta))/2304 + (37*cosine(iota)**2*sine(iota)*sine(beta))/2304) + et[0,-1]**4*( - (51/256)*sine(iota)*sine(beta) + 41/256*cosine(iota)**2*sine(iota)*sine(beta))
 
-        Sp05[1,-1] = et[-1,1]**3*(4*sine(iota)*sine(beta) - 2*cosine(iota)**2*sine(iota)*sine(beta)) + et[-1,1]**5*( - (19/16)*sine(iota)*sine(beta) + 35/48*cosine(iota)**2*sine(iota)*sine(beta)) + et[-1,1]*( - 3*sine(iota)*sine(beta) + cosine(iota)**2*sine(iota)*sine(beta))
+        Sp05[1,-1] = et[1,-1]**3*(4*sine(iota)*sine(beta) - 2*cosine(iota)**2*sine(iota)*sine(beta)) + et[1,-1]**5*( - (19/16)*sine(iota)*sine(beta) + 35/48*cosine(iota)**2*sine(iota)*sine(beta)) + et[1,-1]*( - 3*sine(iota)*sine(beta) + cosine(iota)**2*sine(iota)*sine(beta))
 
-        Sp05[2,-1] = et[-1,2]**4*(531/64*sine(iota)*sine(beta) - 297/64*cosine(iota)**2*sine(iota)*sine(beta)) + et[-1,2]**6*( - ((15399*sine(iota)*sine(beta))/4096) + (9477*cosine(iota)**2*sine(iota)*sine(beta))/4096) + et[-1,2]**2*( - (171/32)*sine(iota)*sine(beta) + 81/32*cosine(iota)**2*sine(iota)*sine(beta))
+        Sp05[2,-1] = et[2,-1]**4*(531/64*sine(iota)*sine(beta) - 297/64*cosine(iota)**2*sine(iota)*sine(beta)) + et[2,-1]**6*( - ((15399*sine(iota)*sine(beta))/4096) + (9477*cosine(iota)**2*sine(iota)*sine(beta))/4096) + et[2,-1]**2*( - (171/32)*sine(iota)*sine(beta) + 81/32*cosine(iota)**2*sine(iota)*sine(beta))
 
-        Sp05[3,-1] = et[-1,3]**5*(31/2*sine(iota)*sine(beta) - 55/6*cosine(iota)**2*sine(iota)*sine(beta)) + et[-1,3]**3*( - (26/3)*sine(iota)*sine(beta) + 14/3*cosine(iota)**2*sine(iota)*sine(beta))
+        Sp05[3,-1] = et[3,-1]**5*(31/2*sine(iota)*sine(beta) - 55/6*cosine(iota)**2*sine(iota)*sine(beta)) + et[3,-1]**3*( - (26/3)*sine(iota)*sine(beta) + 14/3*cosine(iota)**2*sine(iota)*sine(beta))
 
-        Sp05[4,-1] = et[-1,4]**6*((41875*sine(iota)*sine(beta))/1536 - (25625*cosine(iota)**2*sine(iota)*sine(beta))/1536) + et[-1,4]**4*( - (6875/512)*sine(iota)*sine(beta) + (11875*cosine(iota)**2*sine(iota)*sine(beta))/1536)
+        Sp05[4,-1] = et[4,-1]**6*((41875*sine(iota)*sine(beta))/1536 - (25625*cosine(iota)**2*sine(iota)*sine(beta))/1536) + et[4,-1]**4*( - (6875/512)*sine(iota)*sine(beta) + (11875*cosine(iota)**2*sine(iota)*sine(beta))/1536)
 
-        Sp05[5,-1] = et[-1,5]**5*( - (81/4)*sine(iota)*sine(beta) + 243/20*cosine(iota)**2*sine(iota)*sine(beta))
+        Sp05[5,-1] = et[5,-1]**5*( - (81/4)*sine(iota)*sine(beta) + 243/20*cosine(iota)**2*sine(iota)*sine(beta))
 
-        Sp05[6,-1] = et[-1,6]**6*( - ((5529503*sine(iota)*sine(beta))/184320) + (3411821*cosine(iota)**2*sine(iota)*sine(beta))/184320)
+        Sp05[6,-1] = et[6,-1]**6*( - ((5529503*sine(iota)*sine(beta))/184320) + (3411821*cosine(iota)**2*sine(iota)*sine(beta))/184320)
 
 
-        Sp05[0,1] = et[1,0]**2*(9/32*sine(iota)*sine(beta) - 11/32*cosine(iota)**2*sine(iota)*sine(beta)) + et[1,0]**4*( - (1/64)*sine(iota)*sine(beta) - 7/192*cosine(iota)**2*sine(iota)*sine(beta)) + et[1,0]**6*( - ((109*sine(iota)*sine(beta))/12288) - (265*cosine(iota)**2*sine(iota)*sine(beta))/12288)
+        Sp05[0,1] = et[0,1]**2*(9/32*sine(iota)*sine(beta) - 11/32*cosine(iota)**2*sine(iota)*sine(beta)) + et[0,1]**4*( - (1/64)*sine(iota)*sine(beta) - 7/192*cosine(iota)**2*sine(iota)*sine(beta)) + et[0,1]**6*( - ((109*sine(iota)*sine(beta))/12288) - (265*cosine(iota)**2*sine(iota)*sine(beta))/12288)
 
         Sp05[1,1] = et[1,1]**3*(1/3*sine(iota)*sine(beta) - 1/3*cosine(iota)**2*sine(iota)*sine(beta)) + et[1,1]**5*( - (1/16)*sine(iota)*sine(beta) + 1/48*cosine(iota)**2*sine(iota)*sine(beta))
 
-        Sp05[2,1] = et[1,2]**4*(207/512*sine(iota)*sine(beta) - 189/512*cosine(iota)**2*sine(iota)*sine(beta)) + et[1,2]**6*( - ((369*sine(iota)*sine(beta))/2560) + (243*cosine(iota)**2*sine(iota)*sine(beta))/2560)
+        Sp05[2,1] = et[2,1]**4*(207/512*sine(iota)*sine(beta) - 189/512*cosine(iota)**2*sine(iota)*sine(beta)) + et[2,1]**6*( - ((369*sine(iota)*sine(beta))/2560) + (243*cosine(iota)**2*sine(iota)*sine(beta))/2560)
 
-        Sp05[3,1] = et[1,3]**5*(1/2*sine(iota)*sine(beta) - 13/30*cosine(iota)**2*sine(iota)*sine(beta))
+        Sp05[3,1] = et[3,1]**5*(1/2*sine(iota)*sine(beta) - 13/30*cosine(iota)**2*sine(iota)*sine(beta))
 
-        Sp05[4,1] = et[1,4]**6*((23125*sine(iota)*sine(beta))/36864 - (19375*cosine(iota)**2*sine(iota)*sine(beta))/36864)
-
-
-        Sp05[0,-3] = et[-3,0]**4*( - (65/192)*sine(iota)*sine(3*beta) - 65/192*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[-3,0]**6*( - ((19*sine(iota)*sine(3*beta))/12288) - (19*cosine(iota)**2*sine(iota)*sine(3*beta))/12288) + et[-3,0]**2*(19/32*sine(iota)*sine(3*beta) + 19/32*cosine(iota)**2*sine(iota)*sine(3*beta))
-
-        Sp05[1,-3] = et[-3,1]*( - 3*sine(iota)*sine(3*beta) - 3*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[-3,1]**5*( - (133/48)*sine(iota)*sine(3*beta) - 133/48*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[-3,1]**3*(11/2*sine(iota)*sine(3*beta) + 11/2*cosine(iota)**2*sine(iota)*sine(3*beta))
-
-        Sp05[2,-3] = 9/4*sine(iota)*sine(3*beta) + 9/4*cosine(iota)**2*sine(iota)*sine(3*beta) + et[-3,2]**2*( - (27/2)*sine(iota)*sine(3*beta) - 27/2*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[-3,2]**6*( - (3141/256)*sine(iota)*sine(3*beta) - 3141/256*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[-3,2]**4*(5319/256*sine(iota)*sine(3*beta) + 5319/256*cosine(iota)**2*sine(iota)*sine(3*beta))
-
-        Sp05[3,-3] = et[-3,3]**3*( - 38*sine(iota)*sine(3*beta) - 38*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[-3,3]**(8*sine(iota)*sine(3*beta) + 8*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[-3,3]**5*(176/3*sine(iota)*sine(3*beta) + 176/3*cosine(iota)**2*sine(iota)*sine(3*beta))
-
-        Sp05[4,-3] = et[-3,4]**4*( - (5625/64)*sine(iota)*sine(3*beta) - 5625/64*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[-3,4]**2*(625/32*sine(iota)*sine(3*beta) + 625/32*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[-3,4]**6*((1746875*sine(iota)*sine(3*beta))/12288 + (1746875*cosine(iota)**2*sine(iota)*sine(3*beta))/12288)
-
-        Sp05[5,-3] = et[-3,5]**5*( - (729/4)*sine(iota)*sine(3*beta) - 729/4*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[-3,5]**3*(81/2*sine(iota)*sine(3*beta) + 81/2*cosine(iota)**2*sine(iota)*sine(3*beta))
-
-        Sp05[6,-3] = et[-3,6]**6*( - ((2705927*sine(iota)*sine(3*beta))/7680) - (2705927*cosine(iota)**2*sine(iota)*sine(3*beta))/7680) + et[-3,6]**4*((117649*sine(iota)*sine(3*beta))/1536 + (117649*cosine(iota)**2*sine(iota)*sine(3*beta))/1536)
-
-        Sp05[7,-3] = et[-3,7]**5*(2048/15*sine(iota)*sine(3*beta) + 2048/15*cosine(iota)**2*sine(iota)*sine(3*beta))
-
-        Sp05[8,-3] = et[-3,8]**6*((4782969*sine(iota)*sine(3*beta))/20480 + (4782969*cosine(iota)**2*sine(iota)*sine(3*beta))/20480)
+        Sp05[4,1] = et[4,1]**6*((23125*sine(iota)*sine(beta))/36864 - (19375*cosine(iota)**2*sine(iota)*sine(beta))/36864)
 
 
-        Sp05[0,3] = et[3,0]**6*((179*sine(iota)*sine(3*beta))/7680 + (179*cosine(iota)**2*sine(iota)*sine(3*beta))/7680) + et[3,0]**4*(25/512*sine(iota)*sine(3*beta) + 25/512*cosine(iota)**2*sine(iota)*sine(3*beta))
+        Sp05[0,-3] = et[0,-3]**4*( - (65/192)*sine(iota)*sine(3*beta) - 65/192*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[0,-3]**6*( - ((19*sine(iota)*sine(3*beta))/12288) - (19*cosine(iota)**2*sine(iota)*sine(3*beta))/12288) + et[0,-3]**2*(19/32*sine(iota)*sine(3*beta) + 19/32*cosine(iota)**2*sine(iota)*sine(3*beta))
 
-        Sp05[1,3] = et[3,1]**5*(13/240*sine(iota)*sine(3*beta) + 13/240*cosine(iota)**2*sine(iota)*sine(3*beta))
+        Sp05[1,-3] = et[1,-3]*( - 3*sine(iota)*sine(3*beta) - 3*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[1,-3]**5*( - (133/48)*sine(iota)*sine(3*beta) - 133/48*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[1,-3]**3*(11/2*sine(iota)*sine(3*beta) + 11/2*cosine(iota)**2*sine(iota)*sine(3*beta))
 
-        Sp05[2,3] = et[3,2]**6*((1233*sine(iota)*sine(3*beta))/20480 + (1233*cosine(iota)**2*sine(iota)*sine(3*beta))/20480)
+        Sp05[2,-3] = 9/4*sine(iota)*sine(3*beta) + 9/4*cosine(iota)**2*sine(iota)*sine(3*beta) + et[2,-3]**2*( - (27/2)*sine(iota)*sine(3*beta) - 27/2*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[2,-3]**6*( - (3141/256)*sine(iota)*sine(3*beta) - 3141/256*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[2,-3]**4*(5319/256*sine(iota)*sine(3*beta) + 5319/256*cosine(iota)**2*sine(iota)*sine(3*beta))
+
+        Sp05[3,-3] = et[3,-3]**3*( - 38*sine(iota)*sine(3*beta) - 38*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[3,-3]**(8*sine(iota)*sine(3*beta) + 8*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[3,-3]**5*(176/3*sine(iota)*sine(3*beta) + 176/3*cosine(iota)**2*sine(iota)*sine(3*beta))
+
+        Sp05[4,-3] = et[4,-3]**4*( - (5625/64)*sine(iota)*sine(3*beta) - 5625/64*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[4,-3]**2*(625/32*sine(iota)*sine(3*beta) + 625/32*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[4,-3]**6*((1746875*sine(iota)*sine(3*beta))/12288 + (1746875*cosine(iota)**2*sine(iota)*sine(3*beta))/12288)
+
+        Sp05[5,-3] = et[5,-3]**5*( - (729/4)*sine(iota)*sine(3*beta) - 729/4*cosine(iota)**2*sine(iota)*sine(3*beta)) + et[5,-3]**3*(81/2*sine(iota)*sine(3*beta) + 81/2*cosine(iota)**2*sine(iota)*sine(3*beta))
+
+        Sp05[6,-3] = et[6,-3]**6*( - ((2705927*sine(iota)*sine(3*beta))/7680) - (2705927*cosine(iota)**2*sine(iota)*sine(3*beta))/7680) + et[6,-3]**4*((117649*sine(iota)*sine(3*beta))/1536 + (117649*cosine(iota)**2*sine(iota)*sine(3*beta))/1536)
+
+        Sp05[7,-3] = et[7,-3]**5*(2048/15*sine(iota)*sine(3*beta) + 2048/15*cosine(iota)**2*sine(iota)*sine(3*beta))
+
+        Sp05[8,-3] = et[8,-3]**6*((4782969*sine(iota)*sine(3*beta))/20480 + (4782969*cosine(iota)**2*sine(iota)*sine(3*beta))/20480)
+
+
+        Sp05[0,3] = et[0,3]**6*((179*sine(iota)*sine(3*beta))/7680 + (179*cosine(iota)**2*sine(iota)*sine(3*beta))/7680) + et[0,3]**4*(25/512*sine(iota)*sine(3*beta) + 25/512*cosine(iota)**2*sine(iota)*sine(3*beta))
+
+        Sp05[1,3] = et[1,3]**5*(13/240*sine(iota)*sine(3*beta) + 13/240*cosine(iota)**2*sine(iota)*sine(3*beta))
+
+        Sp05[2,3] = et[2,3]**6*((1233*sine(iota)*sine(3*beta))/20480 + (1233*cosine(iota)**2*sine(iota)*sine(3*beta))/20480)
 
         ###################ccross05_start####################
         Cx05 = np.zeros((10,5))
 
-        Cx05[0,1]=-(1/16)*et[1,0]**2 *cosine(iota)*sine(iota)*sine(beta)-5/96*et[1,0]**4 *cosine(iota)*sine(iota)*sine(beta)-(187*et[1,0]**6 *cosine(iota)*sine(iota)*sine(beta))/6144
+        Cx05[0,1]=-(1/16)*et[0,1]**2 *cosine(iota)*sine(iota)*sine(beta)-5/96*et[0,1]**4 *cosine(iota)*sine(iota)*sine(beta)-(187*et[0,1]**6 *cosine(iota)*sine(iota)*sine(beta))/6144
         Cx05[1,1]=-(1/24)*et[1,1]**5 *cosine(iota)*sine(iota)*sine(beta)
-        Cx05[2,1]=9/256*et[1,2]**4 *cosine(iota)*sine(iota)*sine(beta)-(63*et[1,2]**6 *cosine(iota)*sine(iota)*sine(beta))/1280
-        Cx05[3,1]=1/15*et[1,3]**5 *cosine(iota)*sine(iota)*sine(beta)
-        Cx05[4,1]=(625*et[1,4]**6 *cosine(iota)*sine(iota)*sine(beta))/6144
+        Cx05[2,1]=9/256*et[2,1]**4 *cosine(iota)*sine(iota)*sine(beta)-(63*et[2,1]**6 *cosine(iota)*sine(iota)*sine(beta))/1280
+        Cx05[3,1]=1/15*et[3,1]**5 *cosine(iota)*sine(iota)*sine(beta)
+        Cx05[4,1]=(625*et[4,1]**6 *cosine(iota)*sine(iota)*sine(beta))/6144
         
         
-        Cx05[0,-1]=3/2*cosine(iota)*sine(iota)*sine(beta)-et[-1,0]**2 *cosine(iota)*sine(iota)*sine(beta)+5/128*et[-1,0]**4 *cosine(iota)*sine(iota)*sine(beta)-13/384*et[-1,0]**6 *cosine(iota)*sine(iota)*sine(beta)
-        Cx05[1,-1]=2*et[-1,1]*cosine(iota)*sine(iota)*sine(beta)-2*et[-1,1]**3 *cosine(iota)*sine(iota)*sine(beta)+11/24*et[-1,1]**5 *cosine(iota)*sine(iota)*sine(beta)
-        Cx05[2,-1]=45/16*et[-1,2]**2 *cosine(iota)*sine(iota)*sine(beta)-117/32*et[-1,2]**4 *cosine(iota)*sine(iota)*sine(beta)+(2961*et[-1,2]**6 *cosine(iota)*sine(iota)*sine(beta))/2048
-        Cx05[3,-1]=4*et[-1,3]**3 *cosine(iota)*sine(iota)*sine(beta)-19/3*et[-1,3]**5 *cosine(iota)*sine(iota)*sine(beta)
-        Cx05[4,-1]=4375/768*et[-1,4]**4 *cosine(iota)*sine(iota)*sine(beta)-8125/768*et[-1,4]**6 *cosine(iota)*sine(iota)*sine(beta)
-        Cx05[5,-1]=81/10*et[-1,5]**5 *cosine(iota)*sine(iota)*sine(beta)
-        Cx05[6,-1]=(117649*et[-1,6]**6 *cosine(iota)*sine(iota)*sine(beta))/10240 
+        Cx05[0,-1]=3/2*cosine(iota)*sine(iota)*sine(beta)-et[0,-1]**2 *cosine(iota)*sine(iota)*sine(beta)+5/128*et[0,-1]**4 *cosine(iota)*sine(iota)*sine(beta)-13/384*et[0,-1]**6 *cosine(iota)*sine(iota)*sine(beta)
+        Cx05[1,-1]=2*et[1,-1]*cosine(iota)*sine(iota)*sine(beta)-2*et[1,-1]**3 *cosine(iota)*sine(iota)*sine(beta)+11/24*et[1,-1]**5 *cosine(iota)*sine(iota)*sine(beta)
+        Cx05[2,-1]=45/16*et[2,-1]**2 *cosine(iota)*sine(iota)*sine(beta)-117/32*et[2,-1]**4 *cosine(iota)*sine(iota)*sine(beta)+(2961*et[2,-1]**6 *cosine(iota)*sine(iota)*sine(beta))/2048
+        Cx05[3,-1]=4*et[3,-1]**3 *cosine(iota)*sine(iota)*sine(beta)-19/3*et[3,-1]**5 *cosine(iota)*sine(iota)*sine(beta)
+        Cx05[4,-1]=4375/768*et[4,-1]**4 *cosine(iota)*sine(iota)*sine(beta)-8125/768*et[4,-1]**6 *cosine(iota)*sine(iota)*sine(beta)
+        Cx05[5,-1]=81/10*et[5,-1]**5 *cosine(iota)*sine(iota)*sine(beta)
+        Cx05[6,-1]=(117649*et[6,-1]**6 *cosine(iota)*sine(iota)*sine(beta))/10240 
         
         
-        Cx05[0,3]=25/256*et[3,0]**4 *cosine(iota)*sine(iota)*sine(3*beta)+(179*et[3,0]**6 *cosine(iota)*sine(iota)*sine(3*beta))/3840
-        Cx05[1,3]=13/120*et[3,1]**5 *cosine(iota)*sine(iota)*sine(3*beta)
-        Cx05[2,3]=(1233*et[3,2]**6 *cosine(iota)*sine(iota)*sine(3*beta))/10240        
+        Cx05[0,3]=25/256*et[0,3]**4 *cosine(iota)*sine(iota)*sine(3*beta)+(179*et[0,3]**6 *cosine(iota)*sine(iota)*sine(3*beta))/3840
+        Cx05[1,3]=13/120*et[1,3]**5 *cosine(iota)*sine(iota)*sine(3*beta)
+        Cx05[2,3]=(1233*et[2,3]**6 *cosine(iota)*sine(iota)*sine(3*beta))/10240        
         
         
-        Cx05[0,-3]=-(19/16)*et[-3,0]**2 *cosine(iota)*sine(iota)*sine(3*beta)+65/96*et[-3,0]**4 *cosine(iota)*sine(iota)*sine(3*beta)+(19*et[-3,0]**6 *cosine(iota)*sine(iota)*sine(3*beta))/6144
-        Cx05[1,-3]=6*et[-3,1]*cosine(iota)*sine(iota)*sine(3*beta)-11*et[-3,1]**3 *cosine(iota)*sine(iota)*sine(3*beta)+133/24*et[-3,1]**5 *cosine(iota)*sine(iota)*sine(3*beta)
-        Cx05[2,-3]=-(9/2)*cosine(iota)*sine(iota)*sine(3*beta)+27*et[-3,2]**2 *cosine(iota)*sine(iota)*sine(3*beta)-5319/128*et[-3,2]**4 *cosine(iota)*sine(iota)*sine(3*beta)+3141/128*et[-3,2]**6 *cosine(iota)*sine(iota)*sine(3*beta)
-        Cx05[3,-3]=-16*et[-3,3]*cosine(iota)*sine(iota)*sine(3*beta)+76*et[-3,3]**3 *cosine(iota)*sine(iota)*sine(3*beta)-352/3*et[-3,3]**5 *cosine(iota)*sine(iota)*sine(3*beta)
-        Cx05[4,-3]=-(625/16)*et[-3,4]**2 *cosine(iota)*sine(iota)*sine(3*beta)+5625/32*et[-3,4]**4 *cosine(iota)*sine(iota)*sine(3*beta)-(1746875*et[-3,4]**6 *cosine(iota)*sine(iota)*sine(3*beta))/6144
-        Cx05[5,-3]=-81*et[-3,5]**3 *cosine(iota)*sine(iota)*sine(3*beta)+729/2*et[-3,5]**5 *cosine(iota)*sine(iota)*sine(3*beta)
-        Cx05[6,-3]=-(117649/768)*et[-3,6]**4 *cosine(iota)*sine(iota)*sine(3*beta)+(2705927*et[-3,6]**6 *cosine(iota)*sine(iota)*sine(3*beta))/3840
-        Cx05[7,-3]=-(4096/15)*et[-3,7]**5 *cosine(iota)*sine(iota)*sine(3*beta)
-        Cx05[8,-3]=-((4782969*et[-3,8]**6 *cosine(iota)*sine(iota)*sine(3*beta))/10240)        
+        Cx05[0,-3]=-(19/16)*et[0,-3]**2 *cosine(iota)*sine(iota)*sine(3*beta)+65/96*et[0,-3]**4 *cosine(iota)*sine(iota)*sine(3*beta)+(19*et[0,-3]**6 *cosine(iota)*sine(iota)*sine(3*beta))/6144
+        Cx05[1,-3]=6*et[1,-3]*cosine(iota)*sine(iota)*sine(3*beta)-11*et[1,-3]**3 *cosine(iota)*sine(iota)*sine(3*beta)+133/24*et[1,-3]**5 *cosine(iota)*sine(iota)*sine(3*beta)
+        Cx05[2,-3]=-(9/2)*cosine(iota)*sine(iota)*sine(3*beta)+27*et[2,-3]**2 *cosine(iota)*sine(iota)*sine(3*beta)-5319/128*et[2,-3]**4 *cosine(iota)*sine(iota)*sine(3*beta)+3141/128*et[2,-3]**6 *cosine(iota)*sine(iota)*sine(3*beta)
+        Cx05[3,-3]=-16*et[3,-3]*cosine(iota)*sine(iota)*sine(3*beta)+76*et[3,-3]**3 *cosine(iota)*sine(iota)*sine(3*beta)-352/3*et[3,-3]**5 *cosine(iota)*sine(iota)*sine(3*beta)
+        Cx05[4,-3]=-(625/16)*et[4,-3]**2 *cosine(iota)*sine(iota)*sine(3*beta)+5625/32*et[4,-3]**4 *cosine(iota)*sine(iota)*sine(3*beta)-(1746875*et[4,-3]**6 *cosine(iota)*sine(iota)*sine(3*beta))/6144
+        Cx05[5,-3]=-81*et[5,-3]**3 *cosine(iota)*sine(iota)*sine(3*beta)+729/2*et[5,-3]**5 *cosine(iota)*sine(iota)*sine(3*beta)
+        Cx05[6,-3]=-(117649/768)*et[6,-3]**4 *cosine(iota)*sine(iota)*sine(3*beta)+(2705927*et[6,-3]**6 *cosine(iota)*sine(iota)*sine(3*beta))/3840
+        Cx05[7,-3]=-(4096/15)*et[7,-3]**5 *cosine(iota)*sine(iota)*sine(3*beta)
+        Cx05[8,-3]=-((4782969*et[8,-3]**6 *cosine(iota)*sine(iota)*sine(3*beta))/10240)        
         
         ###################scross05_start####################
         Sx05 = np.zeros((10,5))
         
-        Sx05[0,1]=-(1/16)*et[1,0]**2*cosine(iota)*cosine(beta)*sine(iota)-5/96*et[1,0]**4*cosine(iota)*cosine(beta)*sine(iota)-(187*et[1,0]**6*cosine(iota)*cosine(beta)*sine(iota))/6144
+        Sx05[0,1]=-(1/16)*et[0,1]**2*cosine(iota)*cosine(beta)*sine(iota)-5/96*et[0,1]**4*cosine(iota)*cosine(beta)*sine(iota)-(187*et[0,1]**6*cosine(iota)*cosine(beta)*sine(iota))/6144
         Sx05[1,1]=-(1/24)*et[1,1]**5*cosine(iota)*cosine(beta)*sine(iota)
-        Sx05[2,1]=9/256*et[1,2]**4*cosine(iota)*cosine(beta)*sine(iota)-(63*et[1,2]**6*cosine(iota)*cosine(beta)*sine(iota))/1280
-        Sx05[3,1]=1/15*et[1,3]**5*cosine(iota)*cosine(beta)*sine(iota)
-        Sx05[4,1]=(625*et[1,4]**6*cosine(iota)*cosine(beta)*sine(iota))/6144
+        Sx05[2,1]=9/256*et[2,1]**4*cosine(iota)*cosine(beta)*sine(iota)-(63*et[2,1]**6*cosine(iota)*cosine(beta)*sine(iota))/1280
+        Sx05[3,1]=1/15*et[3,1]**5*cosine(iota)*cosine(beta)*sine(iota)
+        Sx05[4,1]=(625*et[4,1]**6*cosine(iota)*cosine(beta)*sine(iota))/6144
         
         
-        Sx05[0,-1]=-(3/2)*cosine(iota)*cosine(beta)*sine(iota)+et[-1,0]**2*cosine(iota)*cosine(beta)*sine(iota)-5/128*et[-1,0]**4*cosine(iota)*cosine(beta)*sine(iota)+13/384*et[-1,0]**6*cosine(iota)*cosine(beta)*sine(iota)
-        Sx05[1,-1]=-2*et[-1,1]*cosine(iota)*cosine(beta)*sine(iota)+2*et[-1,1]**3*cosine(iota)*cosine(beta)*sine(iota)-11/24*et[-1,1]**5*cosine(iota)*cosine(beta)*sine(iota)
-        Sx05[2,-1]=-(45/16)*et[-1,2]**2*cosine(iota)*cosine(beta)*sine(iota)+117/32*et[-1,2]**4*cosine(iota)*cosine(beta)*sine(iota)-(2961*et[-1,2]**6*cosine(iota)*cosine(beta)*sine(iota))/2048
-        Sx05[3,-1]=-4*et[-1,3]**3*cosine(iota)*cosine(beta)*sine(iota)+19/3*et[-1,3]**5*cosine(iota)*cosine(beta)*sine(iota)
-        Sx05[4,-1]=-(4375/768)*et[-1,4]**4*cosine(iota)*cosine(beta)*sine(iota)+8125/768*et[-1,4]**6*cosine(iota)*cosine(beta)*sine(iota)
-        Sx05[5,-1]=-(81/10)*et[-1,5]**5*cosine(iota)*cosine(beta)*sine(iota)
-        Sx05[6,-1]=-((117649*et[-1,6]**6*cosine(iota)*cosine(beta)*sine(iota))/10240)
+        Sx05[0,-1]=-(3/2)*cosine(iota)*cosine(beta)*sine(iota)+et[0,-1]**2*cosine(iota)*cosine(beta)*sine(iota)-5/128*et[0,-1]**4*cosine(iota)*cosine(beta)*sine(iota)+13/384*et[0,-1]**6*cosine(iota)*cosine(beta)*sine(iota)
+        Sx05[1,-1]=-2*et[1,-1]*cosine(iota)*cosine(beta)*sine(iota)+2*et[1,-1]**3*cosine(iota)*cosine(beta)*sine(iota)-11/24*et[1,-1]**5*cosine(iota)*cosine(beta)*sine(iota)
+        Sx05[2,-1]=-(45/16)*et[2,-1]**2*cosine(iota)*cosine(beta)*sine(iota)+117/32*et[2,-1]**4*cosine(iota)*cosine(beta)*sine(iota)-(2961*et[2,-1]**6*cosine(iota)*cosine(beta)*sine(iota))/2048
+        Sx05[3,-1]=-4*et[3,-1]**3*cosine(iota)*cosine(beta)*sine(iota)+19/3*et[3,-1]**5*cosine(iota)*cosine(beta)*sine(iota)
+        Sx05[4,-1]=-(4375/768)*et[4,-1]**4*cosine(iota)*cosine(beta)*sine(iota)+8125/768*et[4,-1]**6*cosine(iota)*cosine(beta)*sine(iota)
+        Sx05[5,-1]=-(81/10)*et[5,-1]**5*cosine(iota)*cosine(beta)*sine(iota)
+        Sx05[6,-1]=-((117649*et[6,-1]**6*cosine(iota)*cosine(beta)*sine(iota))/10240)
         
         
-        Sx05[0,3]=25/256*et[3,0]**4*cosine(iota)*cosine(3*beta)*sine(iota)+(179*et[3,0]**6*cosine(iota)*cosine(3*beta)*sine(iota))/3840
-        Sx05[1,3]=13/120*et[3,1]**5*cosine(iota)*cosine(3*beta)*sine(iota)
-        Sx05[2,3]=(1233*et[3,2]**6*cosine(iota)*cosine(3*beta)*sine(iota))/10240  
+        Sx05[0,3]=25/256*et[0,3]**4*cosine(iota)*cosine(3*beta)*sine(iota)+(179*et[0,3]**6*cosine(iota)*cosine(3*beta)*sine(iota))/3840
+        Sx05[1,3]=13/120*et[1,3]**5*cosine(iota)*cosine(3*beta)*sine(iota)
+        Sx05[2,3]=(1233*et[2,3]**6*cosine(iota)*cosine(3*beta)*sine(iota))/10240  
         
         
-        Sx05[0,-3]=19/16*et[-3,0]**2*cosine(iota)*cosine(3*beta)*sine(iota)-65/96*et[-3,0]**4*cosine(iota)*cosine(3*beta)*sine(iota)-(19*et[-3,0]**6*cosine(iota)*cosine(3*beta)*sine(iota))/6144
-        Sx05[1,-3]=-6*et[-3,1]*cosine(iota)*cosine(3*beta)*sine(iota)+11*et[-3,1]**3*cosine(iota)*cosine(3*beta)*sine(iota)-133/24*et[-3,1]**5*cosine(iota)*cosine(3*beta)*sine(iota)
-        Sx05[2,-3]=9/2*cosine(iota)*cosine(3*beta)*sine(iota)-27*et[-3,2]**2*cosine(iota)*cosine(3*beta)*sine(iota)+5319/128*et[-3,2]**4*cosine(iota)*cosine(3*beta)*sine(iota)-3141/128*et[-3,2]**6*cosine(iota)*cosine(3*beta)*sine(iota)
-        Sx05[3,-3]=16*et[-3,3]*cosine(iota)*cosine(3*beta)*sine(iota)-76*et[-3,3]**3*cosine(iota)*cosine(3*beta)*sine(iota)+352/3*et[-3,3]**5*cosine(iota)*cosine(3*beta)*sine(iota)
-        Sx05[4,-3]=625/16*et[-3,4]**2*cosine(iota)*cosine(3*beta)*sine(iota)-5625/32*et[-3,4]**4*cosine(iota)*cosine(3*beta)*sine(iota)+(1746875*et[-3,4]**6*cosine(iota)*cosine(3*beta)*sine(iota))/6144
-        Sx05[5,-3]=81*et[-3,5]**3*cosine(iota)*cosine(3*beta)*sine(iota)-729/2*et[-3,5]**5*cosine(iota)*cosine(3*beta)*sine(iota)
-        Sx05[6,-3]=117649/768*et[-3,6]**4*cosine(iota)*cosine(3*beta)*sine(iota)-(2705927*et[-3,6]**6*cosine(iota)*cosine(3*beta)*sine(iota))/3840
-        Sx05[7,-3]=4096/15*et[-3,7]**5*cosine(iota)*cosine(3*beta)*sine(iota)
-        Sx05[8,-3]=(4782969*et[-3,8]**6*cosine(iota)*cosine(3*beta)*sine(iota))/10240        
+        Sx05[0,-3]=19/16*et[0,-3]**2*cosine(iota)*cosine(3*beta)*sine(iota)-65/96*et[0,-3]**4*cosine(iota)*cosine(3*beta)*sine(iota)-(19*et[0,-3]**6*cosine(iota)*cosine(3*beta)*sine(iota))/6144
+        Sx05[1,-3]=-6*et[1,-3]*cosine(iota)*cosine(3*beta)*sine(iota)+11*et[1,-3]**3*cosine(iota)*cosine(3*beta)*sine(iota)-133/24*et[1,-3]**5*cosine(iota)*cosine(3*beta)*sine(iota)
+        Sx05[2,-3]=9/2*cosine(iota)*cosine(3*beta)*sine(iota)-27*et[2,-3]**2*cosine(iota)*cosine(3*beta)*sine(iota)+5319/128*et[2,-3]**4*cosine(iota)*cosine(3*beta)*sine(iota)-3141/128*et[2,-3]**6*cosine(iota)*cosine(3*beta)*sine(iota)
+        Sx05[3,-3]=16*et[3,-3]*cosine(iota)*cosine(3*beta)*sine(iota)-76*et[3,-3]**3*cosine(iota)*cosine(3*beta)*sine(iota)+352/3*et[3,-3]**5*cosine(iota)*cosine(3*beta)*sine(iota)
+        Sx05[4,-3]=625/16*et[4,-3]**2*cosine(iota)*cosine(3*beta)*sine(iota)-5625/32*et[4,-3]**4*cosine(iota)*cosine(3*beta)*sine(iota)+(1746875*et[4,-3]**6*cosine(iota)*cosine(3*beta)*sine(iota))/6144
+        Sx05[5,-3]=81*et[5,-3]**3*cosine(iota)*cosine(3*beta)*sine(iota)-729/2*et[5,-3]**5*cosine(iota)*cosine(3*beta)*sine(iota)
+        Sx05[6,-3]=117649/768*et[6,-3]**4*cosine(iota)*cosine(3*beta)*sine(iota)-(2705927*et[6,-3]**6*cosine(iota)*cosine(3*beta)*sine(iota))/3840
+        Sx05[7,-3]=4096/15*et[7,-3]**5*cosine(iota)*cosine(3*beta)*sine(iota)
+        Sx05[8,-3]=(4782969*et[8,-3]**6*cosine(iota)*cosine(3*beta)*sine(iota))/10240        
 
         
         ###################cplus1_start####################
         Cp1 = np.zeros((10,7))
 
-        Cp1[0,2]=et[2,0]**5*((11341*cosine(2*beta))/4608-(1561*eta*cosine(2*beta))/4608+1243/512*cosine(iota)**2*cosine(2*beta)-(1099*eta*cosine(iota)**2*cosine(2*beta))/4608-13/576*cosine(2*beta)*sine(iota)**2+13/192*eta*cosine(2*beta)*sine(iota)**2-13/576*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+13/192*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[2,0]**3*(913/288*cosine(2*beta)-269/288*eta*cosine(2*beta)+91/32*cosine(iota)**2*cosine(2*beta)+13/288*eta*cosine(iota)**2*cosine(2*beta)-13/144*cosine(2*beta)*sine(iota)**2+13/48*eta*cosine(2*beta)*sine(iota)**2-13/144*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+13/48*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
-        Cp1[1,2]=et[2,1]**6*(137/80*cosine(2*beta)-53/288*eta*cosine(2*beta)+419/240*cosine(iota)**2*cosine(2*beta)-(409*eta*cosine(iota)**2*cosine(2*beta))/1440)+et[2,1]**4*(29/9*cosine(2*beta)-17/16*eta*cosine(2*beta)+17/6*cosine(iota)**2*cosine(2*beta)+5/48*eta*cosine(iota)**2*cosine(2*beta)-5/72*cosine(2*beta)*sine(iota)**2+5/24*eta*cosine(2*beta)*sine(iota)**2-5/72*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+5/24*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
+        Cp1[0,2]=et[0,2]**5*((11341*cosine(2*beta))/4608-(1561*eta*cosine(2*beta))/4608+1243/512*cosine(iota)**2*cosine(2*beta)-(1099*eta*cosine(iota)**2*cosine(2*beta))/4608-13/576*cosine(2*beta)*sine(iota)**2+13/192*eta*cosine(2*beta)*sine(iota)**2-13/576*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+13/192*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[0,2]**3*(913/288*cosine(2*beta)-269/288*eta*cosine(2*beta)+91/32*cosine(iota)**2*cosine(2*beta)+13/288*eta*cosine(iota)**2*cosine(2*beta)-13/144*cosine(2*beta)*sine(iota)**2+13/48*eta*cosine(2*beta)*sine(iota)**2-13/144*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+13/48*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
+        Cp1[1,2]=et[1,2]**6*(137/80*cosine(2*beta)-53/288*eta*cosine(2*beta)+419/240*cosine(iota)**2*cosine(2*beta)-(409*eta*cosine(iota)**2*cosine(2*beta))/1440)+et[1,2]**4*(29/9*cosine(2*beta)-17/16*eta*cosine(2*beta)+17/6*cosine(iota)**2*cosine(2*beta)+5/48*eta*cosine(iota)**2*cosine(2*beta)-5/72*cosine(2*beta)*sine(iota)**2+5/24*eta*cosine(2*beta)*sine(iota)**2-5/72*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+5/24*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
         Cp1[2,2]=et[2,2]**5*(1917/512*cosine(2*beta)-(3297*eta*cosine(2*beta))/2560+(8343*cosine(iota)**2*cosine(2*beta))/2560+(429*eta*cosine(iota)**2*cosine(2*beta))/2560-(81*cosine(2*beta)*sine(iota)**2)/1280+(243*eta*cosine(2*beta)*sine(iota)**2)/1280-(81*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)/1280+(243*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)/1280)
-        Cp1[3,2]=et[2,3]**6*((4903*cosine(2*beta))/1080-173/108*eta*cosine(2*beta)+157/40*cosine(iota)**2*cosine(2*beta)+131/540*eta*cosine(iota)**2*cosine(2*beta)-17/270*cosine(2*beta)*sine(iota)**2+17/90*eta*cosine(2*beta)*sine(iota)**2-17/270*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+17/90*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
+        Cp1[3,2]=et[3,2]**6*((4903*cosine(2*beta))/1080-173/108*eta*cosine(2*beta)+157/40*cosine(iota)**2*cosine(2*beta)+131/540*eta*cosine(iota)**2*cosine(2*beta)-17/270*cosine(2*beta)*sine(iota)**2+17/90*eta*cosine(2*beta)*sine(iota)**2-17/270*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+17/90*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
         
-        Cp1[0,-2]=et[-2,0]**5*(-((3631*cosine(2*beta))/2304)+(1543*eta*cosine(2*beta))/2304-947/768*cosine(iota)**2*cosine(2*beta)-(827*eta*cosine(iota)**2*cosine(2*beta))/2304+(79*cosine(2*beta)*sine(iota)**2)/1152-79/384*eta*cosine(2*beta)*sine(iota)**2+(79*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)/1152-79/384*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[-2,0]**3*(-(121/32)*cosine(2*beta)-109/96*eta*cosine(2*beta)-179/32*cosine(iota)**2*cosine(2*beta)+413/96*eta*cosine(iota)**2*cosine(2*beta)-1/8*cosine(2*beta)*sine(iota)**2+3/8*eta*cosine(2*beta)*sine(iota)**2-1/8*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+3/8*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[-2,0]*(145/12*cosine(2*beta)+5/4*eta*cosine(2*beta)+53/4*cosine(iota)**2*cosine(2*beta)-9/4*eta*cosine(iota)**2*cosine(2*beta)-1/6*cosine(2*beta)*sine(iota)**2+1/2*eta*cosine(2*beta)*sine(iota)**2-1/6*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+1/2*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
-        Cp1[1,-2]= 17/3*cosine(2*beta)-13/3*eta*cosine(2*beta)+3*cosine(iota)**2*cosine(2*beta)+11/3*eta*cosine(iota)**2*cosine(2*beta)+2/3*cosine(2*beta)*sine(iota)**2-2*eta*cosine(2*beta)*sine(iota)**2+2/3*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-2*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+et[-2,1]**2*(235/6*cosine(2*beta)+89/6*eta*cosine(2*beta)+105/2*cosine(iota)**2*cosine(2*beta)-151/6*eta*cosine(iota)**2*cosine(2*beta)+2/3*cosine(2*beta)*sine(iota)**2-2*eta*cosine(2*beta)*sine(iota)**2+2/3*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-2*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[-2,1]**6*(2843/864*cosine(2*beta)+4085/864*eta*cosine(2*beta)+707/96*cosine(iota)**2*cosine(2*beta)-6475/864*eta*cosine(iota)**2*cosine(2*beta)+35/54*cosine(2*beta)*sine(iota)**2-35/18*eta*cosine(2*beta)*sine(iota)**2+35/54*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-35/18*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[-2,1]**4*(-(437/48)*cosine(2*beta)-683/48*eta*cosine(2*beta)-367/16*cosine(iota)**2*cosine(2*beta)+1309/48*eta*cosine(iota)**2*cosine(2*beta)-43/24*cosine(2*beta)*sine(iota)**2+43/8*eta*cosine(2*beta)*sine(iota)**2-43/24*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+43/8*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
-        Cp1[2,-2]=et[-2,2]*(-(9/4)*cosine(2*beta)-75/4*eta*cosine(2*beta)-63/4*cosine(iota)**2*cosine(2*beta)+87/4*eta*cosine(iota)**2*cosine(2*beta))+et[-2,2]**3*(2511/32*cosine(2*beta)+1821/32*eta*cosine(2*beta)+4077/32*cosine(iota)**2*cosine(2*beta)-2877/32*eta*cosine(iota)**2*cosine(2*beta)+81/16*cosine(2*beta)*sine(iota)**2-243/16*eta*cosine(2*beta)*sine(iota)**2+81/16*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-243/16*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[-2,2]**5*(-(8379/256)*cosine(2*beta)-14793/256*eta*cosine(2*beta)-21717/256*cosine(iota)**2*cosine(2*beta)+25221/256*eta*cosine(iota)**2*cosine(2*beta)-243/32*cosine(2*beta)*sine(iota)**2+729/32*eta*cosine(2*beta)*sine(iota)**2-243/32*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+729/32*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
-        Cp1[3,-2]=et[-2,3]**4*(1294/9*cosine(2*beta)+458/3*eta*cosine(2*beta)+818/3*cosine(iota)**2*cosine(2*beta)-234*eta*cosine(iota)**2*cosine(2*beta)+148/9*cosine(2*beta)*sine(iota)**2-148/3*eta*cosine(2*beta)*sine(iota)**2+148/9*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-148/3*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[-2,3]**2*(-(62/3)*cosine(2*beta)-148/3*eta*cosine(2*beta)-58*cosine(iota)**2*cosine(2*beta)+188/3*eta*cosine(iota)**2*cosine(2*beta)-8/3*cosine(2*beta)*sine(iota)**2+8*eta*cosine(2*beta)*sine(iota)**2-8/3*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+8*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[-2,3]**6*(-(2047/24)*cosine(2*beta)-6161/36*eta*cosine(2*beta)-5639/24*cosine(iota)**2*cosine(2*beta)+10003/36*eta*cosine(iota)**2*cosine(2*beta)-139/6*cosine(2*beta)*sine(iota)**2+139/2*eta*cosine(2*beta)*sine(iota)**2-139/6*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+139/2*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
-        Cp1[4,-2]=et[-2,4]**5*((1160825*cosine(2*beta))/4608+(1594375*eta*cosine(2*beta))/4608+277175/512*cosine(iota)**2*cosine(2*beta)-(2406875*eta*cosine(iota)**2*cosine(2*beta))/4608+(94375*cosine(2*beta)*sine(iota)**2)/2304-94375/768*eta*cosine(2*beta)*sine(iota)**2+(94375*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)/2304-94375/768*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[-2,4]**3*(-(15175/288)*cosine(2*beta)-30625/288*eta*cosine(2*beta)-4325/32*cosine(iota)**2*cosine(2*beta)+40625/288*eta*cosine(iota)**2*cosine(2*beta)-625/72*cosine(2*beta)*sine(iota)**2+625/24*eta*cosine(2*beta)*sine(iota)**2-625/72*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+625/24*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
-        Cp1[5,-2]=et[-2,5]**6*(68409/160*cosine(2*beta)+11367/16*eta*cosine(2*beta)+163017/160*cosine(iota)**2*cosine(2*beta)-85077/80*eta*cosine(iota)**2*cosine(2*beta)+891/10*cosine(2*beta)*sine(iota)**2-2673/10*eta*cosine(2*beta)*sine(iota)**2+891/10*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-2673/10*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[-2,5]**4*(-(1665/16)*cosine(2*beta)-1647/8*eta*cosine(2*beta)-4257/16*cosine(iota)**2*cosine(2*beta)+2241/8*eta*cosine(iota)**2*cosine(2*beta)-81/4*cosine(2*beta)*sine(iota)**2+243/4*eta*cosine(2*beta)*sine(iota)**2-81/4*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+243/4*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
-        Cp1[6,-2]=et[-2,6]**5*(-((844711*cosine(2*beta))/4608)-(8588377*eta*cosine(2*beta))/23040-(3682399*cosine(iota)**2*cosine(2*beta))/7680+(11882549*eta*cosine(iota)**2*cosine(2*beta))/23040-(117649*cosine(2*beta)*sine(iota)**2)/2880+117649/960*eta*cosine(2*beta)*sine(iota)**2-(117649*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)/2880+117649/960*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
-        Cp1[7,-2]=et[-2,7]**6*(-(81713/270)*cosine(2*beta)-17408/27*eta*cosine(2*beta)-24553/30*cosine(iota)**2*cosine(2*beta)+121856/135*eta*cosine(iota)**2*cosine(2*beta)-2048/27*cosine(2*beta)*sine(iota)**2+2048/9*eta*cosine(2*beta)*sine(iota)**2-2048/27*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+2048/9*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
+        Cp1[0,-2]=et[0,-2]**5*(-((3631*cosine(2*beta))/2304)+(1543*eta*cosine(2*beta))/2304-947/768*cosine(iota)**2*cosine(2*beta)-(827*eta*cosine(iota)**2*cosine(2*beta))/2304+(79*cosine(2*beta)*sine(iota)**2)/1152-79/384*eta*cosine(2*beta)*sine(iota)**2+(79*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)/1152-79/384*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[0,-2]**3*(-(121/32)*cosine(2*beta)-109/96*eta*cosine(2*beta)-179/32*cosine(iota)**2*cosine(2*beta)+413/96*eta*cosine(iota)**2*cosine(2*beta)-1/8*cosine(2*beta)*sine(iota)**2+3/8*eta*cosine(2*beta)*sine(iota)**2-1/8*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+3/8*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[0,-2]*(145/12*cosine(2*beta)+5/4*eta*cosine(2*beta)+53/4*cosine(iota)**2*cosine(2*beta)-9/4*eta*cosine(iota)**2*cosine(2*beta)-1/6*cosine(2*beta)*sine(iota)**2+1/2*eta*cosine(2*beta)*sine(iota)**2-1/6*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+1/2*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
+        Cp1[1,-2]= 17/3*cosine(2*beta)-13/3*eta*cosine(2*beta)+3*cosine(iota)**2*cosine(2*beta)+11/3*eta*cosine(iota)**2*cosine(2*beta)+2/3*cosine(2*beta)*sine(iota)**2-2*eta*cosine(2*beta)*sine(iota)**2+2/3*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-2*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+et[1,-2]**2*(235/6*cosine(2*beta)+89/6*eta*cosine(2*beta)+105/2*cosine(iota)**2*cosine(2*beta)-151/6*eta*cosine(iota)**2*cosine(2*beta)+2/3*cosine(2*beta)*sine(iota)**2-2*eta*cosine(2*beta)*sine(iota)**2+2/3*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-2*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[1,-2]**6*(2843/864*cosine(2*beta)+4085/864*eta*cosine(2*beta)+707/96*cosine(iota)**2*cosine(2*beta)-6475/864*eta*cosine(iota)**2*cosine(2*beta)+35/54*cosine(2*beta)*sine(iota)**2-35/18*eta*cosine(2*beta)*sine(iota)**2+35/54*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-35/18*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[1,-2]**4*(-(437/48)*cosine(2*beta)-683/48*eta*cosine(2*beta)-367/16*cosine(iota)**2*cosine(2*beta)+1309/48*eta*cosine(iota)**2*cosine(2*beta)-43/24*cosine(2*beta)*sine(iota)**2+43/8*eta*cosine(2*beta)*sine(iota)**2-43/24*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+43/8*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
+        Cp1[2,-2]=et[2,-2]*(-(9/4)*cosine(2*beta)-75/4*eta*cosine(2*beta)-63/4*cosine(iota)**2*cosine(2*beta)+87/4*eta*cosine(iota)**2*cosine(2*beta))+et[2,-2]**3*(2511/32*cosine(2*beta)+1821/32*eta*cosine(2*beta)+4077/32*cosine(iota)**2*cosine(2*beta)-2877/32*eta*cosine(iota)**2*cosine(2*beta)+81/16*cosine(2*beta)*sine(iota)**2-243/16*eta*cosine(2*beta)*sine(iota)**2+81/16*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-243/16*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[2,-2]**5*(-(8379/256)*cosine(2*beta)-14793/256*eta*cosine(2*beta)-21717/256*cosine(iota)**2*cosine(2*beta)+25221/256*eta*cosine(iota)**2*cosine(2*beta)-243/32*cosine(2*beta)*sine(iota)**2+729/32*eta*cosine(2*beta)*sine(iota)**2-243/32*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+729/32*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
+        Cp1[3,-2]=et[3,-2]**4*(1294/9*cosine(2*beta)+458/3*eta*cosine(2*beta)+818/3*cosine(iota)**2*cosine(2*beta)-234*eta*cosine(iota)**2*cosine(2*beta)+148/9*cosine(2*beta)*sine(iota)**2-148/3*eta*cosine(2*beta)*sine(iota)**2+148/9*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-148/3*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[3,-2]**2*(-(62/3)*cosine(2*beta)-148/3*eta*cosine(2*beta)-58*cosine(iota)**2*cosine(2*beta)+188/3*eta*cosine(iota)**2*cosine(2*beta)-8/3*cosine(2*beta)*sine(iota)**2+8*eta*cosine(2*beta)*sine(iota)**2-8/3*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+8*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[3,-2]**6*(-(2047/24)*cosine(2*beta)-6161/36*eta*cosine(2*beta)-5639/24*cosine(iota)**2*cosine(2*beta)+10003/36*eta*cosine(iota)**2*cosine(2*beta)-139/6*cosine(2*beta)*sine(iota)**2+139/2*eta*cosine(2*beta)*sine(iota)**2-139/6*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+139/2*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
+        Cp1[4,-2]=et[4,-2]**5*((1160825*cosine(2*beta))/4608+(1594375*eta*cosine(2*beta))/4608+277175/512*cosine(iota)**2*cosine(2*beta)-(2406875*eta*cosine(iota)**2*cosine(2*beta))/4608+(94375*cosine(2*beta)*sine(iota)**2)/2304-94375/768*eta*cosine(2*beta)*sine(iota)**2+(94375*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)/2304-94375/768*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[4,-2]**3*(-(15175/288)*cosine(2*beta)-30625/288*eta*cosine(2*beta)-4325/32*cosine(iota)**2*cosine(2*beta)+40625/288*eta*cosine(iota)**2*cosine(2*beta)-625/72*cosine(2*beta)*sine(iota)**2+625/24*eta*cosine(2*beta)*sine(iota)**2-625/72*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+625/24*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
+        Cp1[5,-2]=et[5,-2]**6*(68409/160*cosine(2*beta)+11367/16*eta*cosine(2*beta)+163017/160*cosine(iota)**2*cosine(2*beta)-85077/80*eta*cosine(iota)**2*cosine(2*beta)+891/10*cosine(2*beta)*sine(iota)**2-2673/10*eta*cosine(2*beta)*sine(iota)**2+891/10*cosine(iota)**2*cosine(2*beta)*sine(iota)**2-2673/10*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)+et[5,-2]**4*(-(1665/16)*cosine(2*beta)-1647/8*eta*cosine(2*beta)-4257/16*cosine(iota)**2*cosine(2*beta)+2241/8*eta*cosine(iota)**2*cosine(2*beta)-81/4*cosine(2*beta)*sine(iota)**2+243/4*eta*cosine(2*beta)*sine(iota)**2-81/4*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+243/4*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
+        Cp1[6,-2]=et[6,-2]**5*(-((844711*cosine(2*beta))/4608)-(8588377*eta*cosine(2*beta))/23040-(3682399*cosine(iota)**2*cosine(2*beta))/7680+(11882549*eta*cosine(iota)**2*cosine(2*beta))/23040-(117649*cosine(2*beta)*sine(iota)**2)/2880+117649/960*eta*cosine(2*beta)*sine(iota)**2-(117649*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)/2880+117649/960*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
+        Cp1[7,-2]=et[7,-2]**6*(-(81713/270)*cosine(2*beta)-17408/27*eta*cosine(2*beta)-24553/30*cosine(iota)**2*cosine(2*beta)+121856/135*eta*cosine(iota)**2*cosine(2*beta)-2048/27*cosine(2*beta)*sine(iota)**2+2048/9*eta*cosine(2*beta)*sine(iota)**2-2048/27*cosine(iota)**2*cosine(2*beta)*sine(iota)**2+2048/9*eta*cosine(iota)**2*cosine(2*beta)*sine(iota)**2)
 
         
         
-        Cp1[0,4]=et[4,0]**5*((1091*cosine(4*beta)*sine(iota)**2)/92160-(1091*eta*cosine(4*beta)*sine(iota)**2)/30720+(1091*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/92160-(1091*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/30720)
-        Cp1[1,4]=et[4,1]**6*((71*cosine(4*beta)*sine(iota)**2)/4320-(71*eta*cosine(4*beta)*sine(iota)**2)/1440+(71*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/4320-(71*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/1440)
+        Cp1[0,4]=et[0,4]**5*((1091*cosine(4*beta)*sine(iota)**2)/92160-(1091*eta*cosine(4*beta)*sine(iota)**2)/30720+(1091*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/92160-(1091*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/30720)
+        Cp1[1,4]=et[1,4]**6*((71*cosine(4*beta)*sine(iota)**2)/4320-(71*eta*cosine(4*beta)*sine(iota)**2)/1440+(71*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/4320-(71*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/1440)
 
       
     
-        Cp1[0,-4]=et[-4,0]**3*((187*cosine(4*beta)*sine(iota)**2)/1152-187/384*eta*cosine(4*beta)*sine(iota)**2+(187*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/1152-187/384*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[-4,0]**5*(-((1769*cosine(4*beta)*sine(iota)**2)/18432)+(1769*eta*cosine(4*beta)*sine(iota)**2)/6144-(1769*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/18432+(1769*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/6144)
-        Cp1[1,-4]=et[-4,1]**4*(137/36*cosine(4*beta)*sine(iota)**2-137/12*eta*cosine(4*beta)*sine(iota)**2+137/36*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-137/12*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[-4,1]**6*(-(57/32)*cosine(4*beta)*sine(iota)**2+171/32*eta*cosine(4*beta)*sine(iota)**2-57/32*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+171/32*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[-4,1]**2*(-(7/3)*cosine(4*beta)*sine(iota)**2+7*eta*cosine(4*beta)*sine(iota)**2-7/3*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+7*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
-        Cp1[2,-4]=et[-4,2]**5*((25191*cosine(4*beta)*sine(iota)**2)/1024-(75573*eta*cosine(4*beta)*sine(iota)**2)/1024+(25191*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/1024-(75573*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/1024)+et[-4,2]*(81/16*cosine(4*beta)*sine(iota)**2-243/16*eta*cosine(4*beta)*sine(iota)**2+81/16*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-243/16*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[-4,2]**3*(-(2511/128)*cosine(4*beta)*sine(iota)**2+7533/128*eta*cosine(4*beta)*sine(iota)**2-2511/128*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+7533/128*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
-        Cp1[3,-4]=-(8/3)*cosine(4*beta)*sine(iota)**2+8*eta*cosine(4*beta)*sine(iota)**2-8/3*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+8*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+et[-4,3]**6*(2768/27*cosine(4*beta)*sine(iota)**2-2768/9*eta*cosine(4*beta)*sine(iota)**2+2768/27*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-2768/9*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[-4,3]**2*(88/3*cosine(4*beta)*sine(iota)**2-88*eta*cosine(4*beta)*sine(iota)**2+88/3*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-88*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[-4,3]**4*(-(253/3)*cosine(4*beta)*sine(iota)**2+253*eta*cosine(4*beta)*sine(iota)**2-253/3*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+253*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
-        Cp1[4,-4]=et[-4,4]**3*(13125/128*cosine(4*beta)*sine(iota)**2-39375/128*eta*cosine(4*beta)*sine(iota)**2+13125/128*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-39375/128*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[-4,4]*(-(625/48)*cosine(4*beta)*sine(iota)**2+625/16*eta*cosine(4*beta)*sine(iota)**2-625/48*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+625/16*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[-4,4]**5*(-((2493125*cosine(4*beta)*sine(iota)**2)/9216)+(2493125*eta*cosine(4*beta)*sine(iota)**2)/3072-(2493125*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/9216+(2493125*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/3072)
-        Cp1[5,-4]=et[-4,5]**4*(567/2*cosine(4*beta)*sine(iota)**2-1701/2*eta*cosine(4*beta)*sine(iota)**2+567/2*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-1701/2*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[-4,5]**2*(-(81/2)*cosine(4*beta)*sine(iota)**2+243/2*eta*cosine(4*beta)*sine(iota)**2-81/2*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+243/2*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[-4,5]**6*(-(11745/16)*cosine(4*beta)*sine(iota)**2+35235/16*eta*cosine(4*beta)*sine(iota)**2-11745/16*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+35235/16*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
-        Cp1[6,-4]=et[-4,6]**5*((12588443*cosine(4*beta)*sine(iota)**2)/18432-(12588443*eta*cosine(4*beta)*sine(iota)**2)/6144+(12588443*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/18432-(12588443*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/6144)+et[-4,6]**3*(-((117649*cosine(4*beta)*sine(iota)**2)/1152)+117649/384*eta*cosine(4*beta)*sine(iota)**2-(117649*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/1152+117649/384*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
-        Cp1[7,-4]=et[-4,7]**6*(22528/15*cosine(4*beta)*sine(iota)**2-22528/5*eta*cosine(4*beta)*sine(iota)**2+22528/15*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-22528/5*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[-4,7]**4*(-(2048/9)*cosine(4*beta)*sine(iota)**2+2048/3*eta*cosine(4*beta)*sine(iota)**2-2048/9*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+2048/3*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
-        Cp1[8,-4]=et[-4,8]**5*(-((4782969*cosine(4*beta)*sine(iota)**2)/10240)+(14348907*eta*cosine(4*beta)*sine(iota)**2)/10240-(4782969*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/10240+(14348907*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/10240)
-        Cp1[9,-4]=et[-4,9]**6*(-(390625/432)*cosine(4*beta)*sine(iota)**2+390625/144*eta*cosine(4*beta)*sine(iota)**2-390625/432*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+390625/144*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)    
+        Cp1[0,-4]=et[0,-4]**3*((187*cosine(4*beta)*sine(iota)**2)/1152-187/384*eta*cosine(4*beta)*sine(iota)**2+(187*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/1152-187/384*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[0,-4]**5*(-((1769*cosine(4*beta)*sine(iota)**2)/18432)+(1769*eta*cosine(4*beta)*sine(iota)**2)/6144-(1769*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/18432+(1769*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/6144)
+        Cp1[1,-4]=et[1,-4]**4*(137/36*cosine(4*beta)*sine(iota)**2-137/12*eta*cosine(4*beta)*sine(iota)**2+137/36*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-137/12*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[1,-4]**6*(-(57/32)*cosine(4*beta)*sine(iota)**2+171/32*eta*cosine(4*beta)*sine(iota)**2-57/32*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+171/32*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[1,-4]**2*(-(7/3)*cosine(4*beta)*sine(iota)**2+7*eta*cosine(4*beta)*sine(iota)**2-7/3*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+7*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
+        Cp1[2,-4]=et[2,-4]**5*((25191*cosine(4*beta)*sine(iota)**2)/1024-(75573*eta*cosine(4*beta)*sine(iota)**2)/1024+(25191*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/1024-(75573*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/1024)+et[2,-4]*(81/16*cosine(4*beta)*sine(iota)**2-243/16*eta*cosine(4*beta)*sine(iota)**2+81/16*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-243/16*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[2,-4]**3*(-(2511/128)*cosine(4*beta)*sine(iota)**2+7533/128*eta*cosine(4*beta)*sine(iota)**2-2511/128*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+7533/128*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
+        Cp1[3,-4]=-(8/3)*cosine(4*beta)*sine(iota)**2+8*eta*cosine(4*beta)*sine(iota)**2-8/3*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+8*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+et[3,-4]**6*(2768/27*cosine(4*beta)*sine(iota)**2-2768/9*eta*cosine(4*beta)*sine(iota)**2+2768/27*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-2768/9*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[3,-4]**2*(88/3*cosine(4*beta)*sine(iota)**2-88*eta*cosine(4*beta)*sine(iota)**2+88/3*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-88*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[3,-4]**4*(-(253/3)*cosine(4*beta)*sine(iota)**2+253*eta*cosine(4*beta)*sine(iota)**2-253/3*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+253*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
+        Cp1[4,-4]=et[4,-4]**3*(13125/128*cosine(4*beta)*sine(iota)**2-39375/128*eta*cosine(4*beta)*sine(iota)**2+13125/128*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-39375/128*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[4,-4]*(-(625/48)*cosine(4*beta)*sine(iota)**2+625/16*eta*cosine(4*beta)*sine(iota)**2-625/48*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+625/16*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[4,-4]**5*(-((2493125*cosine(4*beta)*sine(iota)**2)/9216)+(2493125*eta*cosine(4*beta)*sine(iota)**2)/3072-(2493125*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/9216+(2493125*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/3072)
+        Cp1[5,-4]=et[5,-4]**4*(567/2*cosine(4*beta)*sine(iota)**2-1701/2*eta*cosine(4*beta)*sine(iota)**2+567/2*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-1701/2*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[5,-4]**2*(-(81/2)*cosine(4*beta)*sine(iota)**2+243/2*eta*cosine(4*beta)*sine(iota)**2-81/2*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+243/2*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[5,-4]**6*(-(11745/16)*cosine(4*beta)*sine(iota)**2+35235/16*eta*cosine(4*beta)*sine(iota)**2-11745/16*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+35235/16*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
+        Cp1[6,-4]=et[6,-4]**5*((12588443*cosine(4*beta)*sine(iota)**2)/18432-(12588443*eta*cosine(4*beta)*sine(iota)**2)/6144+(12588443*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/18432-(12588443*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/6144)+et[6,-4]**3*(-((117649*cosine(4*beta)*sine(iota)**2)/1152)+117649/384*eta*cosine(4*beta)*sine(iota)**2-(117649*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/1152+117649/384*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
+        Cp1[7,-4]=et[7,-4]**6*(22528/15*cosine(4*beta)*sine(iota)**2-22528/5*eta*cosine(4*beta)*sine(iota)**2+22528/15*cosine(iota)**2*cosine(4*beta)*sine(iota)**2-22528/5*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)+et[7,-4]**4*(-(2048/9)*cosine(4*beta)*sine(iota)**2+2048/3*eta*cosine(4*beta)*sine(iota)**2-2048/9*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+2048/3*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)
+        Cp1[8,-4]=et[8,-4]**5*(-((4782969*cosine(4*beta)*sine(iota)**2)/10240)+(14348907*eta*cosine(4*beta)*sine(iota)**2)/10240-(4782969*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/10240+(14348907*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)/10240)
+        Cp1[9,-4]=et[9,-4]**6*(-(390625/432)*cosine(4*beta)*sine(iota)**2+390625/144*eta*cosine(4*beta)*sine(iota)**2-390625/432*cosine(iota)**2*cosine(4*beta)*sine(iota)**2+390625/144*eta*cosine(iota)**2*cosine(4*beta)*sine(iota)**2)    
         
         Cp1[0,0]=et[0,0]**3*(-(11/16)+(23*eta)/48+(11*cosine(iota)**2)/16-23/48*eta*cosine(iota)**2+(9*sine(iota)**2)/64-27/64*eta*sine(iota)**2+9/64*cosine(iota)**2*sine(iota)**2-27/64*eta*cosine(iota)**2*sine(iota)**2)+et[0,0]*(-(9/2)+eta/6+(9*cosine(iota)**2)/2-1/6*eta*cosine(iota)**2+sine(iota)**2/8-3/8*eta*sine(iota)**2+1/8*cosine(iota)**2*sine(iota)**2-3/8*eta*cosine(iota)**2*sine(iota)**2)+et[0,0]**5*(-(235/128)-(47*eta)/1152+(235*cosine(iota)**2)/128+(47*eta*cosine(iota)**2)/1152-(19*sine(iota)**2)/1536+19/512*eta*sine(iota)**2-(19*cosine(iota)**2*sine(iota)**2)/1536+19/512*eta*cosine(iota)**2*sine(iota)**2)
-        Cp1[1,0]=et[0,1]**4*(5/2+(35*eta)/18-(5*cosine(iota)**2)/2-35/18*eta*cosine(iota)**2+(7*sine(iota)**2)/12-7/4*eta*sine(iota)**2+7/12*cosine(iota)**2*sine(iota)**2-7/4*eta*cosine(iota)**2*sine(iota)**2)+et[0,1]**6*(-(103/48)-(59*eta)/144+(103*cosine(iota)**2)/48+59/144*eta*cosine(iota)**2-sine(iota)**2/8+3/8*eta*sine(iota)**2-1/8*cosine(iota)**2*sine(iota)**2+3/8*eta*cosine(iota)**2*sine(iota)**2)+et[0,1]**2*(-(15/2)-(11*eta)/6+(15*cosine(iota)**2)/2+11/6*eta*cosine(iota)**2-sine(iota)**2/2+3/2*eta*sine(iota)**2-1/2*cosine(iota)**2*sine(iota)**2+3/2*eta*cosine(iota)**2*sine(iota)**2)
-        Cp1[2,0]=et[0,2]**5*(2097/256+(1269*eta)/256-(2097*cosine(iota)**2)/256-1269/256*eta*cosine(iota)**2+(1539*sine(iota)**2)/1024-(4617*eta*sine(iota)**2)/1024+(1539*cosine(iota)**2*sine(iota)**2)/1024-(4617*eta*cosine(iota)**2*sine(iota)**2)/1024)+et[0,2]**3*(-(189/16)-(69*eta)/16+(189*cosine(iota)**2)/16+69/16*eta*cosine(iota)**2-(81*sine(iota)**2)/64+243/64*eta*sine(iota)**2-81/64*cosine(iota)**2*sine(iota)**2+243/64*eta*cosine(iota)**2*sine(iota)**2)
-        Cp1[3,0]=et[0,3]**6*(272/15+(472*eta)/45-(272*cosine(iota)**2)/15-472/45*eta*cosine(iota)**2+(16*sine(iota)**2)/5-48/5*eta*sine(iota)**2+16/5*cosine(iota)**2*sine(iota)**2-48/5*eta*cosine(iota)**2*sine(iota)**2)+et[0,3]**4*(-18-(70*eta)/9+18*cosine(iota)**2+70/9*eta*cosine(iota)**2-(7*sine(iota)**2)/3+7*eta*sine(iota)**2-7/3*cosine(iota)**2*sine(iota)**2+7*eta*cosine(iota)**2*sine(iota)**2)
-        Cp1[4,0]=et[0,4]**5*(-(6875/256)-(29375*eta)/2304+(6875*cosine(iota)**2)/256+(29375*eta*cosine(iota)**2)/2304-(11875*sine(iota)**2)/3072+(11875*eta*sine(iota)**2)/1024-(11875*cosine(iota)**2*sine(iota)**2)/3072+(11875*eta*cosine(iota)**2*sine(iota)**2)/1024)
-        Cp1[5,0]=et[0,5]**6*(-(3159/80)-(1593*eta)/80+(3159*cosine(iota)**2)/80+1593/80*eta*cosine(iota)**2-(243*sine(iota)**2)/40+729/40*eta*sine(iota)**2-243/40*cosine(iota)**2*sine(iota)**2+729/40*eta*cosine(iota)**2*sine(iota)**2)
+        Cp1[1,0]=et[1,0]**4*(5/2+(35*eta)/18-(5*cosine(iota)**2)/2-35/18*eta*cosine(iota)**2+(7*sine(iota)**2)/12-7/4*eta*sine(iota)**2+7/12*cosine(iota)**2*sine(iota)**2-7/4*eta*cosine(iota)**2*sine(iota)**2)+et[1,0]**6*(-(103/48)-(59*eta)/144+(103*cosine(iota)**2)/48+59/144*eta*cosine(iota)**2-sine(iota)**2/8+3/8*eta*sine(iota)**2-1/8*cosine(iota)**2*sine(iota)**2+3/8*eta*cosine(iota)**2*sine(iota)**2)+et[1,0]**2*(-(15/2)-(11*eta)/6+(15*cosine(iota)**2)/2+11/6*eta*cosine(iota)**2-sine(iota)**2/2+3/2*eta*sine(iota)**2-1/2*cosine(iota)**2*sine(iota)**2+3/2*eta*cosine(iota)**2*sine(iota)**2)
+        Cp1[2,0]=et[2,0]**5*(2097/256+(1269*eta)/256-(2097*cosine(iota)**2)/256-1269/256*eta*cosine(iota)**2+(1539*sine(iota)**2)/1024-(4617*eta*sine(iota)**2)/1024+(1539*cosine(iota)**2*sine(iota)**2)/1024-(4617*eta*cosine(iota)**2*sine(iota)**2)/1024)+et[2,0]**3*(-(189/16)-(69*eta)/16+(189*cosine(iota)**2)/16+69/16*eta*cosine(iota)**2-(81*sine(iota)**2)/64+243/64*eta*sine(iota)**2-81/64*cosine(iota)**2*sine(iota)**2+243/64*eta*cosine(iota)**2*sine(iota)**2)
+        Cp1[3,0]=et[3,0]**6*(272/15+(472*eta)/45-(272*cosine(iota)**2)/15-472/45*eta*cosine(iota)**2+(16*sine(iota)**2)/5-48/5*eta*sine(iota)**2+16/5*cosine(iota)**2*sine(iota)**2-48/5*eta*cosine(iota)**2*sine(iota)**2)+et[3,0]**4*(-18-(70*eta)/9+18*cosine(iota)**2+70/9*eta*cosine(iota)**2-(7*sine(iota)**2)/3+7*eta*sine(iota)**2-7/3*cosine(iota)**2*sine(iota)**2+7*eta*cosine(iota)**2*sine(iota)**2)
+        Cp1[4,0]=et[4,0]**5*(-(6875/256)-(29375*eta)/2304+(6875*cosine(iota)**2)/256+(29375*eta*cosine(iota)**2)/2304-(11875*sine(iota)**2)/3072+(11875*eta*sine(iota)**2)/1024-(11875*cosine(iota)**2*sine(iota)**2)/3072+(11875*eta*cosine(iota)**2*sine(iota)**2)/1024)
+        Cp1[5,0]=et[5,0]**6*(-(3159/80)-(1593*eta)/80+(3159*cosine(iota)**2)/80+1593/80*eta*cosine(iota)**2-(243*sine(iota)**2)/40+729/40*eta*sine(iota)**2-243/40*cosine(iota)**2*sine(iota)**2+729/40*eta*cosine(iota)**2*sine(iota)**2)
                     
         ###################splus1_start####################
         Sp1 = np.zeros((10,7))
 
-        Sp1[0,2]=et[2,0]**3*(-(913/288)*sine(2*beta)+269/288*eta*sine(2*beta)-91/32*cosine(iota)**2*sine(2*beta)-13/288*eta*cosine(iota)**2*sine(2*beta)+13/144*sine(iota)**2*sine(2*beta)-13/48*eta*sine(iota)**2*sine(2*beta)+13/144*cosine(iota)**2*sine(iota)**2*sine(2*beta)-13/48*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[2,0]**5*(-((11341*sine(2*beta))/4608)+(1561*eta*sine(2*beta))/4608-1243/512*cosine(iota)**2*sine(2*beta)+(1099*eta*cosine(iota)**2*sine(2*beta))/4608+13/576*sine(iota)**2*sine(2*beta)-13/192*eta*sine(iota)**2*sine(2*beta)+13/576*cosine(iota)**2*sine(iota)**2*sine(2*beta)-13/192*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
-        Sp1[1,2]=et[2,1]**6*(-(137/80)*sine(2*beta)+53/288*eta*sine(2*beta)-419/240*cosine(iota)**2*sine(2*beta)+(409*eta*cosine(iota)**2*sine(2*beta))/1440)+et[2,1]**4*(-(29/9)*sine(2*beta)+17/16*eta*sine(2*beta)-17/6*cosine(iota)**2*sine(2*beta)-5/48*eta*cosine(iota)**2*sine(2*beta)+5/72*sine(iota)**2*sine(2*beta)-5/24*eta*sine(iota)**2*sine(2*beta)+5/72*cosine(iota)**2*sine(iota)**2*sine(2*beta)-5/24*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
+        Sp1[0,2]=et[0,2]**3*(-(913/288)*sine(2*beta)+269/288*eta*sine(2*beta)-91/32*cosine(iota)**2*sine(2*beta)-13/288*eta*cosine(iota)**2*sine(2*beta)+13/144*sine(iota)**2*sine(2*beta)-13/48*eta*sine(iota)**2*sine(2*beta)+13/144*cosine(iota)**2*sine(iota)**2*sine(2*beta)-13/48*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[0,2]**5*(-((11341*sine(2*beta))/4608)+(1561*eta*sine(2*beta))/4608-1243/512*cosine(iota)**2*sine(2*beta)+(1099*eta*cosine(iota)**2*sine(2*beta))/4608+13/576*sine(iota)**2*sine(2*beta)-13/192*eta*sine(iota)**2*sine(2*beta)+13/576*cosine(iota)**2*sine(iota)**2*sine(2*beta)-13/192*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
+        Sp1[1,2]=et[1,2]**6*(-(137/80)*sine(2*beta)+53/288*eta*sine(2*beta)-419/240*cosine(iota)**2*sine(2*beta)+(409*eta*cosine(iota)**2*sine(2*beta))/1440)+et[1,2]**4*(-(29/9)*sine(2*beta)+17/16*eta*sine(2*beta)-17/6*cosine(iota)**2*sine(2*beta)-5/48*eta*cosine(iota)**2*sine(2*beta)+5/72*sine(iota)**2*sine(2*beta)-5/24*eta*sine(iota)**2*sine(2*beta)+5/72*cosine(iota)**2*sine(iota)**2*sine(2*beta)-5/24*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
         Sp1[2,2]=et[2,2]**5*(-(1917/512)*sine(2*beta)+(3297*eta*sine(2*beta))/2560-(8343*cosine(iota)**2*sine(2*beta))/2560-(429*eta*cosine(iota)**2*sine(2*beta))/2560+(81*sine(iota)**2*sine(2*beta))/1280-(243*eta*sine(iota)**2*sine(2*beta))/1280+(81*cosine(iota)**2*sine(iota)**2*sine(2*beta))/1280-(243*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))/1280)
-        Sp1[3,2]=et[2,3]**6*(-((4903*sine(2*beta))/1080)+173/108*eta*sine(2*beta)-157/40*cosine(iota)**2*sine(2*beta)-131/540*eta*cosine(iota)**2*sine(2*beta)+17/270*sine(iota)**2*sine(2*beta)-17/90*eta*sine(iota)**2*sine(2*beta)+17/270*cosine(iota)**2*sine(iota)**2*sine(2*beta)-17/90*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
+        Sp1[3,2]=et[3,2]**6*(-((4903*sine(2*beta))/1080)+173/108*eta*sine(2*beta)-157/40*cosine(iota)**2*sine(2*beta)-131/540*eta*cosine(iota)**2*sine(2*beta)+17/270*sine(iota)**2*sine(2*beta)-17/90*eta*sine(iota)**2*sine(2*beta)+17/270*cosine(iota)**2*sine(iota)**2*sine(2*beta)-17/90*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
         
         
-        Sp1[0,-2]=et[-2,0]**5*(-((3631*sine(2*beta))/2304)+(1543*eta*sine(2*beta))/2304-947/768*cosine(iota)**2*sine(2*beta)-(827*eta*cosine(iota)**2*sine(2*beta))/2304+(79*sine(iota)**2*sine(2*beta))/1152-79/384*eta*sine(iota)**2*sine(2*beta)+(79*cosine(iota)**2*sine(iota)**2*sine(2*beta))/1152-79/384*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[-2,0]**3*(-(121/32)*sine(2*beta)-109/96*eta*sine(2*beta)-179/32*cosine(iota)**2*sine(2*beta)+413/96*eta*cosine(iota)**2*sine(2*beta)-1/8*sine(iota)**2*sine(2*beta)+3/8*eta*sine(iota)**2*sine(2*beta)-1/8*cosine(iota)**2*sine(iota)**2*sine(2*beta)+3/8*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[-2,0]*(145/12*sine(2*beta)+5/4*eta*sine(2*beta)+53/4*cosine(iota)**2*sine(2*beta)-9/4*eta*cosine(iota)**2*sine(2*beta)-1/6*sine(iota)**2*sine(2*beta)+1/2*eta*sine(iota)**2*sine(2*beta)-1/6*cosine(iota)**2*sine(iota)**2*sine(2*beta)+1/2*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
-        Sp1[1,-2]= 17/3*sine(2*beta)-13/3*eta*sine(2*beta)+3*cosine(iota)**2*sine(2*beta)+11/3*eta*cosine(iota)**2*sine(2*beta)+2/3*sine(iota)**2*sine(2*beta)-2*eta*sine(iota)**2*sine(2*beta)+2/3*cosine(iota)**2*sine(iota)**2*sine(2*beta)-2*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta)+et[-2,1]**2*(235/6*sine(2*beta)+89/6*eta*sine(2*beta)+105/2*cosine(iota)**2*sine(2*beta)-151/6*eta*cosine(iota)**2*sine(2*beta)+2/3*sine(iota)**2*sine(2*beta)-2*eta*sine(iota)**2*sine(2*beta)+2/3*cosine(iota)**2*sine(iota)**2*sine(2*beta)-2*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[-2,1]**6*(2843/864*sine(2*beta)+4085/864*eta*sine(2*beta)+707/96*cosine(iota)**2*sine(2*beta)-6475/864*eta*cosine(iota)**2*sine(2*beta)+35/54*sine(iota)**2*sine(2*beta)-35/18*eta*sine(iota)**2*sine(2*beta)+35/54*cosine(iota)**2*sine(iota)**2*sine(2*beta)-35/18*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[-2,1]**4*(-(437/48)*sine(2*beta)-683/48*eta*sine(2*beta)-367/16*cosine(iota)**2*sine(2*beta)+1309/48*eta*cosine(iota)**2*sine(2*beta)-43/24*sine(iota)**2*sine(2*beta)+43/8*eta*sine(iota)**2*sine(2*beta)-43/24*cosine(iota)**2*sine(iota)**2*sine(2*beta)+43/8*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
-        Sp1[2,-2]=et[-2,2]*(-(9/4)*sine(2*beta)-75/4*eta*sine(2*beta)-63/4*cosine(iota)**2*sine(2*beta)+87/4*eta*cosine(iota)**2*sine(2*beta))+et[-2,2]**3*(2511/32*sine(2*beta)+1821/32*eta*sine(2*beta)+4077/32*cosine(iota)**2*sine(2*beta)-2877/32*eta*cosine(iota)**2*sine(2*beta)+81/16*sine(iota)**2*sine(2*beta)-243/16*eta*sine(iota)**2*sine(2*beta)+81/16*cosine(iota)**2*sine(iota)**2*sine(2*beta)-243/16*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[-2,2]**5*(-(8379/256)*sine(2*beta)-14793/256*eta*sine(2*beta)-21717/256*cosine(iota)**2*sine(2*beta)+25221/256*eta*cosine(iota)**2*sine(2*beta)-243/32*sine(iota)**2*sine(2*beta)+729/32*eta*sine(iota)**2*sine(2*beta)-243/32*cosine(iota)**2*sine(iota)**2*sine(2*beta)+729/32*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
-        Sp1[3,-2]=et[-2,3]**4*(1294/9*sine(2*beta)+458/3*eta*sine(2*beta)+818/3*cosine(iota)**2*sine(2*beta)-234*eta*cosine(iota)**2*sine(2*beta)+148/9*sine(iota)**2*sine(2*beta)-148/3*eta*sine(iota)**2*sine(2*beta)+148/9*cosine(iota)**2*sine(iota)**2*sine(2*beta)-148/3*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[-2,3]**2*(-(62/3)*sine(2*beta)-148/3*eta*sine(2*beta)-58*cosine(iota)**2*sine(2*beta)+188/3*eta*cosine(iota)**2*sine(2*beta)-8/3*sine(iota)**2*sine(2*beta)+8*eta*sine(iota)**2*sine(2*beta)-8/3*cosine(iota)**2*sine(iota)**2*sine(2*beta)+8*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[-2,3]**6*(-(2047/24)*sine(2*beta)-6161/36*eta*sine(2*beta)-5639/24*cosine(iota)**2*sine(2*beta)+10003/36*eta*cosine(iota)**2*sine(2*beta)-139/6*sine(iota)**2*sine(2*beta)+139/2*eta*sine(iota)**2*sine(2*beta)-139/6*cosine(iota)**2*sine(iota)**2*sine(2*beta)+139/2*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
-        Sp1[4,-2]=et[-2,4]**5*((1160825*sine(2*beta))/4608+(1594375*eta*sine(2*beta))/4608+277175/512*cosine(iota)**2*sine(2*beta)-(2406875*eta*cosine(iota)**2*sine(2*beta))/4608+(94375*sine(iota)**2*sine(2*beta))/2304-94375/768*eta*sine(iota)**2*sine(2*beta)+(94375*cosine(iota)**2*sine(iota)**2*sine(2*beta))/2304-94375/768*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[-2,4]**3*(-(15175/288)*sine(2*beta)-30625/288*eta*sine(2*beta)-4325/32*cosine(iota)**2*sine(2*beta)+40625/288*eta*cosine(iota)**2*sine(2*beta)-625/72*sine(iota)**2*sine(2*beta)+625/24*eta*sine(iota)**2*sine(2*beta)-625/72*cosine(iota)**2*sine(iota)**2*sine(2*beta)+625/24*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
-        Sp1[5,-2]=et[-2,5]**6*(68409/160*sine(2*beta)+11367/16*eta*sine(2*beta)+163017/160*cosine(iota)**2*sine(2*beta)-85077/80*eta*cosine(iota)**2*sine(2*beta)+891/10*sine(iota)**2*sine(2*beta)-2673/10*eta*sine(iota)**2*sine(2*beta)+891/10*cosine(iota)**2*sine(iota)**2*sine(2*beta)-2673/10*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[-2,5]**4*(-(1665/16)*sine(2*beta)-1647/8*eta*sine(2*beta)-4257/16*cosine(iota)**2*sine(2*beta)+2241/8*eta*cosine(iota)**2*sine(2*beta)-81/4*sine(iota)**2*sine(2*beta)+243/4*eta*sine(iota)**2*sine(2*beta)-81/4*cosine(iota)**2*sine(iota)**2*sine(2*beta)+243/4*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
-        Sp1[6,-2]=et[-2,6]**5*(-((844711*sine(2*beta))/4608)-(8588377*eta*sine(2*beta))/23040-(3682399*cosine(iota)**2*sine(2*beta))/7680+(11882549*eta*cosine(iota)**2*sine(2*beta))/23040-(117649*sine(iota)**2*sine(2*beta))/2880+117649/960*eta*sine(iota)**2*sine(2*beta)-(117649*cosine(iota)**2*sine(iota)**2*sine(2*beta))/2880+117649/960*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
-        Sp1[7,-2]=et[-2,7]**6*(-(81713/270)*sine(2*beta)-17408/27*eta*sine(2*beta)-24553/30*cosine(iota)**2*sine(2*beta)+121856/135*eta*cosine(iota)**2*sine(2*beta)-2048/27*sine(iota)**2*sine(2*beta)+2048/9*eta*sine(iota)**2*sine(2*beta)-2048/27*cosine(iota)**2*sine(iota)**2*sine(2*beta)+2048/9*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))  
+        Sp1[0,-2]=et[0,-2]**5*(-((3631*sine(2*beta))/2304)+(1543*eta*sine(2*beta))/2304-947/768*cosine(iota)**2*sine(2*beta)-(827*eta*cosine(iota)**2*sine(2*beta))/2304+(79*sine(iota)**2*sine(2*beta))/1152-79/384*eta*sine(iota)**2*sine(2*beta)+(79*cosine(iota)**2*sine(iota)**2*sine(2*beta))/1152-79/384*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[0,-2]**3*(-(121/32)*sine(2*beta)-109/96*eta*sine(2*beta)-179/32*cosine(iota)**2*sine(2*beta)+413/96*eta*cosine(iota)**2*sine(2*beta)-1/8*sine(iota)**2*sine(2*beta)+3/8*eta*sine(iota)**2*sine(2*beta)-1/8*cosine(iota)**2*sine(iota)**2*sine(2*beta)+3/8*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[0,-2]*(145/12*sine(2*beta)+5/4*eta*sine(2*beta)+53/4*cosine(iota)**2*sine(2*beta)-9/4*eta*cosine(iota)**2*sine(2*beta)-1/6*sine(iota)**2*sine(2*beta)+1/2*eta*sine(iota)**2*sine(2*beta)-1/6*cosine(iota)**2*sine(iota)**2*sine(2*beta)+1/2*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
+        Sp1[1,-2]= 17/3*sine(2*beta)-13/3*eta*sine(2*beta)+3*cosine(iota)**2*sine(2*beta)+11/3*eta*cosine(iota)**2*sine(2*beta)+2/3*sine(iota)**2*sine(2*beta)-2*eta*sine(iota)**2*sine(2*beta)+2/3*cosine(iota)**2*sine(iota)**2*sine(2*beta)-2*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta)+et[1,-2]**2*(235/6*sine(2*beta)+89/6*eta*sine(2*beta)+105/2*cosine(iota)**2*sine(2*beta)-151/6*eta*cosine(iota)**2*sine(2*beta)+2/3*sine(iota)**2*sine(2*beta)-2*eta*sine(iota)**2*sine(2*beta)+2/3*cosine(iota)**2*sine(iota)**2*sine(2*beta)-2*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[1,-2]**6*(2843/864*sine(2*beta)+4085/864*eta*sine(2*beta)+707/96*cosine(iota)**2*sine(2*beta)-6475/864*eta*cosine(iota)**2*sine(2*beta)+35/54*sine(iota)**2*sine(2*beta)-35/18*eta*sine(iota)**2*sine(2*beta)+35/54*cosine(iota)**2*sine(iota)**2*sine(2*beta)-35/18*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[1,-2]**4*(-(437/48)*sine(2*beta)-683/48*eta*sine(2*beta)-367/16*cosine(iota)**2*sine(2*beta)+1309/48*eta*cosine(iota)**2*sine(2*beta)-43/24*sine(iota)**2*sine(2*beta)+43/8*eta*sine(iota)**2*sine(2*beta)-43/24*cosine(iota)**2*sine(iota)**2*sine(2*beta)+43/8*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
+        Sp1[2,-2]=et[2,-2]*(-(9/4)*sine(2*beta)-75/4*eta*sine(2*beta)-63/4*cosine(iota)**2*sine(2*beta)+87/4*eta*cosine(iota)**2*sine(2*beta))+et[2,-2]**3*(2511/32*sine(2*beta)+1821/32*eta*sine(2*beta)+4077/32*cosine(iota)**2*sine(2*beta)-2877/32*eta*cosine(iota)**2*sine(2*beta)+81/16*sine(iota)**2*sine(2*beta)-243/16*eta*sine(iota)**2*sine(2*beta)+81/16*cosine(iota)**2*sine(iota)**2*sine(2*beta)-243/16*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[2,-2]**5*(-(8379/256)*sine(2*beta)-14793/256*eta*sine(2*beta)-21717/256*cosine(iota)**2*sine(2*beta)+25221/256*eta*cosine(iota)**2*sine(2*beta)-243/32*sine(iota)**2*sine(2*beta)+729/32*eta*sine(iota)**2*sine(2*beta)-243/32*cosine(iota)**2*sine(iota)**2*sine(2*beta)+729/32*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
+        Sp1[3,-2]=et[3,-2]**4*(1294/9*sine(2*beta)+458/3*eta*sine(2*beta)+818/3*cosine(iota)**2*sine(2*beta)-234*eta*cosine(iota)**2*sine(2*beta)+148/9*sine(iota)**2*sine(2*beta)-148/3*eta*sine(iota)**2*sine(2*beta)+148/9*cosine(iota)**2*sine(iota)**2*sine(2*beta)-148/3*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[3,-2]**2*(-(62/3)*sine(2*beta)-148/3*eta*sine(2*beta)-58*cosine(iota)**2*sine(2*beta)+188/3*eta*cosine(iota)**2*sine(2*beta)-8/3*sine(iota)**2*sine(2*beta)+8*eta*sine(iota)**2*sine(2*beta)-8/3*cosine(iota)**2*sine(iota)**2*sine(2*beta)+8*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[3,-2]**6*(-(2047/24)*sine(2*beta)-6161/36*eta*sine(2*beta)-5639/24*cosine(iota)**2*sine(2*beta)+10003/36*eta*cosine(iota)**2*sine(2*beta)-139/6*sine(iota)**2*sine(2*beta)+139/2*eta*sine(iota)**2*sine(2*beta)-139/6*cosine(iota)**2*sine(iota)**2*sine(2*beta)+139/2*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
+        Sp1[4,-2]=et[4,-2]**5*((1160825*sine(2*beta))/4608+(1594375*eta*sine(2*beta))/4608+277175/512*cosine(iota)**2*sine(2*beta)-(2406875*eta*cosine(iota)**2*sine(2*beta))/4608+(94375*sine(iota)**2*sine(2*beta))/2304-94375/768*eta*sine(iota)**2*sine(2*beta)+(94375*cosine(iota)**2*sine(iota)**2*sine(2*beta))/2304-94375/768*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[4,-2]**3*(-(15175/288)*sine(2*beta)-30625/288*eta*sine(2*beta)-4325/32*cosine(iota)**2*sine(2*beta)+40625/288*eta*cosine(iota)**2*sine(2*beta)-625/72*sine(iota)**2*sine(2*beta)+625/24*eta*sine(iota)**2*sine(2*beta)-625/72*cosine(iota)**2*sine(iota)**2*sine(2*beta)+625/24*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
+        Sp1[5,-2]=et[5,-2]**6*(68409/160*sine(2*beta)+11367/16*eta*sine(2*beta)+163017/160*cosine(iota)**2*sine(2*beta)-85077/80*eta*cosine(iota)**2*sine(2*beta)+891/10*sine(iota)**2*sine(2*beta)-2673/10*eta*sine(iota)**2*sine(2*beta)+891/10*cosine(iota)**2*sine(iota)**2*sine(2*beta)-2673/10*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))+et[5,-2]**4*(-(1665/16)*sine(2*beta)-1647/8*eta*sine(2*beta)-4257/16*cosine(iota)**2*sine(2*beta)+2241/8*eta*cosine(iota)**2*sine(2*beta)-81/4*sine(iota)**2*sine(2*beta)+243/4*eta*sine(iota)**2*sine(2*beta)-81/4*cosine(iota)**2*sine(iota)**2*sine(2*beta)+243/4*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
+        Sp1[6,-2]=et[6,-2]**5*(-((844711*sine(2*beta))/4608)-(8588377*eta*sine(2*beta))/23040-(3682399*cosine(iota)**2*sine(2*beta))/7680+(11882549*eta*cosine(iota)**2*sine(2*beta))/23040-(117649*sine(iota)**2*sine(2*beta))/2880+117649/960*eta*sine(iota)**2*sine(2*beta)-(117649*cosine(iota)**2*sine(iota)**2*sine(2*beta))/2880+117649/960*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))
+        Sp1[7,-2]=et[7,-2]**6*(-(81713/270)*sine(2*beta)-17408/27*eta*sine(2*beta)-24553/30*cosine(iota)**2*sine(2*beta)+121856/135*eta*cosine(iota)**2*sine(2*beta)-2048/27*sine(iota)**2*sine(2*beta)+2048/9*eta*sine(iota)**2*sine(2*beta)-2048/27*cosine(iota)**2*sine(iota)**2*sine(2*beta)+2048/9*eta*cosine(iota)**2*sine(iota)**2*sine(2*beta))  
         
         
-        Sp1[0,4]=et[4,0]**5*(-((1091*sine(iota)**2*sine(4*beta))/92160)+(1091*eta*sine(iota)**2*sine(4*beta))/30720-(1091*cosine(iota)**2*sine(iota)**2*sine(4*beta))/92160+(1091*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/30720)
-        Sp1[1,4]=et[4,1]**6*(-((71*sine(iota)**2*sine(4*beta))/4320)+(71*eta*sine(iota)**2*sine(4*beta))/1440-(71*cosine(iota)**2*sine(iota)**2*sine(4*beta))/4320+(71*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/1440) 
+        Sp1[0,4]=et[0,4]**5*(-((1091*sine(iota)**2*sine(4*beta))/92160)+(1091*eta*sine(iota)**2*sine(4*beta))/30720-(1091*cosine(iota)**2*sine(iota)**2*sine(4*beta))/92160+(1091*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/30720)
+        Sp1[1,4]=et[1,4]**6*(-((71*sine(iota)**2*sine(4*beta))/4320)+(71*eta*sine(iota)**2*sine(4*beta))/1440-(71*cosine(iota)**2*sine(iota)**2*sine(4*beta))/4320+(71*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/1440) 
         
         
-        Sp1[0,-4]=et[-4,0]**3*((187*sine(iota)**2*sine(4*beta))/1152-187/384*eta*sine(iota)**2*sine(4*beta)+(187*cosine(iota)**2*sine(iota)**2*sine(4*beta))/1152-187/384*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[-4,0]**5*(-((1769*sine(iota)**2*sine(4*beta))/18432)+(1769*eta*sine(iota)**2*sine(4*beta))/6144-(1769*cosine(iota)**2*sine(iota)**2*sine(4*beta))/18432+(1769*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/6144)
-        Sp1[1,-4]=et[-4,1]**4*(137/36*sine(iota)**2*sine(4*beta)-137/12*eta*sine(iota)**2*sine(4*beta)+137/36*cosine(iota)**2*sine(iota)**2*sine(4*beta)-137/12*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[-4,1]**6*(-(57/32)*sine(iota)**2*sine(4*beta)+171/32*eta*sine(iota)**2*sine(4*beta)-57/32*cosine(iota)**2*sine(iota)**2*sine(4*beta)+171/32*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[-4,1]**2*(-(7/3)*sine(iota)**2*sine(4*beta)+7*eta*sine(iota)**2*sine(4*beta)-7/3*cosine(iota)**2*sine(iota)**2*sine(4*beta)+7*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
-        Sp1[2,-4]=et[-4,2]**5*((25191*sine(iota)**2*sine(4*beta))/1024-(75573*eta*sine(iota)**2*sine(4*beta))/1024+(25191*cosine(iota)**2*sine(iota)**2*sine(4*beta))/1024-(75573*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/1024)+et[-4,2]*(81/16*sine(iota)**2*sine(4*beta)-243/16*eta*sine(iota)**2*sine(4*beta)+81/16*cosine(iota)**2*sine(iota)**2*sine(4*beta)-243/16*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[-4,2]**3*(-(2511/128)*sine(iota)**2*sine(4*beta)+7533/128*eta*sine(iota)**2*sine(4*beta)-2511/128*cosine(iota)**2*sine(iota)**2*sine(4*beta)+7533/128*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
-        Sp1[3,-4]=-(8/3)*sine(iota)**2*sine(4*beta)+8*eta*sine(iota)**2*sine(4*beta)-8/3*cosine(iota)**2*sine(iota)**2*sine(4*beta)+8*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta)+et[-4,3]**6*(2768/27*sine(iota)**2*sine(4*beta)-2768/9*eta*sine(iota)**2*sine(4*beta)+2768/27*cosine(iota)**2*sine(iota)**2*sine(4*beta)-2768/9*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[-4,3]**2*(88/3*sine(iota)**2*sine(4*beta)-88*eta*sine(iota)**2*sine(4*beta)+88/3*cosine(iota)**2*sine(iota)**2*sine(4*beta)-88*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[-4,3]**4*(-(253/3)*sine(iota)**2*sine(4*beta)+253*eta*sine(iota)**2*sine(4*beta)-253/3*cosine(iota)**2*sine(iota)**2*sine(4*beta)+253*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
-        Sp1[4,-4]=et[-4,4]**3*(13125/128*sine(iota)**2*sine(4*beta)-39375/128*eta*sine(iota)**2*sine(4*beta)+13125/128*cosine(iota)**2*sine(iota)**2*sine(4*beta)-39375/128*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[-4,4]*(-(625/48)*sine(iota)**2*sine(4*beta)+625/16*eta*sine(iota)**2*sine(4*beta)-625/48*cosine(iota)**2*sine(iota)**2*sine(4*beta)+625/16*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[-4,4]**5*(-((2493125*sine(iota)**2*sine(4*beta))/9216)+(2493125*eta*sine(iota)**2*sine(4*beta))/3072-(2493125*cosine(iota)**2*sine(iota)**2*sine(4*beta))/9216+(2493125*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/3072)
-        Sp1[5,-4]=et[-4,5]**4*(567/2*sine(iota)**2*sine(4*beta)-1701/2*eta*sine(iota)**2*sine(4*beta)+567/2*cosine(iota)**2*sine(iota)**2*sine(4*beta)-1701/2*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[-4,5]**2*(-(81/2)*sine(iota)**2*sine(4*beta)+243/2*eta*sine(iota)**2*sine(4*beta)-81/2*cosine(iota)**2*sine(iota)**2*sine(4*beta)+243/2*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[-4,5]**6*(-(11745/16)*sine(iota)**2*sine(4*beta)+35235/16*eta*sine(iota)**2*sine(4*beta)-11745/16*cosine(iota)**2*sine(iota)**2*sine(4*beta)+35235/16*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
-        Sp1[6,-4]=et[-4,6]**5*((12588443*sine(iota)**2*sine(4*beta))/18432-(12588443*eta*sine(iota)**2*sine(4*beta))/6144+(12588443*cosine(iota)**2*sine(iota)**2*sine(4*beta))/18432-(12588443*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/6144)+et[-4,6]**3*(-((117649*sine(iota)**2*sine(4*beta))/1152)+117649/384*eta*sine(iota)**2*sine(4*beta)-(117649*cosine(iota)**2*sine(iota)**2*sine(4*beta))/1152+117649/384*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
-        Sp1[7,-4]=et[-4,7]**6*(22528/15*sine(iota)**2*sine(4*beta)-22528/5*eta*sine(iota)**2*sine(4*beta)+22528/15*cosine(iota)**2*sine(iota)**2*sine(4*beta)-22528/5*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[-4,7]**4*(-(2048/9)*sine(iota)**2*sine(4*beta)+2048/3*eta*sine(iota)**2*sine(4*beta)-2048/9*cosine(iota)**2*sine(iota)**2*sine(4*beta)+2048/3*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
-        Sp1[8,-4]=et[-4,8]**5*(-((4782969*sine(iota)**2*sine(4*beta))/10240)+(14348907*eta*sine(iota)**2*sine(4*beta))/10240-(4782969*cosine(iota)**2*sine(iota)**2*sine(4*beta))/10240+(14348907*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/10240)
-        Sp1[9,-4]=et[-4,9]**6*(-(390625/432)*sine(iota)**2*sine(4*beta)+390625/144*eta*sine(iota)**2*sine(4*beta)-390625/432*cosine(iota)**2*sine(iota)**2*sine(4*beta)+390625/144*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))       
+        Sp1[0,-4]=et[0,-4]**3*((187*sine(iota)**2*sine(4*beta))/1152-187/384*eta*sine(iota)**2*sine(4*beta)+(187*cosine(iota)**2*sine(iota)**2*sine(4*beta))/1152-187/384*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[0,-4]**5*(-((1769*sine(iota)**2*sine(4*beta))/18432)+(1769*eta*sine(iota)**2*sine(4*beta))/6144-(1769*cosine(iota)**2*sine(iota)**2*sine(4*beta))/18432+(1769*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/6144)
+        Sp1[1,-4]=et[1,-4]**4*(137/36*sine(iota)**2*sine(4*beta)-137/12*eta*sine(iota)**2*sine(4*beta)+137/36*cosine(iota)**2*sine(iota)**2*sine(4*beta)-137/12*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[1,-4]**6*(-(57/32)*sine(iota)**2*sine(4*beta)+171/32*eta*sine(iota)**2*sine(4*beta)-57/32*cosine(iota)**2*sine(iota)**2*sine(4*beta)+171/32*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[1,-4]**2*(-(7/3)*sine(iota)**2*sine(4*beta)+7*eta*sine(iota)**2*sine(4*beta)-7/3*cosine(iota)**2*sine(iota)**2*sine(4*beta)+7*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
+        Sp1[2,-4]=et[2,-4]**5*((25191*sine(iota)**2*sine(4*beta))/1024-(75573*eta*sine(iota)**2*sine(4*beta))/1024+(25191*cosine(iota)**2*sine(iota)**2*sine(4*beta))/1024-(75573*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/1024)+et[2,-4]*(81/16*sine(iota)**2*sine(4*beta)-243/16*eta*sine(iota)**2*sine(4*beta)+81/16*cosine(iota)**2*sine(iota)**2*sine(4*beta)-243/16*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[2,-4]**3*(-(2511/128)*sine(iota)**2*sine(4*beta)+7533/128*eta*sine(iota)**2*sine(4*beta)-2511/128*cosine(iota)**2*sine(iota)**2*sine(4*beta)+7533/128*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
+        Sp1[3,-4]=-(8/3)*sine(iota)**2*sine(4*beta)+8*eta*sine(iota)**2*sine(4*beta)-8/3*cosine(iota)**2*sine(iota)**2*sine(4*beta)+8*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta)+et[3,-4]**6*(2768/27*sine(iota)**2*sine(4*beta)-2768/9*eta*sine(iota)**2*sine(4*beta)+2768/27*cosine(iota)**2*sine(iota)**2*sine(4*beta)-2768/9*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[3,-4]**2*(88/3*sine(iota)**2*sine(4*beta)-88*eta*sine(iota)**2*sine(4*beta)+88/3*cosine(iota)**2*sine(iota)**2*sine(4*beta)-88*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[3,-4]**4*(-(253/3)*sine(iota)**2*sine(4*beta)+253*eta*sine(iota)**2*sine(4*beta)-253/3*cosine(iota)**2*sine(iota)**2*sine(4*beta)+253*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
+        Sp1[4,-4]=et[4,-4]**3*(13125/128*sine(iota)**2*sine(4*beta)-39375/128*eta*sine(iota)**2*sine(4*beta)+13125/128*cosine(iota)**2*sine(iota)**2*sine(4*beta)-39375/128*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[4,-4]*(-(625/48)*sine(iota)**2*sine(4*beta)+625/16*eta*sine(iota)**2*sine(4*beta)-625/48*cosine(iota)**2*sine(iota)**2*sine(4*beta)+625/16*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[4,-4]**5*(-((2493125*sine(iota)**2*sine(4*beta))/9216)+(2493125*eta*sine(iota)**2*sine(4*beta))/3072-(2493125*cosine(iota)**2*sine(iota)**2*sine(4*beta))/9216+(2493125*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/3072)
+        Sp1[5,-4]=et[5,-4]**4*(567/2*sine(iota)**2*sine(4*beta)-1701/2*eta*sine(iota)**2*sine(4*beta)+567/2*cosine(iota)**2*sine(iota)**2*sine(4*beta)-1701/2*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[5,-4]**2*(-(81/2)*sine(iota)**2*sine(4*beta)+243/2*eta*sine(iota)**2*sine(4*beta)-81/2*cosine(iota)**2*sine(iota)**2*sine(4*beta)+243/2*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[5,-4]**6*(-(11745/16)*sine(iota)**2*sine(4*beta)+35235/16*eta*sine(iota)**2*sine(4*beta)-11745/16*cosine(iota)**2*sine(iota)**2*sine(4*beta)+35235/16*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
+        Sp1[6,-4]=et[6,-4]**5*((12588443*sine(iota)**2*sine(4*beta))/18432-(12588443*eta*sine(iota)**2*sine(4*beta))/6144+(12588443*cosine(iota)**2*sine(iota)**2*sine(4*beta))/18432-(12588443*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/6144)+et[6,-4]**3*(-((117649*sine(iota)**2*sine(4*beta))/1152)+117649/384*eta*sine(iota)**2*sine(4*beta)-(117649*cosine(iota)**2*sine(iota)**2*sine(4*beta))/1152+117649/384*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
+        Sp1[7,-4]=et[7,-4]**6*(22528/15*sine(iota)**2*sine(4*beta)-22528/5*eta*sine(iota)**2*sine(4*beta)+22528/15*cosine(iota)**2*sine(iota)**2*sine(4*beta)-22528/5*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))+et[7,-4]**4*(-(2048/9)*sine(iota)**2*sine(4*beta)+2048/3*eta*sine(iota)**2*sine(4*beta)-2048/9*cosine(iota)**2*sine(iota)**2*sine(4*beta)+2048/3*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))
+        Sp1[8,-4]=et[8,-4]**5*(-((4782969*sine(iota)**2*sine(4*beta))/10240)+(14348907*eta*sine(iota)**2*sine(4*beta))/10240-(4782969*cosine(iota)**2*sine(iota)**2*sine(4*beta))/10240+(14348907*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))/10240)
+        Sp1[9,-4]=et[9,-4]**6*(-(390625/432)*sine(iota)**2*sine(4*beta)+390625/144*eta*sine(iota)**2*sine(4*beta)-390625/432*cosine(iota)**2*sine(iota)**2*sine(4*beta)+390625/144*eta*cosine(iota)**2*sine(iota)**2*sine(4*beta))       
                 
         ###################ccross1_start####################
         Cx1 = np.zeros((10,7))
 
-        Cx1[0,2]=et[2,0]**5*(-(44/9)*cosine(iota)*sine(2*beta)+(665*eta*cosine(iota)*sine(2*beta))/1152+(131*cosine(iota)*sine(iota)**2*sine(2*beta))/4608-(131*eta*cosine(iota)*sine(iota)**2*sine(2*beta))/1536)+et[2,0]**3*(-(433/72)*cosine(iota)*sine(2*beta)+8/9*eta*cosine(iota)*sine(2*beta)+5/288*cosine(iota)*sine(iota)**2*sine(2*beta)-5/96*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
-        Cx1[1,2]=et[2,1]**6*(-(83/24)*cosine(iota)*sine(2*beta)+337/720*eta*cosine(iota)*sine(2*beta)+1/60*cosine(iota)*sine(iota)**2*sine(2*beta)-1/20*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[2,1]**4*(-(109/18)*cosine(iota)*sine(2*beta)+23/24*eta*cosine(iota)*sine(2*beta)-1/18*cosine(iota)*sine(iota)**2*sine(2*beta)+1/6*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
+        Cx1[0,2]=et[0,2]**5*(-(44/9)*cosine(iota)*sine(2*beta)+(665*eta*cosine(iota)*sine(2*beta))/1152+(131*cosine(iota)*sine(iota)**2*sine(2*beta))/4608-(131*eta*cosine(iota)*sine(iota)**2*sine(2*beta))/1536)+et[0,2]**3*(-(433/72)*cosine(iota)*sine(2*beta)+8/9*eta*cosine(iota)*sine(2*beta)+5/288*cosine(iota)*sine(iota)**2*sine(2*beta)-5/96*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
+        Cx1[1,2]=et[1,2]**6*(-(83/24)*cosine(iota)*sine(2*beta)+337/720*eta*cosine(iota)*sine(2*beta)+1/60*cosine(iota)*sine(iota)**2*sine(2*beta)-1/20*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[1,2]**4*(-(109/18)*cosine(iota)*sine(2*beta)+23/24*eta*cosine(iota)*sine(2*beta)-1/18*cosine(iota)*sine(iota)**2*sine(2*beta)+1/6*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
         Cx1[2,2]=et[2,2]**5*(-(2241/320)*cosine(iota)*sine(2*beta)+717/640*eta*cosine(iota)*sine(2*beta)-(297*cosine(iota)*sine(iota)**2*sine(2*beta))/2560+(891*eta*cosine(iota)*sine(iota)**2*sine(2*beta))/2560)
-        Cx1[3,2]=et[2,3]**6*(-(4571/540)*cosine(iota)*sine(2*beta)+367/270*eta*cosine(iota)*sine(2*beta)-49/270*cosine(iota)*sine(iota)**2*sine(2*beta)+49/90*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
+        Cx1[3,2]=et[3,2]**6*(-(4571/540)*cosine(iota)*sine(2*beta)+367/270*eta*cosine(iota)*sine(2*beta)-49/270*cosine(iota)*sine(iota)**2*sine(2*beta)+49/90*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
         
         
-        Cx1[0,-2]=et[-2,0]*(-(76/3)*cosine(iota)*sine(2*beta)+eta*cosine(iota)*sine(2*beta)+11/12*cosine(iota)*sine(iota)**2*sine(2*beta)-11/4*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[-2,0]**5*(809/288*cosine(iota)*sine(2*beta)-179/576*eta*cosine(iota)*sine(2*beta)+(79*cosine(iota)*sine(iota)**2*sine(2*beta))/2304-79/768*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[-2,0]**3*(75/8*cosine(iota)*sine(2*beta)-19/6*eta*cosine(iota)*sine(2*beta)-21/32*cosine(iota)*sine(iota)**2*sine(2*beta)+63/32*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
-        Cx1[1,-2]=-(26/3)*cosine(iota)*sine(2*beta)+2/3*eta*cosine(iota)*sine(2*beta)-8/3*cosine(iota)*sine(iota)**2*sine(2*beta)+8*eta*cosine(iota)*sine(iota)**2*sine(2*beta)+et[-2,1]**2*(-(275/3)*cosine(iota)*sine(2*beta)+31/3*eta*cosine(iota)*sine(2*beta)+16/3*cosine(iota)*sine(iota)**2*sine(2*beta)-16*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[-2,1]**6*(-(4603/432)*cosine(iota)*sine(2*beta)+1195/432*eta*cosine(iota)*sine(2*beta)+20/27*cosine(iota)*sine(iota)**2*sine(2*beta)-20/9*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[-2,1]**4*(769/24*cosine(iota)*sine(2*beta)-313/24*eta*cosine(iota)*sine(2*beta)-10/3*cosine(iota)*sine(iota)**2*sine(2*beta)+10*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
-        Cx1[2,-2]=et[-2,2]**3*(-(1647/8)*cosine(iota)*sine(2*beta)+33*eta*cosine(iota)*sine(2*beta)+459/32*cosine(iota)*sine(iota)**2*sine(2*beta)-1377/32*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[-2,2]*(18*cosine(iota)*sine(2*beta)-3*eta*cosine(iota)*sine(2*beta)-27/4*cosine(iota)*sine(iota)**2*sine(2*beta)+81/4*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[-2,2]**5*(1881/16*cosine(iota)*sine(2*beta)-2607/64*eta*cosine(iota)*sine(2*beta)-2781/256*cosine(iota)*sine(iota)**2*sine(2*beta)+8343/256*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
-        Cx1[3,-2]=et[-2,3]**4*(-(3748/9)*cosine(iota)*sine(2*beta)+244/3*eta*cosine(iota)*sine(2*beta)+284/9*cosine(iota)*sine(iota)**2*sine(2*beta)-284/3*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[-2,3]**2*(236/3*cosine(iota)*sine(2*beta)-40/3*eta*cosine(iota)*sine(2*beta)-40/3*cosine(iota)*sine(iota)**2*sine(2*beta)+40*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[-2,3]**6*(1281/4*cosine(iota)*sine(2*beta)-1921/18*eta*cosine(iota)*sine(2*beta)-57/2*cosine(iota)*sine(iota)**2*sine(2*beta)+171/2*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
-        Cx1[4,-2]=et[-2,4]**5*(-(456925/576)*cosine(iota)*sine(2*beta)+(203125*eta*cosine(iota)*sine(2*beta))/1152+(289375*cosine(iota)*sine(iota)**2*sine(2*beta))/4608-(289375*eta*cosine(iota)*sine(iota)**2*sine(2*beta))/1536)+et[-2,4]**3*(13525/72*cosine(iota)*sine(2*beta)-625/18*eta*cosine(iota)*sine(2*beta)-6875/288*cosine(iota)*sine(iota)**2*sine(2*beta)+6875/96*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
-        Cx1[5,-2]=et[-2,5]**6*(-(115713/80)*cosine(iota)*sine(2*beta)+14121/40*eta*cosine(iota)*sine(2*beta)+2349/20*cosine(iota)*sine(iota)**2*sine(2*beta)-7047/20*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[-2,5]**4*(2961/8*cosine(iota)*sine(2*beta)-297/4*eta*cosine(iota)*sine(2*beta)-81/2*cosine(iota)*sine(iota)**2*sine(2*beta)+243/2*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
-        Cx1[6,-2]=et[-2,6]**5*(477211/720*cosine(iota)*sine(2*beta)-(823543*eta*cosine(iota)*sine(2*beta))/5760-(1529437*cosine(iota)*sine(iota)**2*sine(2*beta))/23040+(1529437*eta*cosine(iota)*sine(iota)**2*sine(2*beta))/7680)
-        Cx1[7,-2]=et[-2,7]**6*(30269/27*cosine(iota)*sine(2*beta)-34816/135*eta*cosine(iota)*sine(2*beta)-14336/135*cosine(iota)*sine(iota)**2*sine(2*beta)+14336/45*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
+        Cx1[0,-2]=et[0,-2]*(-(76/3)*cosine(iota)*sine(2*beta)+eta*cosine(iota)*sine(2*beta)+11/12*cosine(iota)*sine(iota)**2*sine(2*beta)-11/4*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[0,-2]**5*(809/288*cosine(iota)*sine(2*beta)-179/576*eta*cosine(iota)*sine(2*beta)+(79*cosine(iota)*sine(iota)**2*sine(2*beta))/2304-79/768*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[0,-2]**3*(75/8*cosine(iota)*sine(2*beta)-19/6*eta*cosine(iota)*sine(2*beta)-21/32*cosine(iota)*sine(iota)**2*sine(2*beta)+63/32*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
+        Cx1[1,-2]=-(26/3)*cosine(iota)*sine(2*beta)+2/3*eta*cosine(iota)*sine(2*beta)-8/3*cosine(iota)*sine(iota)**2*sine(2*beta)+8*eta*cosine(iota)*sine(iota)**2*sine(2*beta)+et[1,-2]**2*(-(275/3)*cosine(iota)*sine(2*beta)+31/3*eta*cosine(iota)*sine(2*beta)+16/3*cosine(iota)*sine(iota)**2*sine(2*beta)-16*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[1,-2]**6*(-(4603/432)*cosine(iota)*sine(2*beta)+1195/432*eta*cosine(iota)*sine(2*beta)+20/27*cosine(iota)*sine(iota)**2*sine(2*beta)-20/9*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[1,-2]**4*(769/24*cosine(iota)*sine(2*beta)-313/24*eta*cosine(iota)*sine(2*beta)-10/3*cosine(iota)*sine(iota)**2*sine(2*beta)+10*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
+        Cx1[2,-2]=et[2,-2]**3*(-(1647/8)*cosine(iota)*sine(2*beta)+33*eta*cosine(iota)*sine(2*beta)+459/32*cosine(iota)*sine(iota)**2*sine(2*beta)-1377/32*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[2,-2]*(18*cosine(iota)*sine(2*beta)-3*eta*cosine(iota)*sine(2*beta)-27/4*cosine(iota)*sine(iota)**2*sine(2*beta)+81/4*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[2,-2]**5*(1881/16*cosine(iota)*sine(2*beta)-2607/64*eta*cosine(iota)*sine(2*beta)-2781/256*cosine(iota)*sine(iota)**2*sine(2*beta)+8343/256*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
+        Cx1[3,-2]=et[3,-2]**4*(-(3748/9)*cosine(iota)*sine(2*beta)+244/3*eta*cosine(iota)*sine(2*beta)+284/9*cosine(iota)*sine(iota)**2*sine(2*beta)-284/3*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[3,-2]**2*(236/3*cosine(iota)*sine(2*beta)-40/3*eta*cosine(iota)*sine(2*beta)-40/3*cosine(iota)*sine(iota)**2*sine(2*beta)+40*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[3,-2]**6*(1281/4*cosine(iota)*sine(2*beta)-1921/18*eta*cosine(iota)*sine(2*beta)-57/2*cosine(iota)*sine(iota)**2*sine(2*beta)+171/2*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
+        Cx1[4,-2]=et[4,-2]**5*(-(456925/576)*cosine(iota)*sine(2*beta)+(203125*eta*cosine(iota)*sine(2*beta))/1152+(289375*cosine(iota)*sine(iota)**2*sine(2*beta))/4608-(289375*eta*cosine(iota)*sine(iota)**2*sine(2*beta))/1536)+et[4,-2]**3*(13525/72*cosine(iota)*sine(2*beta)-625/18*eta*cosine(iota)*sine(2*beta)-6875/288*cosine(iota)*sine(iota)**2*sine(2*beta)+6875/96*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
+        Cx1[5,-2]=et[5,-2]**6*(-(115713/80)*cosine(iota)*sine(2*beta)+14121/40*eta*cosine(iota)*sine(2*beta)+2349/20*cosine(iota)*sine(iota)**2*sine(2*beta)-7047/20*eta*cosine(iota)*sine(iota)**2*sine(2*beta))+et[5,-2]**4*(2961/8*cosine(iota)*sine(2*beta)-297/4*eta*cosine(iota)*sine(2*beta)-81/2*cosine(iota)*sine(iota)**2*sine(2*beta)+243/2*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
+        Cx1[6,-2]=et[6,-2]**5*(477211/720*cosine(iota)*sine(2*beta)-(823543*eta*cosine(iota)*sine(2*beta))/5760-(1529437*cosine(iota)*sine(iota)**2*sine(2*beta))/23040+(1529437*eta*cosine(iota)*sine(iota)**2*sine(2*beta))/7680)
+        Cx1[7,-2]=et[7,-2]**6*(30269/27*cosine(iota)*sine(2*beta)-34816/135*eta*cosine(iota)*sine(2*beta)-14336/135*cosine(iota)*sine(iota)**2*sine(2*beta)+14336/45*eta*cosine(iota)*sine(iota)**2*sine(2*beta))
         
         
-        Cx1[0,4]=et[4,0]**5*(-((1091*cosine(iota)*sine(iota)**2*sine(4*beta))/46080)+(1091*eta*cosine(iota)*sine(iota)**2*sine(4*beta))/15360)
-        Cx1[1,4]=et[4,1]**6*(-((71*cosine(iota)*sine(iota)**2*sine(4*beta))/2160)+71/720*eta*cosine(iota)*sine(iota)**2*sine(4*beta))    
+        Cx1[0,4]=et[0,4]**5*(-((1091*cosine(iota)*sine(iota)**2*sine(4*beta))/46080)+(1091*eta*cosine(iota)*sine(iota)**2*sine(4*beta))/15360)
+        Cx1[1,4]=et[1,4]**6*(-((71*cosine(iota)*sine(iota)**2*sine(4*beta))/2160)+71/720*eta*cosine(iota)*sine(iota)**2*sine(4*beta))    
         
         
-        Cx1[0,-4]=et[-4,0]**5*((1769*cosine(iota)*sine(iota)**2*sine(4*beta))/9216-(1769*eta*cosine(iota)*sine(iota)**2*sine(4*beta))/3072)+et[-4,0]**3*(-(187/576)*cosine(iota)*sine(iota)**2*sine(4*beta)+187/192*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
-        Cx1[1,-4]=et[-4,1]**2*(14/3*cosine(iota)*sine(iota)**2*sine(4*beta)-14*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[-4,1]**6*(57/16*cosine(iota)*sine(iota)**2*sine(4*beta)-171/16*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[-4,1]**4*(-(137/18)*cosine(iota)*sine(iota)**2*sine(4*beta)+137/6*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
-        Cx1[2,-4]=et[-4,2]**3*(2511/64*cosine(iota)*sine(iota)**2*sine(4*beta)-7533/64*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[-4,2]*(-(81/8)*cosine(iota)*sine(iota)**2*sine(4*beta)+243/8*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[-4,2]**5*(-(25191/512)*cosine(iota)*sine(iota)**2*sine(4*beta)+75573/512*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
-        Cx1[3,-4]= 16/3*cosine(iota)*sine(iota)**2*sine(4*beta)-16*eta*cosine(iota)*sine(iota)**2*sine(4*beta)+et[-4,3]**4*(506/3*cosine(iota)*sine(iota)**2*sine(4*beta)-506*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[-4,3]**2*(-(176/3)*cosine(iota)*sine(iota)**2*sine(4*beta)+176*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[-4,3]**6*(-(5536/27)*cosine(iota)*sine(iota)**2*sine(4*beta)+5536/9*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
-        Cx1[4,-4]=et[-4,4]**5*((2493125*cosine(iota)*sine(iota)**2*sine(4*beta))/4608-(2493125*eta*cosine(iota)*sine(iota)**2*sine(4*beta))/1536)+et[-4,4]*(625/24*cosine(iota)*sine(iota)**2*sine(4*beta)-625/8*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[-4,4]**3*(-(13125/64)*cosine(iota)*sine(iota)**2*sine(4*beta)+39375/64*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
-        Cx1[5,-4]=et[-4,5]**6*(11745/8*cosine(iota)*sine(iota)**2*sine(4*beta)-35235/8*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[-4,5]**2*(81*cosine(iota)*sine(iota)**2*sine(4*beta)-243*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[-4,5]**4*(-567*cosine(iota)*sine(iota)**2*sine(4*beta)+1701*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
-        Cx1[6,-4]=et[-4,6]**3*(117649/576*cosine(iota)*sine(iota)**2*sine(4*beta)-117649/192*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[-4,6]**5*(-((12588443*cosine(iota)*sine(iota)**2*sine(4*beta))/9216)+(12588443*eta*cosine(iota)*sine(iota)**2*sine(4*beta))/3072)
-        Cx1[7,-4]=et[-4,7]**4*(4096/9*cosine(iota)*sine(iota)**2*sine(4*beta)-4096/3*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[-4,7]**6*(-(45056/15)*cosine(iota)*sine(iota)**2*sine(4*beta)+45056/5*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
-        Cx1[8,-4]=et[-4,8]**5*((4782969*cosine(iota)*sine(iota)**2*sine(4*beta))/5120-(14348907*eta*cosine(iota)*sine(iota)**2*sine(4*beta))/5120)
-        Cx1[9,-4]=et[-4,9]**6*(390625/216*cosine(iota)*sine(iota)**2*sine(4*beta)-390625/72*eta*cosine(iota)*sine(iota)**2*sine(4*beta))       
+        Cx1[0,-4]=et[0,-4]**5*((1769*cosine(iota)*sine(iota)**2*sine(4*beta))/9216-(1769*eta*cosine(iota)*sine(iota)**2*sine(4*beta))/3072)+et[0,-4]**3*(-(187/576)*cosine(iota)*sine(iota)**2*sine(4*beta)+187/192*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
+        Cx1[1,-4]=et[1,-4]**2*(14/3*cosine(iota)*sine(iota)**2*sine(4*beta)-14*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[1,-4]**6*(57/16*cosine(iota)*sine(iota)**2*sine(4*beta)-171/16*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[1,-4]**4*(-(137/18)*cosine(iota)*sine(iota)**2*sine(4*beta)+137/6*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
+        Cx1[2,-4]=et[2,-4]**3*(2511/64*cosine(iota)*sine(iota)**2*sine(4*beta)-7533/64*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[2,-4]*(-(81/8)*cosine(iota)*sine(iota)**2*sine(4*beta)+243/8*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[2,-4]**5*(-(25191/512)*cosine(iota)*sine(iota)**2*sine(4*beta)+75573/512*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
+        Cx1[3,-4]= 16/3*cosine(iota)*sine(iota)**2*sine(4*beta)-16*eta*cosine(iota)*sine(iota)**2*sine(4*beta)+et[3,-4]**4*(506/3*cosine(iota)*sine(iota)**2*sine(4*beta)-506*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[3,-4]**2*(-(176/3)*cosine(iota)*sine(iota)**2*sine(4*beta)+176*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[3,-4]**6*(-(5536/27)*cosine(iota)*sine(iota)**2*sine(4*beta)+5536/9*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
+        Cx1[4,-4]=et[4,-4]**5*((2493125*cosine(iota)*sine(iota)**2*sine(4*beta))/4608-(2493125*eta*cosine(iota)*sine(iota)**2*sine(4*beta))/1536)+et[4,-4]*(625/24*cosine(iota)*sine(iota)**2*sine(4*beta)-625/8*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[4,-4]**3*(-(13125/64)*cosine(iota)*sine(iota)**2*sine(4*beta)+39375/64*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
+        Cx1[5,-4]=et[5,-4]**6*(11745/8*cosine(iota)*sine(iota)**2*sine(4*beta)-35235/8*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[5,-4]**2*(81*cosine(iota)*sine(iota)**2*sine(4*beta)-243*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[5,-4]**4*(-567*cosine(iota)*sine(iota)**2*sine(4*beta)+1701*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
+        Cx1[6,-4]=et[6,-4]**3*(117649/576*cosine(iota)*sine(iota)**2*sine(4*beta)-117649/192*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[6,-4]**5*(-((12588443*cosine(iota)*sine(iota)**2*sine(4*beta))/9216)+(12588443*eta*cosine(iota)*sine(iota)**2*sine(4*beta))/3072)
+        Cx1[7,-4]=et[7,-4]**4*(4096/9*cosine(iota)*sine(iota)**2*sine(4*beta)-4096/3*eta*cosine(iota)*sine(iota)**2*sine(4*beta))+et[7,-4]**6*(-(45056/15)*cosine(iota)*sine(iota)**2*sine(4*beta)+45056/5*eta*cosine(iota)*sine(iota)**2*sine(4*beta))
+        Cx1[8,-4]=et[8,-4]**5*((4782969*cosine(iota)*sine(iota)**2*sine(4*beta))/5120-(14348907*eta*cosine(iota)*sine(iota)**2*sine(4*beta))/5120)
+        Cx1[9,-4]=et[9,-4]**6*(390625/216*cosine(iota)*sine(iota)**2*sine(4*beta)-390625/72*eta*cosine(iota)*sine(iota)**2*sine(4*beta))       
         
         ###################scross1_start####################
         Sx1 = np.zeros((10,7))
         
-        Sx1[0,2]=et[2,0]**5*(-(44/9)*cosine(iota)*cosine(2*beta)+(665*eta*cosine(iota)*cosine(2*beta))/1152+(131*cosine(iota)*cosine(2*beta)*sine(iota)**2)/4608-(131*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)/1536)+et[2,0]**3*(-(433/72)*cosine(iota)*cosine(2*beta)+8/9*eta*cosine(iota)*cosine(2*beta)+5/288*cosine(iota)*cosine(2*beta)*sine(iota)**2-5/96*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
-        Sx1[1,2]=et[2,1]**6*(-(83/24)*cosine(iota)*cosine(2*beta)+337/720*eta*cosine(iota)*cosine(2*beta)+1/60*cosine(iota)*cosine(2*beta)*sine(iota)**2-1/20*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[2,1]**4*(-(109/18)*cosine(iota)*cosine(2*beta)+23/24*eta*cosine(iota)*cosine(2*beta)-1/18*cosine(iota)*cosine(2*beta)*sine(iota)**2+1/6*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
+        Sx1[0,2]=et[0,2]**5*(-(44/9)*cosine(iota)*cosine(2*beta)+(665*eta*cosine(iota)*cosine(2*beta))/1152+(131*cosine(iota)*cosine(2*beta)*sine(iota)**2)/4608-(131*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)/1536)+et[0,2]**3*(-(433/72)*cosine(iota)*cosine(2*beta)+8/9*eta*cosine(iota)*cosine(2*beta)+5/288*cosine(iota)*cosine(2*beta)*sine(iota)**2-5/96*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
+        Sx1[1,2]=et[1,2]**6*(-(83/24)*cosine(iota)*cosine(2*beta)+337/720*eta*cosine(iota)*cosine(2*beta)+1/60*cosine(iota)*cosine(2*beta)*sine(iota)**2-1/20*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[1,2]**4*(-(109/18)*cosine(iota)*cosine(2*beta)+23/24*eta*cosine(iota)*cosine(2*beta)-1/18*cosine(iota)*cosine(2*beta)*sine(iota)**2+1/6*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
         Sx1[2,2]=et[2,2]**5*(-(2241/320)*cosine(iota)*cosine(2*beta)+717/640*eta*cosine(iota)*cosine(2*beta)-(297*cosine(iota)*cosine(2*beta)*sine(iota)**2)/2560+(891*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)/2560)
-        Sx1[3,2]=et[2,3]**6*(-(4571/540)*cosine(iota)*cosine(2*beta)+367/270*eta*cosine(iota)*cosine(2*beta)-49/270*cosine(iota)*cosine(2*beta)*sine(iota)**2+49/90*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
+        Sx1[3,2]=et[3,2]**6*(-(4571/540)*cosine(iota)*cosine(2*beta)+367/270*eta*cosine(iota)*cosine(2*beta)-49/270*cosine(iota)*cosine(2*beta)*sine(iota)**2+49/90*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
         
         
-        Sx1[0,-2]=et[-2,0]**3*(-(75/8)*cosine(iota)*cosine(2*beta)+19/6*eta*cosine(iota)*cosine(2*beta)+21/32*cosine(iota)*cosine(2*beta)*sine(iota)**2-63/32*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[-2,0]**5*(-(809/288)*cosine(iota)*cosine(2*beta)+179/576*eta*cosine(iota)*cosine(2*beta)-(79*cosine(iota)*cosine(2*beta)*sine(iota)**2)/2304+79/768*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[-2,0]*(76/3*cosine(iota)*cosine(2*beta)-eta*cosine(iota)*cosine(2*beta)-11/12*cosine(iota)*cosine(2*beta)*sine(iota)**2+11/4*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
-        Sx1[1,-2]= 26/3*cosine(iota)*cosine(2*beta)-2/3*eta*cosine(iota)*cosine(2*beta)+8/3*cosine(iota)*cosine(2*beta)*sine(iota)**2-8*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2+et[-2,1]**4*(-(769/24)*cosine(iota)*cosine(2*beta)+313/24*eta*cosine(iota)*cosine(2*beta)+10/3*cosine(iota)*cosine(2*beta)*sine(iota)**2-10*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[-2,1]**6*(4603/432*cosine(iota)*cosine(2*beta)-1195/432*eta*cosine(iota)*cosine(2*beta)-20/27*cosine(iota)*cosine(2*beta)*sine(iota)**2+20/9*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[-2,1]**2*(275/3*cosine(iota)*cosine(2*beta)-31/3*eta*cosine(iota)*cosine(2*beta)-16/3*cosine(iota)*cosine(2*beta)*sine(iota)**2+16*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
-        Sx1[2,-2]=et[-2,2]**5*(-(1881/16)*cosine(iota)*cosine(2*beta)+2607/64*eta*cosine(iota)*cosine(2*beta)+2781/256*cosine(iota)*cosine(2*beta)*sine(iota)**2-8343/256*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[-2,2]*(-18*cosine(iota)*cosine(2*beta)+3*eta*cosine(iota)*cosine(2*beta)+27/4*cosine(iota)*cosine(2*beta)*sine(iota)**2-81/4*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[-2,2]**3*(1647/8*cosine(iota)*cosine(2*beta)-33*eta*cosine(iota)*cosine(2*beta)-459/32*cosine(iota)*cosine(2*beta)*sine(iota)**2+1377/32*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
-        Sx1[3,-2]=et[-2,3]**6*(-(1281/4)*cosine(iota)*cosine(2*beta)+1921/18*eta*cosine(iota)*cosine(2*beta)+57/2*cosine(iota)*cosine(2*beta)*sine(iota)**2-171/2*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[-2,3]**2*(-(236/3)*cosine(iota)*cosine(2*beta)+40/3*eta*cosine(iota)*cosine(2*beta)+40/3*cosine(iota)*cosine(2*beta)*sine(iota)**2-40*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[-2,3]**4*(3748/9*cosine(iota)*cosine(2*beta)-244/3*eta*cosine(iota)*cosine(2*beta)-284/9*cosine(iota)*cosine(2*beta)*sine(iota)**2+284/3*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
-        Sx1[4,-2]=et[-2,4]**3*(-(13525/72)*cosine(iota)*cosine(2*beta)+625/18*eta*cosine(iota)*cosine(2*beta)+6875/288*cosine(iota)*cosine(2*beta)*sine(iota)**2-6875/96*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[-2,4]**5*(456925/576*cosine(iota)*cosine(2*beta)-(203125*eta*cosine(iota)*cosine(2*beta))/1152-(289375*cosine(iota)*cosine(2*beta)*sine(iota)**2)/4608+(289375*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)/1536)
-        Sx1[5,-2]=et[-2,5]**4*(-(2961/8)*cosine(iota)*cosine(2*beta)+297/4*eta*cosine(iota)*cosine(2*beta)+81/2*cosine(iota)*cosine(2*beta)*sine(iota)**2-243/2*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[-2,5]**6*(115713/80*cosine(iota)*cosine(2*beta)-14121/40*eta*cosine(iota)*cosine(2*beta)-2349/20*cosine(iota)*cosine(2*beta)*sine(iota)**2+7047/20*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
-        Sx1[6,-2]=et[-2,6]**5*(-(477211/720)*cosine(iota)*cosine(2*beta)+(823543*eta*cosine(iota)*cosine(2*beta))/5760+(1529437*cosine(iota)*cosine(2*beta)*sine(iota)**2)/23040-(1529437*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)/7680)
-        Sx1[7,-2]=et[-2,7]**6*(-(30269/27)*cosine(iota)*cosine(2*beta)+34816/135*eta*cosine(iota)*cosine(2*beta)+14336/135*cosine(iota)*cosine(2*beta)*sine(iota)**2-14336/45*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
+        Sx1[0,-2]=et[0,-2]**3*(-(75/8)*cosine(iota)*cosine(2*beta)+19/6*eta*cosine(iota)*cosine(2*beta)+21/32*cosine(iota)*cosine(2*beta)*sine(iota)**2-63/32*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[0,-2]**5*(-(809/288)*cosine(iota)*cosine(2*beta)+179/576*eta*cosine(iota)*cosine(2*beta)-(79*cosine(iota)*cosine(2*beta)*sine(iota)**2)/2304+79/768*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[0,-2]*(76/3*cosine(iota)*cosine(2*beta)-eta*cosine(iota)*cosine(2*beta)-11/12*cosine(iota)*cosine(2*beta)*sine(iota)**2+11/4*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
+        Sx1[1,-2]= 26/3*cosine(iota)*cosine(2*beta)-2/3*eta*cosine(iota)*cosine(2*beta)+8/3*cosine(iota)*cosine(2*beta)*sine(iota)**2-8*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2+et[1,-2]**4*(-(769/24)*cosine(iota)*cosine(2*beta)+313/24*eta*cosine(iota)*cosine(2*beta)+10/3*cosine(iota)*cosine(2*beta)*sine(iota)**2-10*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[1,-2]**6*(4603/432*cosine(iota)*cosine(2*beta)-1195/432*eta*cosine(iota)*cosine(2*beta)-20/27*cosine(iota)*cosine(2*beta)*sine(iota)**2+20/9*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[1,-2]**2*(275/3*cosine(iota)*cosine(2*beta)-31/3*eta*cosine(iota)*cosine(2*beta)-16/3*cosine(iota)*cosine(2*beta)*sine(iota)**2+16*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
+        Sx1[2,-2]=et[2,-2]**5*(-(1881/16)*cosine(iota)*cosine(2*beta)+2607/64*eta*cosine(iota)*cosine(2*beta)+2781/256*cosine(iota)*cosine(2*beta)*sine(iota)**2-8343/256*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[2,-2]*(-18*cosine(iota)*cosine(2*beta)+3*eta*cosine(iota)*cosine(2*beta)+27/4*cosine(iota)*cosine(2*beta)*sine(iota)**2-81/4*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[2,-2]**3*(1647/8*cosine(iota)*cosine(2*beta)-33*eta*cosine(iota)*cosine(2*beta)-459/32*cosine(iota)*cosine(2*beta)*sine(iota)**2+1377/32*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
+        Sx1[3,-2]=et[3,-2]**6*(-(1281/4)*cosine(iota)*cosine(2*beta)+1921/18*eta*cosine(iota)*cosine(2*beta)+57/2*cosine(iota)*cosine(2*beta)*sine(iota)**2-171/2*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[3,-2]**2*(-(236/3)*cosine(iota)*cosine(2*beta)+40/3*eta*cosine(iota)*cosine(2*beta)+40/3*cosine(iota)*cosine(2*beta)*sine(iota)**2-40*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[3,-2]**4*(3748/9*cosine(iota)*cosine(2*beta)-244/3*eta*cosine(iota)*cosine(2*beta)-284/9*cosine(iota)*cosine(2*beta)*sine(iota)**2+284/3*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
+        Sx1[4,-2]=et[4,-2]**3*(-(13525/72)*cosine(iota)*cosine(2*beta)+625/18*eta*cosine(iota)*cosine(2*beta)+6875/288*cosine(iota)*cosine(2*beta)*sine(iota)**2-6875/96*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[4,-2]**5*(456925/576*cosine(iota)*cosine(2*beta)-(203125*eta*cosine(iota)*cosine(2*beta))/1152-(289375*cosine(iota)*cosine(2*beta)*sine(iota)**2)/4608+(289375*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)/1536)
+        Sx1[5,-2]=et[5,-2]**4*(-(2961/8)*cosine(iota)*cosine(2*beta)+297/4*eta*cosine(iota)*cosine(2*beta)+81/2*cosine(iota)*cosine(2*beta)*sine(iota)**2-243/2*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)+et[5,-2]**6*(115713/80*cosine(iota)*cosine(2*beta)-14121/40*eta*cosine(iota)*cosine(2*beta)-2349/20*cosine(iota)*cosine(2*beta)*sine(iota)**2+7047/20*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
+        Sx1[6,-2]=et[6,-2]**5*(-(477211/720)*cosine(iota)*cosine(2*beta)+(823543*eta*cosine(iota)*cosine(2*beta))/5760+(1529437*cosine(iota)*cosine(2*beta)*sine(iota)**2)/23040-(1529437*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)/7680)
+        Sx1[7,-2]=et[7,-2]**6*(-(30269/27)*cosine(iota)*cosine(2*beta)+34816/135*eta*cosine(iota)*cosine(2*beta)+14336/135*cosine(iota)*cosine(2*beta)*sine(iota)**2-14336/45*eta*cosine(iota)*cosine(2*beta)*sine(iota)**2)
         
         
-        Sx1[0,4]=et[4,0]**5*(-((1091*cosine(iota)*cosine(4*beta)*sine(iota)**2)/46080)+(1091*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)/15360)
-        Sx1[1,4]=et[4,1]**6*(-((71*cosine(iota)*cosine(4*beta)*sine(iota)**2)/2160)+71/720*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2) 
+        Sx1[0,4]=et[0,4]**5*(-((1091*cosine(iota)*cosine(4*beta)*sine(iota)**2)/46080)+(1091*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)/15360)
+        Sx1[1,4]=et[1,4]**6*(-((71*cosine(iota)*cosine(4*beta)*sine(iota)**2)/2160)+71/720*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2) 
         
         
-        Sx1[0,-4]=et[-4,0]**3*(187/576*cosine(iota)*cosine(4*beta)*sine(iota)**2-187/192*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,0]**5*(-((1769*cosine(iota)*cosine(4*beta)*sine(iota)**2)/9216)+(1769*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)/3072)
-        Sx1[1,-4]=et[-4,1]**4*(137/18*cosine(iota)*cosine(4*beta)*sine(iota)**2-137/6*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,1]**6*(-(57/16)*cosine(iota)*cosine(4*beta)*sine(iota)**2+171/16*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,1]**2*(-(14/3)*cosine(iota)*cosine(4*beta)*sine(iota)**2+14*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
-        Sx1[2,-4]=et[-4,2]**5*(25191/512*cosine(iota)*cosine(4*beta)*sine(iota)**2-75573/512*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,2]*(81/8*cosine(iota)*cosine(4*beta)*sine(iota)**2-243/8*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,2]**3*(-(2511/64)*cosine(iota)*cosine(4*beta)*sine(iota)**2+7533/64*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
-        Sx1[3,-4]=-(16/3)*cosine(iota)*cosine(4*beta)*sine(iota)**2+16*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2+et[-4,3]**6*(5536/27*cosine(iota)*cosine(4*beta)*sine(iota)**2-5536/9*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,3]**2*(176/3*cosine(iota)*cosine(4*beta)*sine(iota)**2-176*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,3]**4*(-(506/3)*cosine(iota)*cosine(4*beta)*sine(iota)**2+506*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
-        Sx1[4,-4]=et[-4,4]**3*(13125/64*cosine(iota)*cosine(4*beta)*sine(iota)**2-39375/64*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,4]*(-(625/24)*cosine(iota)*cosine(4*beta)*sine(iota)**2+625/8*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,4]**5*(-((2493125*cosine(iota)*cosine(4*beta)*sine(iota)**2)/4608)+(2493125*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)/1536)
-        Sx1[5,-4]=et[-4,5]**4*(567*cosine(iota)*cosine(4*beta)*sine(iota)**2-1701*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,5]**2*(-81*cosine(iota)*cosine(4*beta)*sine(iota)**2+243*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,5]**6*(-(11745/8)*cosine(iota)*cosine(4*beta)*sine(iota)**2+35235/8*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
-        Sx1[6,-4]=et[-4,6]**5*((12588443*cosine(iota)*cosine(4*beta)*sine(iota)**2)/9216-(12588443*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)/3072)+et[-4,6]**3*(-(117649/576)*cosine(iota)*cosine(4*beta)*sine(iota)**2+117649/192*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
-        Sx1[7,-4]=et[-4,7]**6*(45056/15*cosine(iota)*cosine(4*beta)*sine(iota)**2-45056/5*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[-4,7]**4*(-(4096/9)*cosine(iota)*cosine(4*beta)*sine(iota)**2+4096/3*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
-        Sx1[8,-4]=et[-4,8]**5*(-((4782969*cosine(iota)*cosine(4*beta)*sine(iota)**2)/5120)+(14348907*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)/5120)
-        Sx1[9,-4]=et[-4,9]**6*(-(390625/216)*cosine(iota)*cosine(4*beta)*sine(iota)**2+390625/72*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)  
+        Sx1[0,-4]=et[0,-4]**3*(187/576*cosine(iota)*cosine(4*beta)*sine(iota)**2-187/192*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[0,-4]**5*(-((1769*cosine(iota)*cosine(4*beta)*sine(iota)**2)/9216)+(1769*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)/3072)
+        Sx1[1,-4]=et[1,-4]**4*(137/18*cosine(iota)*cosine(4*beta)*sine(iota)**2-137/6*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[1,-4]**6*(-(57/16)*cosine(iota)*cosine(4*beta)*sine(iota)**2+171/16*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[1,-4]**2*(-(14/3)*cosine(iota)*cosine(4*beta)*sine(iota)**2+14*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
+        Sx1[2,-4]=et[2,-4]**5*(25191/512*cosine(iota)*cosine(4*beta)*sine(iota)**2-75573/512*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[2,-4]*(81/8*cosine(iota)*cosine(4*beta)*sine(iota)**2-243/8*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[2,-4]**3*(-(2511/64)*cosine(iota)*cosine(4*beta)*sine(iota)**2+7533/64*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
+        Sx1[3,-4]=-(16/3)*cosine(iota)*cosine(4*beta)*sine(iota)**2+16*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2+et[3,-4]**6*(5536/27*cosine(iota)*cosine(4*beta)*sine(iota)**2-5536/9*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[3,-4]**2*(176/3*cosine(iota)*cosine(4*beta)*sine(iota)**2-176*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[3,-4]**4*(-(506/3)*cosine(iota)*cosine(4*beta)*sine(iota)**2+506*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
+        Sx1[4,-4]=et[4,-4]**3*(13125/64*cosine(iota)*cosine(4*beta)*sine(iota)**2-39375/64*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[4,-4]*(-(625/24)*cosine(iota)*cosine(4*beta)*sine(iota)**2+625/8*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[4,-4]**5*(-((2493125*cosine(iota)*cosine(4*beta)*sine(iota)**2)/4608)+(2493125*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)/1536)
+        Sx1[5,-4]=et[5,-4]**4*(567*cosine(iota)*cosine(4*beta)*sine(iota)**2-1701*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[5,-4]**2*(-81*cosine(iota)*cosine(4*beta)*sine(iota)**2+243*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[5,-4]**6*(-(11745/8)*cosine(iota)*cosine(4*beta)*sine(iota)**2+35235/8*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
+        Sx1[6,-4]=et[6,-4]**5*((12588443*cosine(iota)*cosine(4*beta)*sine(iota)**2)/9216-(12588443*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)/3072)+et[6,-4]**3*(-(117649/576)*cosine(iota)*cosine(4*beta)*sine(iota)**2+117649/192*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
+        Sx1[7,-4]=et[7,-4]**6*(45056/15*cosine(iota)*cosine(4*beta)*sine(iota)**2-45056/5*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)+et[7,-4]**4*(-(4096/9)*cosine(iota)*cosine(4*beta)*sine(iota)**2+4096/3*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)
+        Sx1[8,-4]=et[8,-4]**5*(-((4782969*cosine(iota)*cosine(4*beta)*sine(iota)**2)/5120)+(14348907*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)/5120)
+        Sx1[9,-4]=et[9,-4]**6*(-(390625/216)*cosine(iota)*cosine(4*beta)*sine(iota)**2+390625/72*eta*cosine(iota)*cosine(4*beta)*sine(iota)**2)  
         
         
         Sx1[0,0]=et[0,0]*(1/2*cosine(iota)*sine(iota)**2-3/2*eta*cosine(iota)*sine(iota)**2)+et[0,0]**5*(-(11/384)*cosine(iota)*sine(iota)**2+11/128*eta*cosine(iota)*sine(iota)**2)+et[0,0]**3*(-(5/16)*cosine(iota)*sine(iota)**2+15/16*eta*cosine(iota)*sine(iota)**2)
-        Sx1[1,0]=et[0,1]**2*(cosine(iota)*sine(iota)**2-3*eta*cosine(iota)*sine(iota)**2)+et[0,1]**6*(1/12*cosine(iota)*sine(iota)**2-1/4*eta*cosine(iota)*sine(iota)**2)+et[0,1]**4*(-(5/6)*cosine(iota)*sine(iota)**2+5/2*eta*cosine(iota)*sine(iota)**2)
-        Sx1[2,0]=et[0,2]**3*(27/16*cosine(iota)*sine(iota)**2-81/16*eta*cosine(iota)*sine(iota)**2)+et[0,2]**5*(-(459/256)*cosine(iota)*sine(iota)**2+1377/256*eta*cosine(iota)*sine(iota)**2)
-        Sx1[3,0]=et[0,3]**4*(8/3*cosine(iota)*sine(iota)**2-8*eta*cosine(iota)*sine(iota)**2)+et[0,3]**6*(-(52/15)*cosine(iota)*sine(iota)**2+52/5*eta*cosine(iota)*sine(iota)**2)
-        Sx1[4,0]=et[0,4]**5*(3125/768*cosine(iota)*sine(iota)**2-3125/256*eta*cosine(iota)*sine(iota)**2)
-        Sx1[5,0]=et[0,5]**6*(243/40*cosine(iota)*sine(iota)**2-729/40*eta*cosine(iota)*sine(iota)**2)
+        Sx1[1,0]=et[1,0]**2*(cosine(iota)*sine(iota)**2-3*eta*cosine(iota)*sine(iota)**2)+et[1,0]**6*(1/12*cosine(iota)*sine(iota)**2-1/4*eta*cosine(iota)*sine(iota)**2)+et[1,0]**4*(-(5/6)*cosine(iota)*sine(iota)**2+5/2*eta*cosine(iota)*sine(iota)**2)
+        Sx1[2,0]=et[2,0]**3*(27/16*cosine(iota)*sine(iota)**2-81/16*eta*cosine(iota)*sine(iota)**2)+et[2,0]**5*(-(459/256)*cosine(iota)*sine(iota)**2+1377/256*eta*cosine(iota)*sine(iota)**2)
+        Sx1[3,0]=et[3,0]**4*(8/3*cosine(iota)*sine(iota)**2-8*eta*cosine(iota)*sine(iota)**2)+et[3,0]**6*(-(52/15)*cosine(iota)*sine(iota)**2+52/5*eta*cosine(iota)*sine(iota)**2)
+        Sx1[4,0]=et[4,0]**5*(3125/768*cosine(iota)*sine(iota)**2-3125/256*eta*cosine(iota)*sine(iota)**2)
+        Sx1[5,0]=et[5,0]**6*(243/40*cosine(iota)*sine(iota)**2-729/40*eta*cosine(iota)*sine(iota)**2)
 
    
         
@@ -563,7 +563,7 @@ class Fn:
             psi.append(psi_n)
         
         # psi( n , l-1 )
-        psi = np.array(psi)    
+        psi = np.array(psi).astype('float64')     
                 
         
         # unit( l-1 , n ) 
@@ -587,15 +587,15 @@ class Fn:
         # psi( n , l-1 )
         for ll in [1,2,3,4,5,6,7,8]:
             #n = -2                                                                                
-            s1 = s1 + xi0(ll-1,-2)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[-2,ll-1]) )
+            s1 = s1 + xi0(ll-1,-2)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,-2]) )
             
         for ll in [1,2,3,4]:
             #n = 2                                                                                
-            s2 = s2 + xi0(ll-1,2)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[2,ll-1]) )
+            s2 = s2 + xi0(ll-1,2)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,2]) )
             
         for ll in [1,2,3,4,5,6]:
             #n = 0                                                                                
-            s3 = s3 + xi0(ll-1,0)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[0,ll-1]) ) 
+            s3 = s3 + xi0(ll-1,0)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,0]) ) 
         
         hf0 = s1+s2+s3
         
@@ -610,16 +610,16 @@ class Fn:
         #frequency domain waveform 
         for ll in [1,2,3,4,5,6,7]:
             #n = -1                                                                                
-            s1 = s1 + xi05(ll-1,-1)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[-1,ll-1]) )
+            s1 = s1 + xi05(ll-1,-1)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,-1]) )
         for l in [1,2,3,4,5]:
             #n = 1                                                                                
-            s2 = s2 + xi05(ll-1,1)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[1,ll-1]) )
+            s2 = s2 + xi05(ll-1,1)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,1]) )
         for ll in [1,2,3,4,5,6,7,8,9]:
             #n = -3                                                                                
-            s3 = s3 + xi05(ll-1,-3)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[-3,ll-1]) )
+            s3 = s3 + xi05(ll-1,-3)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,-3]) )
         for ll in [1,2,3]:
             #n = 3                                                                                
-            s4 = s4 + xi05(ll-1,3)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[3,ll-1]) )                  
+            s4 = s4 + xi05(ll-1,3)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,3]) )                  
         hf05 = s1+s2+s3+s4
         
         ##########1PN#############
@@ -635,19 +635,19 @@ class Fn:
         #frequency domain waveform 
         for ll in [1,2,3,4,5,6,7,8]:
             #n = -2                                                                                
-            s1 = s1 + (xi1(ll-1,-2) + xipn(ll-1,-2))*np.exp( -1j*(np.pi/4 + psi[-2,ll-1]) )
+            s1 = s1 + (xi1(ll-1,-2) + xipn(ll-1,-2))*np.exp( -1j*(np.pi/4 + psi[ll-1,-2]) )
         for ll in [1,2,3,4]:
             #n = 2                                                                                
-            s2 = s2 + (xi1(ll-1,2) + xipn(ll-1,2))*np.exp( -1j*(np.pi/4 + psi[2,ll-1]) )
+            s2 = s2 + (xi1(ll-1,2) + xipn(ll-1,2))*np.exp( -1j*(np.pi/4 + psi[ll-1,2]) )
         for ll in [1,2,3,4,5,6]:
             #n = 0                                                                                
-            s3 = s3 + (xi1(ll-1,0) + xipn(ll-1,0))*np.exp( -1j*(np.pi/4 + psi[0,ll-1]) )
+            s3 = s3 + (xi1(ll-1,0) + xipn(ll-1,0))*np.exp( -1j*(np.pi/4 + psi[ll-1,0]) )
         for ll in [1,2,3,4,5,6,7,8,9,10]:
             #n = -4                                                                                
-            s4 = s4 + xi1(ll-1,-4)*np.exp( -1j*(np.pi/4 + psi[-4,ll-1]) )
+            s4 = s4 + xi1(ll-1,-4)*np.exp( -1j*(np.pi/4 + psi[ll-1,-4]) )
         for ll in [1,2]:
             #n = 4                                                                                
-            s5 = s5 + xi1(ll-1,4)*np.exp( -1j*(np.pi/4 + psi[4,ll-1]) )
+            s5 = s5 + xi1(ll-1,4)*np.exp( -1j*(np.pi/4 + psi[ll-1,4]) )
         
         hf1 = s1+s2+s3+s4+s5
  
@@ -671,15 +671,15 @@ class Fn:
         # psi( n , l-1 )
         for ll in [1,2,3,4,5,6,7,8]:
             #n = -2                                                                                
-            s1 = s1 + xi0(ll-1,-2)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[-2,ll-1]) )
+            s1 = s1 + xi0(ll-1,-2)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,-2]) )
             
         for ll in [1,2,3,4]:
             #n = 2                                                                                
-            s2 = s2 + xi0(ll-1,2)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[2,ll-1]) )
+            s2 = s2 + xi0(ll-1,2)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,2]) )
             
         for ll in [1,2,3,4,5,6]:
             #n = 0                                                                                
-            s3 = s3 + xi0(ll-1,0)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[0,ll-1]) ) 
+            s3 = s3 + xi0(ll-1,0)*((ll/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,0]) ) 
         
         hf0 = s1+s2+s3
         
@@ -694,16 +694,16 @@ class Fn:
         #frequency domain waveform 
         for ll in [1,2,3,4,5,6,7]:
             #n = -1                                                                                
-            s1 = s1 + xi05(ll-1,-1)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[-1,ll-1]) )
+            s1 = s1 + xi05(ll-1,-1)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,-1]) )
         for l in [1,2,3,4,5]:
             #n = 1                                                                                
-            s2 = s2 + xi05(ll-1,1)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[1,ll-1]) )
+            s2 = s2 + xi05(ll-1,1)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,1]) )
         for ll in [1,2,3,4,5,6,7,8,9]:
             #n = -3                                                                                
-            s3 = s3 + xi05(ll-1,-3)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[-3,ll-1]) )
+            s3 = s3 + xi05(ll-1,-3)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,-3]) )
         for ll in [1,2,3]:
             #n = 3                                                                                
-            s4 = s4 + xi05(ll-1,3)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[3,ll-1]) )                  
+            s4 = s4 + xi05(ll-1,3)*((ll/2)**(1/3))*np.exp( -1j*(np.pi/4 + psi[ll-1,3]) )                  
         hf05 = s1+s2+s3+s4
         
         ##########1PN#############
@@ -719,26 +719,26 @@ class Fn:
         #frequency domain waveform 
         for ll in [1,2,3,4,5,6,7,8]:
             #n = -2                                                                                
-            s1 = s1 + (xi1(ll-1,-2) + xipn(ll-1,-2))*np.exp( -1j*(np.pi/4 + psi[-2,ll-1]) )
+            s1 = s1 + (xi1(ll-1,-2) + xipn(ll-1,-2))*np.exp( -1j*(np.pi/4 + psi[ll-1,-2]) )
         for ll in [1,2,3,4]:
             #n = 2                                                                                
-            s2 = s2 + (xi1(ll-1,2) + xipn(ll-1,2))*np.exp( -1j*(np.pi/4 + psi[2,ll-1]) )
+            s2 = s2 + (xi1(ll-1,2) + xipn(ll-1,2))*np.exp( -1j*(np.pi/4 + psi[ll-1,2]) )
         for ll in [1,2,3,4,5,6]:
             #n = 0                                                                                
-            s3 = s3 + (xi1(ll-1,0) + xipn(ll-1,0))*np.exp( -1j*(np.pi/4 + psi[0,ll-1]) )
+            s3 = s3 + (xi1(ll-1,0) + xipn(ll-1,0))*np.exp( -1j*(np.pi/4 + psi[ll-1,0]) )
         for ll in [1,2,3,4,5,6,7,8,9,10]:
             #n = -4                                                                                
-            s4 = s4 + xi1(ll-1,-4)*np.exp( -1j*(np.pi/4 + psi[-4,ll-1]) )
+            s4 = s4 + xi1(ll-1,-4)*np.exp( -1j*(np.pi/4 + psi[ll-1,-4]) )
         for ll in [1,2]:
             #n = 4                                                                                
-            s5 = s5 + xi1(ll-1,4)*np.exp( -1j*(np.pi/4 + psi[4,ll-1]) )
+            s5 = s5 + xi1(ll-1,4)*np.exp( -1j*(np.pi/4 + psi[ll-1,4]) )
         
         hf1 = s1+s2+s3+s4+s5
  
         # final frequency domain strain
         hc = (((5*np.pi*eta)/384)**(1/2)) * (G**2*M**2)/(C**5*D)*( (((G*M*np.pi*f)/C**3)**(-7/6))*hf0 + (((G*M*np.pi*f)/C**3)**(-5/6))*(delta/M)*hf05 + (((G*M*np.pi*f)/C**3)**(-1/2))*hf1 )
 
-        return(hp,hc)
+        return(et)
     
     
 
@@ -763,6 +763,7 @@ class Xi:
         self.Sp1_ = Sp1_
         self.Sx1_ = Sx1_
     
+    #here l range from 0 to 9
     def xi0_(self, l_, n_):
         Fp = self.Fp_
         Fc = self.Fc_
@@ -788,8 +789,8 @@ class Xi:
                 phil = np.arctan(- (Sigma_l/Gamma_l))            
 
             #NOTE: et(n value, l-1)
-            numerator = (1-et[n_,l_]**2)**(7/4)
-            denomitor = ( 1 + (73/24)*et[n_,l_]**2 + (37/96)*et[n_,l_]**4 )**(1/2)
+            numerator = (1-et[l_,n_]**2)**(7/4)
+            denomitor = ( 1 + (73/24)*et[l_,n_]**2 + (37/96)*et[l_,n_]**4 )**(1/2)
             xil = (numerator/denomitor)*al*np.exp(-1j*phil)
             
         return(xil)
@@ -819,8 +820,8 @@ class Xi:
                 phil = np.arctan(- (Sigma_l/Gamma_l))            
 
             #NOTE: et(n value, l-1)
-            numerator = (1-et[n_,l_]**2)**(7/4)
-            denomitor = ( 1 + (73/24)*et[n_,l_]**2 + (37/96)*et[n_,l_]**4 )**(1/2)
+            numerator = (1-et[l_,n_]**2)**(7/4)
+            denomitor = ( 1 + (73/24)*et[l_,n_]**2 + (37/96)*et[l_,n_]**4 )**(1/2)
             xil = (numerator/denomitor)*al*np.exp(-1j*phil)
             
         return(xil)
@@ -850,8 +851,8 @@ class Xi:
                 phil = np.arctan(- (Sigma_l/Gamma_l))            
 
             #NOTE: et(n value, l-1)
-            numerator = (1-et[n_,l_]**2)**(7/4)
-            denomitor = ( 1 + (73/24)*et[n_,l_]**2 + (37/96)*et[n_,l_]**4 )**(1/2)
+            numerator = (1-et[l_,n_]**2)**(7/4)
+            denomitor = ( 1 + (73/24)*et[l_,n_]**2 + (37/96)*et[l_,n_]**4 )**(1/2)
             xil = (numerator/denomitor)*al*np.exp(-1j*phil)
             
         return(xil)
@@ -882,8 +883,8 @@ class Xi:
                 phil = np.arctan(- (Sigma_l/Gamma_l))            
 
             #NOTE: et(n value, l-1)
-            numerator = (1-et[n_,l_]**2)**(3/4)*(11888 + 14784*eta - et[n_,l_]**2*(87720-159600*eta) - et[n_,l_]**4*(171038-141708*eta) - et[n_,l_]**6*(11717-8288*eta))
-            denomitor = ( 1 + (73/24)*et[n_,l_]**2 + (37/96)*et[n_,l_]**4 )**(3/2) * 10752
+            numerator = (1-et[l_,n_]**2)**(3/4)*(11888 + 14784*eta - et[l_,n_]**2*(87720-159600*eta) - et[l_,n_]**4*(171038-141708*eta) - et[l_,n_]**6*(11717-8288*eta))
+            denomitor = ( 1 + (73/24)*et[l_,n_]**2 + (37/96)*et[l_,n_]**4 )**(3/2) * 10752
 
             xil = (numerator/denomitor)*al*np.exp(-1j*phil) 
             

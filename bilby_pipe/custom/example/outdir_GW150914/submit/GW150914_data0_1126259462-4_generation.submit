@@ -1,0 +1,15 @@
+universe = vanilla
+executable = /home/hemantakumar.phurailatpam/anaconda3/envs/bilby_pipe/bin/bilby_pipe_generation
+request_memory = 8 GB
+request_cpus = 1
+getenv = True
+initialdir = /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom_bilby_pipe_function/example
+notification = Never
+requirements = 
+log = outdir_GW150914/log_data_generation/GW150914_data0_1126259462-4_generation.log
+output = outdir_GW150914/log_data_generation/GW150914_data0_1126259462-4_generation.out
+error = outdir_GW150914/log_data_generation/GW150914_data0_1126259462-4_generation.err
+accounting_group = ligo.dev.o3.cbc.pe.lalinference
+priority = 0
+arguments = $(ARGS)
+queue

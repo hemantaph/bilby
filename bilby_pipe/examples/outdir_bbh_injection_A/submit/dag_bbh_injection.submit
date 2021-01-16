@@ -1,0 +1,7 @@
+JOB bbh_injection_data0_0_generation_arg_0 outdir_bbh_injection_A/submit/bbh_injection_data0_0_generation.submit
+VARS bbh_injection_data0_0_generation_arg_0 ARGS="outdir_bbh_injection_A/bbh_injection_config_complete.ini --local --label bbh_injection_data0_0_generation --idx 0 --trigger-time 0 --injection-file outdir_bbh_injection_A/data/bbh_injection_injection_file.dat"
+JOB bbh_injection_data0_0_analysis_H1L1_dynesty_arg_0 outdir_bbh_injection_A/submit/bbh_injection_data0_0_analysis_H1L1_dynesty.submit
+VARS bbh_injection_data0_0_analysis_H1L1_dynesty_arg_0 ARGS="outdir_bbh_injection_A/bbh_injection_config_complete.ini --local --outdir outdir_bbh_injection_A --detectors H1 --detectors L1 --label bbh_injection_data0_0_analysis_H1L1_dynesty --data-dump-file outdir_bbh_injection_A/data/bbh_injection_data0_0_generation_data_dump.pickle --sampler dynesty"
+
+#Inter-job dependencies
+Parent bbh_injection_data0_0_generation_arg_0 Child bbh_injection_data0_0_analysis_H1L1_dynesty_arg_0
