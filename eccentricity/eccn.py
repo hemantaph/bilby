@@ -72,7 +72,7 @@ injection = ifos.inject_signal(waveform_generator=waveform_generator,
 
 # Now we set up the priors on each of the binary parameters.
 prior = injection_parameters.copy()
-prior['eccentricity'] = bilby.core.prior.Uniform(0.01, 0.2, 'e')
+prior['eccentricity'] = bilby.core.prior.Uniform(0.01, 0.2, 'eccentricity')
 
 # Initialising the likelihood function.
 likelihood = bilby.gw.likelihood.GravitationalWaveTransient(

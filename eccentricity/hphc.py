@@ -11,7 +11,7 @@ Mpc = 3.086*1e22
 gamma = 0.5772156649 
 
 class Fn:
-    def __init__(self, iota_, beta_, D_, m1_, m2_, f_, f0_, Fp_, Fc_, et0_, phic_, tc_ ):
+    def __init__(self, iota_, beta_, D_, m1_, m2_, f_, f0_, et0_, phic_, tc_ ):
 
         self.iota_ = iota_
         self.beta_ = beta_
@@ -19,8 +19,6 @@ class Fn:
         self.m1_ = m1_*Mo
         self.m2_ = m2_*Mo
         self.f0_ = f0_
-        self.Fp_ = Fp_
-        self.Fc_ = Fc_
         self.et0_ = et0_
         self.phic_ = phic_
         self.tc_ = tc_
@@ -46,8 +44,6 @@ class Fn:
         m1 = self.m1_
         m2 = self.m2_
         f0 = self.f0_
-        Fp = self.Fp_
-        Fc = self.Fc_
         et0 = self.et0_
         phic = self.phic_
         tc = self.tc_
