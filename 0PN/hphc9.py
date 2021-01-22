@@ -35,7 +35,19 @@ class Fn:
             return(1)
         else:
             return(0)
+    '''    
+    def hphc(self):
+        f1_ = self.f_
+        m11 = self.m1_
+        m22 = self.m2_
+        fmin_ = 20.0
+        fmax_ = (C**3)/( G*(m11+m22)*Mo*np.pi*6**(3/2) )
         
+        if f1_<=fmin_ or f1_<=fmax_:
+            return(0,0)
+        else:
+            return(self.htilde())    
+    '''
     
     def htilde(self):
         iota = self.iota_
@@ -559,10 +571,112 @@ class Fn:
         
         # unit( l-1 , n ) 
         unit = np.zeros((10,9))
+        
+        unit[0,0] = self.unitstep( (1-(1+0)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,0] = self.unitstep( (2-(2+0)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,0] = self.unitstep( (3-(3+0)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,0] = self.unitstep( (4-(4+0)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,0] = self.unitstep( (5-(5+0)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,0] = self.unitstep( (6-(6+0)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,0] = self.unitstep( (7-(7+0)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,0] = self.unitstep( (8-(8+0)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,0] = self.unitstep( (9-(9+0)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,0] = self.unitstep( (10-(10+0)*(k[9]/(1+k[9]))) ,ff,f)
+
+        unit[0,1] = self.unitstep( (1-(1+1)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,1] = self.unitstep( (2-(2+1)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,1] = self.unitstep( (3-(3+1)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,1] = self.unitstep( (4-(4+1)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,1] = self.unitstep( (5-(5+1)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,1] = self.unitstep( (6-(6+1)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,1] = self.unitstep( (7-(7+1)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,1] = self.unitstep( (8-(8+1)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,1] = self.unitstep( (9-(9+1)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,1] = self.unitstep( (10-(10+1)*(k[9]/(1+k[9]))) ,ff,f)
+        
+        unit[0,2] = self.unitstep( (1-(1+2)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,2] = self.unitstep( (2-(2+2)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,2] = self.unitstep( (3-(3+2)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,2] = self.unitstep( (4-(4+2)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,2] = self.unitstep( (5-(5+2)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,2] = self.unitstep( (6-(6+2)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,2] = self.unitstep( (7-(7+2)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,2] = self.unitstep( (8-(8+2)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,2] = self.unitstep( (9-(9+2)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,2] = self.unitstep( (10-(10+2)*(k[9]/(1+k[9]))) ,ff,f)        
+        
+        unit[0,3] = self.unitstep( (1-(1+3)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,3] = self.unitstep( (2-(2+3)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,3] = self.unitstep( (3-(3+3)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,3] = self.unitstep( (4-(4+3)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,3] = self.unitstep( (5-(5+3)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,3] = self.unitstep( (6-(6+3)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,3] = self.unitstep( (7-(7+3)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,3] = self.unitstep( (8-(8+3)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,3] = self.unitstep( (9-(9+3)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,3] = self.unitstep( (10-(10+3)*(k[9]/(1+k[9]))) ,ff,f)
+        
+        unit[0,4] = self.unitstep( (1-(1+4)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,4] = self.unitstep( (2-(2+4)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,4] = self.unitstep( (3-(3+4)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,4] = self.unitstep( (4-(4+4)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,4] = self.unitstep( (5-(5+4)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,4] = self.unitstep( (6-(6+4)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,4] = self.unitstep( (7-(7+4)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,4] = self.unitstep( (8-(8+4)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,4] = self.unitstep( (9-(9+4)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,4] = self.unitstep( (10-(10+4)*(k[9]/(1+k[9]))) ,ff,f)        
+        
+        unit[0,-4] = self.unitstep( (1-(1-4)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,-4] = self.unitstep( (2-(2-4)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,-4] = self.unitstep( (3-(3-4)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,-4] = self.unitstep( (4-(4-4)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,-4] = self.unitstep( (5-(5-4)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,-4] = self.unitstep( (6-(6-4)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,-4] = self.unitstep( (7-(7-4)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,-4] = self.unitstep( (8-(8-4)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,-4] = self.unitstep( (9-(9-4)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,-4] = self.unitstep( (10-(10-4)*(k[9]/(1+k[9]))) ,ff,f)        
+        
+        unit[0,-3] = self.unitstep( (1-(1-3)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,-3] = self.unitstep( (2-(2-3)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,-3] = self.unitstep( (3-(3-3)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,-3] = self.unitstep( (4-(4-3)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,-3] = self.unitstep( (5-(5-3)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,-3] = self.unitstep( (6-(6-3)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,-3] = self.unitstep( (7-(7-3)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,-3] = self.unitstep( (8-(8-3)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,-3] = self.unitstep( (9-(9-3)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,-3] = self.unitstep( (10-(10-3)*(k[9]/(1+k[9]))) ,ff,f)
+        
+        unit[0,-2] = self.unitstep( (1-(1-2)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,-2] = self.unitstep( (2-(2-2)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,-2] = self.unitstep( (3-(3-2)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,-2] = self.unitstep( (4-(4-2)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,-2] = self.unitstep( (5-(5-2)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,-2] = self.unitstep( (6-(6-2)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,-2] = self.unitstep( (7-(7-2)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,-2] = self.unitstep( (8-(8-2)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,-2] = self.unitstep( (9-(9-2)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,-2] = self.unitstep( (10-(10-2)*(k[9]/(1+k[9]))) ,ff,f)        
+        
+        unit[0,-1] = self.unitstep( (1-(1-1)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,-1] = self.unitstep( (2-(2-1)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,-1] = self.unitstep( (3-(3-1)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,-1] = self.unitstep( (4-(4-1)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,-1] = self.unitstep( (5-(5-1)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,-1] = self.unitstep( (6-(6-1)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,-1] = self.unitstep( (7-(7-1)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,-1] = self.unitstep( (8-(8-1)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,-1] = self.unitstep( (9-(9-1)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,-1] = self.unitstep( (10-(10-1)*(k[9]/(1+k[9]))) ,ff,f)        
+        
+        
+        '''
         for n in [0,1,2,3,4,-4,-3,-2,-1]: 
             for ll in [1,2,3,4,5,6,7,8,9,10]:
                 unit[ll-1,n] = self.unitstep( (ll-(ll+n)*(k[ll-1]/(1+k[ll-1]))) ,ff,f)   
-                
+        '''       
         
         ####################################################################################
         #for plus polarization

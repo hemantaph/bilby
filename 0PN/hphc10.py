@@ -35,7 +35,19 @@ class Fn:
             return(1)
         else:
             return(0)
+    '''    
+    def hphc(self):
+        f1_ = self.f_
+        m11 = self.m1_
+        m22 = self.m2_
+        fmin_ = 20.0
+        fmax_ = (C**3)/( G*(m11+m22)*Mo*np.pi*6**(3/2) )
         
+        if f1_<=fmin_ or f1_<=fmax_:
+            return(0,0)
+        else:
+            return(self.htilde())    
+    '''
     
     def htilde(self):
         iota = self.iota_
@@ -218,7 +230,7 @@ class Fn:
 
         Sx0[3,2]=-(11/45)*et[2,3]**6*np.cos(iota)*np.cos(2*beta)
         
-
+        '''
         ###################cplus05_start####################
         Cp05 = np.zeros((10,5))
 
@@ -527,7 +539,7 @@ class Fn:
         Sx1[3,0]=et[0,3]**4*(8/3*np.cos(iota)*np.sin(iota)**2-8*eta*np.cos(iota)*np.sin(iota)**2)+et[0,3]**6*(-(52/15)*np.cos(iota)*np.sin(iota)**2+52/5*eta*np.cos(iota)*np.sin(iota)**2)
         Sx1[4,0]=et[0,4]**5*(3125/768*np.cos(iota)*np.sin(iota)**2-3125/256*eta*np.cos(iota)*np.sin(iota)**2)
         Sx1[5,0]=et[0,5]**6*(243/40*np.cos(iota)*np.sin(iota)**2-729/40*eta*np.cos(iota)*np.sin(iota)**2)
-
+        '''
    
         
         #fourier_phase
@@ -559,14 +571,116 @@ class Fn:
         
         # unit( l-1 , n ) 
         unit = np.zeros((10,9))
+        
+        unit[0,0] = self.unitstep( (1-(1+0)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,0] = self.unitstep( (2-(2+0)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,0] = self.unitstep( (3-(3+0)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,0] = self.unitstep( (4-(4+0)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,0] = self.unitstep( (5-(5+0)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,0] = self.unitstep( (6-(6+0)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,0] = self.unitstep( (7-(7+0)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,0] = self.unitstep( (8-(8+0)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,0] = self.unitstep( (9-(9+0)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,0] = self.unitstep( (10-(10+0)*(k[9]/(1+k[9]))) ,ff,f)
+
+        unit[0,1] = self.unitstep( (1-(1+1)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,1] = self.unitstep( (2-(2+1)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,1] = self.unitstep( (3-(3+1)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,1] = self.unitstep( (4-(4+1)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,1] = self.unitstep( (5-(5+1)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,1] = self.unitstep( (6-(6+1)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,1] = self.unitstep( (7-(7+1)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,1] = self.unitstep( (8-(8+1)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,1] = self.unitstep( (9-(9+1)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,1] = self.unitstep( (10-(10+1)*(k[9]/(1+k[9]))) ,ff,f)
+        
+        unit[0,2] = self.unitstep( (1-(1+2)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,2] = self.unitstep( (2-(2+2)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,2] = self.unitstep( (3-(3+2)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,2] = self.unitstep( (4-(4+2)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,2] = self.unitstep( (5-(5+2)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,2] = self.unitstep( (6-(6+2)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,2] = self.unitstep( (7-(7+2)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,2] = self.unitstep( (8-(8+2)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,2] = self.unitstep( (9-(9+2)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,2] = self.unitstep( (10-(10+2)*(k[9]/(1+k[9]))) ,ff,f)        
+        
+        unit[0,3] = self.unitstep( (1-(1+3)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,3] = self.unitstep( (2-(2+3)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,3] = self.unitstep( (3-(3+3)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,3] = self.unitstep( (4-(4+3)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,3] = self.unitstep( (5-(5+3)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,3] = self.unitstep( (6-(6+3)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,3] = self.unitstep( (7-(7+3)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,3] = self.unitstep( (8-(8+3)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,3] = self.unitstep( (9-(9+3)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,3] = self.unitstep( (10-(10+3)*(k[9]/(1+k[9]))) ,ff,f)
+        
+        unit[0,4] = self.unitstep( (1-(1+4)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,4] = self.unitstep( (2-(2+4)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,4] = self.unitstep( (3-(3+4)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,4] = self.unitstep( (4-(4+4)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,4] = self.unitstep( (5-(5+4)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,4] = self.unitstep( (6-(6+4)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,4] = self.unitstep( (7-(7+4)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,4] = self.unitstep( (8-(8+4)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,4] = self.unitstep( (9-(9+4)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,4] = self.unitstep( (10-(10+4)*(k[9]/(1+k[9]))) ,ff,f)        
+        
+        unit[0,-4] = self.unitstep( (1-(1-4)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,-4] = self.unitstep( (2-(2-4)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,-4] = self.unitstep( (3-(3-4)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,-4] = self.unitstep( (4-(4-4)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,-4] = self.unitstep( (5-(5-4)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,-4] = self.unitstep( (6-(6-4)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,-4] = self.unitstep( (7-(7-4)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,-4] = self.unitstep( (8-(8-4)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,-4] = self.unitstep( (9-(9-4)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,-4] = self.unitstep( (10-(10-4)*(k[9]/(1+k[9]))) ,ff,f)        
+        
+        unit[0,-3] = self.unitstep( (1-(1-3)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,-3] = self.unitstep( (2-(2-3)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,-3] = self.unitstep( (3-(3-3)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,-3] = self.unitstep( (4-(4-3)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,-3] = self.unitstep( (5-(5-3)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,-3] = self.unitstep( (6-(6-3)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,-3] = self.unitstep( (7-(7-3)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,-3] = self.unitstep( (8-(8-3)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,-3] = self.unitstep( (9-(9-3)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,-3] = self.unitstep( (10-(10-3)*(k[9]/(1+k[9]))) ,ff,f)
+        
+        unit[0,-2] = self.unitstep( (1-(1-2)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,-2] = self.unitstep( (2-(2-2)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,-2] = self.unitstep( (3-(3-2)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,-2] = self.unitstep( (4-(4-2)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,-2] = self.unitstep( (5-(5-2)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,-2] = self.unitstep( (6-(6-2)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,-2] = self.unitstep( (7-(7-2)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,-2] = self.unitstep( (8-(8-2)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,-2] = self.unitstep( (9-(9-2)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,-2] = self.unitstep( (10-(10-2)*(k[9]/(1+k[9]))) ,ff,f)        
+        
+        unit[0,-1] = self.unitstep( (1-(1-1)*(k[0]/(1+k[0]))) ,ff,f)
+        unit[1,-1] = self.unitstep( (2-(2-1)*(k[1]/(1+k[1]))) ,ff,f)
+        unit[2,-1] = self.unitstep( (3-(3-1)*(k[2]/(1+k[2]))) ,ff,f)
+        unit[3,-1] = self.unitstep( (4-(4-1)*(k[3]/(1+k[3]))) ,ff,f)
+        unit[4,-1] = self.unitstep( (5-(5-1)*(k[4]/(1+k[4]))) ,ff,f)
+        unit[5,-1] = self.unitstep( (6-(6-1)*(k[5]/(1+k[5]))) ,ff,f)
+        unit[6,-1] = self.unitstep( (7-(7-1)*(k[6]/(1+k[6]))) ,ff,f)
+        unit[7,-1] = self.unitstep( (8-(8-1)*(k[7]/(1+k[7]))) ,ff,f)
+        unit[8,-1] = self.unitstep( (9-(9-1)*(k[8]/(1+k[8]))) ,ff,f)
+        unit[9,-1] = self.unitstep( (10-(10-1)*(k[9]/(1+k[9]))) ,ff,f)        
+        
+        
+        '''
         for n in [0,1,2,3,4,-4,-3,-2,-1]: 
             for ll in [1,2,3,4,5,6,7,8,9,10]:
                 unit[ll-1,n] = self.unitstep( (ll-(ll+n)*(k[ll-1]/(1+k[ll-1]))) ,ff,f)   
-                
+        '''       
         
         ####################################################################################
         #for plus polarization
-        xii = Xi(1.0, 0.0, eta, et, unit, Cp0, Sp0, Cx0, Sx0, Cp05, Sp05, Cx05, Sx05, Cp1, Sp1, Cx1, Sx1)
+        xii = Xi(1.0, 0.0, eta, et, unit, Cp0, Sp0, Cx0, Sx0, 0, 0, 0, 0, 0, 0, 0, 0)
         
         ##########0PN#############
         # xi0( l-1 , n )
@@ -602,7 +716,7 @@ class Fn:
         xi0(5,0)*((6/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[0,5]) )
         
         hf0 = s1+s2+s3
-        
+        '''
         ##########05PN#############
         # xi05( l-1 , n )
         xi05 = xii.xi05_
@@ -698,7 +812,9 @@ class Fn:
         
         
         hf1 = s1+s2+s3+s4+s5
- 
+        '''
+        hf05 = 0
+        hf1 = 0
         # final frequency domain strain
         hp = (((5*np.pi*eta)/384)**(1/2)) * (G**2*M**2)/(C**5*D)*( (((G*M*np.pi*f)/C**3)**(-7/6))*hf0 + (((G*M*np.pi*f)/C**3)**(-5/6))*(delta/M)*hf05 + (((G*M*np.pi*f)/C**3)**(-1/2))*hf1 )
 
@@ -706,7 +822,7 @@ class Fn:
       
         ####################################################################################
         #for cross polarization
-        xii = Xi(0.0, 1.0, eta, et, unit, Cp0, Sp0, Cx0, Sx0, Cp05, Sp05, Cx05, Sx05, Cp1, Sp1, Cx1, Sx1)
+        xii = Xi(0.0, 1.0, eta, et, unit, Cp0, Sp0, Cx0, Sx0, 0, 0, 0, 0, 0, 0, 0, 0)
         
         ##########0PN#############
         # xi0( l-1 , n )
@@ -743,6 +859,7 @@ class Fn:
         
         hf0 = s1+s2+s3
         
+        '''
         ##########05PN#############
         # xi05( l-1 , n )
         xi05 = xii.xi05_
@@ -838,7 +955,10 @@ class Fn:
         
         
         hf1 = s1+s2+s3+s4+s5
- 
+        '''
+        
+        hf05 = 0
+        hf1 = 1
         # final frequency domain strain
         hc = (((5*np.pi*eta)/384)**(1/2)) * (G**2*M**2)/(C**5*D)*( (((G*M*np.pi*f)/C**3)**(-7/6))*hf0 + (((G*M*np.pi*f)/C**3)**(-5/6))*(delta/M)*hf05 + (((G*M*np.pi*f)/C**3)**(-1/2))*hf1 )
         
