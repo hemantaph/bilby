@@ -34,8 +34,10 @@ class Fn:
         else:
             return(0)
         
-    
-    def htilde(self):
+    def hf(self):
+        freq_ = self.f_
+        
+    def htilde(self, freq):
         iota = self.iota_
         beta = self.beta_ 
         D = self.D_
@@ -43,7 +45,7 @@ class Fn:
         et0 = self.et0_
         phic = self.phic_
         tc = self.tc_
-        f = self.f_
+        f = freq
         M = self.M_
         eta = self.eta_
         chi = self.chi_
@@ -937,10 +939,6 @@ class Fn:
         # return(format(hp, '.6g'),format(hc, '.6g')) if you want toround off
         return(hp,hc)
 
-    
-    
-    
-    
     
 
 class Xi:

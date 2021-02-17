@@ -11,23 +11,21 @@ Mpc = 3.086*1e22
 gamma = 0.5772156649 
 
 class Fn:
-    def __init__(self, iota_, beta_, D_, m1_, m2_, f_, f0_, et0_, phic_, tc_ ):
+    def __init__(self, iota_, beta_, D_, f_, f0_, et0_, phic_, tc_, M_, eta_, ff_, delta_ ):
 
         self.iota_ = iota_
         self.beta_ = beta_
-        self.D_ = D_*Mpc
-        self.m1_ = m1_*Mo
-        self.m2_ = m2_*Mo
+        self.D_ = D_
+        self.f_ = f_
         self.f0_ = f0_
         self.et0_ = et0_
         self.phic_ = phic_
         self.tc_ = tc_
-        self.f_ = f_
-        self.M_ = (m1_+m2_)*Mo
-        self.eta_ = (m1_*m2_)/((m1_+m2_)**2)
+        self.M_ = M_
+        self.eta_ = eta_
         self.chi_ = f_/f0_
-        self.ff_ = C**3/(G*(m1_+m2_)*Mo*np.pi*6**(3/2))
-        self.delta_ = (m1_-m2_)*Mo
+        self.ff_ = ff_
+        self.delta_ = delta_
     
     #defining unit-step function 
     def unitstep(self,lp,ff,f):
@@ -35,26 +33,12 @@ class Fn:
             return(1)
         else:
             return(0)
-    '''    
-    def hphc(self):
-        f1_ = self.f_
-        m11 = self.m1_
-        m22 = self.m2_
-        fmin_ = 20.0
-        fmax_ = (C**3)/( G*(m11+m22)*Mo*np.pi*6**(3/2) )
         
-        if f1_<=fmin_ or f1_<=fmax_:
-            return(0,0)
-        else:
-            return(self.htilde())    
-    '''
     
     def htilde(self):
         iota = self.iota_
         beta = self.beta_ 
         D = self.D_
-        m1 = self.m1_
-        m2 = self.m2_
         f0 = self.f0_
         et0 = self.et0_
         phic = self.phic_
@@ -230,7 +214,7 @@ class Fn:
 
         Sx0[3,2]=-(11/45)*et[2,3]**6*np.cos(iota)*np.cos(2*beta)
         
-        '''
+
         ###################cplus05_start####################
         Cp05 = np.zeros((10,5))
 
@@ -539,7 +523,7 @@ class Fn:
         Sx1[3,0]=et[0,3]**4*(8/3*np.cos(iota)*np.sin(iota)**2-8*eta*np.cos(iota)*np.sin(iota)**2)+et[0,3]**6*(-(52/15)*np.cos(iota)*np.sin(iota)**2+52/5*eta*np.cos(iota)*np.sin(iota)**2)
         Sx1[4,0]=et[0,4]**5*(3125/768*np.cos(iota)*np.sin(iota)**2-3125/256*eta*np.cos(iota)*np.sin(iota)**2)
         Sx1[5,0]=et[0,5]**6*(243/40*np.cos(iota)*np.sin(iota)**2-729/40*eta*np.cos(iota)*np.sin(iota)**2)
-        '''
+
    
         
         #fourier_phase
@@ -669,18 +653,12 @@ class Fn:
         unit[6,-1] = self.unitstep( (7-(7-1)*(k[6]/(1+k[6]))) ,ff,f)
         unit[7,-1] = self.unitstep( (8-(8-1)*(k[7]/(1+k[7]))) ,ff,f)
         unit[8,-1] = self.unitstep( (9-(9-1)*(k[8]/(1+k[8]))) ,ff,f)
-        unit[9,-1] = self.unitstep( (10-(10-1)*(k[9]/(1+k[9]))) ,ff,f)        
-        
-        
-        '''
-        for n in [0,1,2,3,4,-4,-3,-2,-1]: 
-            for ll in [1,2,3,4,5,6,7,8,9,10]:
-                unit[ll-1,n] = self.unitstep( (ll-(ll+n)*(k[ll-1]/(1+k[ll-1]))) ,ff,f)   
-        '''       
+        unit[9,-1] = self.unitstep( (10-(10-1)*(k[9]/(1+k[9]))) ,ff,f)   
+                
         
         ####################################################################################
         #for plus polarization
-        xii = Xi(1.0, 0.0, eta, et, unit, Cp0, Sp0, Cx0, Sx0, 0, 0, 0, 0, 0, 0, 0, 0)
+        xii = Xi(1.0, 0.0, eta, et, unit, Cp0, Sp0, Cx0, Sx0, Cp05, Sp05, Cx05, Sx05, Cp1, Sp1, Cx1, Sx1)
         
         ##########0PN#############
         # xi0( l-1 , n )
@@ -716,7 +694,7 @@ class Fn:
         xi0(5,0)*((6/2)**(2/3))*np.exp( -1j*(np.pi/4 + psi[0,5]) )
         
         hf0 = s1+s2+s3
-        '''
+        
         ##########05PN#############
         # xi05( l-1 , n )
         xi05 = xii.xi05_
@@ -812,9 +790,7 @@ class Fn:
         
         
         hf1 = s1+s2+s3+s4+s5
-        '''
-        hf05 = 0
-        hf1 = 0
+ 
         # final frequency domain strain
         hp = (((5*np.pi*eta)/384)**(1/2)) * (G**2*M**2)/(C**5*D)*( (((G*M*np.pi*f)/C**3)**(-7/6))*hf0 + (((G*M*np.pi*f)/C**3)**(-5/6))*(delta/M)*hf05 + (((G*M*np.pi*f)/C**3)**(-1/2))*hf1 )
 
@@ -822,7 +798,7 @@ class Fn:
       
         ####################################################################################
         #for cross polarization
-        xii = Xi(0.0, 1.0, eta, et, unit, Cp0, Sp0, Cx0, Sx0, 0, 0, 0, 0, 0, 0, 0, 0)
+        xii = Xi(0.0, 1.0, eta, et, unit, Cp0, Sp0, Cx0, Sx0, Cp05, Sp05, Cx05, Sx05, Cp1, Sp1, Cx1, Sx1)
         
         ##########0PN#############
         # xi0( l-1 , n )
@@ -859,7 +835,6 @@ class Fn:
         
         hf0 = s1+s2+s3
         
-        '''
         ##########05PN#############
         # xi05( l-1 , n )
         xi05 = xii.xi05_
@@ -955,10 +930,7 @@ class Fn:
         
         
         hf1 = s1+s2+s3+s4+s5
-        '''
-        
-        hf05 = 0
-        hf1 = 1
+ 
         # final frequency domain strain
         hc = (((5*np.pi*eta)/384)**(1/2)) * (G**2*M**2)/(C**5*D)*( (((G*M*np.pi*f)/C**3)**(-7/6))*hf0 + (((G*M*np.pi*f)/C**3)**(-5/6))*(delta/M)*hf05 + (((G*M*np.pi*f)/C**3)**(-1/2))*hf1 )
         
@@ -1114,79 +1086,3 @@ class Xi:
             xil = (numerator/denomitor)*al*np.exp(-1j*phil) 
             
         return(xil)
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-         
-        
-        
