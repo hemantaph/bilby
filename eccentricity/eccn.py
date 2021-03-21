@@ -78,7 +78,6 @@ prior['eccentricity'] = bilby.core.prior.Uniform(0.01, 0.2, 'eccentricity')
 likelihood = bilby.gw.likelihood.GravitationalWaveTransient(
     interferometers=ifos, waveform_generator=waveform_generator)
 
-# Now we run sampler (PyMultiNest in our case).
 result = bilby.core.sampler.run_sampler(
     likelihood, prior, sampler='dynesty', outdir=outdir, label=label,
     resume=False, sample='unif', injection_parameters=injection_parameters, 

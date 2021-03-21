@@ -174,7 +174,7 @@ class Fn:
             else:
                 phil = np.arctan(- (Sigma_l/Gamma_l))            
 
-            numerator = (1-et**2)**(7/4)
+            numerator = np.power((1-et**2),7/4,dtype=np.complex)
             denomitor = ( 1 + (73/24)*et**2 + (37/96)*et**4 )**(1/2)
             xil = (numerator/denomitor)*al*np.exp(-1j*phil)    
         

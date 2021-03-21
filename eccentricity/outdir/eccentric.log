@@ -50,3 +50,7 @@
 13:42 INFO    :   geocent_time = 1126259642.413
 13:42 INFO    :   ra = 1.375
 13:42 INFO    :   dec = -1.2108
+01:44 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: __main__.eccentric_waveform
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
