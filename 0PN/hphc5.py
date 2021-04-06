@@ -98,7 +98,7 @@ class Fn:
         #change the dtype of the array to float64 
         
         
-        return( et.astype('float64') )
+        return( et.astype('float64'))
         #return( np.nan_to_num(et.astype('float64')) )
     
         #fourier phase

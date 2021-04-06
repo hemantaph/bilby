@@ -496,3 +496,43 @@ ln_bayes_factor: 3092.797 +/-  0.056
 12:59 INFO    : Using lal git version Branch: None;Tag: lal-v6.21.0;Id: 37caf89936b637993c30b3076fe4b853311873ee;;Builder: Adam Mercer <adam.mercer@ligo.org>;Repository status: CLEAN: All modifications committed
 12:59 INFO    : Using lalsimulation version 1.10.0
 12:59 INFO    : Using lalsimulation git version Branch: None;Tag: lalsimulation-v1.10.0;Id: 5bfe091197594d55cf634f8a1c004eb9dc9b6459;;Builder: Adam Mercer <adam.mercer@ligo.org>;Repository status: CLEAN: All modifications committed
+14:12 INFO    : Waveform generator initiated with
+  frequency_domain_source_model: bilby.gw.source.lal_eccentric_binary_black_hole_no_spins
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+14:12 INFO    : Injected signal in H1:
+14:12 INFO    :   optimal SNR = 66.39
+14:12 INFO    :   matched filter SNR = 67.49-0.58j
+14:12 INFO    :   mass_1 = 35.0
+14:12 INFO    :   mass_2 = 30.0
+14:12 INFO    :   eccentricity = 0.1
+14:12 INFO    :   luminosity_distance = 440.0
+14:12 INFO    :   theta_jn = 0.4
+14:12 INFO    :   psi = 0.1
+14:12 INFO    :   phase = 1.2
+14:12 INFO    :   geocent_time = 1180002601.0
+14:12 INFO    :   ra = 45
+14:12 INFO    :   dec = 5.73
+14:12 INFO    : Injected signal in L1:
+14:12 INFO    :   optimal SNR = 39.04
+14:12 INFO    :   matched filter SNR = 40.49+0.18j
+14:12 INFO    :   mass_1 = 35.0
+14:12 INFO    :   mass_2 = 30.0
+14:12 INFO    :   eccentricity = 0.1
+14:12 INFO    :   luminosity_distance = 440.0
+14:12 INFO    :   theta_jn = 0.4
+14:12 INFO    :   psi = 0.1
+14:12 INFO    :   phase = 1.2
+14:12 INFO    :   geocent_time = 1180002601.0
+14:12 INFO    :   ra = 45
+14:12 INFO    :   dec = 5.73
+14:12 INFO    : Running for label 'eccentric_GW140914', output will be saved to 'outdir'
+14:12 INFO    : Using lal version 6.21.0
+14:12 INFO    : Using lal git version Branch: None;Tag: lal-v6.21.0;Id: 37caf89936b637993c30b3076fe4b853311873ee;;Builder: Adam Mercer <adam.mercer@ligo.org>;Repository status: CLEAN: All modifications committed
+14:12 INFO    : Using lalsimulation version 1.10.0
+14:12 INFO    : Using lalsimulation git version Branch: None;Tag: lalsimulation-v1.10.0;Id: 5bfe091197594d55cf634f8a1c004eb9dc9b6459;;Builder: Adam Mercer <adam.mercer@ligo.org>;Repository status: CLEAN: All modifications committed
+14:15 INFO    : Running for label 'eccentric_GW140914', output will be saved to 'outdir'
+14:15 INFO    : Using lal version 6.21.0
+14:15 INFO    : Using lal git version Branch: None;Tag: lal-v6.21.0;Id: 37caf89936b637993c30b3076fe4b853311873ee;;Builder: Adam Mercer <adam.mercer@ligo.org>;Repository status: CLEAN: All modifications committed
+14:15 INFO    : Using lalsimulation version 1.10.0
+14:15 INFO    : Using lalsimulation git version Branch: None;Tag: lalsimulation-v1.10.0;Id: 5bfe091197594d55cf634f8a1c004eb9dc9b6459;;Builder: Adam Mercer <adam.mercer@ligo.org>;Repository status: CLEAN: All modifications committed
