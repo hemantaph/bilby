@@ -1,11 +1,22 @@
-""" Bayes analysis for moving sources """
-
-import sys
-import subprocess
-
-import bilby
+import gwsurrogate
 import numpy as np
 
+from math import cos
+from math import sin
+from math import sqrt
+from math import factorial
+from math import pi
+from math import e
+from numpy import conj
+
+import bilby
+import WaVel
+
+# Define constants: speed of light (in m/s), gravitational constant (in m^3/(kg*s^2)), solar mass (in kg) and megaparsec (in m)
+c = 2.99e8
+G = 6.67e-11
+M_sun = 1.99e30
+Mpc = 3.09e22
 
 # Define labels, sampling frequency and times
 outdir = 'outdir'
@@ -15,56 +26,37 @@ duration = 2.0
 geocent_time = 0.0
 start_time = geocent_time - duration + 0.02
 
+# Load the surrogate model
+surrogate = gwsurrogate.LoadSurrogate('NRHybSur3dq8')
 
 # Define the time-domain model
 def moving_bbh(times, mass, ratio, distance, theta, phi, speed, v_the, v_phi):
-	# Transform times into a string
-	times_str = ' '.join(map(str,times))
 
-	# Run 'WaVel.py' and import the time and polarizations
-	subprocess.run([sys.executable, "WaVel.py", str(mass), str(ratio), str(distance), str(theta), str(phi), str(speed), str(v_the), str(v_phi), times_str])
+    arg_ = {'surrogate_':surrogate,'M_':mass, 'q_':ratio, 'dis_':distance, 'the_':theta, 'phi_':phi, 'v_mag_':speed, 'v_the_':v_the, 'v_phi_':v_phi, 'times_':times}
+    fplus = WaVel.Fn(**arg_)
+    h_plus = fplus.WaVe()[0]
+    h_cross = fplus.WaVe()[1]
 
-	# 'Get' the polarizations
-	WaVel = np.load('WaVel.npy')
-
-
-	# Return results
-	return {'plus': WaVel[0], 'cross': WaVel[1]}
-	
+    return {'plus': h_plus, 'cross': h_cross}
 
 # Define parameters to inject
 injection_parameters = dict(mass=50, ratio=6, distance=300, theta=45, phi=45, speed=3000, v_the=0, v_phi=0, ra=0, dec=0, psi=0, geocent_time=geocent_time)
 
-
 # Generate model with waveform_generator
-waveform = bilby.gw.waveform_generator.WaveformGenerator(sampling_frequency=sampling_frequency, duration=duration, time_domain_source_model=moving_bbh, start_time=start_time)  
-
+waveform_generator = bilby.gw.waveform_generator.WaveformGenerator(sampling_frequency=sampling_frequency, duration=duration, time_domain_source_model=moving_bbh, start_time=start_time)
 
 # Inject signal into ifos
 ifos = bilby.gw.detector.InterferometerList(['H1', 'L1', 'V1'])
 ifos.set_strain_data_from_power_spectral_densities(sampling_frequency=sampling_frequency, duration=duration, start_time=start_time)
-ifos.inject_signal(waveform_generator=waveform, parameters=injection_parameters)
-
+ifos.inject_signal(waveform_generator=waveform_generator, parameters=injection_parameters)
 
 # Create priors
 prior = injection_parameters.copy()
 prior['mass'] = bilby.core.prior.Uniform(45, 55, r'$M$', unit='$M_sun$')
-#prior['ratio'] = bilby.core.prior.Uniform(5, 7, r'$q$')
-#prior['distance'] = bilby.core.prior.Uniform(275, 325, r'd', unit='$Mpc$')
-#prior['theta'] = bilby.core.prior.Uniform(40, 50, r'$\theta$', unit='degree')
-#prior['phi'] = bilby.core.prior.Uniform(40, 50, r'$\phi$', unit='degree')
-#prior['speed'] = bilby.core.prior.Uniform(0, 3000, r'$|v|$', unit='$km/s$')
-#prior['v_the'] = bilby.core.prior.Uniform(0, 40, r'$v_\theta$', unit='$degree$')
-#prior['v_phi'] = bilby.core.prior.Uniform(0, 40, r'$v_\phi$', unit='$degree$')
-
+#prior['mass'] = bilby.core.prior.Uniform(45, 55, r'$M$', unit='$M_sun$')
 
 # Define likelihood
-likelihood = bilby.gw.likelihood.GravitationalWaveTransient(interferometers=ifos, waveform_generator=waveform, priors=prior)
-
+likelihood = bilby.gw.likelihood.GravitationalWaveTransient(interferometers=ifos, waveform_generator=waveform_generator, priors=prior)
 
 # Launch sampler
-result = bilby.core.sampler.run_sampler(likelihood, prior, sampler='dynesty', npoints=200, injection_parameters=injection_parameters, outdir=outdir, label=label, dlogz=3, npool=6)
-
-
-# Plot results
-result.plot_corner()
+result = bilby.core.sampler.run_sampler(likelihood, prior, sampler='dynesty', npoints=500, injection_parameters=injection_parameters, outdir=outdir, label=label, dlogz=3, npool=16)
