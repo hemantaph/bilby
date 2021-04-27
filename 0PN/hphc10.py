@@ -129,7 +129,7 @@ class Fn:
         Cp0[2,2]=et[2,2]**5*((153*np.cos(2*beta))/1280+(153*np.cos(iota)**2*np.cos(2*beta))/1280)
 
         Cp0[3,2]=et[2,3]**6*(11/90*np.cos(2*beta)+11/90*np.cos(iota)**2*np.cos(2*beta))
-        
+
         ###################splus0_start####################
         Sp0=np.zeros((10,3))
 
@@ -663,7 +663,7 @@ class Fn:
         ##########0PN#############
         # xi0( l-1 , n )
         xi0 = xii.xi0_
-                                                                                        
+                                                                                            
         #frequency domain waveform 
         # psi( n , l-1 )
         #n = -2                                                                                
@@ -790,12 +790,11 @@ class Fn:
         
         
         hf1 = s1+s2+s3+s4+s5
- 
+           
         # final frequency domain strain
         hp = (((5*np.pi*eta)/384)**(1/2)) * (G**2*M**2)/(C**5*D)*( (((G*M*np.pi*f)/C**3)**(-7/6))*hf0 + (((G*M*np.pi*f)/C**3)**(-5/6))*(delta/M)*hf05 + (((G*M*np.pi*f)/C**3)**(-1/2))*hf1 )
-
         
-      
+
         ####################################################################################
         #for cross polarization
         xii = Xi(0.0, 1.0, eta, et, unit, Cp0, Sp0, Cx0, Sx0, Cp05, Sp05, Cx05, Sx05, Cp1, Sp1, Cx1, Sx1)
@@ -937,7 +936,6 @@ class Fn:
         # return(format(hp, '.6g'),format(hc, '.6g')) if you want toround off
         return(hp,hc)
 
-    
 
 class Xi:
     def __init__(self, Fp_, Fc_, eta_, et_, unit_, Cp0_, Sp0_, Cx0_, Sx0_, Cp05_, Sp05_, Cx05_, Sx05_, Cp1_, Sp1_, Cx1_, Sx1_):

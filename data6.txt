@@ -1,0 +1,206 @@
+        #n = -2 
+        #defining some values
+        #because these values are the same for both plus and cross polarization, only Xi differs
+        Psi_Nm2_0 = np.exp( -1j*(Pi_b4 + psi[0,-2]) )
+        Psi_Nm2_1 = np.exp( -1j*(Pi_b4 + psi[1,-2]) )
+        Psi_Nm2_2 = np.exp( -1j*(Pi_b4 + psi[2,-2]) )
+        Psi_Nm2_3 = np.exp( -1j*(Pi_b4 + psi[3,-2]) )
+        Psi_Nm2_4 = np.exp( -1j*(Pi_b4 + psi[4,-2]) )
+        Psi_Nm2_5 = np.exp( -1j*(Pi_b4 + psi[5,-2]) )
+        Psi_Nm2_6 = np.exp( -1j*(Pi_b4 + psi[6,-2]) )
+        Psi_Nm2_7 = np.exp( -1j*(Pi_b4 + psi[7,-2]) )
+        
+        s1 = \
+        (xi1(0,-2) + xipn(0,-2))*Psi_Nm2_0 +\
+        (xi1(1,-2) + xipn(1,-2))*Psi_Nm2_1 +\
+        (xi1(2,-2) + xipn(2,-2))*Psi_Nm2_2 +\
+        (xi1(3,-2) + xipn(3,-2))*Psi_Nm2_3 +\
+        (xi1(4,-2) + xipn(4,-2))*Psi_Nm2_4 +\
+        (xi1(5,-2) + xipn(5,-2))*Psi_Nm2_5 +\
+        (xi1(6,-2) + xipn(6,-2))*Psi_Nm2_6 +\
+        (xi1(7,-2) + xipn(7,-2))*Psi_Nm2_7
+
+        #n = 2
+        Psi_N2_0 = np.exp( -1j*(Pi_b4 + psi[0,2]) )
+        Psi_N2_1 = np.exp( -1j*(Pi_b4 + psi[1,2]) )
+        Psi_N2_2 = np.exp( -1j*(Pi_b4 + psi[2,2]) )
+        Psi_N2_3 = np.exp( -1j*(Pi_b4 + psi[3,2]) )
+        
+        s2 = \
+        (xi1(0,2) + xipn(0,2))*Psi_N2_0 +\
+        (xi1(1,2) + xipn(1,2))*Psi_N2_1 +\
+        (xi1(2,2) + xipn(2,2))*Psi_N2_2 +\
+        (xi1(3,2) + xipn(3,2))*Psi_N2_3 
+
+        #n = 0
+        Psi_N0_0 = np.exp( -1j*(Pi_b4 + psi[0,0]) )
+        Psi_N0_1 = np.exp( -1j*(Pi_b4 + psi[1,0]) )
+        Psi_N0_2 = np.exp( -1j*(Pi_b4 + psi[2,0]) )
+        Psi_N0_3 = np.exp( -1j*(Pi_b4 + psi[3,0]) )
+        Psi_N0_4 = np.exp( -1j*(Pi_b4 + psi[4,0]) )
+        Psi_N0_5 = np.exp( -1j*(Pi_b4 + psi[5,0]) )
+        
+        s3 = \
+        (xi1(0,0) + xipn(0,0))*Psi_N0_0 +\
+        (xi1(1,0) + xipn(1,0))*Psi_N0_1 +\
+        (xi1(2,0) + xipn(2,0))*Psi_N0_2 +\
+        (xi1(3,0) + xipn(3,0))*Psi_N0_3 +\
+        (xi1(4,0) + xipn(4,0))*Psi_N0_4 +\
+        (xi1(5,0) + xipn(5,0))*Psi_N0_5
+         
+        #n = -4 
+        Psi_Nm4_0 = np.exp( -1j*(Pi_b4 + psi[0,-4]) )
+        Psi_Nm4_1 = np.exp( -1j*(Pi_b4 + psi[1,-4]) )
+        Psi_Nm4_2 = np.exp( -1j*(Pi_b4 + psi[2,-4]) )
+        Psi_Nm4_3 = np.exp( -1j*(Pi_b4 + psi[3,-4]) )
+        Psi_Nm4_4 = np.exp( -1j*(Pi_b4 + psi[4,-4]) )
+        Psi_Nm4_5 = np.exp( -1j*(Pi_b4 + psi[5,-4]) )
+        Psi_Nm4_6 = np.exp( -1j*(Pi_b4 + psi[6,-4]) )
+        Psi_Nm4_7 = np.exp( -1j*(Pi_b4 + psi[7,-4]) )
+        Psi_Nm4_8 = np.exp( -1j*(Pi_b4 + psi[8,-4]) )
+        Psi_Nm4_9 = np.exp( -1j*(Pi_b4 + psi[9,-4]) )
+   
+        s4 = \
+        xi1(0,-4)*Psi_Nm4_0 +\
+        xi1(1,-4)*Psi_Nm4_1 +\
+        xi1(2,-4)*Psi_Nm4_2 +\
+        xi1(3,-4)*Psi_Nm4_3 +\
+        xi1(4,-4)*Psi_Nm4_4 +\
+        xi1(5,-4)*Psi_Nm4_5 +\
+        xi1(6,-4)*Psi_Nm4_6 +\
+        xi1(7,-4)*Psi_Nm4_7 +\
+        xi1(8,-4)*Psi_Nm4_8 +\
+        xi1(9,-4)*Psi_Nm4_9
+            
+        #n = 4   
+        Psi_N4_0 = np.exp( -1j*(Pi_b4 + psi[0,4]) )
+        Psi_N4_1 = np.exp( -1j*(Pi_b4 + psi[1,4]) )
+        
+        s5 = \
+        xi1(0,4)*Psi_N4_0 +\
+        xi1(1,4)*Psi_N4_1
+        
+        hf1 = s1+s2+s3+s4+s5
+             
+        ##########0PN#############
+        # xi0( l-1 , n )
+        xi0 = xii.xi0_
+
+        #n = -2
+        L1_Psi_Nm2_0 = ((n_1b2)**(n_2b3))*Psi_Nm2_0
+        L2_Psi_Nm2_1 = ((n_2b2)**(n_2b3))*Psi_Nm2_1
+        L3_Psi_Nm2_2 = ((n_3b2)**(n_2b3))*Psi_Nm2_2
+        L4_Psi_Nm2_3 = ((n_4b2)**(n_2b3))*Psi_Nm2_3
+        L5_Psi_Nm2_4 = ((n_5b2)**(n_2b3))*Psi_Nm2_4
+        L6_Psi_Nm2_5 = ((n_6b2)**(n_2b3))*Psi_Nm2_5
+        L7_Psi_Nm2_6 = ((n_7b2)**(n_2b3))*Psi_Nm2_6
+        L8_Psi_Nm2_7 = ((n_8b2)**(n_2b3))*Psi_Nm2_7
+        
+        s1 = \
+        xi0(0,-2)*L1_Psi_Nm2_0 +\
+        xi0(1,-2)*L2_Psi_Nm2_1 +\
+        xi0(2,-2)*L3_Psi_Nm2_2 +\
+        xi0(3,-2)*L4_Psi_Nm2_3 +\
+        xi0(4,-2)*L5_Psi_Nm2_4 +\
+        xi0(5,-2)*L6_Psi_Nm2_5 +\
+        xi0(6,-2)*L7_Psi_Nm2_6 +\
+        xi0(7,-2)*L8_Psi_Nm2_7                                                                                                                                       
+        #n = 2
+        L1_Psi_N2_0 = ((n_1b2)**(n_2b3))*Psi_N2_0
+        L2_Psi_N2_1 = ((n_2b2)**(n_2b3))*Psi_N2_1
+        L3_Psi_N2_2 = ((n_3b2)**(n_2b3))*Psi_N2_2
+        L4_Psi_N2_3 = ((n_4b2)**(n_2b3))*Psi_N2_3
+        
+        s2 = \
+        xi0(0,2)*L1_Psi_N2_0 +\
+        xi0(1,2)*L2_Psi_N2_1 +\
+        xi0(2,2)*L3_Psi_N2_2 +\
+        xi0(3,2)*L4_Psi_N2_3
+        
+        #n = 0  
+        L1_Psi_N0_0 = ((n_1b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[0,0]) )
+        L2_Psi_N0_1 = ((n_2b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[1,0]) )
+        L3_Psi_N0_2 = ((n_3b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[2,0]) )
+        L4_Psi_N0_3 = ((n_4b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[3,0]) )
+        L5_Psi_N0_4 = ((n_5b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[4,0]) )
+        L6_Psi_N0_5 = ((n_6b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[5,0]) )
+        
+        s3 = \
+        xi0(0,0)*L1_Psi_N0_0 +\
+        xi0(1,0)*L2_Psi_N0_1 +\
+        xi0(2,0)*L3_Psi_N0_2 +\
+        xi0(3,0)*L4_Psi_N0_3 +\
+        xi0(4,0)*L5_Psi_N0_4 +\
+        xi0(5,0)*L6_Psi_N0_5
+        
+        hf0 = s1+s2+s3
+        
+        ##########0.5PN#############
+        # xi05( l-1 , n )
+        xi05 = xii.xi05_
+        
+        #n = -1
+        L1_Psi_Nm1_0 = ((n_1b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[0,-1]) )
+        L2_Psi_Nm1_1 = ((n_2b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[1,-1]) )
+        L3_Psi_Nm1_2 = ((n_3b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[2,-1]) )
+        L4_Psi_Nm1_3 = ((n_4b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[3,-1]) )
+        L5_Psi_Nm1_4 = ((n_5b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[4,-1]) )
+        L6_Psi_Nm1_5 = ((n_6b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[5,-1]) )
+        L7_Psi_Nm1_6 = ((n_7b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[6,-1]) )
+        
+        s1 = \
+        xi05(0,-1)*L1_Psi_Nm1_0 +\
+        xi05(1,-1)*L2_Psi_Nm1_1 +\
+        xi05(2,-1)*L3_Psi_Nm1_2 +\
+        xi05(3,-1)*L4_Psi_Nm1_3 +\
+        xi05(4,-1)*L5_Psi_Nm1_4 +\
+        xi05(5,-1)*L6_Psi_Nm1_5 +\
+        xi05(6,-1)*L7_Psi_Nm1_6
+            
+        #n = 1   
+        L1_Psi_N1_0 = ((n_1b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[0,1]) )
+        L2_Psi_N1_1 = ((n_2b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[1,1]) )
+        L3_Psi_N1_2 = ((n_3b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[2,1]) )
+        L4_Psi_N1_3 = ((n_4b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[3,1]) )
+        L5_Psi_N1_4 = ((n_5b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[4,1]) )
+        
+        s2 = \
+        xi05(0,1)*L1_Psi_N1_0 +\
+        xi05(1,1)*L2_Psi_N1_1 +\
+        xi05(2,1)*L3_Psi_N1_2 +\
+        xi05(3,1)*L4_Psi_N1_3 +\
+        xi05(4,1)*L5_Psi_N1_4
+            
+        #n = -3   
+        L1_Psi_Nm3_0 = ((n_1b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[0,-3]) )
+        L2_Psi_Nm3_1 = ((n_2b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[1,-3]) )
+        L3_Psi_Nm3_2 = ((n_3b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[2,-3]) )
+        L4_Psi_Nm3_3 = ((n_4b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[3,-3]) )
+        L5_Psi_Nm3_4 = ((n_5b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[4,-3]) )
+        L6_Psi_Nm3_5 = ((n_6b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[5,-3]) )
+        L7_Psi_Nm3_6 = ((n_7b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[6,-3]) )
+        L8_Psi_Nm3_7 = ((n_8b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[7,-3]) )
+        L9_Psi_Nm3_8 = ((n_9b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[8,-3]) )
+        
+        s3 = \
+        xi05(0,-3)*L1_Psi_Nm3_0 +\
+        xi05(1,-3)*L2_Psi_Nm3_1 +\
+        xi05(2,-3)*L3_Psi_Nm3_2 +\
+        xi05(3,-3)*L4_Psi_Nm3_3 +\
+        xi05(4,-3)*L5_Psi_Nm3_4 +\
+        xi05(5,-3)*L6_Psi_Nm3_5 +\
+        xi05(6,-3)*L7_Psi_Nm3_6 +\
+        xi05(7,-3)*L8_Psi_Nm3_7 +\
+        xi05(8,-3)*L9_Psi_Nm3_8
+                
+        #n = 3 
+        L1_Psi_N3_0 = ((n_1b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[0,3]) )
+        L2_Psi_N3_1 = ((n_2b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[1,3]) )
+        L3_Psi_N3_2 = ((n_3b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[2,3]) )
+
+        s4 = \
+        xi05(0,3)*L1_Psi_N3_0 +\
+        xi05(1,3)*L2_Psi_N3_1 +\
+        xi05(2,3)*L3_Psi_N3_2
+   
+        hf05 = s1+s2+s3+s4
