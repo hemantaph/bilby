@@ -1,9 +1,9 @@
 universe = vanilla
-executable = /home/hemantakumar.phurailatpam/anaconda3/envs/bilby_pipe/bin/bilby_pipe_generation
+executable = /home/hemantakumar.phurailatpam/anaconda3/envs/bilby/bin/bilby_pipe_generation
 request_memory = 8 GB
 request_cpus = 1
 getenv = True
-initialdir = /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom_bilby_pipe_function/example
+initialdir = /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom/example
 notification = Never
 requirements = 
 log = outdir_GW150914/log_data_generation/GW150914_data0_1126259462-4_generation.log

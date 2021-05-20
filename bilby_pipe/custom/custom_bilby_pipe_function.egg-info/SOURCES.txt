@@ -1,4 +1,3 @@
-.gitignore
 LICENSE
 setup.py
 custom_bilby_pipe_function/__init__.py
@@ -9,3 +8,11 @@ custom_bilby_pipe_function.egg-info/dependency_links.txt
 custom_bilby_pipe_function.egg-info/requires.txt
 custom_bilby_pipe_function.egg-info/top_level.txt
 example/GW150914.ini
+example/outdir_GW150914/GW150914_config_complete.ini
+example/outdir_GW150914/results_page/overview.html
+example/outdir_GW150914/submit/GW150914_data0_1126259462-4_analysis_H1L1_dynesty.submit
+example/outdir_GW150914/submit/GW150914_data0_1126259462-4_analysis_H1_dynesty.submit
+example/outdir_GW150914/submit/GW150914_data0_1126259462-4_analysis_L1_dynesty.submit
+example/outdir_GW150914/submit/GW150914_data0_1126259462-4_generation.submit
+example/outdir_GW150914/submit/bash_GW150914.sh
+example/outdir_GW150914/submit/dag_GW150914.submit

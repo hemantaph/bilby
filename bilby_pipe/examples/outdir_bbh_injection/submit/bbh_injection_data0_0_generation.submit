@@ -1,15 +1,15 @@
 universe = vanilla
-executable = /home/hemantakumar.phurailatpam/anaconda3/envs/bilby_pipe/bin/bilby_pipe_generation
+executable = /home/hemantakumar.phurailatpam/anaconda3/envs/bilby/bin/bilby_pipe_generation
 request_memory = 8 GB
 request_cpus = 1
 getenv = True
-initialdir = /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples
+initialdir = /home/hemantakumar.phurailatpam/bilby/bilby_pipe/examples
 notification = Never
 requirements = 
 log = outdir_bbh_injection/log_data_generation/bbh_injection_data0_0_generation.log
 output = outdir_bbh_injection/log_data_generation/bbh_injection_data0_0_generation.out
 error = outdir_bbh_injection/log_data_generation/bbh_injection_data0_0_generation.err
-accounting_group = FILL_THIS_IN
+accounting_group = ligo.sim.o3.cbc.pe.lalinference
 priority = 0
 arguments = $(ARGS)
 queue

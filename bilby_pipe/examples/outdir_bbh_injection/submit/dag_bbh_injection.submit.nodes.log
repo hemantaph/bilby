@@ -1,0 +1,46 @@
+000 (5255035.000.000) 2021-05-17 08:12:53 Job submitted from host: <10.14.0.99:9618?addrs=10.14.0.99-9618&alias=ldas-pcdev1.ligo.caltech.edu&noUDP&sock=schedd_8025_0f9c>
+    DAG Node: bbh_injection_data0_0_generation_arg_0
+...
+001 (5255035.000.000) 2021-05-17 08:13:33 Job executing on host: <10.14.9.193:9618?addrs=10.14.9.193-9618&alias=node2193.cluster.ldas.cit&noUDP&sock=startd_3243_01b9>
+...
+005 (5255035.000.000) 2021-05-17 08:15:08 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:46, Sys 0 00:00:07  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:46, Sys 0 00:00:07  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :                 1         1 
+	   Disk (KB)            :        1        1    104530 
+	   GPUs                 :                           0 
+	   Memory (MB)          :       12     8192      8192 
+
+	Job terminated of its own accord at 2021-05-17T15:15:08Z.
+...
+000 (5256207.000.000) 2021-05-17 08:15:13 Job submitted from host: <10.14.0.99:9618?addrs=10.14.0.99-9618&alias=ldas-pcdev1.ligo.caltech.edu&noUDP&sock=schedd_8025_0f9c>
+    DAG Node: bbh_injection_data0_0_analysis_H1L1_dynesty_arg_0
+...
+001 (5256207.000.000) 2021-05-17 08:15:14 Job executing on host: <10.14.9.193:9618?addrs=10.14.9.193-9618&alias=node2193.cluster.ldas.cit&noUDP&sock=startd_3243_01b9>
+...
+005 (5256207.000.000) 2021-05-17 10:57:06 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 02:35:15, Sys 0 00:01:53  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 02:35:15, Sys 0 00:01:53  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	9573576  -  Run Bytes Sent By Job
+	1080899  -  Run Bytes Received By Job
+	9573576  -  Total Bytes Sent By Job
+	1080899  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.99        1         1 
+	   Disk (KB)            : 10429        1250    104530 
+	   GPUs                 :                           0 
+	   Memory (MB)          :   184        4096      8192 
+
+	Job terminated of its own accord at 2021-05-17T17:57:06Z.
+...

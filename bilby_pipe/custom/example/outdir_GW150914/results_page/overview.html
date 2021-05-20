@@ -66,13 +66,13 @@ tr:nth-child(even) {
 <div class="container">
 <h2> Setup </h2>
 
-<button class="accordion"> <b>Configuration file:</b> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom_bilby_pipe_function/example/GW150914.ini </button>
+<button class="accordion"> <b>Configuration file:</b> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom/example/GW150914.ini </button>
 <div class="panel">
 <table style="width:100%">
 
 <tr>
     <th scope="row"> ini </th>
-   <td> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom_bilby_pipe_function/example/GW150914.ini </td>
+   <td> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom/example/GW150914.ini </td>
 </tr>
 
 <tr>
@@ -136,6 +136,11 @@ tr:nth-child(even) {
 </tr>
 
 <tr>
+    <th scope="row"> gaussian_noise </th>
+   <td> False </td>
+</tr>
+
+<tr>
     <th scope="row"> n_simulation </th>
    <td> 0 </td>
 </tr>
@@ -153,16 +158,6 @@ tr:nth-child(even) {
 <tr>
     <th scope="row"> channel_dict </th>
    <td> {H1:DCS-CALIB_STRAIN_C02, L1:DCS-CALIB_STRAIN_C02} </td>
-</tr>
-
-<tr>
-    <th scope="row"> gaussian_noise </th>
-   <td> False </td>
-</tr>
-
-<tr>
-    <th scope="row"> zero_noise </th>
-   <td> False </td>
 </tr>
 
 <tr>
@@ -236,6 +231,11 @@ tr:nth-child(even) {
 </tr>
 
 <tr>
+    <th scope="row"> zero_noise </th>
+   <td> False </td>
+</tr>
+
+<tr>
     <th scope="row"> tukey_roll_off </th>
    <td> 0.4 </td>
 </tr>
@@ -297,12 +297,7 @@ tr:nth-child(even) {
 
 <tr>
     <th scope="row"> outdir </th>
-   <td> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom_bilby_pipe_function/example/outdir_GW150914 </td>
-</tr>
-
-<tr>
-    <th scope="row"> overwrite_outdir </th>
-   <td> False </td>
+   <td> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom/example/outdir_GW150914 </td>
 </tr>
 
 <tr>
@@ -383,11 +378,6 @@ tr:nth-child(even) {
 <tr>
     <th scope="row"> osg </th>
    <td> False </td>
-</tr>
-
-<tr>
-    <th scope="row"> analysis_executable </th>
-   <td> None </td>
 </tr>
 
 <tr>
@@ -527,12 +517,12 @@ tr:nth-child(even) {
 
 <tr>
     <th scope="row"> prior_file </th>
-   <td> None </td>
+   <td> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom/example/GW150914_prior.prior </td>
 </tr>
 
 <tr>
     <th scope="row"> prior_dict </th>
-   <td> {mass-1: Constraint(name='mass_1', minimum=10, maximum=80), mass_2 = Constraint(name='mass_2', minimum=10, maximum=80), mass_ratio =  Uniform(name='mass_ratio', minimum=0.125, maximum=1, latex_label="$q$"), chirp_mass =  Uniform(name='chirp_mass', minimum=25, maximum=40, latex_label="$M_{c}$"), a_1 = Uniform(name='a_1', minimum=0, maximum=0.99), a_2 = Uniform(name='a_2', minimum=0, maximum=0.99), tilt_1 = Sine(name='tilt_1'), tilt_2 = Sine(name='tilt_2'), phi_12 = Uniform(name='phi_12', minimum=0, maximum=2 * np.pi, boundary='periodic'), phi_jl = Uniform(name='phi_jl', minimum=0, maximum=2 * np.pi, boundary='periodic'), luminosity_distance = PowerLaw(alpha=2, name='luminosity_distance', minimum=50, maximum=2000, unit='Mpc', latex_label='$d_L$'), dec = Cosine(name='dec'), ra = Uniform(name='ra', minimum=0, maximum=2 * np.pi, boundary='periodic'), theta_jn = Sine(name='theta_jn'), psi =  Uniform(name='psi', minimum=0, maximum=np.pi, boundary='periodic'), phase =  Uniform(name='phase', minimum=0, maximum=2 * np.pi, boundary='periodic'), } </td>
+   <td> None </td>
 </tr>
 
 <tr>
@@ -621,16 +611,6 @@ tr:nth-child(even) {
 </tr>
 
 <tr>
-    <th scope="row"> numerical_relativity_file </th>
-   <td> None </td>
-</tr>
-
-<tr>
-    <th scope="row"> waveform_arguments_dict </th>
-   <td> None </td>
-</tr>
-
-<tr>
     <th scope="row"> mode_array </th>
    <td> None </td>
 </tr>
@@ -640,20 +620,10 @@ tr:nth-child(even) {
    <td> custom_bilby_pipe_function.my_module.my_function </td>
 </tr>
 
-<tr>
-    <th scope="row"> conversion_function </th>
-   <td> None </td>
-</tr>
-
-<tr>
-    <th scope="row"> generation_function </th>
-   <td> None </td>
-</tr>
-
 </table>
 </div>
 
-<button class="accordion"> <b>Prior file:</b> Specified in INI </button>
+<button class="accordion"> <b>Prior file:</b> ('/home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom/example/GW150914_prior.prior',) </button>
 <div class="panel">
 <table style="width:100%">
 
@@ -872,7 +842,7 @@ N/A
 
 <div class="container">
 <h2> Bilby results:
-<a href="../result"> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom_bilby_pipe_function/example/outdir_GW150914/result </a>
+<a href="../result"> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom/example/outdir_GW150914/result </a>
  </h2>
  </div>
 

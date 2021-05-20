@@ -66,13 +66,13 @@ tr:nth-child(even) {
 <div class="container">
 <h2> Setup </h2>
 
-<button class="accordion"> <b>Configuration file:</b> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/bbh_simple_example.ini </button>
+<button class="accordion"> <b>Configuration file:</b> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/examples/bbh_simple_example.ini </button>
 <div class="panel">
 <table style="width:100%">
 
 <tr>
     <th scope="row"> ini </th>
-   <td> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/bbh_simple_example.ini </td>
+   <td> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/examples/bbh_simple_example.ini </td>
 </tr>
 
 <tr>
@@ -136,6 +136,11 @@ tr:nth-child(even) {
 </tr>
 
 <tr>
+    <th scope="row"> gaussian_noise </th>
+   <td> True </td>
+</tr>
+
+<tr>
     <th scope="row"> n_simulation </th>
    <td> 1 </td>
 </tr>
@@ -153,16 +158,6 @@ tr:nth-child(even) {
 <tr>
     <th scope="row"> channel_dict </th>
    <td> None </td>
-</tr>
-
-<tr>
-    <th scope="row"> gaussian_noise </th>
-   <td> True </td>
-</tr>
-
-<tr>
-    <th scope="row"> zero_noise </th>
-   <td> False </td>
 </tr>
 
 <tr>
@@ -236,6 +231,11 @@ tr:nth-child(even) {
 </tr>
 
 <tr>
+    <th scope="row"> zero_noise </th>
+   <td> False </td>
+</tr>
+
+<tr>
     <th scope="row"> tukey_roll_off </th>
    <td> 0.4 </td>
 </tr>
@@ -272,7 +272,7 @@ tr:nth-child(even) {
 
 <tr>
     <th scope="row"> accounting </th>
-   <td> FILL_THIS_IN </td>
+   <td> ligo.sim.o3.cbc.pe.lalinference </td>
 </tr>
 
 <tr>
@@ -297,12 +297,7 @@ tr:nth-child(even) {
 
 <tr>
     <th scope="row"> outdir </th>
-   <td> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection </td>
-</tr>
-
-<tr>
-    <th scope="row"> overwrite_outdir </th>
-   <td> False </td>
+   <td> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/examples/outdir_bbh_injection </td>
 </tr>
 
 <tr>
@@ -322,7 +317,7 @@ tr:nth-child(even) {
 
 <tr>
     <th scope="row"> request_cpus </th>
-   <td> 4 </td>
+   <td> 1 </td>
 </tr>
 
 <tr>
@@ -383,11 +378,6 @@ tr:nth-child(even) {
 <tr>
     <th scope="row"> osg </th>
    <td> False </td>
-</tr>
-
-<tr>
-    <th scope="row"> analysis_executable </th>
-   <td> None </td>
 </tr>
 
 <tr>
@@ -527,7 +517,7 @@ tr:nth-child(even) {
 
 <tr>
     <th scope="row"> prior_file </th>
-   <td> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/bbh_simple_example.prior </td>
+   <td> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/examples/bbh_simple_example.prior </td>
 </tr>
 
 <tr>
@@ -577,7 +567,7 @@ tr:nth-child(even) {
 
 <tr>
     <th scope="row"> sampler_kwargs </th>
-   <td> {'nlive': 1000, 'npool': 4} </td>
+   <td> {'nlive': 1000} </td>
 </tr>
 
 <tr>
@@ -621,16 +611,6 @@ tr:nth-child(even) {
 </tr>
 
 <tr>
-    <th scope="row"> numerical_relativity_file </th>
-   <td> None </td>
-</tr>
-
-<tr>
-    <th scope="row"> waveform_arguments_dict </th>
-   <td> None </td>
-</tr>
-
-<tr>
     <th scope="row"> mode_array </th>
    <td> None </td>
 </tr>
@@ -640,20 +620,10 @@ tr:nth-child(even) {
    <td> lal_binary_black_hole </td>
 </tr>
 
-<tr>
-    <th scope="row"> conversion_function </th>
-   <td> None </td>
-</tr>
-
-<tr>
-    <th scope="row"> generation_function </th>
-   <td> None </td>
-</tr>
-
 </table>
 </div>
 
-<button class="accordion"> <b>Prior file:</b> ('/home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/bbh_simple_example.prior',) </button>
+<button class="accordion"> <b>Prior file:</b> ('/home/hemantakumar.phurailatpam/bilby/bilby_pipe/examples/bbh_simple_example.prior',) </button>
 <div class="panel">
 <table style="width:100%">
 
@@ -737,7 +707,7 @@ tr:nth-child(even) {
 
 
 <button class="accordion"> <b>Injection-waveform:</b> IMRPhenomPv2,
-<b>File:</b> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/data/bbh_injection_injection_file.dat </button>
+<b>File:</b> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/examples/outdir_bbh_injection/data/bbh_injection_injection_file.dat </button>
 <div class="panel">
 <table style="width:100%">
 <table border="1" class="dataframe">
@@ -848,7 +818,7 @@ N/A
 
 <div class="container">
 <h2> Bilby results:
-<a href="../result"> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/pipe_examples/outdir_bbh_injection/result </a>
+<a href="../result"> /home/hemantakumar.phurailatpam/bilby/bilby_pipe/examples/outdir_bbh_injection/result </a>
  </h2>
  </div>
 

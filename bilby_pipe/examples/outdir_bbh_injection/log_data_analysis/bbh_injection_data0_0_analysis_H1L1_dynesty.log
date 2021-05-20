@@ -1,0 +1,108 @@
+000 (5256207.000.000) 2021-05-17 08:15:13 Job submitted from host: <10.14.0.99:9618?addrs=10.14.0.99-9618&alias=ldas-pcdev1.ligo.caltech.edu&noUDP&sock=schedd_8025_0f9c>
+    DAG Node: bbh_injection_data0_0_analysis_H1L1_dynesty_arg_0
+...
+040 (5256207.000.000) 2021-05-17 08:15:14 Started transferring input files
+	Transferring to host: <10.14.9.193:9618?addrs=10.14.9.193-9618&alias=node2193.cluster.ldas.cit&noUDP&sock=slot1_21_3321_b1e0_6316>
+...
+040 (5256207.000.000) 2021-05-17 08:15:14 Finished transferring input files
+...
+001 (5256207.000.000) 2021-05-17 08:15:14 Job executing on host: <10.14.9.193:9618?addrs=10.14.9.193-9618&alias=node2193.cluster.ldas.cit&noUDP&sock=startd_3243_01b9>
+...
+006 (5256207.000.000) 2021-05-17 08:15:23 Image size of job updated: 190860
+	21  -  MemoryUsage of job (MB)
+	20832  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 08:20:23 Image size of job updated: 688948
+	115  -  MemoryUsage of job (MB)
+	117260  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 08:25:23 Image size of job updated: 689900
+	116  -  MemoryUsage of job (MB)
+	118428  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 08:30:23 Image size of job updated: 693516
+	138  -  MemoryUsage of job (MB)
+	141284  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 08:35:23 Image size of job updated: 722952
+	148  -  MemoryUsage of job (MB)
+	150952  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 08:40:23 Image size of job updated: 722952
+	148  -  MemoryUsage of job (MB)
+	151080  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 08:45:23 Image size of job updated: 741892
+	167  -  MemoryUsage of job (MB)
+	170120  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 08:55:23 Image size of job updated: 767664
+	174  -  MemoryUsage of job (MB)
+	177776  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 09:00:24 Image size of job updated: 767664
+	174  -  MemoryUsage of job (MB)
+	177800  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 09:05:25 Image size of job updated: 767664
+	178  -  MemoryUsage of job (MB)
+	181972  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 09:20:27 Image size of job updated: 767664
+	179  -  MemoryUsage of job (MB)
+	182880  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 09:30:29 Image size of job updated: 771912
+	180  -  MemoryUsage of job (MB)
+	184200  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 09:40:29 Image size of job updated: 773704
+	181  -  MemoryUsage of job (MB)
+	184692  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 09:55:29 Image size of job updated: 773704
+	181  -  MemoryUsage of job (MB)
+	185016  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 10:05:30 Image size of job updated: 773704
+	182  -  MemoryUsage of job (MB)
+	185628  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 10:15:34 Image size of job updated: 778056
+	182  -  MemoryUsage of job (MB)
+	185992  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 10:30:32 Image size of job updated: 778056
+	183  -  MemoryUsage of job (MB)
+	186436  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 10:40:32 Image size of job updated: 778056
+	184  -  MemoryUsage of job (MB)
+	188236  -  ResidentSetSize of job (KB)
+...
+006 (5256207.000.000) 2021-05-17 10:45:32 Image size of job updated: 778056
+	184  -  MemoryUsage of job (MB)
+	188244  -  ResidentSetSize of job (KB)
+...
+040 (5256207.000.000) 2021-05-17 10:57:06 Started transferring output files
+...
+040 (5256207.000.000) 2021-05-17 10:57:06 Finished transferring output files
+...
+005 (5256207.000.000) 2021-05-17 10:57:06 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 02:35:15, Sys 0 00:01:53  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 02:35:15, Sys 0 00:01:53  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	9573576  -  Run Bytes Sent By Job
+	1080899  -  Run Bytes Received By Job
+	9573576  -  Total Bytes Sent By Job
+	1080899  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.99        1         1 
+	   Disk (KB)            : 10429        1250    104530 
+	   GPUs                 :                           0 
+	   Memory (MB)          :   184        4096      8192 
+
+	Job terminated of its own accord at 2021-05-17T17:57:06Z.
+...
