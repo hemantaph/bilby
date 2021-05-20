@@ -176,4 +176,3 @@ class Fn:
 
         # Write out the waveforms
         return(hp,hc)
-
