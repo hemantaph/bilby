@@ -1,0 +1,7 @@
+JOB center_of_mass_data0_0-0_generation_arg_0 outdir/submit/center_of_mass_data0_0-0_generation.submit
+VARS center_of_mass_data0_0-0_generation_arg_0 ARGS="outdir/center_of_mass_config_complete.ini --label center_of_mass_data0_0-0_generation --idx 0 --trigger-time 0.0"
+JOB center_of_mass_data0_0-0_analysis_H1L1_dynesty_arg_0 outdir/submit/center_of_mass_data0_0-0_analysis_H1L1_dynesty.submit
+VARS center_of_mass_data0_0-0_analysis_H1L1_dynesty_arg_0 ARGS="outdir/center_of_mass_config_complete.ini --outdir outdir --detectors H1 --detectors L1 --label center_of_mass_data0_0-0_analysis_H1L1_dynesty --data-dump-file outdir/data/center_of_mass_data0_0-0_generation_data_dump.pickle --sampler dynesty"
+
+#Inter-job dependencies
+Parent center_of_mass_data0_0-0_generation_arg_0 Child center_of_mass_data0_0-0_analysis_H1L1_dynesty_arg_0

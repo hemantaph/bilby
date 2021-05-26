@@ -20,18 +20,18 @@ def readfile(filename):
 
 VERSION = '1.0'
 
-setup(name='function',
-      description='cnter of mass, parameter estimation',
-      author='Hemanta',
-      author_email='hemantaphurailatpam@gmail.com',
-      license="CUHK",
+setup(name='custom_bilby_pipe_function',
+      description='Just a brief tutorial',
+      author='Moritz Huebner',
+      author_email='moritz.huebner@monash.edu',
+      license="MIT",
       version=VERSION,
-      packages=['function'],
-      package_dir={'function': 'function'},
+      packages=['custom_bilby_pipe_function'],
+      package_dir={'custom_bilby_pipe_function': 'custom_bilby_pipe_function'},
       package_data={},
       python_requires='>=3.5',
       install_requires=[
-          'bilby','numpy',],
+          'bilby','gwsurrogate'],
       entry_points={},
       classifiers=[
           "Programming Language :: Python :: 3.6",

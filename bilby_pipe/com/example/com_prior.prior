@@ -1,0 +1,12 @@
+mass = Uniform(name='Total Mass', minimum=45.0, maximum=55.0, latex_label="$M$")
+ratio = 6.0
+distance = 300.0
+theta = 45.0
+phi = 45.0
+speed = 3000.0
+v_the = 0.0
+v_phi = 0.0
+ra = 0.0
+dec = 0.0
+psi = 0.0
+geocent_time = 0.
