@@ -21,10 +21,10 @@ def readfile(filename):
 VERSION = '1.0'
 
 setup(name='custom_bilby_pipe_function',
-      description='Just a brief tutorial',
-      author='Moritz Huebner',
-      author_email='moritz.huebner@monash.edu',
-      license="MIT",
+      description='a test run',
+      author='hemanta phurailatpam',
+      author_email='hemantaphurailatpam@gmail.com',
+      license="CUHK",
       version=VERSION,
       packages=['custom_bilby_pipe_function'],
       package_dir={'custom_bilby_pipe_function': 'custom_bilby_pipe_function'},

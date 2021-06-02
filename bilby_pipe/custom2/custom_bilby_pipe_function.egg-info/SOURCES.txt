@@ -6,3 +6,6 @@ custom_bilby_pipe_function.egg-info/SOURCES.txt
 custom_bilby_pipe_function.egg-info/dependency_links.txt
 custom_bilby_pipe_function.egg-info/requires.txt
 custom_bilby_pipe_function.egg-info/top_level.txt
+dist/custom_bilby_pipe_function-1.0-py3.7.egg
+example/GW150914.ini
+example/GW150914_prior.prior
