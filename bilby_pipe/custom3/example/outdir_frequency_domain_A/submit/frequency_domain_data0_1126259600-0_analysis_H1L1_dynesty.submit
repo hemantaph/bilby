@@ -1,0 +1,23 @@
+universe = vanilla
+executable = /home/hemantakumar.phurailatpam/anaconda3/envs/bilby/bin/bilby_pipe_analysis
+request_memory = 4.0 GB
+request_cpus = 8
+getenv = True
+initialdir = /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom3/example
+notification = Never
+requirements = 
+should_transfer_files = YES
+transfer_input_files = outdir_frequency_domain/data/frequency_domain_data0_1126259600-0_generation_data_dump.pickle,outdir_frequency_domain/frequency_domain_config_complete.ini
+transfer_output_files = outdir_frequency_domain
+when_to_transfer_output = ON_EXIT_OR_EVICT
+stream_error = True
+stream_output = True
++SuccessCheckpointExitCode = 77
++WantFTOnCheckpoint = True
+log = outdir_frequency_domain/log_data_analysis/frequency_domain_data0_1126259600-0_analysis_H1L1_dynesty.log
+output = outdir_frequency_domain/log_data_analysis/frequency_domain_data0_1126259600-0_analysis_H1L1_dynesty.out
+error = outdir_frequency_domain/log_data_analysis/frequency_domain_data0_1126259600-0_analysis_H1L1_dynesty.err
+accounting_group = ligo.dev.o3.cbc.pe.lalinference
+priority = 0
+arguments = $(ARGS)
+queue

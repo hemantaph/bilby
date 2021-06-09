@@ -1,0 +1,7 @@
+JOB frequency_domain_data0_1126259600-0_generation_arg_0 outdir_frequency_domain/submit/frequency_domain_data0_1126259600-0_generation.submit
+VARS frequency_domain_data0_1126259600-0_generation_arg_0 ARGS="outdir_frequency_domain/frequency_domain_config_complete.ini --local --label frequency_domain_data0_1126259600-0_generation --idx 0 --trigger-time 1126259600.0"
+JOB frequency_domain_data0_1126259600-0_analysis_H1L1_dynesty_arg_0 outdir_frequency_domain/submit/frequency_domain_data0_1126259600-0_analysis_H1L1_dynesty.submit
+VARS frequency_domain_data0_1126259600-0_analysis_H1L1_dynesty_arg_0 ARGS="outdir_frequency_domain/frequency_domain_config_complete.ini --local --outdir outdir_frequency_domain --detectors H1 --detectors L1 --label frequency_domain_data0_1126259600-0_analysis_H1L1_dynesty --data-dump-file outdir_frequency_domain/data/frequency_domain_data0_1126259600-0_generation_data_dump.pickle --sampler dynesty"
+
+#Inter-job dependencies
+Parent frequency_domain_data0_1126259600-0_generation_arg_0 Child frequency_domain_data0_1126259600-0_analysis_H1L1_dynesty_arg_0

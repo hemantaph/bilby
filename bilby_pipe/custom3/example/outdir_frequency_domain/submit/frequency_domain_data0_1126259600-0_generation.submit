@@ -1,0 +1,15 @@
+universe = vanilla
+executable = /home/hemantakumar.phurailatpam/anaconda3/envs/bilby/bin/bilby_pipe_generation
+request_memory = 8 GB
+request_cpus = 1
+getenv = True
+initialdir = /home/hemantakumar.phurailatpam/bilby/bilby_pipe/custom3/example
+notification = Never
+requirements = 
+log = outdir_frequency_domain/log_data_generation/frequency_domain_data0_1126259600-0_generation.log
+output = outdir_frequency_domain/log_data_generation/frequency_domain_data0_1126259600-0_generation.out
+error = outdir_frequency_domain/log_data_generation/frequency_domain_data0_1126259600-0_generation.err
+accounting_group = ligo.dev.o3.cbc.pe.lalinference
+priority = 0
+arguments = $(ARGS)
+queue

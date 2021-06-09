@@ -1,9 +1,0 @@
-amplitude = LogUniform(1e-23, 1e-21, r'$h_0$')
-damping_time = Uniform(0.01, 1, r'damping time', unit='$s$')
-frequency = Uniform(0, 200, r'frequency', unit='Hz')
-phase = Uniform(-np.pi / 2, np.pi / 2, r'$\phi$') 
-ra = 0.0
-dec = 0.0
-psi = 0.0
-t0 = 0.0
-geocent_time = 1126259600.
