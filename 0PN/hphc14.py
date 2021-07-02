@@ -92,7 +92,7 @@ class Fn:
         #some et/psi elements are unnecessary to calculated 
         #because the range of l is different for each n
         #it means that not all [l,n] elements will contribute while solving the final waveform
-        l = np.array([1,2,3,4,5,6,7,8,9,10]).astype('float64')
+        l = np.array([1,2,3,4,5,6,7,8,9,10]).astype('float')
         ll = np.array([ [1,1,1,1,1,1,1,1,1],\
                         [2,2,2,2,2,2,2,2,2],\
                         [3,3,3,3,3,3,3,3,3],\
@@ -102,7 +102,7 @@ class Fn:
                         [7,7,7,7,7,7,7,7,7],\
                         [8,8,8,8,8,8,8,8,8],\
                         [9,9,9,9,9,9,9,9,9],\
-                        [10,10,10,10,10,10,10,10,10] ]).astype('float64')
+                        [10,10,10,10,10,10,10,10,10] ]).astype('float')
         nn = np.array([ [0,1,2,3,4,-4,-3,-2,-1],\
                         [0,1,2,3,4,-4,-3,-2,-1],\
                         [0,1,2,3,4,-4,-3,-2,-1],\
@@ -112,10 +112,10 @@ class Fn:
                         [0,1,2,3,4,-4,-3,-2,-1],\
                         [0,1,2,3,4,-4,-3,-2,-1],\
                         [0,1,2,3,4,-4,-3,-2,-1],\
-                        [0,1,2,3,4,-4,-3,-2,-1] ]).astype('float64')
+                        [0,1,2,3,4,-4,-3,-2,-1] ]).astype('float')
 
         #log values                
-        log_ll = np.log(ll).astype('float64')
+        log_ll = np.log(ll).astype('float')
         
         #sinn_values
         sin_i = np.sin(iota)
@@ -211,10 +211,10 @@ class Fn:
                             [k[6],k[6],k[6],k[6],k[6],k[6],k[6],k[6],k[6]],\
                             [k[7],k[7],k[7],k[7],k[7],k[7],k[7],k[7],k[7]],\
                             [k[8],k[8],k[8],k[8],k[8],k[8],k[8],k[8],k[8]],\
-                            [k[9],k[9],k[9],k[9],k[9],k[9],k[9],k[9],k[9]] ]).astype('float64')
+                            [k[9],k[9],k[9],k[9],k[9],k[9],k[9],k[9],k[9]] ]).astype('float')
 
             #################unitary function, unit( l-1 , n ), 2D array################### 
-            unit = np.zeros((10,9), dtype='float64')
+            unit = np.zeros((10,9), dtype='float')
 
             buffer = ( ll-(ll+nn)*(kk/(1+kk)) )*ff - 2*f
             unit[buffer>=0] = 1.0
@@ -256,8 +256,8 @@ class Fn:
             et = ( x_3b2*(a_3b2) + x*(a_1) + x_5b2*(a_5b2) + x_2*(a_2) + a_0 + x_3*(a_3) )*unit
 
             #NOTE: et(n value, l-1)
-            #if an error like dtype=object arises, then et = et.astype('float64')
-            et = et.astype('float64')
+            #if an error like dtype=object arises, then et = et.astype('float')
+            et = et.astype('float')
             
             ###################fourier_phase 2D array#######################
 
@@ -279,9 +279,9 @@ class Fn:
 
             #note dtype=object will appear because it is dealing with number>=10^20 or number<=10^20
             #this is due to log
-            #change the dtype of the array to float64 
+            #change the dtype of the array to float 
             # psi( n , l-1 )
-            psi = np.array(psi).astype('float64')   
+            psi = np.array(psi).astype('float')   
 
             #########################################################################################
             #Various amplitudes due to harmonic contributions 
