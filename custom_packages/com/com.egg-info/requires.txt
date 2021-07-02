@@ -1,0 +1,5 @@
+bilby
+gwsurrogate
+cython
+numpy
+gwpy

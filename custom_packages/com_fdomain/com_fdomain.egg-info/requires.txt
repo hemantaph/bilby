@@ -1,0 +1,6 @@
+bilby
+gwsurrogate
+cython
+numpy
+matplotlib
+gwpy

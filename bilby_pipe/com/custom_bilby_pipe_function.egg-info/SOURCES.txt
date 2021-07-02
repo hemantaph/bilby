@@ -1,4 +1,10 @@
 setup.py
+custom_bilby_pipe_function/Coeff.c
+custom_bilby_pipe_function/Coeff.cpython-37m-x86_64-linux-gnu.so
+custom_bilby_pipe_function/Coeff.pyx
+custom_bilby_pipe_function/WaVel.c
+custom_bilby_pipe_function/WaVel.cpython-37m-x86_64-linux-gnu.so
+custom_bilby_pipe_function/WaVel.pyx
 custom_bilby_pipe_function/__init__.py
 custom_bilby_pipe_function/my_module.py
 custom_bilby_pipe_function/setup.py
@@ -7,3 +13,9 @@ custom_bilby_pipe_function.egg-info/SOURCES.txt
 custom_bilby_pipe_function.egg-info/dependency_links.txt
 custom_bilby_pipe_function.egg-info/requires.txt
 custom_bilby_pipe_function.egg-info/top_level.txt
+custom_bilby_pipe_function/build/lib.linux-x86_64-3.7/Coeff.cpython-37m-x86_64-linux-gnu.so
+custom_bilby_pipe_function/build/lib.linux-x86_64-3.7/WaVel.cpython-37m-x86_64-linux-gnu.so
+custom_bilby_pipe_function/build/temp.linux-x86_64-3.7/Coeff.o
+custom_bilby_pipe_function/build/temp.linux-x86_64-3.7/WaVel.o
+dist/custom_bilby_pipe_function-1.0-py3.7.egg
+example/com.ini

@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: custom-bilby-pipe-function
+Version: 1.0
+Summary: a test run
+Home-page: UNKNOWN
+Author: hemanta phurailatpam
+Author-email: hemantaphurailatpam@gmail.com
+License: CUHK
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5

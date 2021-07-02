@@ -1,0 +1,10 @@
+setup.py
+com.egg-info/PKG-INFO
+com.egg-info/SOURCES.txt
+com.egg-info/dependency_links.txt
+com.egg-info/requires.txt
+com.egg-info/top_level.txt
+com_fdomain/__init__.py
+com_fdomain/functions.py
+com_fdomain/cython_files/__init__.py
+com_fdomain/cython_files/setup.py

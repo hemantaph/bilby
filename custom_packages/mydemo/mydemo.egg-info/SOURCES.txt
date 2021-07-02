@@ -1,0 +1,13 @@
+LICENCE
+README.md
+setup.py
+mydemo/__init__.py
+mydemo/example.py
+mydemo/exceptions.py
+mydemo.egg-info/PKG-INFO
+mydemo.egg-info/SOURCES.txt
+mydemo.egg-info/dependency_links.txt
+mydemo.egg-info/not-zip-safe
+mydemo.egg-info/requires.txt
+mydemo.egg-info/top_level.txt
+mydemo/addition/__init__.py

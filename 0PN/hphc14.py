@@ -213,9 +213,8 @@ class Fn:
                             [k[8],k[8],k[8],k[8],k[8],k[8],k[8],k[8],k[8]],\
                             [k[9],k[9],k[9],k[9],k[9],k[9],k[9],k[9],k[9]] ]).astype('float64')
 
-
             #################unitary function, unit( l-1 , n ), 2D array################### 
-            unit = np.zeros((10,9))
+            unit = np.zeros((10,9), dtype='float64')
 
             buffer = ( ll-(ll+nn)*(kk/(1+kk)) )*ff - 2*f
             unit[buffer>=0] = 1.0
@@ -259,7 +258,7 @@ class Fn:
             #NOTE: et(n value, l-1)
             #if an error like dtype=object arises, then et = et.astype('float64')
             et = et.astype('float64')
-
+            
             ###################fourier_phase 2D array#######################
 
             #psi[l-1,n] 2D array 
@@ -282,8 +281,7 @@ class Fn:
             #this is due to log
             #change the dtype of the array to float64 
             # psi( n , l-1 )
-            psi = np.array(psi).astype('complex128')   
-            
+            psi = np.array(psi).astype('float64')   
 
             #########################################################################################
             #Various amplitudes due to harmonic contributions 
@@ -776,7 +774,6 @@ class Fn:
             #numerator and denominator already define above in 1PN
             xi05_p = unit * (numerator/denomitor)*al*np.exp(-1j*phil)
 
-
             #Summary of following technique to calculate frequency domain waveform
             #hf1 = s1+s2+s3+s4+s5
             #hf0 = s1+s2+s3
@@ -1177,6 +1174,7 @@ class Fn:
         # return(format(hp, '.6g'),format(hc, '.6g')) if you want toround off
         return(hp,hc)
         
-    
+
+
     
     
