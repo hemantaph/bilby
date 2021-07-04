@@ -1,0 +1,15 @@
+universe = vanilla
+executable = /home/hemantakumar.phurailatpam/anaconda3/envs/bilby/bin/bilby_pipe_generation
+request_memory = 8 GB
+request_cpus = 1
+getenv = True
+initialdir = /home/hemantakumar.phurailatpam/bilby/bilby_pipe/eccn3
+notification = Never
+requirements = 
+log = outdir_com/log_data_generation/eccn_data0_1126259462-4_generation.log
+output = outdir_com/log_data_generation/eccn_data0_1126259462-4_generation.out
+error = outdir_com/log_data_generation/eccn_data0_1126259462-4_generation.err
+accounting_group = ligo.dev.o3.cbc.pe.lalinference
+priority = 0
+arguments = $(ARGS)
+queue

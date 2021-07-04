@@ -1,7 +1,7 @@
 universe = vanilla
 executable = /home/hemantakumar.phurailatpam/anaconda3/envs/bilby/bin/bilby_pipe_analysis
 request_memory = 4.0 GB
-request_cpus = 16
+request_cpus = 20
 getenv = True
 initialdir = /home/hemantakumar.phurailatpam/bilby/bilby_pipe/eccn
 notification = Never

@@ -1,3 +1,10 @@
+#This code is written by Phurailatpam Hemantakumar, CUHK
+#This code calculate plus and cross polarization strains given the following parameters 
+#iota, beta, distance, frequency, initial frequency, initial eccentricity , phase of coalesence, time of coalesence, total mass, symmetric mass ratio, maximum allowed frequency, mass difference
+#The two angles iota and beta specify the line of sight vector in a certain inertial fram
+
+#I will avoid for loop and if else conditional statements through numpy operations
+#numpy compile its code in 'C' in the background. So its faster than a normal operations.
 import numpy as np
 #precision can be set to match the result of mathematica motebook calculation
 #np.set_printoptions(precision=17)
@@ -34,10 +41,11 @@ Pi_b2 = np.pi/2.
 log_2 = np.log(2.)
 log_3 = np.log(3.)
 log_5 = np.log(5.)
-        
-#This funtion returns both plus and cross polarization states
-def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
 
+    
+#This funtion returns both plus and cross polarization states
+def htilde(farray, M, eta, delta, et0, D, iota, beta, phic, tc, f0, ff, f_max):
+    
     #defining the repeatative values
     #eta
     eta_2 = eta**2.
@@ -54,44 +62,38 @@ def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
     #some et/psi elements are unnecessary to calculated 
     #because the range of l is different for each n
     #it means that not all [l,n] elements will contribute while solving the final waveform
-    l = np.array([1,2,3,4,5,6,7,8,9,10]).astype('float64')
-    ll = np.array([ [1,1,1,1,1,1,1,1,1],\
-                    [2,2,2,2,2,2,2,2,2],\
-                    [3,3,3,3,3,3,3,3,3],\
-                    [4,4,4,4,4,4,4,4,4],\
-                    [5,5,5,5,5,5,5,5,5],\
-                    [6,6,6,6,6,6,6,6,6],\
-                    [7,7,7,7,7,7,7,7,7],\
-                    [8,8,8,8,8,8,8,8,8],\
-                    [9,9,9,9,9,9,9,9,9],\
-                    [10,10,10,10,10,10,10,10,10] ]).astype('float64')
-    nn = np.array([ [0,1,2,3,4,-4,-3,-2,-1],\
-                    [0,1,2,3,4,-4,-3,-2,-1],\
-                    [0,1,2,3,4,-4,-3,-2,-1],\
-                    [0,1,2,3,4,-4,-3,-2,-1],\
-                    [0,1,2,3,4,-4,-3,-2,-1],\
-                    [0,1,2,3,4,-4,-3,-2,-1],\
-                    [0,1,2,3,4,-4,-3,-2,-1],\
-                    [0,1,2,3,4,-4,-3,-2,-1],\
-                    [0,1,2,3,4,-4,-3,-2,-1],\
-                    [0,1,2,3,4,-4,-3,-2,-1] ]).astype('float64')
+    l = np.array([1,2,3,4,5,6,7,8,9,10]).astype('float')
+    ll = np.array([ [1,1,1],\
+                    [2,2,2],\
+                    [3,3,3],\
+                    [4,4,4],\
+                    [5,5,5],\
+                    [6,6,6],\
+                    [7,7,7],\
+                    [8,8,8],\
+                    [9,9,9],\
+                    [10,10,10] ]).astype('float')
+    nn = np.array([ [0,-2,2],\
+                    [0,-2,2],\
+                    [0,-2,2],\
+                    [0,-2,2],\
+                    [0,-2,2],\
+                    [0,-2,2],\
+                    [0,-2,2],\
+                    [0,-2,2],\
+                    [0,-2,2],\
+                    [0,-2,2] ]).astype('float')
 
     #log values                
-    log_ll = np.log(ll).astype('float64')
+    log_ll = np.log(ll).astype('float')
 
     #sinn_values
     sin_i = np.sin(iota)
-    sin_b = np.sin(beta)
     sin_2b = np.sin(2*beta)
-    sin_3b = np.sin(3*beta)
-    sin_4b = np.sin(4*beta)
 
     #cosinne_values
     cos_i = np.cos(iota)
-    cos_b = np.cos(beta)
     cos_2b = np.cos(2.*beta)
-    cos_3b = np.cos(3.*beta)
-    cos_4b = np.cos(4.*beta)
 
     length = len(farray)
     hp = np.zeros(length).astype('complex128')
@@ -164,20 +166,20 @@ def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
         k = (xk**2 * (27/2 - 7*eta + et0_6 * (1589015535/(5175296*chi_7) - (110496315*eta)/(184832*chi_7) + 498132560585/(1614692352*chi_19b3) + (168333575*eta)/(1478656*chi_19b3) - 908911888607/(1816528896*chi_44b9) + (4154545993*eta)/(4990464*chi_44b9) - 892815840919/(1816528896*chi_38b9) - (301299733*eta)/(4990464*chi_38b9) + 3110697122471/(14532231168*chi_25b9) - (12075357445*eta)/(39923712*chi_25b9) + 17781607555/(69866496*chi_19b9) - (82799465*eta)/(2495232*chi_19b9)) + et0_4 * ( - (6830363/(153216*chi_44b9)) + (474967*eta)/(5472*chi_44b9) - 268677653/(3983616*chi_38b9) - (90671*eta)/(10944*chi_38b9) + 18185905/(284544*chi_25b9) - (267133*eta)/(2736*chi_25b9) + 34967929/(306432*chi_19b9) - (162827*eta)/(10944*chi_19b9)) + et0_2 * (2833/(336*chi_25b9) - (197*eta)/(12*chi_25b9) + 10523/(336*chi_19b9) - (49*eta)/(12*chi_19b9))) + xk * (3 + et0_4 * ( - (2411/(304*chi_38b9)) + 3323/(304*chi_19b9)) + et0_6 * (1682685/(46208*chi_19b3) - 8011753/(138624*chi_38b9) + 1689785/(69312*chi_19b9)) + (3 * et0_2)/chi_19b9) + xk**(n_5b2) * ( - ((377 * et0_2*Pi_*( - 1 + chi))/(24*chi_28b9)) - (et0_4 * Pi_*(3635788 - 2258257*chi - 3883073*chi_19b9 + 2505542*chi_28b9))/(43776*chi_47b9) - (et0_6 * Pi_*( - 331142311890 + 189286331247*chi + 446685572185*chi_19b9 - 217621452319*chi_28b9 - 161105816843*chi_38b9 + 73897677620*chi_47b9))/(578893824*chi_22b3)) + xk**3 * (1/32*(2160 - 5192*eta + 123*Pi_**2*eta + 224*eta_2) + 1/(1016064*chi_31b9) * et0_2 * ( - 1193251 - 22282512*eta + 42700560*eta_2 + 89434977*chi_2b3 - 185795232*eta*chi_2b3 + 22703856*eta_2*chi_2b3 + 285923842*chi_4b3 - 477003408*eta*chi_4b3 + 12692862*Pi_**2*eta*chi_4b3 - 3424512*eta_2*chi_4b3) + 1/(84325183488*chi_50b9) * et0_4 * ( - 4759063292165 + 30348860970792*eta - 38763744107088*eta_2 - 31968879219858*chi_2b3 + 58318046249232*eta*chi_2b3 + 7646159215968*eta_2*chi_2b3 - 31736268138496*chi_4b3 + 45889671128952*eta*chi_4b3 - 1650389381550*Pi_**2*eta*chi_4b3 + 219411602592*eta_2*chi_4b3 + 2043730880707*chi_19b9 - 27141856655592*eta*chi_19b9 + 35073241576464*eta_2*chi_19b9 + 56262861824610*chi_25b9 - 93285988260024*eta*chi_25b9 + 11206302010176*eta_2*chi_25b9 + 86461368353906*chi_31b9 - 144242491555344*eta*chi_31b9 + 3838232618766*Pi_**2*eta*chi_31b9 - 1035548457216*eta_2*chi_31b9) + 1/(3999037501734912*chi_23b3) * et0_6 * (3279894679024104960 - 16631859540896308800*eta + 19202503791507079680*eta_2 + 10402025549836075155*chi_2b3 - 16414748179030197360*eta*chi_2b3 - 7473844435281260400*eta_2*chi_2b3 + 6636901757399139267*chi_4b3 - 6647849008784363016*eta*chi_4b3 + 341159644201429872*Pi_**2*eta*chi_4b3 + 623118469564347120*eta_2*chi_4b3 - 4220015697065866256*chi_19b9 + 21692272309533291648*eta*chi_19b9 - 23329096412641114368*eta_2*chi_19b9 - 17016310487961012648*chi_25b9 + 26221595034201700224*eta*chi_25b9 + 3477817715529865344*eta_2*chi_25b9 - 10967800378519109632*chi_31b9 + 15859103224796779584*eta*chi_31b9 - 570361367148627600*Pi_**2*eta*chi_31b9 + 75826894562974464*eta_2*chi_31b9 + 493039468942823701*chi_38b9 - 6093524899450135056*eta*chi_38b9 + 7224047870706816240*eta_2*chi_38b9 + 8936345368795116909*chi_44b9 - 13792229587322482296*eta*chi_44b9 + 1646334720273668880*eta_2*chi_44b9 + 9145059780731944160*chi_50b9 - 15256596481285635840*eta*chi_50b9 + 405971677516073760*Pi_**2*eta*chi_50b9 - 109530449579765760*eta_2*chi_50b9)) )
 
 
-        kk = np.array([ [k[0],k[0],k[0],k[0],k[0],k[0],k[0],k[0],k[0]],\
-                        [k[1],k[1],k[1],k[1],k[1],k[1],k[1],k[1],k[1]],\
-                        [k[2],k[2],k[2],k[2],k[2],k[2],k[2],k[2],k[2]],\
-                        [k[3],k[3],k[3],k[3],k[3],k[3],k[3],k[3],k[3]],\
-                        [k[4],k[4],k[4],k[4],k[4],k[4],k[4],k[4],k[4]],\
-                        [k[5],k[5],k[5],k[5],k[5],k[5],k[5],k[5],k[5]],\
-                        [k[6],k[6],k[6],k[6],k[6],k[6],k[6],k[6],k[6]],\
-                        [k[7],k[7],k[7],k[7],k[7],k[7],k[7],k[7],k[7]],\
-                        [k[8],k[8],k[8],k[8],k[8],k[8],k[8],k[8],k[8]],\
-                        [k[9],k[9],k[9],k[9],k[9],k[9],k[9],k[9],k[9]] ]).astype('float64')
+        kk = np.array([ [k[0],k[0],k[0]],\
+                        [k[1],k[1],k[1]],\
+                        [k[2],k[2],k[2]],\
+                        [k[3],k[3],k[3]],\
+                        [k[4],k[4],k[4]],\
+                        [k[5],k[5],k[5]],\
+                        [k[6],k[6],k[6]],\
+                        [k[7],k[7],k[7]],\
+                        [k[8],k[8],k[8]],\
+                        [k[9],k[9],k[9]] ]).astype('float')
 
 
         #################unitary function, unit( l-1 , n ), 2D array################### 
-        unit = np.zeros((10,9))
+        unit = np.zeros((10,3))
 
         buffer = ( ll-(ll+nn)*(kk/(1+kk)) )*ff - 2*f
         unit[buffer>=0] = 1.0
@@ -219,8 +221,8 @@ def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
         et = ( x_3b2*(a_3b2) + x*(a_1) + x_5b2*(a_5b2) + x_2*(a_2) + a_0 + x_3*(a_3) )*unit
 
         #NOTE: et(n value, l-1)
-        #if an error like dtype=object arises, then et = et.astype('float64')
-        et = et.astype('float64')
+        #if an error like dtype=object arises, then et = et.astype('float')
+        et = et.astype('float')
 
         ###################fourier_phase 2D array#######################
 
@@ -242,15 +244,16 @@ def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
 
         #note dtype=object will appear because it is dealing with number>=10^20 or number<=10^20
         #this is due to log
-        #change the dtype of the array to float64 
+        #change the dtype of the array to float 
         # psi( n , l-1 )
+        psi = np.array(psi).astype('float')   
 
         #########################################################################################
         #Various amplitudes due to harmonic contributions 
         #depends on et, iota and beta
         ###################cplus0, 2D array####################
         #Cp0[l-1,n]
-        Cp0=np.zeros((10,9))
+        Cp0=np.zeros((10,3))
 
         Cp0[0,-2]=et[0,-2]**3*(-(13/16)*cos_2b-13/16*cos_i**2*cos_2b)+et[0,-2]**5*(-(5/384)*cos_2b-5/384*cos_i**2*cos_2b)+et[0,-2]*(3/2*cos_2b+3/2*cos_i**2*cos_2b)
 
@@ -291,7 +294,7 @@ def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
         Cp0[3,2]=et[3,2]**6*(11/90*cos_2b+11/90*cos_i**2*cos_2b)
 
         ###################splus0, 2D array####################
-        Sp0=np.zeros((10,9))
+        Sp0=np.zeros((10,3))
 
         Sp0[0,-2]=et[0,-2]**3*(-(13/16)*sin_2b-13/16*cos_i**2*sin_2b)+et[0,-2]**5*(-(5/384)*sin_2b-5/384*cos_i**2*sin_2b)+et[0,-2]*(3/2*sin_2b+3/2*cos_i**2*sin_2b)
 
@@ -319,7 +322,7 @@ def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
         Sp0[3,2]=et[3,2]**6*(-(11/90)*sin_2b-11/90*cos_i**2*sin_2b)
 
         ###################ccross0, 2D array####################
-        Cx0=np.zeros((10,9))
+        Cx0=np.zeros((10,3))
 
         Cx0[0,-2]=-3*et[0,-2]*cos_i*sin_2b+13/8*et[0,-2]**3*cos_i*sin_2b+5/192*et[0,-2]**5*cos_i*sin_2b
 
@@ -347,7 +350,7 @@ def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
         Cx0[3,2]=-(11/45)*et[3,2]**6*cos_i*sin_2b
 
         ###################scross0_start, 2D array####################
-        Sx0=np.zeros((10,9))
+        Sx0=np.zeros((10,3))
 
         Sx0[0,-2]=3*et[0,-2]*cos_i*cos_2b-13/8*et[0,-2]**3*cos_i*cos_2b-5/192*et[0,-2]**5*cos_i*cos_2b
 
@@ -374,493 +377,64 @@ def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
 
         Sx0[3,2]=-(11/45)*et[3,2]**6*cos_i*cos_2b
 
-        ###################cplus05, 2D array####################
-        Cp05 = np.zeros((10,9))
-
-        Cp05[0,1]=et[0,1]**6*((109*cos_b*sin_i)/12288+(265*cos_i**2*cos_b*sin_i)/12288)+et[0,1]**4*(1/64*cos_b*sin_i+7/192*cos_i**2*cos_b*sin_i)+et[0,1]**2*(-(9/32)*cos_b*sin_i+11/32*cos_i**2*cos_b*sin_i)
-        Cp05[1,1]=et[1,1]**5*(1/16*cos_b*sin_i-1/48*cos_i**2*cos_b*sin_i)+et[1,1]**3*(-(n_1b3)*cos_b*sin_i+1/3*cos_i**2*cos_b*sin_i)
-        Cp05[2,1]=et[2,1]**6*((369*cos_b*sin_i)/2560-(243*cos_i**2*cos_b*sin_i)/2560)+et[2,1]**4*(-(207/512)*cos_b*sin_i+189/512*cos_i**2*cos_b*sin_i)
-        Cp05[3,1]=et[3,1]**5*(-(n_1b2)*cos_b*sin_i+13/30*cos_i**2*cos_b*sin_i)
-        Cp05[4,1]=et[4,1]**6*(-((23125*cos_b*sin_i)/36864)+(19375*cos_i**2*cos_b*sin_i)/36864)
-
-
-        Cp05[0,-1]=-(5/4)*cos_b*sin_i-1/4*cos_i**2*cos_b*sin_i+et[0,-1]**2*(3/2*cos_b*sin_i-1/2*cos_i**2*cos_b*sin_i)+et[0,-1]**6*((41*cos_b*sin_i)/2304+(37*cos_i**2*cos_b*sin_i)/2304)+et[0,-1]**4*(-(51/256)*cos_b*sin_i+41/256*cos_i**2*cos_b*sin_i)
-        Cp05[1,-1]=et[1,-1]**3*(4*cos_b*sin_i-2*cos_i**2*cos_b*sin_i)+et[1,-1]**5*(-(19/16)*cos_b*sin_i+35/48*cos_i**2*cos_b*sin_i)+et[1,-1]*(-3*cos_b*sin_i+cos_i**2*cos_b*sin_i)
-        Cp05[2,-1]=et[2,-1]**4*(531/64*cos_b*sin_i-297/64*cos_i**2*cos_b*sin_i)+et[2,-1]**6*(-((15399*cos_b*sin_i)/4096)+(9477*cos_i**2*cos_b*sin_i)/4096)+et[2,-1]**2*(-(171/32)*cos_b*sin_i+81/32*cos_i**2*cos_b*sin_i)
-        Cp05[3,-1]=et[3,-1]**5*(31/2*cos_b*sin_i-55/6*cos_i**2*cos_b*sin_i)+et[3,-1]**3*(-(26/3)*cos_b*sin_i+14/3*cos_i**2*cos_b*sin_i)
-        Cp05[4,-1]=et[4,-1]**6*((41875*cos_b*sin_i)/1536-(25625*cos_i**2*cos_b*sin_i)/1536)+et[4,-1]**4*(-(6875/512)*cos_b*sin_i+(11875*cos_i**2*cos_b*sin_i)/1536)
-        Cp05[5,-1]=et[5,-1]**5*(-(81/4)*cos_b*sin_i+243/20*cos_i**2*cos_b*sin_i)
-        Cp05[6,-1]=et[6,-1]**6*(-((5529503*cos_b*sin_i)/184320)+(3411821*cos_i**2*cos_b*sin_i)/184320)
-
-
-        Cp05[0,3]=et[0,3]**4*(-(25/512)*cos_3b*sin_i-25/512*cos_i**2*cos_3b*sin_i)+et[0,3]**6*(-((179*cos_3b*sin_i)/7680)-(179*cos_i**2*cos_3b*sin_i)/7680)
-        Cp05[1,3]=et[1,3]**5*(-(13/240)*cos_3b*sin_i-13/240*cos_i**2*cos_3b*sin_i)
-        Cp05[2,3]=et[2,3]**6*(-((1233*cos_3b*sin_i)/20480)-(1233*cos_i**2*cos_3b*sin_i)/20480)
-
-
-        Cp05[0,-3]=et[0,-3]**4*(-(65/192)*cos_3b*sin_i-65/192*cos_i**2*cos_3b*sin_i)+et[0,-3]**6*(-((19*cos_3b*sin_i)/12288)-(19*cos_i**2*cos_3b*sin_i)/12288)+et[0,-3]**2*(19/32*cos_3b*sin_i+19/32*cos_i**2*cos_3b*sin_i)
-        Cp05[1,-3]=et[1,-3]*(-3*cos_3b*sin_i-3*cos_i**2*cos_3b*sin_i)+et[1,-3]**5*(-(133/48)*cos_3b*sin_i-133/48*cos_i**2*cos_3b*sin_i)+et[1,-3]**3*(11/2*cos_3b*sin_i+11/2*cos_i**2*cos_3b*sin_i)
-        Cp05[2,-3]=9/4*cos_3b*sin_i+9/4*cos_i**2*cos_3b*sin_i+et[2,-3]**2*(-(27/2)*cos_3b*sin_i-27/2*cos_i**2*cos_3b*sin_i)+et[2,-3]**6*(-(3141/256)*cos_3b*sin_i-3141/256*cos_i**2*cos_3b*sin_i)+et[2,-3]**4*(5319/256*cos_3b*sin_i+5319/256*cos_i**2*cos_3b*sin_i)
-        Cp05[3,-3]=et[3,-3]**3*(-38*cos_3b*sin_i-38*cos_i**2*cos_3b*sin_i)+et[3,-3]*(8*cos_3b*sin_i+8*cos_i**2*cos_3b*sin_i)+et[3,-3]**5*(176/3*cos_3b*sin_i+176/3*cos_i**2*cos_3b*sin_i)
-        Cp05[4,-3]=et[4,-3]**4*(-(5625/64)*cos_3b*sin_i-5625/64*cos_i**2*cos_3b*sin_i)+et[4,-3]**2*(625/32*cos_3b*sin_i+625/32*cos_i**2*cos_3b*sin_i)+et[4,-3]**6*((1746875*cos_3b*sin_i)/12288+(1746875*cos_i**2*cos_3b*sin_i)/12288)
-        Cp05[5,-3]=et[5,-3]**5*(-(729/4)*cos_3b*sin_i-729/4*cos_i**2*cos_3b*sin_i)+et[5,-3]**3*(81/2*cos_3b*sin_i+81/2*cos_i**2*cos_3b*sin_i)
-        Cp05[6,-3]=et[6,-3]**6*(-((2705927*cos_3b*sin_i)/7680)-(2705927*cos_i**2*cos_3b*sin_i)/7680)+et[6,-3]**4*((117649*cos_3b*sin_i)/1536+(117649*cos_i**2*cos_3b*sin_i)/1536)
-        Cp05[7,-3]=et[7,-3]**5*(2048/15*cos_3b*sin_i+2048/15*cos_i**2*cos_3b*sin_i)
-        Cp05[8,-3]=et[8,-3]**6*((4782969*cos_3b*sin_i)/20480+(4782969*cos_i**2*cos_3b*sin_i)/20480)  
-
-        ###################splus05, 2D array####################
-        Sp05 = np.zeros((10,9))
-
-        Sp05[0,-1] =  - (5/4)*sin_i*sin_b - 1/4*cos_i**2*sin_i*sin_b + et[0,-1]**2*(3/2*sin_i*sin_b - 1/2*cos_i**2*sin_i*sin_b) + et[0,-1]**6*((41*sin_i*sin_b)/2304 + (37*cos_i**2*sin_i*sin_b)/2304) + et[0,-1]**4*( - (51/256)*sin_i*sin_b + 41/256*cos_i**2*sin_i*sin_b)
-
-        Sp05[1,-1] = et[1,-1]**3*(4*sin_i*sin_b - 2*cos_i**2*sin_i*sin_b) + et[1,-1]**5*( - (19/16)*sin_i*sin_b + 35/48*cos_i**2*sin_i*sin_b) + et[1,-1]*( - 3*sin_i*sin_b + cos_i**2*sin_i*sin_b)
-
-        Sp05[2,-1] = et[2,-1]**4*(531/64*sin_i*sin_b - 297/64*cos_i**2*sin_i*sin_b) + et[2,-1]**6*( - ((15399*sin_i*sin_b)/4096) + (9477*cos_i**2*sin_i*sin_b)/4096) + et[2,-1]**2*( - (171/32)*sin_i*sin_b + 81/32*cos_i**2*sin_i*sin_b)
-
-        Sp05[3,-1] = et[3,-1]**5*(31/2*sin_i*sin_b - 55/6*cos_i**2*sin_i*sin_b) + et[3,-1]**3*( - (26/3)*sin_i*sin_b + 14/3*cos_i**2*sin_i*sin_b)
-
-        Sp05[4,-1] = et[4,-1]**6*((41875*sin_i*sin_b)/1536 - (25625*cos_i**2*sin_i*sin_b)/1536) + et[4,-1]**4*( - (6875/512)*sin_i*sin_b + (11875*cos_i**2*sin_i*sin_b)/1536)
-
-        Sp05[5,-1] = et[5,-1]**5*( - (81/4)*sin_i*sin_b + 243/20*cos_i**2*sin_i*sin_b)
-
-        Sp05[6,-1] = et[6,-1]**6*( - ((5529503*sin_i*sin_b)/184320) + (3411821*cos_i**2*sin_i*sin_b)/184320)
-
-
-        Sp05[0,1] = et[0,1]**2*(9/32*sin_i*sin_b - 11/32*cos_i**2*sin_i*sin_b) + et[0,1]**4*( - (1/64)*sin_i*sin_b - 7/192*cos_i**2*sin_i*sin_b) + et[0,1]**6*( - ((109*sin_i*sin_b)/12288) - (265*cos_i**2*sin_i*sin_b)/12288)
-
-        Sp05[1,1] = et[1,1]**3*(1/3*sin_i*sin_b - 1/3*cos_i**2*sin_i*sin_b) + et[1,1]**5*( - (1/16)*sin_i*sin_b + 1/48*cos_i**2*sin_i*sin_b)
-
-        Sp05[2,1] = et[2,1]**4*(207/512*sin_i*sin_b - 189/512*cos_i**2*sin_i*sin_b) + et[2,1]**6*( - ((369*sin_i*sin_b)/2560) + (243*cos_i**2*sin_i*sin_b)/2560)
-
-        Sp05[3,1] = et[3,1]**5*(1/2*sin_i*sin_b - 13/30*cos_i**2*sin_i*sin_b)
-
-        Sp05[4,1] = et[4,1]**6*((23125*sin_i*sin_b)/36864 - (19375*cos_i**2*sin_i*sin_b)/36864)
-
-
-        Sp05[0,-3] = et[0,-3]**4*( - (65/192)*sin_i*sin_3b - 65/192*cos_i**2*sin_i*sin_3b) + et[0,-3]**6*( - ((19*sin_i*sin_3b)/12288) - (19*cos_i**2*sin_i*sin_3b)/12288) + et[0,-3]**2*(19/32*sin_i*sin_3b + 19/32*cos_i**2*sin_i*sin_3b)
-
-        Sp05[1,-3] = et[1,-3]*( - 3*sin_i*sin_3b - 3*cos_i**2*sin_i*sin_3b) + et[1,-3]**5*( - (133/48)*sin_i*sin_3b - 133/48*cos_i**2*sin_i*sin_3b) + et[1,-3]**3*(11/2*sin_i*sin_3b + 11/2*cos_i**2*sin_i*sin_3b)
-
-        Sp05[2,-3] = 9/4*sin_i*sin_3b + 9/4*cos_i**2*sin_i*sin_3b + et[2,-3]**2*( - (27/2)*sin_i*sin_3b - 27/2*cos_i**2*sin_i*sin_3b) + et[2,-3]**6*( - (3141/256)*sin_i*sin_3b - 3141/256*cos_i**2*sin_i*sin_3b) + et[2,-3]**4*(5319/256*sin_i*sin_3b + 5319/256*cos_i**2*sin_i*sin_3b)
-
-        Sp05[3,-3] = et[3,-3]**3*( - 38*sin_i*sin_3b - 38*cos_i**2*sin_i*sin_3b) + et[3,-3]*(8*sin_i*sin_3b + 8*cos_i**2*sin_i*sin_3b) + et[3,-3]**5*(176/3*sin_i*sin_3b + 176/3*cos_i**2*sin_i*sin_3b)
-
-        Sp05[4,-3] = et[4,-3]**4*( - (5625/64)*sin_i*sin_3b - 5625/64*cos_i**2*sin_i*sin_3b) + et[4,-3]**2*(625/32*sin_i*sin_3b + 625/32*cos_i**2*sin_i*sin_3b) + et[4,-3]**6*((1746875*sin_i*sin_3b)/12288 + (1746875*cos_i**2*sin_i*sin_3b)/12288)
-
-        Sp05[5,-3] = et[5,-3]**5*( - (729/4)*sin_i*sin_3b - 729/4*cos_i**2*sin_i*sin_3b) + et[5,-3]**3*(81/2*sin_i*sin_3b + 81/2*cos_i**2*sin_i*sin_3b)
-
-        Sp05[6,-3] = et[6,-3]**6*( - ((2705927*sin_i*sin_3b)/7680) - (2705927*cos_i**2*sin_i*sin_3b)/7680) + et[6,-3]**4*((117649*sin_i*sin_3b)/1536 + (117649*cos_i**2*sin_i*sin_3b)/1536)
-
-        Sp05[7,-3] = et[7,-3]**5*(2048/15*sin_i*sin_3b + 2048/15*cos_i**2*sin_i*sin_3b)
-
-        Sp05[8,-3] = et[8,-3]**6*((4782969*sin_i*sin_3b)/20480 + (4782969*cos_i**2*sin_i*sin_3b)/20480)
-
-
-        Sp05[0,3] = et[0,3]**6*((179*sin_i*sin_3b)/7680 + (179*cos_i**2*sin_i*sin_3b)/7680) + et[0,3]**4*(25/512*sin_i*sin_3b + 25/512*cos_i**2*sin_i*sin_3b)
-
-        Sp05[1,3] = et[1,3]**5*(13/240*sin_i*sin_3b + 13/240*cos_i**2*sin_i*sin_3b)
-
-        Sp05[2,3] = et[2,3]**6*((1233*sin_i*sin_3b)/20480 + (1233*cos_i**2*sin_i*sin_3b)/20480)
-
-        ###################ccross05, 2D array####################
-        Cx05 = np.zeros((10,9))
-
-        Cx05[0,1]=-(1/16)*et[0,1]**2 *cos_i*sin_i*sin_b-5/96*et[0,1]**4 *cos_i*sin_i*sin_b-(187*et[0,1]**6 *cos_i*sin_i*sin_b)/6144
-        Cx05[1,1]=-(1/24)*et[1,1]**5 *cos_i*sin_i*sin_b
-        Cx05[2,1]=9/256*et[2,1]**4 *cos_i*sin_i*sin_b-(63*et[2,1]**6 *cos_i*sin_i*sin_b)/1280
-        Cx05[3,1]=1/15*et[3,1]**5 *cos_i*sin_i*sin_b
-        Cx05[4,1]=(625*et[4,1]**6 *cos_i*sin_i*sin_b)/6144
-
-
-        Cx05[0,-1]=3/2*cos_i*sin_i*sin_b-et[0,-1]**2 *cos_i*sin_i*sin_b+5/128*et[0,-1]**4 *cos_i*sin_i*sin_b-13/384*et[0,-1]**6 *cos_i*sin_i*sin_b
-        Cx05[1,-1]=2*et[1,-1]*cos_i*sin_i*sin_b-2*et[1,-1]**3 *cos_i*sin_i*sin_b+11/24*et[1,-1]**5 *cos_i*sin_i*sin_b
-        Cx05[2,-1]=45/16*et[2,-1]**2 *cos_i*sin_i*sin_b-117/32*et[2,-1]**4 *cos_i*sin_i*sin_b+(2961*et[2,-1]**6 *cos_i*sin_i*sin_b)/2048
-        Cx05[3,-1]=4*et[3,-1]**3 *cos_i*sin_i*sin_b-19/3*et[3,-1]**5 *cos_i*sin_i*sin_b
-        Cx05[4,-1]=4375/768*et[4,-1]**4 *cos_i*sin_i*sin_b-8125/768*et[4,-1]**6 *cos_i*sin_i*sin_b
-        Cx05[5,-1]=81/10*et[5,-1]**5 *cos_i*sin_i*sin_b
-        Cx05[6,-1]=(117649*et[6,-1]**6 *cos_i*sin_i*sin_b)/10240 
-
-
-        Cx05[0,3]=25/256*et[0,3]**4 *cos_i*sin_i*sin_3b+(179*et[0,3]**6 *cos_i*sin_i*sin_3b)/3840
-        Cx05[1,3]=13/120*et[1,3]**5 *cos_i*sin_i*sin_3b
-        Cx05[2,3]=(1233*et[2,3]**6 *cos_i*sin_i*sin_3b)/10240        
-
-
-        Cx05[0,-3]=-(19/16)*et[0,-3]**2 *cos_i*sin_i*sin_3b+65/96*et[0,-3]**4 *cos_i*sin_i*sin_3b+(19*et[0,-3]**6 *cos_i*sin_i*sin_3b)/6144
-        Cx05[1,-3]=6*et[1,-3]*cos_i*sin_i*sin_3b-11*et[1,-3]**3 *cos_i*sin_i*sin_3b+133/24*et[1,-3]**5 *cos_i*sin_i*sin_3b
-        Cx05[2,-3]=-(n_9b2)*cos_i*sin_i*sin_3b+27*et[2,-3]**2 *cos_i*sin_i*sin_3b-5319/128*et[2,-3]**4 *cos_i*sin_i*sin_3b+3141/128*et[2,-3]**6 *cos_i*sin_i*sin_3b
-        Cx05[3,-3]=-16*et[3,-3]*cos_i*sin_i*sin_3b+76*et[3,-3]**3 *cos_i*sin_i*sin_3b-352/3*et[3,-3]**5 *cos_i*sin_i*sin_3b
-        Cx05[4,-3]=-(625/16)*et[4,-3]**2 *cos_i*sin_i*sin_3b+5625/32*et[4,-3]**4 *cos_i*sin_i*sin_3b-(1746875*et[4,-3]**6 *cos_i*sin_i*sin_3b)/6144
-        Cx05[5,-3]=-81*et[5,-3]**3 *cos_i*sin_i*sin_3b+729/2*et[5,-3]**5 *cos_i*sin_i*sin_3b
-        Cx05[6,-3]=-(117649/768)*et[6,-3]**4 *cos_i*sin_i*sin_3b+(2705927*et[6,-3]**6 *cos_i*sin_i*sin_3b)/3840
-        Cx05[7,-3]=-(4096/15)*et[7,-3]**5 *cos_i*sin_i*sin_3b
-        Cx05[8,-3]=-((4782969*et[8,-3]**6 *cos_i*sin_i*sin_3b)/10240)        
-
-        ###################scross05, 2D array####################
-        Sx05 = np.zeros((10,9))
-
-        Sx05[0,1]=-(1/16)*et[0,1]**2*cos_i*cos_b*sin_i-5/96*et[0,1]**4*cos_i*cos_b*sin_i-(187*et[0,1]**6*cos_i*cos_b*sin_i)/6144
-        Sx05[1,1]=-(1/24)*et[1,1]**5*cos_i*cos_b*sin_i
-        Sx05[2,1]=9/256*et[2,1]**4*cos_i*cos_b*sin_i-(63*et[2,1]**6*cos_i*cos_b*sin_i)/1280
-        Sx05[3,1]=1/15*et[3,1]**5*cos_i*cos_b*sin_i
-        Sx05[4,1]=(625*et[4,1]**6*cos_i*cos_b*sin_i)/6144
-
-
-        Sx05[0,-1]=-(n_3b2)*cos_i*cos_b*sin_i+et[0,-1]**2*cos_i*cos_b*sin_i-5/128*et[0,-1]**4*cos_i*cos_b*sin_i+13/384*et[0,-1]**6*cos_i*cos_b*sin_i
-        Sx05[1,-1]=-2*et[1,-1]*cos_i*cos_b*sin_i+2*et[1,-1]**3*cos_i*cos_b*sin_i-11/24*et[1,-1]**5*cos_i*cos_b*sin_i
-        Sx05[2,-1]=-(45/16)*et[2,-1]**2*cos_i*cos_b*sin_i+117/32*et[2,-1]**4*cos_i*cos_b*sin_i-(2961*et[2,-1]**6*cos_i*cos_b*sin_i)/2048
-        Sx05[3,-1]=-4*et[3,-1]**3*cos_i*cos_b*sin_i+19/3*et[3,-1]**5*cos_i*cos_b*sin_i
-        Sx05[4,-1]=-(4375/768)*et[4,-1]**4*cos_i*cos_b*sin_i+8125/768*et[4,-1]**6*cos_i*cos_b*sin_i
-        Sx05[5,-1]=-(81/10)*et[5,-1]**5*cos_i*cos_b*sin_i
-        Sx05[6,-1]=-((117649*et[6,-1]**6*cos_i*cos_b*sin_i)/10240)
-
-
-        Sx05[0,3]=25/256*et[0,3]**4*cos_i*cos_3b*sin_i+(179*et[0,3]**6*cos_i*cos_3b*sin_i)/3840
-        Sx05[1,3]=13/120*et[1,3]**5*cos_i*cos_3b*sin_i
-        Sx05[2,3]=(1233*et[2,3]**6*cos_i*cos_3b*sin_i)/10240  
-
-
-        Sx05[0,-3]=19/16*et[0,-3]**2*cos_i*cos_3b*sin_i-65/96*et[0,-3]**4*cos_i*cos_3b*sin_i-(19*et[0,-3]**6*cos_i*cos_3b*sin_i)/6144
-        Sx05[1,-3]=-6*et[1,-3]*cos_i*cos_3b*sin_i+11*et[1,-3]**3*cos_i*cos_3b*sin_i-133/24*et[1,-3]**5*cos_i*cos_3b*sin_i
-        Sx05[2,-3]=9/2*cos_i*cos_3b*sin_i-27*et[2,-3]**2*cos_i*cos_3b*sin_i+5319/128*et[2,-3]**4*cos_i*cos_3b*sin_i-3141/128*et[2,-3]**6*cos_i*cos_3b*sin_i
-        Sx05[3,-3]=16*et[3,-3]*cos_i*cos_3b*sin_i-76*et[3,-3]**3*cos_i*cos_3b*sin_i+352/3*et[3,-3]**5*cos_i*cos_3b*sin_i
-        Sx05[4,-3]=625/16*et[4,-3]**2*cos_i*cos_3b*sin_i-5625/32*et[4,-3]**4*cos_i*cos_3b*sin_i+(1746875*et[4,-3]**6*cos_i*cos_3b*sin_i)/6144
-        Sx05[5,-3]=81*et[5,-3]**3*cos_i*cos_3b*sin_i-729/2*et[5,-3]**5*cos_i*cos_3b*sin_i
-        Sx05[6,-3]=117649/768*et[6,-3]**4*cos_i*cos_3b*sin_i-(2705927*et[6,-3]**6*cos_i*cos_3b*sin_i)/3840
-        Sx05[7,-3]=4096/15*et[7,-3]**5*cos_i*cos_3b*sin_i
-        Sx05[8,-3]=(4782969*et[8,-3]**6*cos_i*cos_3b*sin_i)/10240        
-
-
-        ###################cplus1, 2D array####################
-        Cp1 = np.zeros((10,9))
-
-        Cp1[0,2]=et[0,2]**5*((11341*cos_2b)/4608-(1561*eta*cos_2b)/4608+1243/512*cos_i**2*cos_2b-(1099*eta*cos_i**2*cos_2b)/4608-13/576*cos_2b*sin_i**2+13/192*eta*cos_2b*sin_i**2-13/576*cos_i**2*cos_2b*sin_i**2+13/192*eta*cos_i**2*cos_2b*sin_i**2)+et[0,2]**3*(913/288*cos_2b-269/288*eta*cos_2b+91/32*cos_i**2*cos_2b+13/288*eta*cos_i**2*cos_2b-13/144*cos_2b*sin_i**2+13/48*eta*cos_2b*sin_i**2-13/144*cos_i**2*cos_2b*sin_i**2+13/48*eta*cos_i**2*cos_2b*sin_i**2)
-        Cp1[1,2]=et[1,2]**6*(137/80*cos_2b-53/288*eta*cos_2b+419/240*cos_i**2*cos_2b-(409*eta*cos_i**2*cos_2b)/1440)+et[1,2]**4*(29/9*cos_2b-17/16*eta*cos_2b+17/6*cos_i**2*cos_2b+5/48*eta*cos_i**2*cos_2b-5/72*cos_2b*sin_i**2+5/24*eta*cos_2b*sin_i**2-5/72*cos_i**2*cos_2b*sin_i**2+5/24*eta*cos_i**2*cos_2b*sin_i**2)
-        Cp1[2,2]=et[2,2]**5*(1917/512*cos_2b-(3297*eta*cos_2b)/2560+(8343*cos_i**2*cos_2b)/2560+(429*eta*cos_i**2*cos_2b)/2560-(81*cos_2b*sin_i**2)/1280+(243*eta*cos_2b*sin_i**2)/1280-(81*cos_i**2*cos_2b*sin_i**2)/1280+(243*eta*cos_i**2*cos_2b*sin_i**2)/1280)
-        Cp1[3,2]=et[3,2]**6*((4903*cos_2b)/1080-173/108*eta*cos_2b+157/40*cos_i**2*cos_2b+131/540*eta*cos_i**2*cos_2b-17/270*cos_2b*sin_i**2+17/90*eta*cos_2b*sin_i**2-17/270*cos_i**2*cos_2b*sin_i**2+17/90*eta*cos_i**2*cos_2b*sin_i**2)
-
-        Cp1[0,-2]=et[0,-2]**5*(-((3631*cos_2b)/2304)+(1543*eta*cos_2b)/2304-947/768*cos_i**2*cos_2b-(827*eta*cos_i**2*cos_2b)/2304+(79*cos_2b*sin_i**2)/1152-79/384*eta*cos_2b*sin_i**2+(79*cos_i**2*cos_2b*sin_i**2)/1152-79/384*eta*cos_i**2*cos_2b*sin_i**2)+et[0,-2]**3*(-(121/32)*cos_2b-109/96*eta*cos_2b-179/32*cos_i**2*cos_2b+413/96*eta*cos_i**2*cos_2b-1/8*cos_2b*sin_i**2+3/8*eta*cos_2b*sin_i**2-1/8*cos_i**2*cos_2b*sin_i**2+3/8*eta*cos_i**2*cos_2b*sin_i**2)+et[0,-2]*(145/12*cos_2b+5/4*eta*cos_2b+53/4*cos_i**2*cos_2b-9/4*eta*cos_i**2*cos_2b-1/6*cos_2b*sin_i**2+1/2*eta*cos_2b*sin_i**2-1/6*cos_i**2*cos_2b*sin_i**2+1/2*eta*cos_i**2*cos_2b*sin_i**2)
-        Cp1[1,-2]= 17/3*cos_2b-13/3*eta*cos_2b+3*cos_i**2*cos_2b+11/3*eta*cos_i**2*cos_2b+n_2b3*cos_2b*sin_i**2-2*eta*cos_2b*sin_i**2+n_2b3*cos_i**2*cos_2b*sin_i**2-2*eta*cos_i**2*cos_2b*sin_i**2+et[1,-2]**2*(235/6*cos_2b+89/6*eta*cos_2b+105/2*cos_i**2*cos_2b-151/6*eta*cos_i**2*cos_2b+n_2b3*cos_2b*sin_i**2-2*eta*cos_2b*sin_i**2+n_2b3*cos_i**2*cos_2b*sin_i**2-2*eta*cos_i**2*cos_2b*sin_i**2)+et[1,-2]**6*(2843/864*cos_2b+4085/864*eta*cos_2b+707/96*cos_i**2*cos_2b-6475/864*eta*cos_i**2*cos_2b+35/54*cos_2b*sin_i**2-35/18*eta*cos_2b*sin_i**2+35/54*cos_i**2*cos_2b*sin_i**2-35/18*eta*cos_i**2*cos_2b*sin_i**2)+et[1,-2]**4*(-(437/48)*cos_2b-683/48*eta*cos_2b-367/16*cos_i**2*cos_2b+1309/48*eta*cos_i**2*cos_2b-43/24*cos_2b*sin_i**2+43/8*eta*cos_2b*sin_i**2-43/24*cos_i**2*cos_2b*sin_i**2+43/8*eta*cos_i**2*cos_2b*sin_i**2)
-        Cp1[2,-2]=et[2,-2]*(-(9/4)*cos_2b-75/4*eta*cos_2b-63/4*cos_i**2*cos_2b+87/4*eta*cos_i**2*cos_2b)+et[2,-2]**3*(2511/32*cos_2b+1821/32*eta*cos_2b+4077/32*cos_i**2*cos_2b-2877/32*eta*cos_i**2*cos_2b+81/16*cos_2b*sin_i**2-243/16*eta*cos_2b*sin_i**2+81/16*cos_i**2*cos_2b*sin_i**2-243/16*eta*cos_i**2*cos_2b*sin_i**2)+et[2,-2]**5*(-(8379/256)*cos_2b-14793/256*eta*cos_2b-21717/256*cos_i**2*cos_2b+25221/256*eta*cos_i**2*cos_2b-243/32*cos_2b*sin_i**2+729/32*eta*cos_2b*sin_i**2-243/32*cos_i**2*cos_2b*sin_i**2+729/32*eta*cos_i**2*cos_2b*sin_i**2)
-        Cp1[3,-2]=et[3,-2]**4*(1294/9*cos_2b+458/3*eta*cos_2b+818/3*cos_i**2*cos_2b-234*eta*cos_i**2*cos_2b+148/9*cos_2b*sin_i**2-148/3*eta*cos_2b*sin_i**2+148/9*cos_i**2*cos_2b*sin_i**2-148/3*eta*cos_i**2*cos_2b*sin_i**2)+et[3,-2]**2*(-(62/3)*cos_2b-148/3*eta*cos_2b-58*cos_i**2*cos_2b+188/3*eta*cos_i**2*cos_2b-8/3*cos_2b*sin_i**2+8*eta*cos_2b*sin_i**2-8/3*cos_i**2*cos_2b*sin_i**2+8*eta*cos_i**2*cos_2b*sin_i**2)+et[3,-2]**6*(-(2047/24)*cos_2b-6161/36*eta*cos_2b-5639/24*cos_i**2*cos_2b+10003/36*eta*cos_i**2*cos_2b-139/6*cos_2b*sin_i**2+139/2*eta*cos_2b*sin_i**2-139/6*cos_i**2*cos_2b*sin_i**2+139/2*eta*cos_i**2*cos_2b*sin_i**2)
-        Cp1[4,-2]=et[4,-2]**5*((1160825*cos_2b)/4608+(1594375*eta*cos_2b)/4608+277175/512*cos_i**2*cos_2b-(2406875*eta*cos_i**2*cos_2b)/4608+(94375*cos_2b*sin_i**2)/2304-94375/768*eta*cos_2b*sin_i**2+(94375*cos_i**2*cos_2b*sin_i**2)/2304-94375/768*eta*cos_i**2*cos_2b*sin_i**2)+et[4,-2]**3*(-(15175/288)*cos_2b-30625/288*eta*cos_2b-4325/32*cos_i**2*cos_2b+40625/288*eta*cos_i**2*cos_2b-625/72*cos_2b*sin_i**2+625/24*eta*cos_2b*sin_i**2-625/72*cos_i**2*cos_2b*sin_i**2+625/24*eta*cos_i**2*cos_2b*sin_i**2)
-        Cp1[5,-2]=et[5,-2]**6*(68409/160*cos_2b+11367/16*eta*cos_2b+163017/160*cos_i**2*cos_2b-85077/80*eta*cos_i**2*cos_2b+891/10*cos_2b*sin_i**2-2673/10*eta*cos_2b*sin_i**2+891/10*cos_i**2*cos_2b*sin_i**2-2673/10*eta*cos_i**2*cos_2b*sin_i**2)+et[5,-2]**4*(-(1665/16)*cos_2b-1647/8*eta*cos_2b-4257/16*cos_i**2*cos_2b+2241/8*eta*cos_i**2*cos_2b-81/4*cos_2b*sin_i**2+243/4*eta*cos_2b*sin_i**2-81/4*cos_i**2*cos_2b*sin_i**2+243/4*eta*cos_i**2*cos_2b*sin_i**2)
-        Cp1[6,-2]=et[6,-2]**5*(-((844711*cos_2b)/4608)-(8588377*eta*cos_2b)/23040-(3682399*cos_i**2*cos_2b)/7680+(11882549*eta*cos_i**2*cos_2b)/23040-(117649*cos_2b*sin_i**2)/2880+117649/960*eta*cos_2b*sin_i**2-(117649*cos_i**2*cos_2b*sin_i**2)/2880+117649/960*eta*cos_i**2*cos_2b*sin_i**2)
-        Cp1[7,-2]=et[7,-2]**6*(-(81713/270)*cos_2b-17408/27*eta*cos_2b-24553/30*cos_i**2*cos_2b+121856/135*eta*cos_i**2*cos_2b-2048/27*cos_2b*sin_i**2+2048/9*eta*cos_2b*sin_i**2-2048/27*cos_i**2*cos_2b*sin_i**2+2048/9*eta*cos_i**2*cos_2b*sin_i**2)
-
-
-        Cp1[0,4]=et[0,4]**5*((1091*cos_4b*sin_i**2)/92160-(1091*eta*cos_4b*sin_i**2)/30720+(1091*cos_i**2*cos_4b*sin_i**2)/92160-(1091*eta*cos_i**2*cos_4b*sin_i**2)/30720)
-        Cp1[1,4]=et[1,4]**6*((71*cos_4b*sin_i**2)/4320-(71*eta*cos_4b*sin_i**2)/1440+(71*cos_i**2*cos_4b*sin_i**2)/4320-(71*eta*cos_i**2*cos_4b*sin_i**2)/1440)
-
-
-        Cp1[0,-4]=et[0,-4]**3*((187*cos_4b*sin_i**2)/1152-187/384*eta*cos_4b*sin_i**2+(187*cos_i**2*cos_4b*sin_i**2)/1152-187/384*eta*cos_i**2*cos_4b*sin_i**2)+et[0,-4]**5*(-((1769*cos_4b*sin_i**2)/18432)+(1769*eta*cos_4b*sin_i**2)/6144-(1769*cos_i**2*cos_4b*sin_i**2)/18432+(1769*eta*cos_i**2*cos_4b*sin_i**2)/6144)
-        Cp1[1,-4]=et[1,-4]**4*(137/36*cos_4b*sin_i**2-137/12*eta*cos_4b*sin_i**2+137/36*cos_i**2*cos_4b*sin_i**2-137/12*eta*cos_i**2*cos_4b*sin_i**2)+et[1,-4]**6*(-(57/32)*cos_4b*sin_i**2+171/32*eta*cos_4b*sin_i**2-57/32*cos_i**2*cos_4b*sin_i**2+171/32*eta*cos_i**2*cos_4b*sin_i**2)+et[1,-4]**2*(-(7/3)*cos_4b*sin_i**2+7*eta*cos_4b*sin_i**2-7/3*cos_i**2*cos_4b*sin_i**2+7*eta*cos_i**2*cos_4b*sin_i**2)
-        Cp1[2,-4]=et[2,-4]**5*((25191*cos_4b*sin_i**2)/1024-(75573*eta*cos_4b*sin_i**2)/1024+(25191*cos_i**2*cos_4b*sin_i**2)/1024-(75573*eta*cos_i**2*cos_4b*sin_i**2)/1024)+et[2,-4]*(81/16*cos_4b*sin_i**2-243/16*eta*cos_4b*sin_i**2+81/16*cos_i**2*cos_4b*sin_i**2-243/16*eta*cos_i**2*cos_4b*sin_i**2)+et[2,-4]**3*(-(2511/128)*cos_4b*sin_i**2+7533/128*eta*cos_4b*sin_i**2-2511/128*cos_i**2*cos_4b*sin_i**2+7533/128*eta*cos_i**2*cos_4b*sin_i**2)
-        Cp1[3,-4]=-(8/3)*cos_4b*sin_i**2+8*eta*cos_4b*sin_i**2-8/3*cos_i**2*cos_4b*sin_i**2+8*eta*cos_i**2*cos_4b*sin_i**2+et[3,-4]**6*(2768/27*cos_4b*sin_i**2-2768/9*eta*cos_4b*sin_i**2+2768/27*cos_i**2*cos_4b*sin_i**2-2768/9*eta*cos_i**2*cos_4b*sin_i**2)+et[3,-4]**2*(88/3*cos_4b*sin_i**2-88*eta*cos_4b*sin_i**2+88/3*cos_i**2*cos_4b*sin_i**2-88*eta*cos_i**2*cos_4b*sin_i**2)+et[3,-4]**4*(-(253/3)*cos_4b*sin_i**2+253*eta*cos_4b*sin_i**2-253/3*cos_i**2*cos_4b*sin_i**2+253*eta*cos_i**2*cos_4b*sin_i**2)
-        Cp1[4,-4]=et[4,-4]**3*(13125/128*cos_4b*sin_i**2-39375/128*eta*cos_4b*sin_i**2+13125/128*cos_i**2*cos_4b*sin_i**2-39375/128*eta*cos_i**2*cos_4b*sin_i**2)+et[4,-4]*(-(625/48)*cos_4b*sin_i**2+625/16*eta*cos_4b*sin_i**2-625/48*cos_i**2*cos_4b*sin_i**2+625/16*eta*cos_i**2*cos_4b*sin_i**2)+et[4,-4]**5*(-((2493125*cos_4b*sin_i**2)/9216)+(2493125*eta*cos_4b*sin_i**2)/3072-(2493125*cos_i**2*cos_4b*sin_i**2)/9216+(2493125*eta*cos_i**2*cos_4b*sin_i**2)/3072)
-        Cp1[5,-4]=et[5,-4]**4*(567/2*cos_4b*sin_i**2-1701/2*eta*cos_4b*sin_i**2+567/2*cos_i**2*cos_4b*sin_i**2-1701/2*eta*cos_i**2*cos_4b*sin_i**2)+et[5,-4]**2*(-(81/2)*cos_4b*sin_i**2+243/2*eta*cos_4b*sin_i**2-81/2*cos_i**2*cos_4b*sin_i**2+243/2*eta*cos_i**2*cos_4b*sin_i**2)+et[5,-4]**6*(-(11745/16)*cos_4b*sin_i**2+35235/16*eta*cos_4b*sin_i**2-11745/16*cos_i**2*cos_4b*sin_i**2+35235/16*eta*cos_i**2*cos_4b*sin_i**2)
-        Cp1[6,-4]=et[6,-4]**5*((12588443*cos_4b*sin_i**2)/18432-(12588443*eta*cos_4b*sin_i**2)/6144+(12588443*cos_i**2*cos_4b*sin_i**2)/18432-(12588443*eta*cos_i**2*cos_4b*sin_i**2)/6144)+et[6,-4]**3*(-((117649*cos_4b*sin_i**2)/1152)+117649/384*eta*cos_4b*sin_i**2-(117649*cos_i**2*cos_4b*sin_i**2)/1152+117649/384*eta*cos_i**2*cos_4b*sin_i**2)
-        Cp1[7,-4]=et[7,-4]**6*(22528/15*cos_4b*sin_i**2-22528/5*eta*cos_4b*sin_i**2+22528/15*cos_i**2*cos_4b*sin_i**2-22528/5*eta*cos_i**2*cos_4b*sin_i**2)+et[7,-4]**4*(-(2048/9)*cos_4b*sin_i**2+2048/3*eta*cos_4b*sin_i**2-2048/9*cos_i**2*cos_4b*sin_i**2+2048/3*eta*cos_i**2*cos_4b*sin_i**2)
-        Cp1[8,-4]=et[8,-4]**5*(-((4782969*cos_4b*sin_i**2)/10240)+(14348907*eta*cos_4b*sin_i**2)/10240-(4782969*cos_i**2*cos_4b*sin_i**2)/10240+(14348907*eta*cos_i**2*cos_4b*sin_i**2)/10240)
-        Cp1[9,-4]=et[9,-4]**6*(-(390625/432)*cos_4b*sin_i**2+390625/144*eta*cos_4b*sin_i**2-390625/432*cos_i**2*cos_4b*sin_i**2+390625/144*eta*cos_i**2*cos_4b*sin_i**2)    
-
-        Cp1[0,0]=et[0,0]**3*(-(11/16)+(23*eta)/48+(11*cos_i**2)/16-23/48*eta*cos_i**2+(9*sin_i**2)/64-27/64*eta*sin_i**2+9/64*cos_i**2*sin_i**2-27/64*eta*cos_i**2*sin_i**2)+et[0,0]*(-(n_9b2)+eta/6+(9*cos_i**2)/2-1/6*eta*cos_i**2+sin_i**2/8-3/8*eta*sin_i**2+1/8*cos_i**2*sin_i**2-3/8*eta*cos_i**2*sin_i**2)+et[0,0]**5*(-(235/128)-(47*eta)/1152+(235*cos_i**2)/128+(47*eta*cos_i**2)/1152-(19*sin_i**2)/1536+19/512*eta*sin_i**2-(19*cos_i**2*sin_i**2)/1536+19/512*eta*cos_i**2*sin_i**2)
-        Cp1[1,0]=et[1,0]**4*(5/2+(35*eta)/18-(5*cos_i**2)/2-35/18*eta*cos_i**2+(7*sin_i**2)/12-7/4*eta*sin_i**2+7/12*cos_i**2*sin_i**2-7/4*eta*cos_i**2*sin_i**2)+et[1,0]**6*(-(103/48)-(59*eta)/144+(103*cos_i**2)/48+59/144*eta*cos_i**2-sin_i**2/8+3/8*eta*sin_i**2-1/8*cos_i**2*sin_i**2+3/8*eta*cos_i**2*sin_i**2)+et[1,0]**2*(-(15/2)-(11*eta)/6+(15*cos_i**2)/2+11/6*eta*cos_i**2-sin_i**2/2+3/2*eta*sin_i**2-1/2*cos_i**2*sin_i**2+3/2*eta*cos_i**2*sin_i**2)
-        Cp1[2,0]=et[2,0]**5*(2097/256+(1269*eta)/256-(2097*cos_i**2)/256-1269/256*eta*cos_i**2+(1539*sin_i**2)/1024-(4617*eta*sin_i**2)/1024+(1539*cos_i**2*sin_i**2)/1024-(4617*eta*cos_i**2*sin_i**2)/1024)+et[2,0]**3*(-(189/16)-(69*eta)/16+(189*cos_i**2)/16+69/16*eta*cos_i**2-(81*sin_i**2)/64+243/64*eta*sin_i**2-81/64*cos_i**2*sin_i**2+243/64*eta*cos_i**2*sin_i**2)
-        Cp1[3,0]=et[3,0]**6*(272/15+(472*eta)/45-(272*cos_i**2)/15-472/45*eta*cos_i**2+(16*sin_i**2)/5-48/5*eta*sin_i**2+16/5*cos_i**2*sin_i**2-48/5*eta*cos_i**2*sin_i**2)+et[3,0]**4*(-18-(70*eta)/9+18*cos_i**2+70/9*eta*cos_i**2-(7*sin_i**2)/3+7*eta*sin_i**2-7/3*cos_i**2*sin_i**2+7*eta*cos_i**2*sin_i**2)
-        Cp1[4,0]=et[4,0]**5*(-(6875/256)-(29375*eta)/2304+(6875*cos_i**2)/256+(29375*eta*cos_i**2)/2304-(11875*sin_i**2)/3072+(11875*eta*sin_i**2)/1024-(11875*cos_i**2*sin_i**2)/3072+(11875*eta*cos_i**2*sin_i**2)/1024)
-        Cp1[5,0]=et[5,0]**6*(-(3159/80)-(1593*eta)/80+(3159*cos_i**2)/80+1593/80*eta*cos_i**2-(243*sin_i**2)/40+729/40*eta*sin_i**2-243/40*cos_i**2*sin_i**2+729/40*eta*cos_i**2*sin_i**2)
-
-        ###################splus1, 2D array####################
-        Sp1 = np.zeros((10,9))
-
-        Sp1[0,2]=et[0,2]**3*(-(913/288)*sin_2b+269/288*eta*sin_2b-91/32*cos_i**2*sin_2b-13/288*eta*cos_i**2*sin_2b+13/144*sin_i**2*sin_2b-13/48*eta*sin_i**2*sin_2b+13/144*cos_i**2*sin_i**2*sin_2b-13/48*eta*cos_i**2*sin_i**2*sin_2b)+et[0,2]**5*(-((11341*sin_2b)/4608)+(1561*eta*sin_2b)/4608-1243/512*cos_i**2*sin_2b+(1099*eta*cos_i**2*sin_2b)/4608+13/576*sin_i**2*sin_2b-13/192*eta*sin_i**2*sin_2b+13/576*cos_i**2*sin_i**2*sin_2b-13/192*eta*cos_i**2*sin_i**2*sin_2b)
-        Sp1[1,2]=et[1,2]**6*(-(137/80)*sin_2b+53/288*eta*sin_2b-419/240*cos_i**2*sin_2b+(409*eta*cos_i**2*sin_2b)/1440)+et[1,2]**4*(-(29/9)*sin_2b+17/16*eta*sin_2b-17/6*cos_i**2*sin_2b-5/48*eta*cos_i**2*sin_2b+5/72*sin_i**2*sin_2b-5/24*eta*sin_i**2*sin_2b+5/72*cos_i**2*sin_i**2*sin_2b-5/24*eta*cos_i**2*sin_i**2*sin_2b)
-        Sp1[2,2]=et[2,2]**5*(-(1917/512)*sin_2b+(3297*eta*sin_2b)/2560-(8343*cos_i**2*sin_2b)/2560-(429*eta*cos_i**2*sin_2b)/2560+(81*sin_i**2*sin_2b)/1280-(243*eta*sin_i**2*sin_2b)/1280+(81*cos_i**2*sin_i**2*sin_2b)/1280-(243*eta*cos_i**2*sin_i**2*sin_2b)/1280)
-        Sp1[3,2]=et[3,2]**6*(-((4903*sin_2b)/1080)+173/108*eta*sin_2b-157/40*cos_i**2*sin_2b-131/540*eta*cos_i**2*sin_2b+17/270*sin_i**2*sin_2b-17/90*eta*sin_i**2*sin_2b+17/270*cos_i**2*sin_i**2*sin_2b-17/90*eta*cos_i**2*sin_i**2*sin_2b)
-
-
-        Sp1[0,-2]=et[0,-2]**5*(-((3631*sin_2b)/2304)+(1543*eta*sin_2b)/2304-947/768*cos_i**2*sin_2b-(827*eta*cos_i**2*sin_2b)/2304+(79*sin_i**2*sin_2b)/1152-79/384*eta*sin_i**2*sin_2b+(79*cos_i**2*sin_i**2*sin_2b)/1152-79/384*eta*cos_i**2*sin_i**2*sin_2b)+et[0,-2]**3*(-(121/32)*sin_2b-109/96*eta*sin_2b-179/32*cos_i**2*sin_2b+413/96*eta*cos_i**2*sin_2b-1/8*sin_i**2*sin_2b+3/8*eta*sin_i**2*sin_2b-1/8*cos_i**2*sin_i**2*sin_2b+3/8*eta*cos_i**2*sin_i**2*sin_2b)+et[0,-2]*(145/12*sin_2b+5/4*eta*sin_2b+53/4*cos_i**2*sin_2b-9/4*eta*cos_i**2*sin_2b-1/6*sin_i**2*sin_2b+1/2*eta*sin_i**2*sin_2b-1/6*cos_i**2*sin_i**2*sin_2b+1/2*eta*cos_i**2*sin_i**2*sin_2b)
-        Sp1[1,-2]= 17/3*sin_2b-13/3*eta*sin_2b+3*cos_i**2*sin_2b+11/3*eta*cos_i**2*sin_2b+n_2b3*sin_i**2*sin_2b-2*eta*sin_i**2*sin_2b+n_2b3*cos_i**2*sin_i**2*sin_2b-2*eta*cos_i**2*sin_i**2*sin_2b+et[1,-2]**2*(235/6*sin_2b+89/6*eta*sin_2b+105/2*cos_i**2*sin_2b-151/6*eta*cos_i**2*sin_2b+n_2b3*sin_i**2*sin_2b-2*eta*sin_i**2*sin_2b+n_2b3*cos_i**2*sin_i**2*sin_2b-2*eta*cos_i**2*sin_i**2*sin_2b)+et[1,-2]**6*(2843/864*sin_2b+4085/864*eta*sin_2b+707/96*cos_i**2*sin_2b-6475/864*eta*cos_i**2*sin_2b+35/54*sin_i**2*sin_2b-35/18*eta*sin_i**2*sin_2b+35/54*cos_i**2*sin_i**2*sin_2b-35/18*eta*cos_i**2*sin_i**2*sin_2b)+et[1,-2]**4*(-(437/48)*sin_2b-683/48*eta*sin_2b-367/16*cos_i**2*sin_2b+1309/48*eta*cos_i**2*sin_2b-43/24*sin_i**2*sin_2b+43/8*eta*sin_i**2*sin_2b-43/24*cos_i**2*sin_i**2*sin_2b+43/8*eta*cos_i**2*sin_i**2*sin_2b)
-        Sp1[2,-2]=et[2,-2]*(-(9/4)*sin_2b-75/4*eta*sin_2b-63/4*cos_i**2*sin_2b+87/4*eta*cos_i**2*sin_2b)+et[2,-2]**3*(2511/32*sin_2b+1821/32*eta*sin_2b+4077/32*cos_i**2*sin_2b-2877/32*eta*cos_i**2*sin_2b+81/16*sin_i**2*sin_2b-243/16*eta*sin_i**2*sin_2b+81/16*cos_i**2*sin_i**2*sin_2b-243/16*eta*cos_i**2*sin_i**2*sin_2b)+et[2,-2]**5*(-(8379/256)*sin_2b-14793/256*eta*sin_2b-21717/256*cos_i**2*sin_2b+25221/256*eta*cos_i**2*sin_2b-243/32*sin_i**2*sin_2b+729/32*eta*sin_i**2*sin_2b-243/32*cos_i**2*sin_i**2*sin_2b+729/32*eta*cos_i**2*sin_i**2*sin_2b)
-        Sp1[3,-2]=et[3,-2]**4*(1294/9*sin_2b+458/3*eta*sin_2b+818/3*cos_i**2*sin_2b-234*eta*cos_i**2*sin_2b+148/9*sin_i**2*sin_2b-148/3*eta*sin_i**2*sin_2b+148/9*cos_i**2*sin_i**2*sin_2b-148/3*eta*cos_i**2*sin_i**2*sin_2b)+et[3,-2]**2*(-(62/3)*sin_2b-148/3*eta*sin_2b-58*cos_i**2*sin_2b+188/3*eta*cos_i**2*sin_2b-8/3*sin_i**2*sin_2b+8*eta*sin_i**2*sin_2b-8/3*cos_i**2*sin_i**2*sin_2b+8*eta*cos_i**2*sin_i**2*sin_2b)+et[3,-2]**6*(-(2047/24)*sin_2b-6161/36*eta*sin_2b-5639/24*cos_i**2*sin_2b+10003/36*eta*cos_i**2*sin_2b-139/6*sin_i**2*sin_2b+139/2*eta*sin_i**2*sin_2b-139/6*cos_i**2*sin_i**2*sin_2b+139/2*eta*cos_i**2*sin_i**2*sin_2b)
-        Sp1[4,-2]=et[4,-2]**5*((1160825*sin_2b)/4608+(1594375*eta*sin_2b)/4608+277175/512*cos_i**2*sin_2b-(2406875*eta*cos_i**2*sin_2b)/4608+(94375*sin_i**2*sin_2b)/2304-94375/768*eta*sin_i**2*sin_2b+(94375*cos_i**2*sin_i**2*sin_2b)/2304-94375/768*eta*cos_i**2*sin_i**2*sin_2b)+et[4,-2]**3*(-(15175/288)*sin_2b-30625/288*eta*sin_2b-4325/32*cos_i**2*sin_2b+40625/288*eta*cos_i**2*sin_2b-625/72*sin_i**2*sin_2b+625/24*eta*sin_i**2*sin_2b-625/72*cos_i**2*sin_i**2*sin_2b+625/24*eta*cos_i**2*sin_i**2*sin_2b)
-        Sp1[5,-2]=et[5,-2]**6*(68409/160*sin_2b+11367/16*eta*sin_2b+163017/160*cos_i**2*sin_2b-85077/80*eta*cos_i**2*sin_2b+891/10*sin_i**2*sin_2b-2673/10*eta*sin_i**2*sin_2b+891/10*cos_i**2*sin_i**2*sin_2b-2673/10*eta*cos_i**2*sin_i**2*sin_2b)+et[5,-2]**4*(-(1665/16)*sin_2b-1647/8*eta*sin_2b-4257/16*cos_i**2*sin_2b+2241/8*eta*cos_i**2*sin_2b-81/4*sin_i**2*sin_2b+243/4*eta*sin_i**2*sin_2b-81/4*cos_i**2*sin_i**2*sin_2b+243/4*eta*cos_i**2*sin_i**2*sin_2b)
-        Sp1[6,-2]=et[6,-2]**5*(-((844711*sin_2b)/4608)-(8588377*eta*sin_2b)/23040-(3682399*cos_i**2*sin_2b)/7680+(11882549*eta*cos_i**2*sin_2b)/23040-(117649*sin_i**2*sin_2b)/2880+117649/960*eta*sin_i**2*sin_2b-(117649*cos_i**2*sin_i**2*sin_2b)/2880+117649/960*eta*cos_i**2*sin_i**2*sin_2b)
-        Sp1[7,-2]=et[7,-2]**6*(-(81713/270)*sin_2b-17408/27*eta*sin_2b-24553/30*cos_i**2*sin_2b+121856/135*eta*cos_i**2*sin_2b-2048/27*sin_i**2*sin_2b+2048/9*eta*sin_i**2*sin_2b-2048/27*cos_i**2*sin_i**2*sin_2b+2048/9*eta*cos_i**2*sin_i**2*sin_2b)  
-
-
-        Sp1[0,4]=et[0,4]**5*(-((1091*sin_i**2*sin_4b)/92160)+(1091*eta*sin_i**2*sin_4b)/30720-(1091*cos_i**2*sin_i**2*sin_4b)/92160+(1091*eta*cos_i**2*sin_i**2*sin_4b)/30720)
-        Sp1[1,4]=et[1,4]**6*(-((71*sin_i**2*sin_4b)/4320)+(71*eta*sin_i**2*sin_4b)/1440-(71*cos_i**2*sin_i**2*sin_4b)/4320+(71*eta*cos_i**2*sin_i**2*sin_4b)/1440) 
-
-
-        Sp1[0,-4]=et[0,-4]**3*((187*sin_i**2*sin_4b)/1152-187/384*eta*sin_i**2*sin_4b+(187*cos_i**2*sin_i**2*sin_4b)/1152-187/384*eta*cos_i**2*sin_i**2*sin_4b)+et[0,-4]**5*(-((1769*sin_i**2*sin_4b)/18432)+(1769*eta*sin_i**2*sin_4b)/6144-(1769*cos_i**2*sin_i**2*sin_4b)/18432+(1769*eta*cos_i**2*sin_i**2*sin_4b)/6144)
-        Sp1[1,-4]=et[1,-4]**4*(137/36*sin_i**2*sin_4b-137/12*eta*sin_i**2*sin_4b+137/36*cos_i**2*sin_i**2*sin_4b-137/12*eta*cos_i**2*sin_i**2*sin_4b)+et[1,-4]**6*(-(57/32)*sin_i**2*sin_4b+171/32*eta*sin_i**2*sin_4b-57/32*cos_i**2*sin_i**2*sin_4b+171/32*eta*cos_i**2*sin_i**2*sin_4b)+et[1,-4]**2*(-(7/3)*sin_i**2*sin_4b+7*eta*sin_i**2*sin_4b-7/3*cos_i**2*sin_i**2*sin_4b+7*eta*cos_i**2*sin_i**2*sin_4b)
-        Sp1[2,-4]=et[2,-4]**5*((25191*sin_i**2*sin_4b)/1024-(75573*eta*sin_i**2*sin_4b)/1024+(25191*cos_i**2*sin_i**2*sin_4b)/1024-(75573*eta*cos_i**2*sin_i**2*sin_4b)/1024)+et[2,-4]*(81/16*sin_i**2*sin_4b-243/16*eta*sin_i**2*sin_4b+81/16*cos_i**2*sin_i**2*sin_4b-243/16*eta*cos_i**2*sin_i**2*sin_4b)+et[2,-4]**3*(-(2511/128)*sin_i**2*sin_4b+7533/128*eta*sin_i**2*sin_4b-2511/128*cos_i**2*sin_i**2*sin_4b+7533/128*eta*cos_i**2*sin_i**2*sin_4b)
-        Sp1[3,-4]=-(8/3)*sin_i**2*sin_4b+8*eta*sin_i**2*sin_4b-8/3*cos_i**2*sin_i**2*sin_4b+8*eta*cos_i**2*sin_i**2*sin_4b+et[3,-4]**6*(2768/27*sin_i**2*sin_4b-2768/9*eta*sin_i**2*sin_4b+2768/27*cos_i**2*sin_i**2*sin_4b-2768/9*eta*cos_i**2*sin_i**2*sin_4b)+et[3,-4]**2*(88/3*sin_i**2*sin_4b-88*eta*sin_i**2*sin_4b+88/3*cos_i**2*sin_i**2*sin_4b-88*eta*cos_i**2*sin_i**2*sin_4b)+et[3,-4]**4*(-(253/3)*sin_i**2*sin_4b+253*eta*sin_i**2*sin_4b-253/3*cos_i**2*sin_i**2*sin_4b+253*eta*cos_i**2*sin_i**2*sin_4b)
-        Sp1[4,-4]=et[4,-4]**3*(13125/128*sin_i**2*sin_4b-39375/128*eta*sin_i**2*sin_4b+13125/128*cos_i**2*sin_i**2*sin_4b-39375/128*eta*cos_i**2*sin_i**2*sin_4b)+et[4,-4]*(-(625/48)*sin_i**2*sin_4b+625/16*eta*sin_i**2*sin_4b-625/48*cos_i**2*sin_i**2*sin_4b+625/16*eta*cos_i**2*sin_i**2*sin_4b)+et[4,-4]**5*(-((2493125*sin_i**2*sin_4b)/9216)+(2493125*eta*sin_i**2*sin_4b)/3072-(2493125*cos_i**2*sin_i**2*sin_4b)/9216+(2493125*eta*cos_i**2*sin_i**2*sin_4b)/3072)
-        Sp1[5,-4]=et[5,-4]**4*(567/2*sin_i**2*sin_4b-1701/2*eta*sin_i**2*sin_4b+567/2*cos_i**2*sin_i**2*sin_4b-1701/2*eta*cos_i**2*sin_i**2*sin_4b)+et[5,-4]**2*(-(81/2)*sin_i**2*sin_4b+243/2*eta*sin_i**2*sin_4b-81/2*cos_i**2*sin_i**2*sin_4b+243/2*eta*cos_i**2*sin_i**2*sin_4b)+et[5,-4]**6*(-(11745/16)*sin_i**2*sin_4b+35235/16*eta*sin_i**2*sin_4b-11745/16*cos_i**2*sin_i**2*sin_4b+35235/16*eta*cos_i**2*sin_i**2*sin_4b)
-        Sp1[6,-4]=et[6,-4]**5*((12588443*sin_i**2*sin_4b)/18432-(12588443*eta*sin_i**2*sin_4b)/6144+(12588443*cos_i**2*sin_i**2*sin_4b)/18432-(12588443*eta*cos_i**2*sin_i**2*sin_4b)/6144)+et[6,-4]**3*(-((117649*sin_i**2*sin_4b)/1152)+117649/384*eta*sin_i**2*sin_4b-(117649*cos_i**2*sin_i**2*sin_4b)/1152+117649/384*eta*cos_i**2*sin_i**2*sin_4b)
-        Sp1[7,-4]=et[7,-4]**6*(22528/15*sin_i**2*sin_4b-22528/5*eta*sin_i**2*sin_4b+22528/15*cos_i**2*sin_i**2*sin_4b-22528/5*eta*cos_i**2*sin_i**2*sin_4b)+et[7,-4]**4*(-(2048/9)*sin_i**2*sin_4b+2048/3*eta*sin_i**2*sin_4b-2048/9*cos_i**2*sin_i**2*sin_4b+2048/3*eta*cos_i**2*sin_i**2*sin_4b)
-        Sp1[8,-4]=et[8,-4]**5*(-((4782969*sin_i**2*sin_4b)/10240)+(14348907*eta*sin_i**2*sin_4b)/10240-(4782969*cos_i**2*sin_i**2*sin_4b)/10240+(14348907*eta*cos_i**2*sin_i**2*sin_4b)/10240)
-        Sp1[9,-4]=et[9,-4]**6*(-(390625/432)*sin_i**2*sin_4b+390625/144*eta*sin_i**2*sin_4b-390625/432*cos_i**2*sin_i**2*sin_4b+390625/144*eta*cos_i**2*sin_i**2*sin_4b)       
-
-        ###################ccross1, 2D array####################
-        Cx1 = np.zeros((10,9))
-
-        Cx1[0,2]=et[0,2]**5*(-(44/9)*cos_i*sin_2b+(665*eta*cos_i*sin_2b)/1152+(131*cos_i*sin_i**2*sin_2b)/4608-(131*eta*cos_i*sin_i**2*sin_2b)/1536)+et[0,2]**3*(-(433/72)*cos_i*sin_2b+8/9*eta*cos_i*sin_2b+5/288*cos_i*sin_i**2*sin_2b-5/96*eta*cos_i*sin_i**2*sin_2b)
-        Cx1[1,2]=et[1,2]**6*(-(83/24)*cos_i*sin_2b+337/720*eta*cos_i*sin_2b+1/60*cos_i*sin_i**2*sin_2b-1/20*eta*cos_i*sin_i**2*sin_2b)+et[1,2]**4*(-(109/18)*cos_i*sin_2b+23/24*eta*cos_i*sin_2b-1/18*cos_i*sin_i**2*sin_2b+1/6*eta*cos_i*sin_i**2*sin_2b)
-        Cx1[2,2]=et[2,2]**5*(-(2241/320)*cos_i*sin_2b+717/640*eta*cos_i*sin_2b-(297*cos_i*sin_i**2*sin_2b)/2560+(891*eta*cos_i*sin_i**2*sin_2b)/2560)
-        Cx1[3,2]=et[3,2]**6*(-(4571/540)*cos_i*sin_2b+367/270*eta*cos_i*sin_2b-49/270*cos_i*sin_i**2*sin_2b+49/90*eta*cos_i*sin_i**2*sin_2b)
-
-
-        Cx1[0,-2]=et[0,-2]*(-(76/3)*cos_i*sin_2b+eta*cos_i*sin_2b+11/12*cos_i*sin_i**2*sin_2b-11/4*eta*cos_i*sin_i**2*sin_2b)+et[0,-2]**5*(809/288*cos_i*sin_2b-179/576*eta*cos_i*sin_2b+(79*cos_i*sin_i**2*sin_2b)/2304-79/768*eta*cos_i*sin_i**2*sin_2b)+et[0,-2]**3*(75/8*cos_i*sin_2b-19/6*eta*cos_i*sin_2b-21/32*cos_i*sin_i**2*sin_2b+63/32*eta*cos_i*sin_i**2*sin_2b)
-        Cx1[1,-2]=-(26/3)*cos_i*sin_2b+n_2b3*eta*cos_i*sin_2b-8/3*cos_i*sin_i**2*sin_2b+8*eta*cos_i*sin_i**2*sin_2b+et[1,-2]**2*(-(275/3)*cos_i*sin_2b+31/3*eta*cos_i*sin_2b+16/3*cos_i*sin_i**2*sin_2b-16*eta*cos_i*sin_i**2*sin_2b)+et[1,-2]**6*(-(4603/432)*cos_i*sin_2b+1195/432*eta*cos_i*sin_2b+20/27*cos_i*sin_i**2*sin_2b-20/9*eta*cos_i*sin_i**2*sin_2b)+et[1,-2]**4*(769/24*cos_i*sin_2b-313/24*eta*cos_i*sin_2b-10/3*cos_i*sin_i**2*sin_2b+10*eta*cos_i*sin_i**2*sin_2b)
-        Cx1[2,-2]=et[2,-2]**3*(-(1647/8)*cos_i*sin_2b+33*eta*cos_i*sin_2b+459/32*cos_i*sin_i**2*sin_2b-1377/32*eta*cos_i*sin_i**2*sin_2b)+et[2,-2]*(18*cos_i*sin_2b-3*eta*cos_i*sin_2b-27/4*cos_i*sin_i**2*sin_2b+81/4*eta*cos_i*sin_i**2*sin_2b)+et[2,-2]**5*(1881/16*cos_i*sin_2b-2607/64*eta*cos_i*sin_2b-2781/256*cos_i*sin_i**2*sin_2b+8343/256*eta*cos_i*sin_i**2*sin_2b)
-        Cx1[3,-2]=et[3,-2]**4*(-(3748/9)*cos_i*sin_2b+244/3*eta*cos_i*sin_2b+284/9*cos_i*sin_i**2*sin_2b-284/3*eta*cos_i*sin_i**2*sin_2b)+et[3,-2]**2*(236/3*cos_i*sin_2b-40/3*eta*cos_i*sin_2b-40/3*cos_i*sin_i**2*sin_2b+40*eta*cos_i*sin_i**2*sin_2b)+et[3,-2]**6*(1281/4*cos_i*sin_2b-1921/18*eta*cos_i*sin_2b-57/2*cos_i*sin_i**2*sin_2b+171/2*eta*cos_i*sin_i**2*sin_2b)
-        Cx1[4,-2]=et[4,-2]**5*(-(456925/576)*cos_i*sin_2b+(203125*eta*cos_i*sin_2b)/1152+(289375*cos_i*sin_i**2*sin_2b)/4608-(289375*eta*cos_i*sin_i**2*sin_2b)/1536)+et[4,-2]**3*(13525/72*cos_i*sin_2b-625/18*eta*cos_i*sin_2b-6875/288*cos_i*sin_i**2*sin_2b+6875/96*eta*cos_i*sin_i**2*sin_2b)
-        Cx1[5,-2]=et[5,-2]**6*(-(115713/80)*cos_i*sin_2b+14121/40*eta*cos_i*sin_2b+2349/20*cos_i*sin_i**2*sin_2b-7047/20*eta*cos_i*sin_i**2*sin_2b)+et[5,-2]**4*(2961/8*cos_i*sin_2b-297/4*eta*cos_i*sin_2b-81/2*cos_i*sin_i**2*sin_2b+243/2*eta*cos_i*sin_i**2*sin_2b)
-        Cx1[6,-2]=et[6,-2]**5*(477211/720*cos_i*sin_2b-(823543*eta*cos_i*sin_2b)/5760-(1529437*cos_i*sin_i**2*sin_2b)/23040+(1529437*eta*cos_i*sin_i**2*sin_2b)/7680)
-        Cx1[7,-2]=et[7,-2]**6*(30269/27*cos_i*sin_2b-34816/135*eta*cos_i*sin_2b-14336/135*cos_i*sin_i**2*sin_2b+14336/45*eta*cos_i*sin_i**2*sin_2b)
-
-
-        Cx1[0,4]=et[0,4]**5*(-((1091*cos_i*sin_i**2*sin_4b)/46080)+(1091*eta*cos_i*sin_i**2*sin_4b)/15360)
-        Cx1[1,4]=et[1,4]**6*(-((71*cos_i*sin_i**2*sin_4b)/2160)+71/720*eta*cos_i*sin_i**2*sin_4b)    
-
-
-        Cx1[0,-4]=et[0,-4]**5*((1769*cos_i*sin_i**2*sin_4b)/9216-(1769*eta*cos_i*sin_i**2*sin_4b)/3072)+et[0,-4]**3*(-(187/576)*cos_i*sin_i**2*sin_4b+187/192*eta*cos_i*sin_i**2*sin_4b)
-        Cx1[1,-4]=et[1,-4]**2*(14/3*cos_i*sin_i**2*sin_4b-14*eta*cos_i*sin_i**2*sin_4b)+et[1,-4]**6*(57/16*cos_i*sin_i**2*sin_4b-171/16*eta*cos_i*sin_i**2*sin_4b)+et[1,-4]**4*(-(137/18)*cos_i*sin_i**2*sin_4b+137/6*eta*cos_i*sin_i**2*sin_4b)
-        Cx1[2,-4]=et[2,-4]**3*(2511/64*cos_i*sin_i**2*sin_4b-7533/64*eta*cos_i*sin_i**2*sin_4b)+et[2,-4]*(-(81/8)*cos_i*sin_i**2*sin_4b+243/8*eta*cos_i*sin_i**2*sin_4b)+et[2,-4]**5*(-(25191/512)*cos_i*sin_i**2*sin_4b+75573/512*eta*cos_i*sin_i**2*sin_4b)
-        Cx1[3,-4]= 16/3*cos_i*sin_i**2*sin_4b-16*eta*cos_i*sin_i**2*sin_4b+et[3,-4]**4*(506/3*cos_i*sin_i**2*sin_4b-506*eta*cos_i*sin_i**2*sin_4b)+et[3,-4]**2*(-(176/3)*cos_i*sin_i**2*sin_4b+176*eta*cos_i*sin_i**2*sin_4b)+et[3,-4]**6*(-(5536/27)*cos_i*sin_i**2*sin_4b+5536/9*eta*cos_i*sin_i**2*sin_4b)
-        Cx1[4,-4]=et[4,-4]**5*((2493125*cos_i*sin_i**2*sin_4b)/4608-(2493125*eta*cos_i*sin_i**2*sin_4b)/1536)+et[4,-4]*(625/24*cos_i*sin_i**2*sin_4b-625/8*eta*cos_i*sin_i**2*sin_4b)+et[4,-4]**3*(-(13125/64)*cos_i*sin_i**2*sin_4b+39375/64*eta*cos_i*sin_i**2*sin_4b)
-        Cx1[5,-4]=et[5,-4]**6*(11745/8*cos_i*sin_i**2*sin_4b-35235/8*eta*cos_i*sin_i**2*sin_4b)+et[5,-4]**2*(81*cos_i*sin_i**2*sin_4b-243*eta*cos_i*sin_i**2*sin_4b)+et[5,-4]**4*(-567*cos_i*sin_i**2*sin_4b+1701*eta*cos_i*sin_i**2*sin_4b)
-        Cx1[6,-4]=et[6,-4]**3*(117649/576*cos_i*sin_i**2*sin_4b-117649/192*eta*cos_i*sin_i**2*sin_4b)+et[6,-4]**5*(-((12588443*cos_i*sin_i**2*sin_4b)/9216)+(12588443*eta*cos_i*sin_i**2*sin_4b)/3072)
-        Cx1[7,-4]=et[7,-4]**4*(4096/9*cos_i*sin_i**2*sin_4b-4096/3*eta*cos_i*sin_i**2*sin_4b)+et[7,-4]**6*(-(45056/15)*cos_i*sin_i**2*sin_4b+45056/5*eta*cos_i*sin_i**2*sin_4b)
-        Cx1[8,-4]=et[8,-4]**5*((4782969*cos_i*sin_i**2*sin_4b)/5120-(14348907*eta*cos_i*sin_i**2*sin_4b)/5120)
-        Cx1[9,-4]=et[9,-4]**6*(390625/216*cos_i*sin_i**2*sin_4b-390625/72*eta*cos_i*sin_i**2*sin_4b)       
-
-        ###################scross1, 2D array####################
-        Sx1 = np.zeros((10,9))
-
-        Sx1[0,2]=et[0,2]**5*(-(44/9)*cos_i*cos_2b+(665*eta*cos_i*cos_2b)/1152+(131*cos_i*cos_2b*sin_i**2)/4608-(131*eta*cos_i*cos_2b*sin_i**2)/1536)+et[0,2]**3*(-(433/72)*cos_i*cos_2b+8/9*eta*cos_i*cos_2b+5/288*cos_i*cos_2b*sin_i**2-5/96*eta*cos_i*cos_2b*sin_i**2)
-        Sx1[1,2]=et[1,2]**6*(-(83/24)*cos_i*cos_2b+337/720*eta*cos_i*cos_2b+1/60*cos_i*cos_2b*sin_i**2-1/20*eta*cos_i*cos_2b*sin_i**2)+et[1,2]**4*(-(109/18)*cos_i*cos_2b+23/24*eta*cos_i*cos_2b-1/18*cos_i*cos_2b*sin_i**2+1/6*eta*cos_i*cos_2b*sin_i**2)
-        Sx1[2,2]=et[2,2]**5*(-(2241/320)*cos_i*cos_2b+717/640*eta*cos_i*cos_2b-(297*cos_i*cos_2b*sin_i**2)/2560+(891*eta*cos_i*cos_2b*sin_i**2)/2560)
-        Sx1[3,2]=et[3,2]**6*(-(4571/540)*cos_i*cos_2b+367/270*eta*cos_i*cos_2b-49/270*cos_i*cos_2b*sin_i**2+49/90*eta*cos_i*cos_2b*sin_i**2)
-
-
-        Sx1[0,-2]=et[0,-2]**3*(-(75/8)*cos_i*cos_2b+19/6*eta*cos_i*cos_2b+21/32*cos_i*cos_2b*sin_i**2-63/32*eta*cos_i*cos_2b*sin_i**2)+et[0,-2]**5*(-(809/288)*cos_i*cos_2b+179/576*eta*cos_i*cos_2b-(79*cos_i*cos_2b*sin_i**2)/2304+79/768*eta*cos_i*cos_2b*sin_i**2)+et[0,-2]*(76/3*cos_i*cos_2b-eta*cos_i*cos_2b-11/12*cos_i*cos_2b*sin_i**2+11/4*eta*cos_i*cos_2b*sin_i**2)
-        Sx1[1,-2]= 26/3*cos_i*cos_2b-n_2b3*eta*cos_i*cos_2b+8/3*cos_i*cos_2b*sin_i**2-8*eta*cos_i*cos_2b*sin_i**2+et[1,-2]**4*(-(769/24)*cos_i*cos_2b+313/24*eta*cos_i*cos_2b+10/3*cos_i*cos_2b*sin_i**2-10*eta*cos_i*cos_2b*sin_i**2)+et[1,-2]**6*(4603/432*cos_i*cos_2b-1195/432*eta*cos_i*cos_2b-20/27*cos_i*cos_2b*sin_i**2+20/9*eta*cos_i*cos_2b*sin_i**2)+et[1,-2]**2*(275/3*cos_i*cos_2b-31/3*eta*cos_i*cos_2b-16/3*cos_i*cos_2b*sin_i**2+16*eta*cos_i*cos_2b*sin_i**2)
-        Sx1[2,-2]=et[2,-2]**5*(-(1881/16)*cos_i*cos_2b+2607/64*eta*cos_i*cos_2b+2781/256*cos_i*cos_2b*sin_i**2-8343/256*eta*cos_i*cos_2b*sin_i**2)+et[2,-2]*(-18*cos_i*cos_2b+3*eta*cos_i*cos_2b+27/4*cos_i*cos_2b*sin_i**2-81/4*eta*cos_i*cos_2b*sin_i**2)+et[2,-2]**3*(1647/8*cos_i*cos_2b-33*eta*cos_i*cos_2b-459/32*cos_i*cos_2b*sin_i**2+1377/32*eta*cos_i*cos_2b*sin_i**2)
-        Sx1[3,-2]=et[3,-2]**6*(-(1281/4)*cos_i*cos_2b+1921/18*eta*cos_i*cos_2b+57/2*cos_i*cos_2b*sin_i**2-171/2*eta*cos_i*cos_2b*sin_i**2)+et[3,-2]**2*(-(236/3)*cos_i*cos_2b+40/3*eta*cos_i*cos_2b+40/3*cos_i*cos_2b*sin_i**2-40*eta*cos_i*cos_2b*sin_i**2)+et[3,-2]**4*(3748/9*cos_i*cos_2b-244/3*eta*cos_i*cos_2b-284/9*cos_i*cos_2b*sin_i**2+284/3*eta*cos_i*cos_2b*sin_i**2)
-        Sx1[4,-2]=et[4,-2]**3*(-(13525/72)*cos_i*cos_2b+625/18*eta*cos_i*cos_2b+6875/288*cos_i*cos_2b*sin_i**2-6875/96*eta*cos_i*cos_2b*sin_i**2)+et[4,-2]**5*(456925/576*cos_i*cos_2b-(203125*eta*cos_i*cos_2b)/1152-(289375*cos_i*cos_2b*sin_i**2)/4608+(289375*eta*cos_i*cos_2b*sin_i**2)/1536)
-        Sx1[5,-2]=et[5,-2]**4*(-(2961/8)*cos_i*cos_2b+297/4*eta*cos_i*cos_2b+81/2*cos_i*cos_2b*sin_i**2-243/2*eta*cos_i*cos_2b*sin_i**2)+et[5,-2]**6*(115713/80*cos_i*cos_2b-14121/40*eta*cos_i*cos_2b-2349/20*cos_i*cos_2b*sin_i**2+7047/20*eta*cos_i*cos_2b*sin_i**2)
-        Sx1[6,-2]=et[6,-2]**5*(-(477211/720)*cos_i*cos_2b+(823543*eta*cos_i*cos_2b)/5760+(1529437*cos_i*cos_2b*sin_i**2)/23040-(1529437*eta*cos_i*cos_2b*sin_i**2)/7680)
-        Sx1[7,-2]=et[7,-2]**6*(-(30269/27)*cos_i*cos_2b+34816/135*eta*cos_i*cos_2b+14336/135*cos_i*cos_2b*sin_i**2-14336/45*eta*cos_i*cos_2b*sin_i**2)
-
-
-        Sx1[0,4]=et[0,4]**5*(-((1091*cos_i*cos_4b*sin_i**2)/46080)+(1091*eta*cos_i*cos_4b*sin_i**2)/15360)
-        Sx1[1,4]=et[1,4]**6*(-((71*cos_i*cos_4b*sin_i**2)/2160)+71/720*eta*cos_i*cos_4b*sin_i**2) 
-
-
-        Sx1[0,-4]=et[0,-4]**3*(187/576*cos_i*cos_4b*sin_i**2-187/192*eta*cos_i*cos_4b*sin_i**2)+et[0,-4]**5*(-((1769*cos_i*cos_4b*sin_i**2)/9216)+(1769*eta*cos_i*cos_4b*sin_i**2)/3072)
-        Sx1[1,-4]=et[1,-4]**4*(137/18*cos_i*cos_4b*sin_i**2-137/6*eta*cos_i*cos_4b*sin_i**2)+et[1,-4]**6*(-(57/16)*cos_i*cos_4b*sin_i**2+171/16*eta*cos_i*cos_4b*sin_i**2)+et[1,-4]**2*(-(14/3)*cos_i*cos_4b*sin_i**2+14*eta*cos_i*cos_4b*sin_i**2)
-        Sx1[2,-4]=et[2,-4]**5*(25191/512*cos_i*cos_4b*sin_i**2-75573/512*eta*cos_i*cos_4b*sin_i**2)+et[2,-4]*(81/8*cos_i*cos_4b*sin_i**2-243/8*eta*cos_i*cos_4b*sin_i**2)+et[2,-4]**3*(-(2511/64)*cos_i*cos_4b*sin_i**2+7533/64*eta*cos_i*cos_4b*sin_i**2)
-        Sx1[3,-4]=-(16/3)*cos_i*cos_4b*sin_i**2+16*eta*cos_i*cos_4b*sin_i**2+et[3,-4]**6*(5536/27*cos_i*cos_4b*sin_i**2-5536/9*eta*cos_i*cos_4b*sin_i**2)+et[3,-4]**2*(176/3*cos_i*cos_4b*sin_i**2-176*eta*cos_i*cos_4b*sin_i**2)+et[3,-4]**4*(-(506/3)*cos_i*cos_4b*sin_i**2+506*eta*cos_i*cos_4b*sin_i**2)
-        Sx1[4,-4]=et[4,-4]**3*(13125/64*cos_i*cos_4b*sin_i**2-39375/64*eta*cos_i*cos_4b*sin_i**2)+et[4,-4]*(-(625/24)*cos_i*cos_4b*sin_i**2+625/8*eta*cos_i*cos_4b*sin_i**2)+et[4,-4]**5*(-((2493125*cos_i*cos_4b*sin_i**2)/4608)+(2493125*eta*cos_i*cos_4b*sin_i**2)/1536)
-        Sx1[5,-4]=et[5,-4]**4*(567*cos_i*cos_4b*sin_i**2-1701*eta*cos_i*cos_4b*sin_i**2)+et[5,-4]**2*(-81*cos_i*cos_4b*sin_i**2+243*eta*cos_i*cos_4b*sin_i**2)+et[5,-4]**6*(-(11745/8)*cos_i*cos_4b*sin_i**2+35235/8*eta*cos_i*cos_4b*sin_i**2)
-        Sx1[6,-4]=et[6,-4]**5*((12588443*cos_i*cos_4b*sin_i**2)/9216-(12588443*eta*cos_i*cos_4b*sin_i**2)/3072)+et[6,-4]**3*(-(117649/576)*cos_i*cos_4b*sin_i**2+117649/192*eta*cos_i*cos_4b*sin_i**2)
-        Sx1[7,-4]=et[7,-4]**6*(45056/15*cos_i*cos_4b*sin_i**2-45056/5*eta*cos_i*cos_4b*sin_i**2)+et[7,-4]**4*(-(4096/9)*cos_i*cos_4b*sin_i**2+4096/3*eta*cos_i*cos_4b*sin_i**2)
-        Sx1[8,-4]=et[8,-4]**5*(-((4782969*cos_i*cos_4b*sin_i**2)/5120)+(14348907*eta*cos_i*cos_4b*sin_i**2)/5120)
-        Sx1[9,-4]=et[9,-4]**6*(-(390625/216)*cos_i*cos_4b*sin_i**2+390625/72*eta*cos_i*cos_4b*sin_i**2)  
-
-        Sx1[0,0]=et[0,0]*(1/2*cos_i*sin_i**2-3/2*eta*cos_i*sin_i**2)+et[0,0]**5*(-(11/384)*cos_i*sin_i**2+11/128*eta*cos_i*sin_i**2)+et[0,0]**3*(-(5/16)*cos_i*sin_i**2+15/16*eta*cos_i*sin_i**2)
-        Sx1[1,0]=et[1,0]**2*(cos_i*sin_i**2-3*eta*cos_i*sin_i**2)+et[1,0]**6*(1/12*cos_i*sin_i**2-1/4*eta*cos_i*sin_i**2)+et[1,0]**4*(-(5/6)*cos_i*sin_i**2+5/2*eta*cos_i*sin_i**2)
-        Sx1[2,0]=et[2,0]**3*(27/16*cos_i*sin_i**2-81/16*eta*cos_i*sin_i**2)+et[2,0]**5*(-(459/256)*cos_i*sin_i**2+1377/256*eta*cos_i*sin_i**2)
-        Sx1[3,0]=et[3,0]**4*(8/3*cos_i*sin_i**2-8*eta*cos_i*sin_i**2)+et[3,0]**6*(-(52/15)*cos_i*sin_i**2+52/5*eta*cos_i*sin_i**2)
-        Sx1[4,0]=et[4,0]**5*(3125/768*cos_i*sin_i**2-3125/256*eta*cos_i*sin_i**2)
-        Sx1[5,0]=et[5,0]**6*(243/40*cos_i*sin_i**2-729/40*eta*cos_i*sin_i**2)
-
 
 
         ####################################################################################
         #for plus polarization Fp=1.0 and Fc=0.0
         ####################################################################################
         #Xi here incorporates the effect of unitary function. If unit[l,n]=0, then xi[l,n]=0
-
-        ####### Xi1 1PN , 2D array ########
-        #it is supposed to be; Gamma_l = Fp*Cp1 + Fc*Cx1 and Sigma_l = Fp*Sp1 + Fc*Sx1
-        #but Fp=1.0 and Fc=0.0 
-        Gamma_l = Cp1
-        Sigma_l = Sp1
-
-        al = np.sign(Gamma_l)*np.sqrt(Gamma_l**2 + Sigma_l**2)
-        phil = -np.sign(Sigma_l)*Pi_b2 
-        #the following numpy array technique is fater than if else condition 
-        phil[Gamma_l!=0] = np.arctan(- (Sigma_l[Gamma_l!=0]/Gamma_l[Gamma_l!=0])) 
-
-        #these terms will also be used later
-        numerator = (1-et**2)**(n_7b4)
-        denomitor = ( 1 + (73/24)*et**2 + (37/96)*et**4 )**(n_1b2)
-
-        #to take care the unitary function
-        #I will let xi multiply by unit array
-        xi1_p = unit * (numerator/denomitor)*al*np.exp(-1j*phil)
-
-        ########## Xipn 1PN and Xi0 0PN , 2D array ###########
+        
+        ########## Xi0 0PN , 2D array ###########
         Gamma_l = Cp0
         Sigma_l = Sp0
 
         al = np.sign(Gamma_l)*np.sqrt(Gamma_l**2 + Sigma_l**2)
         phil = -np.sign(Sigma_l)*Pi_b2 
         phil[Gamma_l!=0] = np.arctan(- (Sigma_l[Gamma_l!=0]/Gamma_l[Gamma_l!=0])) 
-
-        #xipn 1PN
-        numerator_pn = (1-et**2)**(3/4)*(11888 + 14784*eta - et**2*(87720-159600*eta) - et**4*(171038-141708*eta) - et**6*(11717-8288*eta))
-        denomitor_pn = ( 1 + (73/24)*et**2 + (37/96)*et**4 )**(n_3b2) * 10752
-
-        xipn_p = unit * (numerator_pn/denomitor_pn)*al*np.exp(-1j*phil)
-
+        
+        numerator = (1-et**2)**(n_7b4)
+        denomitor = ( 1 + (73/24)*et**2 + (37/96)*et**4 )**(n_1b2)
+        
         #Xi0 0PN
-        #numerator and denominator already define above in 1PN
-        xi0_p = unit * (numerator/denomitor)*al*np.exp(-1j*phil)
-
-        ############## Xi05 0.5PN , 2D array ################
-        Gamma_l = Cp05
-        Sigma_l = Sp05
-
-        al = np.sign(Gamma_l)*np.sqrt(Gamma_l**2 + Sigma_l**2)
-        phil = -np.sign(Sigma_l)*Pi_b2 
-        phil[Gamma_l!=0] = np.arctan(- (Sigma_l[Gamma_l!=0]/Gamma_l[Gamma_l!=0])) 
-
-        #Xi05 0.5PN
-        #numerator and denominator already define above in 1PN
-        xi05_p = unit * (numerator/denomitor)*al*np.exp(-1j*phil)
+        xi0 = unit * (numerator/denomitor)*al*np.exp(-1j*phil)
 
 
         #Summary of following technique to calculate frequency domain waveform
-        #hf1 = s1+s2+s3+s4+s5
         #hf0 = s1+s2+s3
-        #hf05 = s1+s2+s3+s4
         #where s terms depend on psi and xi 
-        #hp = coeff*( coeff0PN*hf0 + coeff05PN*hf05 + coeff1PN*hf1 )
-        ##########1PN#############
-
-        #n = -2 
-        #defining some values
-        #because these values are the same for both plus and cross polarization, only Xi differs
-        Psi_Nm2_0 = np.exp( -1j*(Pi_b4 + psi[0,-2]) )
-        Psi_Nm2_1 = np.exp( -1j*(Pi_b4 + psi[1,-2]) )
-        Psi_Nm2_2 = np.exp( -1j*(Pi_b4 + psi[2,-2]) )
-        Psi_Nm2_3 = np.exp( -1j*(Pi_b4 + psi[3,-2]) )
-        Psi_Nm2_4 = np.exp( -1j*(Pi_b4 + psi[4,-2]) )
-        Psi_Nm2_5 = np.exp( -1j*(Pi_b4 + psi[5,-2]) )
-        Psi_Nm2_6 = np.exp( -1j*(Pi_b4 + psi[6,-2]) )
-        Psi_Nm2_7 = np.exp( -1j*(Pi_b4 + psi[7,-2]) )
-
-        s1 = \
-        (xi1_p[0,-2] + xipn_p[0,-2])*Psi_Nm2_0 +\
-        (xi1_p[1,-2] + xipn_p[1,-2])*Psi_Nm2_1 +\
-        (xi1_p[2,-2] + xipn_p[2,-2])*Psi_Nm2_2 +\
-        (xi1_p[3,-2] + xipn_p[3,-2])*Psi_Nm2_3 +\
-        (xi1_p[4,-2] + xipn_p[4,-2])*Psi_Nm2_4 +\
-        (xi1_p[5,-2] + xipn_p[5,-2])*Psi_Nm2_5 +\
-        (xi1_p[6,-2] + xipn_p[6,-2])*Psi_Nm2_6 +\
-        (xi1_p[7,-2] + xipn_p[7,-2])*Psi_Nm2_7
-
-        #n = 2
-        Psi_N2_0 = np.exp( -1j*(Pi_b4 + psi[0,2]) )
-        Psi_N2_1 = np.exp( -1j*(Pi_b4 + psi[1,2]) )
-        Psi_N2_2 = np.exp( -1j*(Pi_b4 + psi[2,2]) )
-        Psi_N2_3 = np.exp( -1j*(Pi_b4 + psi[3,2]) )
-
-        s2 = \
-        (xi1_p[0,2] + xipn_p[0,2])*Psi_N2_0 +\
-        (xi1_p[1,2] + xipn_p[1,2])*Psi_N2_1 +\
-        (xi1_p[2,2] + xipn_p[2,2])*Psi_N2_2 +\
-        (xi1_p[3,2] + xipn_p[3,2])*Psi_N2_3  
-
-        #n = 0
-        Psi_N0_0 = np.exp( -1j*(Pi_b4 + psi[0,0]) )
-        Psi_N0_1 = np.exp( -1j*(Pi_b4 + psi[1,0]) )
-        Psi_N0_2 = np.exp( -1j*(Pi_b4 + psi[2,0]) )
-        Psi_N0_3 = np.exp( -1j*(Pi_b4 + psi[3,0]) )
-        Psi_N0_4 = np.exp( -1j*(Pi_b4 + psi[4,0]) )
-        Psi_N0_5 = np.exp( -1j*(Pi_b4 + psi[5,0]) )
-
-        s3 = \
-        (xi1_p[0,0] + xipn_p[0,0])*Psi_N0_0 +\
-        (xi1_p[1,0] + xipn_p[1,0])*Psi_N0_1 +\
-        (xi1_p[2,0] + xipn_p[2,0])*Psi_N0_2 +\
-        (xi1_p[3,0] + xipn_p[3,0])*Psi_N0_3 +\
-        (xi1_p[4,0] + xipn_p[4,0])*Psi_N0_4 +\
-        (xi1_p[5,0] + xipn_p[5,0])*Psi_N0_5
-
-        #n = -4 
-        Psi_Nm4_0 = np.exp( -1j*(Pi_b4 + psi[0,-4]) )
-        Psi_Nm4_1 = np.exp( -1j*(Pi_b4 + psi[1,-4]) )
-        Psi_Nm4_2 = np.exp( -1j*(Pi_b4 + psi[2,-4]) )
-        Psi_Nm4_3 = np.exp( -1j*(Pi_b4 + psi[3,-4]) )
-        Psi_Nm4_4 = np.exp( -1j*(Pi_b4 + psi[4,-4]) )
-        Psi_Nm4_5 = np.exp( -1j*(Pi_b4 + psi[5,-4]) )
-        Psi_Nm4_6 = np.exp( -1j*(Pi_b4 + psi[6,-4]) )
-        Psi_Nm4_7 = np.exp( -1j*(Pi_b4 + psi[7,-4]) )
-        Psi_Nm4_8 = np.exp( -1j*(Pi_b4 + psi[8,-4]) )
-        Psi_Nm4_9 = np.exp( -1j*(Pi_b4 + psi[9,-4]) )
-
-        s4 = \
-        xi1_p[0,-4]*Psi_Nm4_0 +\
-        xi1_p[1,-4]*Psi_Nm4_1 +\
-        xi1_p[2,-4]*Psi_Nm4_2 +\
-        xi1_p[3,-4]*Psi_Nm4_3 +\
-        xi1_p[4,-4]*Psi_Nm4_4 +\
-        xi1_p[5,-4]*Psi_Nm4_5 +\
-        xi1_p[6,-4]*Psi_Nm4_6 +\
-        xi1_p[7,-4]*Psi_Nm4_7 +\
-        xi1_p[8,-4]*Psi_Nm4_8 +\
-        xi1_p[9,-4]*Psi_Nm4_9
-
-        #n = 4   
-        Psi_N4_0 = np.exp( -1j*(Pi_b4 + psi[0,4]) )
-        Psi_N4_1 = np.exp( -1j*(Pi_b4 + psi[1,4]) )
-
-        s5 = \
-        xi1_p[0,4]*Psi_N4_0 +\
-        xi1_p[1,4]*Psi_N4_1
-
-        hf1 = s1+s2+s3+s4+s5
+        #hp = coeff*( coeff0PN*hf0 )
 
         ##########0PN#############
-
         #n = -2
-        L1_Psi_Nm2_0 = ((n_1b2)**(n_2b3))*Psi_Nm2_0
-        L2_Psi_Nm2_1 = ((n_2b2)**(n_2b3))*Psi_Nm2_1
-        L3_Psi_Nm2_2 = ((n_3b2)**(n_2b3))*Psi_Nm2_2
-        L4_Psi_Nm2_3 = ((n_4b2)**(n_2b3))*Psi_Nm2_3
-        L5_Psi_Nm2_4 = ((n_5b2)**(n_2b3))*Psi_Nm2_4
-        L6_Psi_Nm2_5 = ((n_6b2)**(n_2b3))*Psi_Nm2_5
-        L7_Psi_Nm2_6 = ((n_7b2)**(n_2b3))*Psi_Nm2_6
-        L8_Psi_Nm2_7 = ((n_8b2)**(n_2b3))*Psi_Nm2_7
+        L1_Psi_Nm2_0 = ((n_1b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[0,-2]) )
+        L2_Psi_Nm2_1 = ((n_2b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[1,-2]) )
+        L3_Psi_Nm2_2 = ((n_3b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[2,-2]) )
+        L4_Psi_Nm2_3 = ((n_4b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[3,-2]) )
+        L5_Psi_Nm2_4 = ((n_5b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[4,-2]) )
+        L6_Psi_Nm2_5 = ((n_6b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[5,-2]) )
+        L7_Psi_Nm2_6 = ((n_7b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[6,-2]) )
+        L8_Psi_Nm2_7 = ((n_8b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[7,-2]) )
 
         s1 = \
-        xi0_p[0,-2]*L1_Psi_Nm2_0 +\
-        xi0_p[1,-2]*L2_Psi_Nm2_1 +\
-        xi0_p[2,-2]*L3_Psi_Nm2_2 +\
-        xi0_p[3,-2]*L4_Psi_Nm2_3 +\
-        xi0_p[4,-2]*L5_Psi_Nm2_4 +\
-        xi0_p[5,-2]*L6_Psi_Nm2_5 +\
-        xi0_p[6,-2]*L7_Psi_Nm2_6 +\
-        xi0_p[7,-2]*L8_Psi_Nm2_7                                                                                                                                       
-        #n = 2
-        L1_Psi_N2_0 = ((n_1b2)**(n_2b3))*Psi_N2_0
-        L2_Psi_N2_1 = ((n_2b2)**(n_2b3))*Psi_N2_1
-        L3_Psi_N2_2 = ((n_3b2)**(n_2b3))*Psi_N2_2
-        L4_Psi_N2_3 = ((n_4b2)**(n_2b3))*Psi_N2_3
+        xi0[0,-2]*L1_Psi_Nm2_0 +\
+        xi0[1,-2]*L2_Psi_Nm2_1 +\
+        xi0[2,-2]*L3_Psi_Nm2_2 +\
+        xi0[3,-2]*L4_Psi_Nm2_3 +\
+        xi0[4,-2]*L5_Psi_Nm2_4 +\
+        xi0[5,-2]*L6_Psi_Nm2_5 +\
+        xi0[6,-2]*L7_Psi_Nm2_6 +\
+        xi0[7,-2]*L8_Psi_Nm2_7                                                                                                                                       
+        #n = 2           
+        L1_Psi_N2_0 = ((n_1b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[0,2]) )
+        L2_Psi_N2_1 = ((n_2b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[1,2]) )
+        L3_Psi_N2_2 = ((n_3b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[2,2]) )
+        L4_Psi_N2_3 = ((n_4b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[3,2]) )
 
         s2 = \
-        xi0_p[0,2]*L1_Psi_N2_0 +\
-        xi0_p[1,2]*L2_Psi_N2_1 +\
-        xi0_p[2,2]*L3_Psi_N2_2 +\
-        xi0_p[3,2]*L4_Psi_N2_3
+        xi0[0,2]*L1_Psi_N2_0 +\
+        xi0[1,2]*L2_Psi_N2_1 +\
+        xi0[2,2]*L3_Psi_N2_2 +\
+        xi0[3,2]*L4_Psi_N2_3
 
         #n = 0  
         L1_Psi_N0_0 = ((n_1b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[0,0]) )
@@ -871,113 +445,27 @@ def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
         L6_Psi_N0_5 = ((n_6b2)**(n_2b3))*np.exp( -1j*(Pi_b4 + psi[5,0]) )
 
         s3 = \
-        xi0_p[0,0]*L1_Psi_N0_0 +\
-        xi0_p[1,0]*L2_Psi_N0_1 +\
-        xi0_p[2,0]*L3_Psi_N0_2 +\
-        xi0_p[3,0]*L4_Psi_N0_3 +\
-        xi0_p[4,0]*L5_Psi_N0_4 +\
-        xi0_p[5,0]*L6_Psi_N0_5
+        xi0[0,0]*L1_Psi_N0_0 +\
+        xi0[1,0]*L2_Psi_N0_1 +\
+        xi0[2,0]*L3_Psi_N0_2 +\
+        xi0[3,0]*L4_Psi_N0_3 +\
+        xi0[4,0]*L5_Psi_N0_4 +\
+        xi0[5,0]*L6_Psi_N0_5
 
         hf0 = s1+s2+s3
 
-        ##########0.5PN#############
-
-        #n = -1
-        L1_Psi_Nm1_0 = ((n_1b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[0,-1]) )
-        L2_Psi_Nm1_1 = ((n_2b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[1,-1]) )
-        L3_Psi_Nm1_2 = ((n_3b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[2,-1]) )
-        L4_Psi_Nm1_3 = ((n_4b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[3,-1]) )
-        L5_Psi_Nm1_4 = ((n_5b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[4,-1]) )
-        L6_Psi_Nm1_5 = ((n_6b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[5,-1]) )
-        L7_Psi_Nm1_6 = ((n_7b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[6,-1]) )
-
-        s1 = \
-        xi05_p[0,-1]*L1_Psi_Nm1_0 +\
-        xi05_p[1,-1]*L2_Psi_Nm1_1 +\
-        xi05_p[2,-1]*L3_Psi_Nm1_2 +\
-        xi05_p[3,-1]*L4_Psi_Nm1_3 +\
-        xi05_p[4,-1]*L5_Psi_Nm1_4 +\
-        xi05_p[5,-1]*L6_Psi_Nm1_5 +\
-        xi05_p[6,-1]*L7_Psi_Nm1_6
-
-        #n = 1   
-        L1_Psi_N1_0 = ((n_1b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[0,1]) )
-        L2_Psi_N1_1 = ((n_2b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[1,1]) )
-        L3_Psi_N1_2 = ((n_3b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[2,1]) )
-        L4_Psi_N1_3 = ((n_4b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[3,1]) )
-        L5_Psi_N1_4 = ((n_5b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[4,1]) )
-
-        s2 = \
-        xi05_p[0,1]*L1_Psi_N1_0 +\
-        xi05_p[1,1]*L2_Psi_N1_1 +\
-        xi05_p[2,1]*L3_Psi_N1_2 +\
-        xi05_p[3,1]*L4_Psi_N1_3 +\
-        xi05_p[4,1]*L5_Psi_N1_4
-
-        #n = -3   
-        L1_Psi_Nm3_0 = ((n_1b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[0,-3]) )
-        L2_Psi_Nm3_1 = ((n_2b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[1,-3]) )
-        L3_Psi_Nm3_2 = ((n_3b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[2,-3]) )
-        L4_Psi_Nm3_3 = ((n_4b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[3,-3]) )
-        L5_Psi_Nm3_4 = ((n_5b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[4,-3]) )
-        L6_Psi_Nm3_5 = ((n_6b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[5,-3]) )
-        L7_Psi_Nm3_6 = ((n_7b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[6,-3]) )
-        L8_Psi_Nm3_7 = ((n_8b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[7,-3]) )
-        L9_Psi_Nm3_8 = ((n_9b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[8,-3]) )
-
-        s3 = \
-        xi05_p[0,-3]*L1_Psi_Nm3_0 +\
-        xi05_p[1,-3]*L2_Psi_Nm3_1 +\
-        xi05_p[2,-3]*L3_Psi_Nm3_2 +\
-        xi05_p[3,-3]*L4_Psi_Nm3_3 +\
-        xi05_p[4,-3]*L5_Psi_Nm3_4 +\
-        xi05_p[5,-3]*L6_Psi_Nm3_5 +\
-        xi05_p[6,-3]*L7_Psi_Nm3_6 +\
-        xi05_p[7,-3]*L8_Psi_Nm3_7 +\
-        xi05_p[8,-3]*L9_Psi_Nm3_8
-
-        #n = 3 
-        L1_Psi_N3_0 = ((n_1b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[0,3]) )
-        L2_Psi_N3_1 = ((n_2b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[1,3]) )
-        L3_Psi_N3_2 = ((n_3b2)**(n_1b3))*np.exp( -1j*(Pi_b4 + psi[2,3]) )
-
-        s4 = \
-        xi05_p[0,3]*L1_Psi_N3_0 +\
-        xi05_p[1,3]*L2_Psi_N3_1 +\
-        xi05_p[2,3]*L3_Psi_N3_2
-
-        hf05 = s1+s2+s3+s4
-
-
-        # final frequency domain strain
+        # final frequency domain strain with newtonian amplitude and 3PN fourier phase
         coeff = (((5*Pi_*eta)/384)**(n_1b2)) * (G**2*M**2)/(C**5*D)
         coeff0PN = (((G*M*Pi_*f)/C**3)**(-7/6))
-        coeff05PN = (((G*M*Pi_*f)/C**3)**(-5/6))*(delta/M)
-        coeff1PN = (((G*M*Pi_*f)/C**3)**(-1/2))
 
-        hp[idx] = coeff*( coeff0PN*hf0 + coeff05PN*hf05 + coeff1PN*hf1 )
+        hp[idx] = coeff*( coeff0PN*hf0 )
 
         ####################################################################################
         #for cross polarization Fp=0.0 and Fc=1.0 
         ####################################################################################
         #Xi here incorporates the effect of unitary function. If unit[l,n]=0, then xi[l,n]=0
 
-        ####### Xi1 1PN , 2D array ########
-        #it is supposed to be; Gamma_l = Fp*Cp1 + Fc*Cx1 and Sigma_l = Fp*Sp1 + Fc*Sx1
-        #but Fp=0.0 and Fc=1.0 
-        Gamma_l = Cx1
-        Sigma_l = Sx1
-
-        al = np.sign(Gamma_l)*np.sqrt(Gamma_l**2 + Sigma_l**2)
-        phil = -np.sign(Sigma_l)*Pi_b2 
-        phil[Gamma_l!=0] = np.arctan(- (Sigma_l[Gamma_l!=0]/Gamma_l[Gamma_l!=0])) 
-
-        #to take care the unitary function
-        #I will let xi multiply by unit array
-        #numerator and denominator same with plus polarization
-        xi1_c = unit * (numerator/denomitor)*al*np.exp(-1j*phil)
-
-        ########## Xipn 1PN and Xi0 0PN , 2D array ###########
+        ####### Xi0 0PN , 2D array ########
         Gamma_l = Cx0
         Sigma_l = Sx0
 
@@ -985,25 +473,10 @@ def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
         phil = -np.sign(Sigma_l)*Pi_b2 
         phil[Gamma_l!=0] = np.arctan(- (Sigma_l[Gamma_l!=0]/Gamma_l[Gamma_l!=0])) 
 
-        #numerator and denominator same with plus polarization
-        xipn_c = unit * (numerator_pn/denomitor_pn)*al*np.exp(-1j*phil)
-
         #Xi0 0PN
-        #numerator and denominator already define above in 1PN
-        xi0_c = unit * (numerator/denomitor)*al*np.exp(-1j*phil)
-
-        ############## Xi05 0.5PN , 2D array ################
-        Gamma_l = Cx05
-        Sigma_l = Sx05
-
-        al = np.sign(Gamma_l)*np.sqrt(Gamma_l**2 + Sigma_l**2)
-        phil = -np.sign(Sigma_l)*Pi_b2 
-        phil[Gamma_l!=0] = np.arctan(- (Sigma_l[Gamma_l!=0]/Gamma_l[Gamma_l!=0])) 
-
-        #Xi05 0.5PN
-        #numerator and denominator same with plus polarization
-        xi05_c = unit * (numerator/denomitor)*al*np.exp(-1j*phil)
-
+        #numerator and denominator already define above in plus polarization
+        xi0 = unit * (numerator/denomitor)*al*np.exp(-1j*phil)
+        
 
         #Summary of following technique to calculate frequency domain waveform
         #hf1 = s1+s2+s3+s4+s5
@@ -1011,170 +484,42 @@ def htilde(iota,beta,D,farray,f0,et0,phic,tc,M,eta,ff,delta,f_max):
         #hf05 = s1+s2+s3+s4
         #where s terms depend on psi and xi 
         #hc = coeff*( coeff0PN*hf0 + coeff05PN*hf05 + coeff1PN*hf1 )
-        ##########1PN#############
-
-        #n = -2 
-        #defining some values
-        #because these values are the same for both plus and cross polarization, only Xi differs
-        s1 = \
-        (xi1_c[0,-2] + xipn_c[0,-2])*Psi_Nm2_0 +\
-        (xi1_c[1,-2] + xipn_c[1,-2])*Psi_Nm2_1 +\
-        (xi1_c[2,-2] + xipn_c[2,-2])*Psi_Nm2_2 +\
-        (xi1_c[3,-2] + xipn_c[3,-2])*Psi_Nm2_3 +\
-        (xi1_c[4,-2] + xipn_c[4,-2])*Psi_Nm2_4 +\
-        (xi1_c[5,-2] + xipn_c[5,-2])*Psi_Nm2_5 +\
-        (xi1_c[6,-2] + xipn_c[6,-2])*Psi_Nm2_6 +\
-        (xi1_c[7,-2] + xipn_c[7,-2])*Psi_Nm2_7
-
-        #n = 2
-        s2 = \
-        (xi1_c[0,2] + xipn_c[0,2])*Psi_N2_0 +\
-        (xi1_c[1,2] + xipn_c[1,2])*Psi_N2_1 +\
-        (xi1_c[2,2] + xipn_c[2,2])*Psi_N2_2 +\
-        (xi1_c[3,2] + xipn_c[3,2])*Psi_N2_3  
-
-        #n = 0
-        s3 = \
-        (xi1_c[0,0] + xipn_c[0,0])*Psi_N0_0 +\
-        (xi1_c[1,0] + xipn_c[1,0])*Psi_N0_1 +\
-        (xi1_c[2,0] + xipn_c[2,0])*Psi_N0_2 +\
-        (xi1_c[3,0] + xipn_c[3,0])*Psi_N0_3 +\
-        (xi1_c[4,0] + xipn_c[4,0])*Psi_N0_4 +\
-        (xi1_c[5,0] + xipn_c[5,0])*Psi_N0_5
-
-        #n = -4 
-        s4 = \
-        xi1_c[0,-4]*Psi_Nm4_0 +\
-        xi1_c[1,-4]*Psi_Nm4_1 +\
-        xi1_c[2,-4]*Psi_Nm4_2 +\
-        xi1_c[3,-4]*Psi_Nm4_3 +\
-        xi1_c[4,-4]*Psi_Nm4_4 +\
-        xi1_c[5,-4]*Psi_Nm4_5 +\
-        xi1_c[6,-4]*Psi_Nm4_6 +\
-        xi1_c[7,-4]*Psi_Nm4_7 +\
-        xi1_c[8,-4]*Psi_Nm4_8 +\
-        xi1_c[9,-4]*Psi_Nm4_9
-
-        #n = 4   
-        s5 = \
-        xi1_c[0,4]*Psi_N4_0 +\
-        xi1_c[1,4]*Psi_N4_1
-
-        hf1 = s1+s2+s3+s4+s5
-
+ 
         ##########0PN#############
-
         #n = -2
         s1 = \
-        xi0_c[0,-2]*L1_Psi_Nm2_0 +\
-        xi0_c[1,-2]*L2_Psi_Nm2_1 +\
-        xi0_c[2,-2]*L3_Psi_Nm2_2 +\
-        xi0_c[3,-2]*L4_Psi_Nm2_3 +\
-        xi0_c[4,-2]*L5_Psi_Nm2_4 +\
-        xi0_c[5,-2]*L6_Psi_Nm2_5 +\
-        xi0_c[6,-2]*L7_Psi_Nm2_6 +\
-        xi0_c[7,-2]*L8_Psi_Nm2_7                                                                                                                                       
-        #n = 2
+        xi0[0,-2]*L1_Psi_Nm2_0 +\
+        xi0[1,-2]*L2_Psi_Nm2_1 +\
+        xi0[2,-2]*L3_Psi_Nm2_2 +\
+        xi0[3,-2]*L4_Psi_Nm2_3 +\
+        xi0[4,-2]*L5_Psi_Nm2_4 +\
+        xi0[5,-2]*L6_Psi_Nm2_5 +\
+        xi0[6,-2]*L7_Psi_Nm2_6 +\
+        xi0[7,-2]*L8_Psi_Nm2_7                                                                                                                                       
+        #n = 2           
         s2 = \
-        xi0_c[0,2]*L1_Psi_N2_0 +\
-        xi0_c[1,2]*L2_Psi_N2_1 +\
-        xi0_c[2,2]*L3_Psi_N2_2 +\
-        xi0_c[3,2]*L4_Psi_N2_3
+        xi0[0,2]*L1_Psi_N2_0 +\
+        xi0[1,2]*L2_Psi_N2_1 +\
+        xi0[2,2]*L3_Psi_N2_2 +\
+        xi0[3,2]*L4_Psi_N2_3
 
         #n = 0  
         s3 = \
-        xi0_c[0,0]*L1_Psi_N0_0 +\
-        xi0_c[1,0]*L2_Psi_N0_1 +\
-        xi0_c[2,0]*L3_Psi_N0_2 +\
-        xi0_c[3,0]*L4_Psi_N0_3 +\
-        xi0_c[4,0]*L5_Psi_N0_4 +\
-        xi0_c[5,0]*L6_Psi_N0_5
+        xi0[0,0]*L1_Psi_N0_0 +\
+        xi0[1,0]*L2_Psi_N0_1 +\
+        xi0[2,0]*L3_Psi_N0_2 +\
+        xi0[3,0]*L4_Psi_N0_3 +\
+        xi0[4,0]*L5_Psi_N0_4 +\
+        xi0[5,0]*L6_Psi_N0_5
 
         hf0 = s1+s2+s3
 
-        ##########0.5PN#############
-
-        #n = -1
-        s1 = \
-        xi05_c[0,-1]*L1_Psi_Nm1_0 +\
-        xi05_c[1,-1]*L2_Psi_Nm1_1 +\
-        xi05_c[2,-1]*L3_Psi_Nm1_2 +\
-        xi05_c[3,-1]*L4_Psi_Nm1_3 +\
-        xi05_c[4,-1]*L5_Psi_Nm1_4 +\
-        xi05_c[5,-1]*L6_Psi_Nm1_5 +\
-        xi05_c[6,-1]*L7_Psi_Nm1_6
-
-        #n = 1   
-        s2 = \
-        xi05_c[0,1]*L1_Psi_N1_0 +\
-        xi05_c[1,1]*L2_Psi_N1_1 +\
-        xi05_c[2,1]*L3_Psi_N1_2 +\
-        xi05_c[3,1]*L4_Psi_N1_3 +\
-        xi05_c[4,1]*L5_Psi_N1_4
-
-        #n = -3   
-        s3 = \
-        xi05_c[0,-3]*L1_Psi_Nm3_0 +\
-        xi05_c[1,-3]*L2_Psi_Nm3_1 +\
-        xi05_c[2,-3]*L3_Psi_Nm3_2 +\
-        xi05_c[3,-3]*L4_Psi_Nm3_3 +\
-        xi05_c[4,-3]*L5_Psi_Nm3_4 +\
-        xi05_c[5,-3]*L6_Psi_Nm3_5 +\
-        xi05_c[6,-3]*L7_Psi_Nm3_6 +\
-        xi05_c[7,-3]*L8_Psi_Nm3_7 +\
-        xi05_c[8,-3]*L9_Psi_Nm3_8
-
-        #n = 3 
-        s4 = \
-        xi05_c[0,3]*L1_Psi_N3_0 +\
-        xi05_c[1,3]*L2_Psi_N3_1 +\
-        xi05_c[2,3]*L3_Psi_N3_2
-
-        hf05 = s1+s2+s3+s4
-
-        hc[idx] = coeff*( coeff0PN*hf0 + coeff05PN*hf05 + coeff1PN*hf1 )
+        hc[idx] = coeff*( coeff0PN*hf0 )
 
     # return(format(hp, '.6g'),format(hc, '.6g')) if you want toround off
     return(hp,hc)
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+    
+    
+    
+    

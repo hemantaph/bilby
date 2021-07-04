@@ -20,7 +20,7 @@ def eccentric_waveform(frequency_array_, chirp_mass, mass_ratio, initial_eccentr
     mass_diff = (mass_1-mass_2)*Mo
     f_min = 20.
     #f_max is set according to the prior we choose, depends on total_mass. 
-    f_max = 100.
+    f_max = 110.
     #time of coalescence is taken to be 0 for convenience
     tc = 0.
     

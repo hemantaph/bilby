@@ -1,0 +1,41 @@
+18:17 bilby_pipe INFO    : Running bilby_pipe version: 1.0.1: (CLEAN) c4c6d92 2020-08-26 02:52:43 -0500
+18:17 bilby_pipe INFO    : Running bilby: 1.0.1: release
+18:17 bilby_pipe INFO    : Command line arguments: Namespace(accounting='ligo.dev.o3.cbc.pe.lalinference', calibration_model=None, catch_waveform_errors=False, channel_dict='{H1:GWOSC, L1:GWOSC}', coherence_test=False, condor_job_priority=0, convert_to_flat_in_component_mass=False, create_plots=False, create_summary=False, data_dict=None, data_dump_file='outdir_com/data/eccn_data0_1126259463-9_generation_data_dump.pickle', data_format=None, default_prior='BBHPriorDict', deltaT=0.2, detectors=['H1', 'L1'], distance_marginalization=False, distance_marginalization_lookup_table=None, duration=4.0, email=None, existing_dir=None, extra_likelihood_kwargs=None, frequency_domain_source_model='eccn.functions.eccentric_waveform', gaussian_noise=False, generation_seed=None, gps_file=None, gps_tuple=None, idx=0, ignore_gwpy_data_quality_check=True, ini='eccn_config_complete.ini', injection=True, injection_dict="{'mass_1':23.5, 'mass_2':21.5, 'chirp_mass':19.564163812778446, 'mass_ratio':0.9148936170212766, 'initial_eccentricity':0.1, 'a_1':0., 'a_2':0., 'tilt_1':0., 'tilt_2':0., 'phi_12':0., 'phi_jl':0., 'luminosity_distance':400., 'theta_jn':0.4, 'psi':0.1, 'phase':1.2, 'geocent_time':1126259462.4, 'ra':45., 'dec':5.73,}", injection_file=None, injection_numbers=['None'], injection_waveform_approximant=None, jitter_time=True, label='eccn_data0_1126259463-9_analysis_H1L1_dynesty', likelihood_type='GravitationalWaveTransient', local=False, local_generation=False, local_plot=False, log_directory=None, maximum_frequency='107.0', minimum_frequency='23.0', mode_array=[None], n_parallel=1, n_simulation=1, notification='Never', online_pe=False, osg=False, outdir='outdir_com', periodic_restart_time=28800, phase_marginalization=False, plot_calibration=False, plot_corner=False, plot_format='png', plot_marginal=False, plot_skymap=False, plot_waveform=False, pn_amplitude_order=0, pn_phase_order=-1, pn_spin_order=-1, pn_tidal_order=-1, post_trigger_duration=2.0, postprocessing_arguments=None, postprocessing_executable=None, prior_dict="{mass-1: Constraint(name='mass_1', minimum=10, maximum=80), mass-2: Constraint(name='mass_2', minimum=10, maximum=80), chirp-mass: 19.564163812778446, mass-ratio: 0.9148936170212766, initial-eccentricity: LogUniform(name='eccentricity', minimum=0.01, maximum=0.2), a-1: 0., a-2: 0., tilt-1: 0., tilt-2: 0., phi-12: 0., phi-jl: 0., luminosity-distance: 400., theta-jn: 0.4, psi: 0.1, phase: 1.2, geocent-time: 1126259462.4, ra: 45.0, dec: 5.73, }", prior_file=None, psd_dict=None, psd_fractional_overlap=0.5, psd_length=32, psd_maximum_duration=1024, psd_method='median', psd_start_time=None, reference_frame='sky', reference_frequency=20.0, request_cpus=8, request_memory=4.0, request_memory_generation=None, resampling_method='lal', roq_folder=None, roq_scale_factor=1.0, roq_weights=None, sampler='dynesty', sampler_kwargs="{'nlive': 500, 'npool': 8}", sampling_frequency=1024.0, sampling_seed=None, scheduler='condor', scheduler_analysis_time='7-00:00:00', scheduler_args=None, scheduler_env=None, scheduler_module=[None], single_postprocessing_arguments=None, single_postprocessing_executable=None, singularity_image=None, spline_calibration_amplitude_uncertainty_dict=None, spline_calibration_envelope_dict=None, spline_calibration_nodes=5, spline_calibration_phase_uncertainty_dict=None, submit=False, summarypages_arguments=None, time_marginalization=False, time_reference='geocent', timeslide_dict=None, timeslide_file=None, transfer_files=True, trigger_time='1126259463.9', tukey_roll_off=0.4, verbose=False, waveform_approximant='IMRPhenomPv2', waveform_generator='eccn.functions.my_waveform_generator', webdir=None, zero_noise=False)
+18:17 bilby_pipe INFO    : Sampling seed set to 479790
+18:17 bilby_pipe INFO    : No calibration_model model provided, calibration marginalization will not be used
+18:17 bilby_pipe INFO    : Found data for detectors = ['H1', 'L1']
+18:17 bilby_pipe INFO    : Using data for detectors = ['H1', 'L1']
+18:17 bilby_pipe INFO    : H1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+18:17 bilby_pipe INFO    : L1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+18:17 bilby INFO    : Waveform generator initiated with
+  frequency_domain_source_model: eccn.functions.eccentric_waveform
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+18:17 bilby INFO    : Running for label 'eccn_data0_1126259463-9_analysis_H1L1_dynesty', output will be saved to 'outdir_com/result'
+18:17 bilby INFO    : Using lal version 7.1.2
+18:17 bilby INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+18:17 bilby INFO    : Using lalsimulation version 2.5.1
+18:17 bilby INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+18:17 bilby INFO    : Search parameters:
+18:17 bilby INFO    :   initial_eccentricity = LogUniform(minimum=0.01, maximum=0.2, name='eccentricity', latex_label='eccentricity', unit=None, boundary=None)
+18:17 bilby INFO    :   mass_1 = Constraint(minimum=10, maximum=80, name='mass_1', latex_label='$m_1$', unit=None)
+18:17 bilby INFO    :   mass_2 = Constraint(minimum=10, maximum=80, name='mass_2', latex_label='$m_2$', unit=None)
+18:17 bilby INFO    :   chirp_mass = 19.564163812778446
+18:17 bilby INFO    :   mass_ratio = 0.9148936170212766
+18:17 bilby INFO    :   a_1 = 0.0
+18:17 bilby INFO    :   a_2 = 0.0
+18:17 bilby INFO    :   tilt_1 = 0.0
+18:17 bilby INFO    :   tilt_2 = 0.0
+18:17 bilby INFO    :   phi_12 = 0.0
+18:17 bilby INFO    :   phi_jl = 0.0
+18:17 bilby INFO    :   luminosity_distance = 400.0
+18:17 bilby INFO    :   theta_jn = 0.4
+18:17 bilby INFO    :   psi = 0.1
+18:17 bilby INFO    :   phase = 1.2
+18:17 bilby INFO    :   geocent_time = 1126259462.4
+18:17 bilby INFO    :   ra = 45.0
+18:17 bilby INFO    :   dec = 5.73
+18:17 bilby INFO    : Generating frequency domain strain from given time domain strain.
+18:17 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+18:17 bilby INFO    : Generating frequency domain strain from given time domain strain.
+18:17 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4

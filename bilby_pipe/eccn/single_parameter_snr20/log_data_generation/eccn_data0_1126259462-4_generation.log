@@ -1,0 +1,27 @@
+000 (7680771.000.000) 2021-07-02 15:38:08 Job submitted from host: <10.14.0.99:9618?addrs=10.14.0.99-9618&alias=ldas-pcdev1.ligo.caltech.edu&noUDP&sock=schedd_11200_d8ce>
+    DAG Node: eccn_data0_1126259462-4_generation_arg_0
+...
+001 (7680771.000.000) 2021-07-02 15:41:21 Job executing on host: <10.14.9.68:9618?addrs=10.14.9.68-9618&alias=node2068.cluster.ldas.cit&noUDP&sock=startd_3147270_0510>
+...
+006 (7680771.000.000) 2021-07-02 15:41:30 Image size of job updated: 503500
+	130  -  MemoryUsage of job (MB)
+	132516  -  ResidentSetSize of job (KB)
+...
+005 (7680771.000.000) 2021-07-02 15:41:34 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:08, Sys 0 00:00:01  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:08, Sys 0 00:00:01  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :                 1         1 
+	   Disk (KB)            :        1        1    102118 
+	   GPUs                 :                           0 
+	   Memory (MB)          :      130     8192      8192 
+
+	Job terminated of its own accord at 2021-07-02T22:41:34Z.
+...
