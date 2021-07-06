@@ -1,0 +1,60 @@
+000 (7756524.000.000) 2021-07-03 18:19:32 Job submitted from host: <10.14.0.99:9618?addrs=10.14.0.99-9618&alias=ldas-pcdev1.ligo.caltech.edu&noUDP&sock=schedd_11200_d8ce>
+    DAG Node: eccn_data0_1126259462-4_analysis_H1L1_dynesty_arg_0
+...
+040 (7756524.000.000) 2021-07-03 18:20:11 Started transferring input files
+	Transferring to host: <10.14.9.136:9618?addrs=10.14.9.136-9618&alias=node2136.cluster.ldas.cit&noUDP&sock=slot1_21_2360657_2954_33208>
+...
+040 (7756524.000.000) 2021-07-03 18:20:11 Finished transferring input files
+...
+001 (7756524.000.000) 2021-07-03 18:20:11 Job executing on host: <10.14.9.136:9618?addrs=10.14.9.136-9618&alias=node2136.cluster.ldas.cit&noUDP&sock=startd_2360499_8df9>
+...
+006 (7756524.000.000) 2021-07-03 18:20:20 Image size of job updated: 154248
+	113  -  MemoryUsage of job (MB)
+	114872  -  ResidentSetSize of job (KB)
+...
+006 (7756524.000.000) 2021-07-03 18:25:21 Image size of job updated: 1486376
+	113  -  MemoryUsage of job (MB)
+	115208  -  ResidentSetSize of job (KB)
+...
+006 (7756524.000.000) 2021-07-03 18:30:21 Image size of job updated: 13574392
+	151  -  MemoryUsage of job (MB)
+	154576  -  ResidentSetSize of job (KB)
+...
+006 (7756524.000.000) 2021-07-03 18:35:22 Image size of job updated: 13574648
+	152  -  MemoryUsage of job (MB)
+	154932  -  ResidentSetSize of job (KB)
+...
+006 (7756524.000.000) 2021-07-03 18:40:22 Image size of job updated: 13743620
+	228  -  MemoryUsage of job (MB)
+	232876  -  ResidentSetSize of job (KB)
+...
+006 (7756524.000.000) 2021-07-03 18:45:22 Image size of job updated: 13743620
+	228  -  MemoryUsage of job (MB)
+	232912  -  ResidentSetSize of job (KB)
+...
+006 (7756524.000.000) 2021-07-03 18:50:22 Image size of job updated: 13758140
+	242  -  MemoryUsage of job (MB)
+	247696  -  ResidentSetSize of job (KB)
+...
+040 (7756524.000.000) 2021-07-03 18:54:09 Started transferring output files
+...
+040 (7756524.000.000) 2021-07-03 18:54:09 Finished transferring output files
+...
+005 (7756524.000.000) 2021-07-03 18:54:09 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 03:18:21, Sys 0 00:00:15  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 03:18:21, Sys 0 00:00:15  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	2407552  -  Run Bytes Sent By Job
+	345381  -  Run Bytes Received By Job
+	2407552  -  Total Bytes Sent By Job
+	345381  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     7.01        8         8 
+	   Disk (KB)            :  2719         350    102126 
+	   GPUs                 :                           0 
+	   Memory (MB)          :   242        4096      4096 
+
+	Job terminated of its own accord at 2021-07-04T01:54:05Z.
+...

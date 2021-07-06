@@ -1,0 +1,245 @@
+000 (7815385.000.000) 2021-07-04 11:05:00 Job submitted from host: <10.14.0.99:9618?addrs=10.14.0.99-9618&alias=ldas-pcdev1.ligo.caltech.edu&noUDP&sock=schedd_11200_d8ce>
+    DAG Node: eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0
+...
+040 (7815385.000.000) 2021-07-04 11:06:32 Started transferring input files
+	Transferring to host: <10.14.9.103:9618?addrs=10.14.9.103-9618&alias=node2103.cluster.ldas.cit&noUDP&sock=slot1_18_1982449_6941_8375>
+...
+040 (7815385.000.000) 2021-07-04 11:06:32 Finished transferring input files
+...
+001 (7815385.000.000) 2021-07-04 11:06:32 Job executing on host: <10.14.9.103:9618?addrs=10.14.9.103-9618&alias=node2103.cluster.ldas.cit&noUDP&sock=startd_1982402_761b>
+...
+006 (7815385.000.000) 2021-07-04 11:06:41 Image size of job updated: 2389656
+	113  -  MemoryUsage of job (MB)
+	114916  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 11:11:42 Image size of job updated: 2551364
+	113  -  MemoryUsage of job (MB)
+	115512  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 11:16:43 Image size of job updated: 43570580
+	186  -  MemoryUsage of job (MB)
+	190256  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 11:21:43 Image size of job updated: 43570836
+	187  -  MemoryUsage of job (MB)
+	190908  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 11:26:43 Image size of job updated: 43745140
+	267  -  MemoryUsage of job (MB)
+	272840  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 11:31:43 Image size of job updated: 43745140
+	267  -  MemoryUsage of job (MB)
+	272948  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 11:36:44 Image size of job updated: 43756752
+	279  -  MemoryUsage of job (MB)
+	284684  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 11:41:45 Image size of job updated: 43758708
+	282  -  MemoryUsage of job (MB)
+	287944  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 11:46:45 Image size of job updated: 43772020
+	289  -  MemoryUsage of job (MB)
+	295404  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 11:51:45 Image size of job updated: 43772020
+	289  -  MemoryUsage of job (MB)
+	295528  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 11:56:46 Image size of job updated: 43772020
+	294  -  MemoryUsage of job (MB)
+	300776  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 12:01:46 Image size of job updated: 43772020
+	294  -  MemoryUsage of job (MB)
+	300780  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 12:06:46 Image size of job updated: 43772020
+	296  -  MemoryUsage of job (MB)
+	302852  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 12:16:48 Image size of job updated: 43772020
+	296  -  MemoryUsage of job (MB)
+	302884  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 12:46:49 Image size of job updated: 43772120
+	296  -  MemoryUsage of job (MB)
+	303084  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 12:51:50 Image size of job updated: 43772120
+	296  -  MemoryUsage of job (MB)
+	303088  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 13:01:50 Image size of job updated: 43772376
+	297  -  MemoryUsage of job (MB)
+	303572  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 13:11:52 Image size of job updated: 43772376
+	297  -  MemoryUsage of job (MB)
+	303580  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 13:16:52 Image size of job updated: 43778776
+	297  -  MemoryUsage of job (MB)
+	303984  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 13:21:53 Image size of job updated: 43778776
+	297  -  MemoryUsage of job (MB)
+	304020  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 13:26:53 Image size of job updated: 43778776
+	301  -  MemoryUsage of job (MB)
+	307340  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 13:36:55 Image size of job updated: 43778776
+	302  -  MemoryUsage of job (MB)
+	308832  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 13:41:55 Image size of job updated: 43778776
+	302  -  MemoryUsage of job (MB)
+	308864  -  ResidentSetSize of job (KB)
+...
+040 (7815385.000.000) 2021-07-04 19:08:24 Started transferring output files
+...
+040 (7815385.000.000) 2021-07-04 19:08:24 Finished transferring output files
+...
+006 (7815385.000.000) 2021-07-04 20:17:42 Image size of job updated: 43778776
+	303  -  MemoryUsage of job (MB)
+	309592  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-04 23:48:01 Image size of job updated: 43785088
+	303  -  MemoryUsage of job (MB)
+	309592  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 01:03:07 Image size of job updated: 43786112
+	303  -  MemoryUsage of job (MB)
+	309592  -  ResidentSetSize of job (KB)
+...
+040 (7815385.000.000) 2021-07-05 03:12:27 Started transferring output files
+...
+040 (7815385.000.000) 2021-07-05 03:12:27 Finished transferring output files
+...
+006 (7815385.000.000) 2021-07-05 06:48:45 Image size of job updated: 43786112
+	311  -  MemoryUsage of job (MB)
+	317600  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 06:53:45 Image size of job updated: 43786112
+	311  -  MemoryUsage of job (MB)
+	317604  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 06:58:46 Image size of job updated: 43786112
+	311  -  MemoryUsage of job (MB)
+	317612  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 07:03:46 Image size of job updated: 43786112
+	311  -  MemoryUsage of job (MB)
+	317888  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 07:18:47 Image size of job updated: 43804868
+	312  -  MemoryUsage of job (MB)
+	318864  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 07:38:50 Image size of job updated: 43804868
+	312  -  MemoryUsage of job (MB)
+	319108  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 07:53:52 Image size of job updated: 43804868
+	313  -  MemoryUsage of job (MB)
+	319788  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 08:43:55 Image size of job updated: 43804868
+	313  -  MemoryUsage of job (MB)
+	320328  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 09:18:59 Image size of job updated: 43804868
+	314  -  MemoryUsage of job (MB)
+	320612  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 09:34:00 Image size of job updated: 43804868
+	314  -  MemoryUsage of job (MB)
+	321472  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 10:09:05 Image size of job updated: 43804868
+	315  -  MemoryUsage of job (MB)
+	321684  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 10:24:07 Image size of job updated: 43804868
+	325  -  MemoryUsage of job (MB)
+	331788  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 10:44:09 Image size of job updated: 43809492
+	325  -  MemoryUsage of job (MB)
+	332536  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 11:14:12 Image size of job updated: 43809492
+	326  -  MemoryUsage of job (MB)
+	333380  -  ResidentSetSize of job (KB)
+...
+040 (7815385.000.000) 2021-07-05 11:16:01 Started transferring output files
+...
+040 (7815385.000.000) 2021-07-05 11:16:01 Finished transferring output files
+...
+006 (7815385.000.000) 2021-07-05 13:14:26 Image size of job updated: 43809492
+	326  -  MemoryUsage of job (MB)
+	333808  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 13:24:27 Image size of job updated: 43809492
+	326  -  MemoryUsage of job (MB)
+	333812  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 13:29:28 Image size of job updated: 43809492
+	327  -  MemoryUsage of job (MB)
+	334840  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 13:49:31 Image size of job updated: 43809492
+	328  -  MemoryUsage of job (MB)
+	334872  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 14:04:33 Image size of job updated: 43809492
+	328  -  MemoryUsage of job (MB)
+	335244  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 14:14:34 Image size of job updated: 43809492
+	328  -  MemoryUsage of job (MB)
+	335248  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 14:19:36 Image size of job updated: 43809492
+	328  -  MemoryUsage of job (MB)
+	335780  -  ResidentSetSize of job (KB)
+...
+006 (7815385.000.000) 2021-07-05 14:34:37 Image size of job updated: 43809492
+	328  -  MemoryUsage of job (MB)
+	335792  -  ResidentSetSize of job (KB)
+...
+004 (7815385.000.000) 2021-07-05 14:55:44 Job was evicted.
+	(0) CPU times
+		Usr 16 00:58:08, Sys 0 00:06:55  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	7051400  -  Run Bytes Sent By Job
+	345598  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :    15.93       16        16 
+	   Disk (KB)            :  3532         350    102122 
+	   GPUs                 :                           0 
+	   Memory (MB)          :   328        4096      4096 
+...
+040 (7815385.000.000) 2021-07-05 14:57:06 Started transferring input files
+	Transferring to host: <10.14.9.121:9618?addrs=10.14.9.121-9618&alias=node2121.cluster.ldas.cit&noUDP&sock=slot1_12_3234434_1a80_37957>
+...
+040 (7815385.000.000) 2021-07-05 14:57:06 Finished transferring input files
+...
+001 (7815385.000.000) 2021-07-05 14:57:07 Job executing on host: <10.14.9.121:9618?addrs=10.14.9.121-9618&alias=node2121.cluster.ldas.cit&noUDP&sock=startd_3234280_a481>
+...
+007 (7815385.000.000) 2021-07-05 15:39:18 Shadow exception!
+	Assertion ERROR on (result)
+	0  -  Run Bytes Sent By Job
+	3149306  -  Run Bytes Received By Job
+...
+040 (7815385.000.000) 2021-07-05 15:42:35 Started transferring input files
+	Transferring to host: <10.14.9.104:9618?addrs=10.14.9.104-9618&alias=node2104.cluster.ldas.cit&noUDP&sock=slot1_2_3684695_b5e6_36631>
+...
+040 (7815385.000.000) 2021-07-05 15:42:35 Finished transferring input files
+...
+001 (7815385.000.000) 2021-07-05 15:42:36 Job executing on host: <10.14.9.104:9618?addrs=10.14.9.104-9618&alias=node2104.cluster.ldas.cit&noUDP&sock=startd_3684530_b142>
+...

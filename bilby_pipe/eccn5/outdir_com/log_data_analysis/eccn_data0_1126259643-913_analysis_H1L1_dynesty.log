@@ -1,0 +1,94 @@
+000 (7862188.000.000) 2021-07-05 13:56:47 Job submitted from host: <10.14.0.99:9618?addrs=10.14.0.99-9618&alias=ldas-pcdev1.ligo.caltech.edu&noUDP&sock=schedd_11200_d8ce>
+    DAG Node: eccn_data0_1126259643-913_analysis_H1L1_dynesty_arg_0
+...
+040 (7862188.000.000) 2021-07-05 13:58:21 Started transferring input files
+	Transferring to host: <10.14.9.88:9618?addrs=10.14.9.88-9618&alias=node2088.cluster.ldas.cit&noUDP&sock=slot1_2_3645344_5f06_36335>
+...
+040 (7862188.000.000) 2021-07-05 13:58:21 Finished transferring input files
+...
+001 (7862188.000.000) 2021-07-05 13:58:21 Job executing on host: <10.14.9.88:9618?addrs=10.14.9.88-9618&alias=node2088.cluster.ldas.cit&noUDP&sock=startd_3645167_f2d0>
+...
+006 (7862188.000.000) 2021-07-05 13:58:30 Image size of job updated: 154776
+	113  -  MemoryUsage of job (MB)
+	114892  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 14:03:31 Image size of job updated: 1486368
+	113  -  MemoryUsage of job (MB)
+	115452  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 14:08:32 Image size of job updated: 13574320
+	152  -  MemoryUsage of job (MB)
+	154868  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 14:13:33 Image size of job updated: 13574576
+	152  -  MemoryUsage of job (MB)
+	155216  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 14:18:33 Image size of job updated: 13749180
+	232  -  MemoryUsage of job (MB)
+	237380  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 14:23:34 Image size of job updated: 13749180
+	232  -  MemoryUsage of job (MB)
+	237496  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 14:28:35 Image size of job updated: 13761868
+	245  -  MemoryUsage of job (MB)
+	250052  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 14:33:36 Image size of job updated: 13761868
+	245  -  MemoryUsage of job (MB)
+	250056  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 14:38:36 Image size of job updated: 13761868
+	245  -  MemoryUsage of job (MB)
+	250060  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 14:43:36 Image size of job updated: 13767824
+	251  -  MemoryUsage of job (MB)
+	256148  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 14:53:38 Image size of job updated: 13772296
+	255  -  MemoryUsage of job (MB)
+	260648  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 14:58:38 Image size of job updated: 13774252
+	256  -  MemoryUsage of job (MB)
+	262116  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 15:03:38 Image size of job updated: 13776404
+	259  -  MemoryUsage of job (MB)
+	264960  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 15:08:38 Image size of job updated: 13776404
+	259  -  MemoryUsage of job (MB)
+	265108  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 15:13:38 Image size of job updated: 13776404
+	259  -  MemoryUsage of job (MB)
+	265176  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 15:18:39 Image size of job updated: 13776920
+	260  -  MemoryUsage of job (MB)
+	265680  -  ResidentSetSize of job (KB)
+...
+007 (7862188.000.000) 2021-07-05 15:39:20 Shadow exception!
+	Assertion ERROR on (result)
+	0  -  Run Bytes Sent By Job
+	345611  -  Run Bytes Received By Job
+...
+040 (7862188.000.000) 2021-07-05 15:42:36 Started transferring input files
+	Transferring to host: <10.14.9.101:9618?addrs=10.14.9.101-9618&alias=node2101.cluster.ldas.cit&noUDP&sock=slot1_3_172334_a499_39575>
+...
+040 (7862188.000.000) 2021-07-05 15:42:36 Finished transferring input files
+...
+001 (7862188.000.000) 2021-07-05 15:42:36 Job executing on host: <10.14.9.101:9618?addrs=10.14.9.101-9618&alias=node2101.cluster.ldas.cit&noUDP&sock=startd_172176_fe55>
+...
+006 (7862188.000.000) 2021-07-05 17:22:52 Image size of job updated: 15000000
+	269  -  MemoryUsage of job (MB)
+	275196  -  ResidentSetSize of job (KB)
+...
+006 (7862188.000.000) 2021-07-05 17:27:53 Image size of job updated: 15000000
+	269  -  MemoryUsage of job (MB)
+	275200  -  ResidentSetSize of job (KB)
+...

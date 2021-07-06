@@ -1,0 +1,438 @@
+11:06 bilby_pipe INFO    : Running bilby_pipe version: 1.0.1: (CLEAN) c4c6d92 2020-08-26 02:52:43 -0500
+11:06 bilby_pipe INFO    : Running bilby: 1.0.1: release
+11:06 bilby_pipe INFO    : Command line arguments: Namespace(accounting='ligo.dev.o3.cbc.pe.lalinference', calibration_model=None, catch_waveform_errors=False, channel_dict='{H1:GWOSC, L1:GWOSC}', coherence_test=False, condor_job_priority=0, convert_to_flat_in_component_mass=False, create_plots=False, create_summary=False, data_dict=None, data_dump_file='outdir_com/data/eccn_data0_1126259463-9_generation_data_dump.pickle', data_format=None, default_prior='BBHPriorDict', deltaT=0.2, detectors=['H1', 'L1'], distance_marginalization=False, distance_marginalization_lookup_table=None, duration=4.0, email=None, existing_dir=None, extra_likelihood_kwargs=None, frequency_domain_source_model='eccn.functions.eccentric_waveform', gaussian_noise=False, generation_seed=None, gps_file=None, gps_tuple=None, idx=0, ignore_gwpy_data_quality_check=True, ini='eccn_config_complete.ini', injection=True, injection_dict="{'mass_1':23.5, 'mass_2':21.5, 'chirp_mass':19.564163812778446, 'mass_ratio':0.9148936170212766, 'initial_eccentricity':0.1, 'a_1':0., 'a_2':0., 'tilt_1':0., 'tilt_2':0., 'phi_12':0., 'phi_jl':0., 'luminosity_distance':400., 'theta_jn':0.4, 'psi':0.1, 'phase':1.2, 'geocent_time':1126259462.4, 'ra':45., 'dec':5.73,}", injection_file=None, injection_numbers=['None'], injection_waveform_approximant=None, jitter_time=True, label='eccn_data0_1126259463-9_analysis_H1L1_dynesty', likelihood_type='GravitationalWaveTransient', local=False, local_generation=False, local_plot=False, log_directory=None, maximum_frequency='107.0', minimum_frequency='23.0', mode_array=[None], n_parallel=1, n_simulation=1, notification='Never', online_pe=False, osg=False, outdir='outdir_com', periodic_restart_time=28800, phase_marginalization=False, plot_calibration=False, plot_corner=False, plot_format='png', plot_marginal=False, plot_skymap=False, plot_waveform=False, pn_amplitude_order=0, pn_phase_order=-1, pn_spin_order=-1, pn_tidal_order=-1, post_trigger_duration=2.0, postprocessing_arguments=None, postprocessing_executable=None, prior_dict="{mass-1: Constraint(name='mass_1', minimum=10, maximum=80), mass-2: Constraint(name='mass_2', minimum=10, maximum=80), chirp-mass: Uniform(name='chirp_mass', minimum=17.411,maximum=21.764), mass-ratio: Uniform(name='mass_ratio', minimum=0.5, maximum=1), initial-eccentricity: LogUniform(name='eccentricity', minimum=0.01, maximum=0.2), a-1: 0., a-2: 0., tilt-1: 0., tilt-2: 0., phi-12: 0., phi-jl: 0., luminosity-distance: 400., theta-jn: 0.4, psi: 0.1, phase: 1.2, geocent-time: 1126259462.4, ra: 45.0, dec: 5.73, }", prior_file=None, psd_dict=None, psd_fractional_overlap=0.5, psd_length=32, psd_maximum_duration=1024, psd_method='median', psd_start_time=None, reference_frame='sky', reference_frequency=20.0, request_cpus=16, request_memory=4.0, request_memory_generation=None, resampling_method='lal', roq_folder=None, roq_scale_factor=1.0, roq_weights=None, sampler='dynesty', sampler_kwargs="{'nlive': 500, 'npool': 16}", sampling_frequency=1024.0, sampling_seed=None, scheduler='condor', scheduler_analysis_time='7-00:00:00', scheduler_args=None, scheduler_env=None, scheduler_module=[None], single_postprocessing_arguments=None, single_postprocessing_executable=None, singularity_image=None, spline_calibration_amplitude_uncertainty_dict=None, spline_calibration_envelope_dict=None, spline_calibration_nodes=5, spline_calibration_phase_uncertainty_dict=None, submit=False, summarypages_arguments=None, time_marginalization=False, time_reference='geocent', timeslide_dict=None, timeslide_file=None, transfer_files=True, trigger_time='1126259463.9', tukey_roll_off=0.4, verbose=False, waveform_approximant='IMRPhenomPv2', waveform_generator='eccn.functions.my_waveform_generator', webdir=None, zero_noise=False)
+11:06 bilby_pipe INFO    : Sampling seed set to 519362
+11:06 bilby_pipe INFO    : No calibration_model model provided, calibration marginalization will not be used
+11:06 bilby_pipe INFO    : Found data for detectors = ['H1', 'L1']
+11:06 bilby_pipe INFO    : Using data for detectors = ['H1', 'L1']
+11:06 bilby_pipe INFO    : H1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+11:06 bilby_pipe INFO    : L1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+11:06 bilby INFO    : Waveform generator initiated with
+  frequency_domain_source_model: eccn.functions.eccentric_waveform
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+11:06 bilby INFO    : Running for label 'eccn_data0_1126259463-9_analysis_H1L1_dynesty', output will be saved to 'outdir_com/result'
+11:06 bilby INFO    : Using lal version 7.1.2
+11:06 bilby INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+11:06 bilby INFO    : Using lalsimulation version 2.5.1
+11:06 bilby INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+11:06 bilby INFO    : Search parameters:
+11:06 bilby INFO    :   chirp_mass = Uniform(minimum=17.411, maximum=21.764, name='chirp_mass', latex_label='$\\mathcal{M}$', unit=None, boundary=None)
+11:06 bilby INFO    :   mass_ratio = Uniform(minimum=0.5, maximum=1, name='mass_ratio', latex_label='$q$', unit=None, boundary=None)
+11:06 bilby INFO    :   initial_eccentricity = LogUniform(minimum=0.01, maximum=0.2, name='eccentricity', latex_label='eccentricity', unit=None, boundary=None)
+11:06 bilby INFO    :   mass_1 = Constraint(minimum=10, maximum=80, name='mass_1', latex_label='$m_1$', unit=None)
+11:06 bilby INFO    :   mass_2 = Constraint(minimum=10, maximum=80, name='mass_2', latex_label='$m_2$', unit=None)
+11:06 bilby INFO    :   a_1 = 0.0
+11:06 bilby INFO    :   a_2 = 0.0
+11:06 bilby INFO    :   tilt_1 = 0.0
+11:06 bilby INFO    :   tilt_2 = 0.0
+11:06 bilby INFO    :   phi_12 = 0.0
+11:06 bilby INFO    :   phi_jl = 0.0
+11:06 bilby INFO    :   luminosity_distance = 400.0
+11:06 bilby INFO    :   theta_jn = 0.4
+11:06 bilby INFO    :   psi = 0.1
+11:06 bilby INFO    :   phase = 1.2
+11:06 bilby INFO    :   geocent_time = 1126259462.4
+11:06 bilby INFO    :   ra = 45.0
+11:06 bilby INFO    :   dec = 5.73
+11:06 bilby INFO    : Generating frequency domain strain from given time domain strain.
+11:06 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+11:06 bilby INFO    : Generating frequency domain strain from given time domain strain.
+11:06 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+11:07 bilby INFO    : Single likelihood evaluation took 7.256e-01 s
+11:07 bilby INFO    : Using sampler Dynesty with kwargs {'bound': 'multi', 'sample': 'rwalk', 'verbose': True, 'periodic': None, 'reflective': None, 'check_point_delta_t': 600, 'nlive': 500, 'first_update': None, 'walks': 100, 'npdim': None, 'rstate': None, 'queue_size': 16, 'pool': None, 'use_pool': None, 'live_points': None, 'logl_args': None, 'logl_kwargs': None, 'ptform_args': None, 'ptform_kwargs': None, 'enlarge': 1.5, 'bootstrap': None, 'vol_dec': 0.5, 'vol_check': 8.0, 'facc': 0.2, 'slices': 5, 'update_interval': 300, 'print_func': <bound method Dynesty._print_func of <bilby.core.sampler.dynesty.Dynesty object at 0x2b832af81110>>, 'dlogz': 0.1, 'maxiter': None, 'maxcall': None, 'logl_max': inf, 'add_live': True, 'print_progress': True, 'save_bounds': False, 'n_effective': None, 'maxmcmc': 5000, 'nact': 5}
+11:07 bilby INFO    : Checkpoint every check_point_delta_t = 600s
+11:07 bilby INFO    : Using dynesty version 1.0.1
+11:07 bilby INFO    : Generating initial points from the prior
+11:13 bilby INFO    : Using the bilby-implemented rwalk sample method with ACT estimated walks
+11:13 bilby INFO    : Setting up multiproccesing pool with 16 processes.
+11:13 bilby INFO    : Resume file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle does not exist.
+11:24 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+11:34 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+11:44 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+11:56 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+12:06 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+12:21 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+12:34 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+12:46 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+12:59 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+13:12 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+13:24 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+13:35 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+13:48 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+13:59 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+14:13 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+14:27 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+14:40 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+14:54 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+15:06 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+15:18 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+15:30 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+15:43 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+15:56 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+16:08 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+16:21 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+16:33 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+16:46 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+17:00 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+17:13 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+17:26 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+17:39 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+17:53 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+18:05 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+18:18 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+18:30 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+18:44 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+18:56 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+19:06 bilby INFO    : Run interrupted by alarm signal 14: checkpoint and exit on 77
+19:06 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+19:06 bilby INFO    : Writing 122 current samples to outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_samples.dat
+19:06 bilby INFO    : Starting to close worker pool.
+19:08 bilby INFO    : Finished closing worker pool.
+19:08 bilby_pipe INFO    : Running bilby_pipe version: 1.0.1: (CLEAN) c4c6d92 2020-08-26 02:52:43 -0500
+19:08 bilby_pipe INFO    : Running bilby: 1.0.1: release
+19:08 bilby_pipe INFO    : Command line arguments: Namespace(accounting='ligo.dev.o3.cbc.pe.lalinference', calibration_model=None, catch_waveform_errors=False, channel_dict='{H1:GWOSC, L1:GWOSC}', coherence_test=False, condor_job_priority=0, convert_to_flat_in_component_mass=False, create_plots=False, create_summary=False, data_dict=None, data_dump_file='outdir_com/data/eccn_data0_1126259463-9_generation_data_dump.pickle', data_format=None, default_prior='BBHPriorDict', deltaT=0.2, detectors=['H1', 'L1'], distance_marginalization=False, distance_marginalization_lookup_table=None, duration=4.0, email=None, existing_dir=None, extra_likelihood_kwargs=None, frequency_domain_source_model='eccn.functions.eccentric_waveform', gaussian_noise=False, generation_seed=None, gps_file=None, gps_tuple=None, idx=0, ignore_gwpy_data_quality_check=True, ini='eccn_config_complete.ini', injection=True, injection_dict="{'mass_1':23.5, 'mass_2':21.5, 'chirp_mass':19.564163812778446, 'mass_ratio':0.9148936170212766, 'initial_eccentricity':0.1, 'a_1':0., 'a_2':0., 'tilt_1':0., 'tilt_2':0., 'phi_12':0., 'phi_jl':0., 'luminosity_distance':400., 'theta_jn':0.4, 'psi':0.1, 'phase':1.2, 'geocent_time':1126259462.4, 'ra':45., 'dec':5.73,}", injection_file=None, injection_numbers=['None'], injection_waveform_approximant=None, jitter_time=True, label='eccn_data0_1126259463-9_analysis_H1L1_dynesty', likelihood_type='GravitationalWaveTransient', local=False, local_generation=False, local_plot=False, log_directory=None, maximum_frequency='107.0', minimum_frequency='23.0', mode_array=[None], n_parallel=1, n_simulation=1, notification='Never', online_pe=False, osg=False, outdir='outdir_com', periodic_restart_time=28800, phase_marginalization=False, plot_calibration=False, plot_corner=False, plot_format='png', plot_marginal=False, plot_skymap=False, plot_waveform=False, pn_amplitude_order=0, pn_phase_order=-1, pn_spin_order=-1, pn_tidal_order=-1, post_trigger_duration=2.0, postprocessing_arguments=None, postprocessing_executable=None, prior_dict="{mass-1: Constraint(name='mass_1', minimum=10, maximum=80), mass-2: Constraint(name='mass_2', minimum=10, maximum=80), chirp-mass: Uniform(name='chirp_mass', minimum=17.411,maximum=21.764), mass-ratio: Uniform(name='mass_ratio', minimum=0.5, maximum=1), initial-eccentricity: LogUniform(name='eccentricity', minimum=0.01, maximum=0.2), a-1: 0., a-2: 0., tilt-1: 0., tilt-2: 0., phi-12: 0., phi-jl: 0., luminosity-distance: 400., theta-jn: 0.4, psi: 0.1, phase: 1.2, geocent-time: 1126259462.4, ra: 45.0, dec: 5.73, }", prior_file=None, psd_dict=None, psd_fractional_overlap=0.5, psd_length=32, psd_maximum_duration=1024, psd_method='median', psd_start_time=None, reference_frame='sky', reference_frequency=20.0, request_cpus=16, request_memory=4.0, request_memory_generation=None, resampling_method='lal', roq_folder=None, roq_scale_factor=1.0, roq_weights=None, sampler='dynesty', sampler_kwargs="{'nlive': 500, 'npool': 16}", sampling_frequency=1024.0, sampling_seed=None, scheduler='condor', scheduler_analysis_time='7-00:00:00', scheduler_args=None, scheduler_env=None, scheduler_module=[None], single_postprocessing_arguments=None, single_postprocessing_executable=None, singularity_image=None, spline_calibration_amplitude_uncertainty_dict=None, spline_calibration_envelope_dict=None, spline_calibration_nodes=5, spline_calibration_phase_uncertainty_dict=None, submit=False, summarypages_arguments=None, time_marginalization=False, time_reference='geocent', timeslide_dict=None, timeslide_file=None, transfer_files=True, trigger_time='1126259463.9', tukey_roll_off=0.4, verbose=False, waveform_approximant='IMRPhenomPv2', waveform_generator='eccn.functions.my_waveform_generator', webdir=None, zero_noise=False)
+19:08 bilby_pipe INFO    : Sampling seed set to 352966
+19:08 bilby_pipe INFO    : No calibration_model model provided, calibration marginalization will not be used
+19:08 bilby_pipe INFO    : Found data for detectors = ['H1', 'L1']
+19:08 bilby_pipe INFO    : Using data for detectors = ['H1', 'L1']
+19:08 bilby_pipe INFO    : H1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+19:08 bilby_pipe INFO    : L1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+19:08 bilby INFO    : Waveform generator initiated with
+  frequency_domain_source_model: eccn.functions.eccentric_waveform
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+19:08 bilby INFO    : Running for label 'eccn_data0_1126259463-9_analysis_H1L1_dynesty', output will be saved to 'outdir_com/result'
+19:08 bilby INFO    : Using lal version 7.1.2
+19:08 bilby INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+19:08 bilby INFO    : Using lalsimulation version 2.5.1
+19:08 bilby INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+19:08 bilby INFO    : Search parameters:
+19:08 bilby INFO    :   chirp_mass = Uniform(minimum=17.411, maximum=21.764, name='chirp_mass', latex_label='$\\mathcal{M}$', unit=None, boundary=None)
+19:08 bilby INFO    :   mass_ratio = Uniform(minimum=0.5, maximum=1, name='mass_ratio', latex_label='$q$', unit=None, boundary=None)
+19:08 bilby INFO    :   initial_eccentricity = LogUniform(minimum=0.01, maximum=0.2, name='eccentricity', latex_label='eccentricity', unit=None, boundary=None)
+19:08 bilby INFO    :   mass_1 = Constraint(minimum=10, maximum=80, name='mass_1', latex_label='$m_1$', unit=None)
+19:08 bilby INFO    :   mass_2 = Constraint(minimum=10, maximum=80, name='mass_2', latex_label='$m_2$', unit=None)
+19:08 bilby INFO    :   a_1 = 0.0
+19:08 bilby INFO    :   a_2 = 0.0
+19:08 bilby INFO    :   tilt_1 = 0.0
+19:08 bilby INFO    :   tilt_2 = 0.0
+19:08 bilby INFO    :   phi_12 = 0.0
+19:08 bilby INFO    :   phi_jl = 0.0
+19:08 bilby INFO    :   luminosity_distance = 400.0
+19:08 bilby INFO    :   theta_jn = 0.4
+19:08 bilby INFO    :   psi = 0.1
+19:08 bilby INFO    :   phase = 1.2
+19:08 bilby INFO    :   geocent_time = 1126259462.4
+19:08 bilby INFO    :   ra = 45.0
+19:08 bilby INFO    :   dec = 5.73
+19:08 bilby INFO    : Generating frequency domain strain from given time domain strain.
+19:08 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+19:08 bilby INFO    : Generating frequency domain strain from given time domain strain.
+19:08 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+19:09 bilby INFO    : Single likelihood evaluation took 7.049e-01 s
+19:09 bilby INFO    : Using sampler Dynesty with kwargs {'bound': 'multi', 'sample': 'rwalk', 'verbose': True, 'periodic': None, 'reflective': None, 'check_point_delta_t': 600, 'nlive': 500, 'first_update': None, 'walks': 100, 'npdim': None, 'rstate': None, 'queue_size': 16, 'pool': None, 'use_pool': None, 'live_points': None, 'logl_args': None, 'logl_kwargs': None, 'ptform_args': None, 'ptform_kwargs': None, 'enlarge': 1.5, 'bootstrap': None, 'vol_dec': 0.5, 'vol_check': 8.0, 'facc': 0.2, 'slices': 5, 'update_interval': 300, 'print_func': <bound method Dynesty._print_func of <bilby.core.sampler.dynesty.Dynesty object at 0x2b7ae2bdbe10>>, 'dlogz': 0.1, 'maxiter': None, 'maxcall': None, 'logl_max': inf, 'add_live': True, 'print_progress': True, 'save_bounds': False, 'n_effective': None, 'maxmcmc': 5000, 'nact': 5}
+19:09 bilby INFO    : Checkpoint every check_point_delta_t = 600s
+19:09 bilby INFO    : Using dynesty version 1.0.1
+19:09 bilby INFO    : Generating initial points from the prior
+19:15 bilby INFO    : Using the bilby-implemented rwalk sample method with ACT estimated walks
+19:15 bilby INFO    : Setting up multiproccesing pool with 16 processes.
+19:15 bilby INFO    : Reading resume file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+19:15 bilby INFO    : Resume file successfully loaded.
+19:22 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+19:35 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+19:49 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+20:02 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+20:15 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+20:29 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+20:41 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+20:55 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+21:08 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+21:22 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+21:36 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+21:49 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+22:03 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+22:17 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+22:32 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+22:47 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+23:02 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+23:17 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+23:31 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+23:46 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+00:01 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+00:15 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+00:30 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+00:45 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+01:00 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+01:15 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+01:30 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+01:45 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+02:01 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+02:16 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+02:32 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+02:48 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+03:04 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+03:08 bilby INFO    : Run interrupted by alarm signal 14: checkpoint and exit on 77
+03:08 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+03:08 bilby INFO    : Writing 968 current samples to outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_samples.dat
+03:08 bilby INFO    : Starting to close worker pool.
+03:12 bilby INFO    : Finished closing worker pool.
+03:12 bilby_pipe INFO    : Running bilby_pipe version: 1.0.1: (CLEAN) c4c6d92 2020-08-26 02:52:43 -0500
+03:12 bilby_pipe INFO    : Running bilby: 1.0.1: release
+03:12 bilby_pipe INFO    : Command line arguments: Namespace(accounting='ligo.dev.o3.cbc.pe.lalinference', calibration_model=None, catch_waveform_errors=False, channel_dict='{H1:GWOSC, L1:GWOSC}', coherence_test=False, condor_job_priority=0, convert_to_flat_in_component_mass=False, create_plots=False, create_summary=False, data_dict=None, data_dump_file='outdir_com/data/eccn_data0_1126259463-9_generation_data_dump.pickle', data_format=None, default_prior='BBHPriorDict', deltaT=0.2, detectors=['H1', 'L1'], distance_marginalization=False, distance_marginalization_lookup_table=None, duration=4.0, email=None, existing_dir=None, extra_likelihood_kwargs=None, frequency_domain_source_model='eccn.functions.eccentric_waveform', gaussian_noise=False, generation_seed=None, gps_file=None, gps_tuple=None, idx=0, ignore_gwpy_data_quality_check=True, ini='eccn_config_complete.ini', injection=True, injection_dict="{'mass_1':23.5, 'mass_2':21.5, 'chirp_mass':19.564163812778446, 'mass_ratio':0.9148936170212766, 'initial_eccentricity':0.1, 'a_1':0., 'a_2':0., 'tilt_1':0., 'tilt_2':0., 'phi_12':0., 'phi_jl':0., 'luminosity_distance':400., 'theta_jn':0.4, 'psi':0.1, 'phase':1.2, 'geocent_time':1126259462.4, 'ra':45., 'dec':5.73,}", injection_file=None, injection_numbers=['None'], injection_waveform_approximant=None, jitter_time=True, label='eccn_data0_1126259463-9_analysis_H1L1_dynesty', likelihood_type='GravitationalWaveTransient', local=False, local_generation=False, local_plot=False, log_directory=None, maximum_frequency='107.0', minimum_frequency='23.0', mode_array=[None], n_parallel=1, n_simulation=1, notification='Never', online_pe=False, osg=False, outdir='outdir_com', periodic_restart_time=28800, phase_marginalization=False, plot_calibration=False, plot_corner=False, plot_format='png', plot_marginal=False, plot_skymap=False, plot_waveform=False, pn_amplitude_order=0, pn_phase_order=-1, pn_spin_order=-1, pn_tidal_order=-1, post_trigger_duration=2.0, postprocessing_arguments=None, postprocessing_executable=None, prior_dict="{mass-1: Constraint(name='mass_1', minimum=10, maximum=80), mass-2: Constraint(name='mass_2', minimum=10, maximum=80), chirp-mass: Uniform(name='chirp_mass', minimum=17.411,maximum=21.764), mass-ratio: Uniform(name='mass_ratio', minimum=0.5, maximum=1), initial-eccentricity: LogUniform(name='eccentricity', minimum=0.01, maximum=0.2), a-1: 0., a-2: 0., tilt-1: 0., tilt-2: 0., phi-12: 0., phi-jl: 0., luminosity-distance: 400., theta-jn: 0.4, psi: 0.1, phase: 1.2, geocent-time: 1126259462.4, ra: 45.0, dec: 5.73, }", prior_file=None, psd_dict=None, psd_fractional_overlap=0.5, psd_length=32, psd_maximum_duration=1024, psd_method='median', psd_start_time=None, reference_frame='sky', reference_frequency=20.0, request_cpus=16, request_memory=4.0, request_memory_generation=None, resampling_method='lal', roq_folder=None, roq_scale_factor=1.0, roq_weights=None, sampler='dynesty', sampler_kwargs="{'nlive': 500, 'npool': 16}", sampling_frequency=1024.0, sampling_seed=None, scheduler='condor', scheduler_analysis_time='7-00:00:00', scheduler_args=None, scheduler_env=None, scheduler_module=[None], single_postprocessing_arguments=None, single_postprocessing_executable=None, singularity_image=None, spline_calibration_amplitude_uncertainty_dict=None, spline_calibration_envelope_dict=None, spline_calibration_nodes=5, spline_calibration_phase_uncertainty_dict=None, submit=False, summarypages_arguments=None, time_marginalization=False, time_reference='geocent', timeslide_dict=None, timeslide_file=None, transfer_files=True, trigger_time='1126259463.9', tukey_roll_off=0.4, verbose=False, waveform_approximant='IMRPhenomPv2', waveform_generator='eccn.functions.my_waveform_generator', webdir=None, zero_noise=False)
+03:12 bilby_pipe INFO    : Sampling seed set to 61069
+03:12 bilby_pipe INFO    : No calibration_model model provided, calibration marginalization will not be used
+03:12 bilby_pipe INFO    : Found data for detectors = ['H1', 'L1']
+03:12 bilby_pipe INFO    : Using data for detectors = ['H1', 'L1']
+03:12 bilby_pipe INFO    : H1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+03:12 bilby_pipe INFO    : L1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+03:12 bilby INFO    : Waveform generator initiated with
+  frequency_domain_source_model: eccn.functions.eccentric_waveform
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+03:12 bilby INFO    : Running for label 'eccn_data0_1126259463-9_analysis_H1L1_dynesty', output will be saved to 'outdir_com/result'
+03:12 bilby INFO    : Using lal version 7.1.2
+03:12 bilby INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+03:12 bilby INFO    : Using lalsimulation version 2.5.1
+03:12 bilby INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+03:12 bilby INFO    : Search parameters:
+03:12 bilby INFO    :   chirp_mass = Uniform(minimum=17.411, maximum=21.764, name='chirp_mass', latex_label='$\\mathcal{M}$', unit=None, boundary=None)
+03:12 bilby INFO    :   mass_ratio = Uniform(minimum=0.5, maximum=1, name='mass_ratio', latex_label='$q$', unit=None, boundary=None)
+03:12 bilby INFO    :   initial_eccentricity = LogUniform(minimum=0.01, maximum=0.2, name='eccentricity', latex_label='eccentricity', unit=None, boundary=None)
+03:12 bilby INFO    :   mass_1 = Constraint(minimum=10, maximum=80, name='mass_1', latex_label='$m_1$', unit=None)
+03:12 bilby INFO    :   mass_2 = Constraint(minimum=10, maximum=80, name='mass_2', latex_label='$m_2$', unit=None)
+03:12 bilby INFO    :   a_1 = 0.0
+03:12 bilby INFO    :   a_2 = 0.0
+03:12 bilby INFO    :   tilt_1 = 0.0
+03:12 bilby INFO    :   tilt_2 = 0.0
+03:12 bilby INFO    :   phi_12 = 0.0
+03:12 bilby INFO    :   phi_jl = 0.0
+03:12 bilby INFO    :   luminosity_distance = 400.0
+03:12 bilby INFO    :   theta_jn = 0.4
+03:12 bilby INFO    :   psi = 0.1
+03:12 bilby INFO    :   phase = 1.2
+03:12 bilby INFO    :   geocent_time = 1126259462.4
+03:12 bilby INFO    :   ra = 45.0
+03:12 bilby INFO    :   dec = 5.73
+03:12 bilby INFO    : Generating frequency domain strain from given time domain strain.
+03:12 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+03:12 bilby INFO    : Generating frequency domain strain from given time domain strain.
+03:12 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+03:13 bilby INFO    : Single likelihood evaluation took 7.214e-01 s
+03:13 bilby INFO    : Using sampler Dynesty with kwargs {'bound': 'multi', 'sample': 'rwalk', 'verbose': True, 'periodic': None, 'reflective': None, 'check_point_delta_t': 600, 'nlive': 500, 'first_update': None, 'walks': 100, 'npdim': None, 'rstate': None, 'queue_size': 16, 'pool': None, 'use_pool': None, 'live_points': None, 'logl_args': None, 'logl_kwargs': None, 'ptform_args': None, 'ptform_kwargs': None, 'enlarge': 1.5, 'bootstrap': None, 'vol_dec': 0.5, 'vol_check': 8.0, 'facc': 0.2, 'slices': 5, 'update_interval': 300, 'print_func': <bound method Dynesty._print_func of <bilby.core.sampler.dynesty.Dynesty object at 0x2af374555590>>, 'dlogz': 0.1, 'maxiter': None, 'maxcall': None, 'logl_max': inf, 'add_live': True, 'print_progress': True, 'save_bounds': False, 'n_effective': None, 'maxmcmc': 5000, 'nact': 5}
+03:13 bilby INFO    : Checkpoint every check_point_delta_t = 600s
+03:13 bilby INFO    : Using dynesty version 1.0.1
+03:13 bilby INFO    : Generating initial points from the prior
+03:19 bilby INFO    : Using the bilby-implemented rwalk sample method with ACT estimated walks
+03:19 bilby INFO    : Setting up multiproccesing pool with 16 processes.
+03:19 bilby INFO    : Reading resume file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+03:19 bilby INFO    : Resume file successfully loaded.
+03:27 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+03:45 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+04:02 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+04:20 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+04:35 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+04:51 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+05:07 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+05:22 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+05:39 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+05:56 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+06:12 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+06:29 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+06:45 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+07:02 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+07:18 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+07:34 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+07:50 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+08:07 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+08:24 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+08:41 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+08:57 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+09:15 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+09:32 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+09:49 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+10:06 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+10:23 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+10:41 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+10:58 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+11:12 bilby INFO    : Run interrupted by alarm signal 14: checkpoint and exit on 77
+11:12 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+11:12 bilby INFO    : Writing 308 current samples to outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_samples.dat
+11:12 bilby INFO    : Starting to close worker pool.
+11:16 bilby INFO    : Finished closing worker pool.
+11:16 bilby_pipe INFO    : Running bilby_pipe version: 1.0.1: (CLEAN) c4c6d92 2020-08-26 02:52:43 -0500
+11:16 bilby_pipe INFO    : Running bilby: 1.0.1: release
+11:16 bilby_pipe INFO    : Command line arguments: Namespace(accounting='ligo.dev.o3.cbc.pe.lalinference', calibration_model=None, catch_waveform_errors=False, channel_dict='{H1:GWOSC, L1:GWOSC}', coherence_test=False, condor_job_priority=0, convert_to_flat_in_component_mass=False, create_plots=False, create_summary=False, data_dict=None, data_dump_file='outdir_com/data/eccn_data0_1126259463-9_generation_data_dump.pickle', data_format=None, default_prior='BBHPriorDict', deltaT=0.2, detectors=['H1', 'L1'], distance_marginalization=False, distance_marginalization_lookup_table=None, duration=4.0, email=None, existing_dir=None, extra_likelihood_kwargs=None, frequency_domain_source_model='eccn.functions.eccentric_waveform', gaussian_noise=False, generation_seed=None, gps_file=None, gps_tuple=None, idx=0, ignore_gwpy_data_quality_check=True, ini='eccn_config_complete.ini', injection=True, injection_dict="{'mass_1':23.5, 'mass_2':21.5, 'chirp_mass':19.564163812778446, 'mass_ratio':0.9148936170212766, 'initial_eccentricity':0.1, 'a_1':0., 'a_2':0., 'tilt_1':0., 'tilt_2':0., 'phi_12':0., 'phi_jl':0., 'luminosity_distance':400., 'theta_jn':0.4, 'psi':0.1, 'phase':1.2, 'geocent_time':1126259462.4, 'ra':45., 'dec':5.73,}", injection_file=None, injection_numbers=['None'], injection_waveform_approximant=None, jitter_time=True, label='eccn_data0_1126259463-9_analysis_H1L1_dynesty', likelihood_type='GravitationalWaveTransient', local=False, local_generation=False, local_plot=False, log_directory=None, maximum_frequency='107.0', minimum_frequency='23.0', mode_array=[None], n_parallel=1, n_simulation=1, notification='Never', online_pe=False, osg=False, outdir='outdir_com', periodic_restart_time=28800, phase_marginalization=False, plot_calibration=False, plot_corner=False, plot_format='png', plot_marginal=False, plot_skymap=False, plot_waveform=False, pn_amplitude_order=0, pn_phase_order=-1, pn_spin_order=-1, pn_tidal_order=-1, post_trigger_duration=2.0, postprocessing_arguments=None, postprocessing_executable=None, prior_dict="{mass-1: Constraint(name='mass_1', minimum=10, maximum=80), mass-2: Constraint(name='mass_2', minimum=10, maximum=80), chirp-mass: Uniform(name='chirp_mass', minimum=17.411,maximum=21.764), mass-ratio: Uniform(name='mass_ratio', minimum=0.5, maximum=1), initial-eccentricity: LogUniform(name='eccentricity', minimum=0.01, maximum=0.2), a-1: 0., a-2: 0., tilt-1: 0., tilt-2: 0., phi-12: 0., phi-jl: 0., luminosity-distance: 400., theta-jn: 0.4, psi: 0.1, phase: 1.2, geocent-time: 1126259462.4, ra: 45.0, dec: 5.73, }", prior_file=None, psd_dict=None, psd_fractional_overlap=0.5, psd_length=32, psd_maximum_duration=1024, psd_method='median', psd_start_time=None, reference_frame='sky', reference_frequency=20.0, request_cpus=16, request_memory=4.0, request_memory_generation=None, resampling_method='lal', roq_folder=None, roq_scale_factor=1.0, roq_weights=None, sampler='dynesty', sampler_kwargs="{'nlive': 500, 'npool': 16}", sampling_frequency=1024.0, sampling_seed=None, scheduler='condor', scheduler_analysis_time='7-00:00:00', scheduler_args=None, scheduler_env=None, scheduler_module=[None], single_postprocessing_arguments=None, single_postprocessing_executable=None, singularity_image=None, spline_calibration_amplitude_uncertainty_dict=None, spline_calibration_envelope_dict=None, spline_calibration_nodes=5, spline_calibration_phase_uncertainty_dict=None, submit=False, summarypages_arguments=None, time_marginalization=False, time_reference='geocent', timeslide_dict=None, timeslide_file=None, transfer_files=True, trigger_time='1126259463.9', tukey_roll_off=0.4, verbose=False, waveform_approximant='IMRPhenomPv2', waveform_generator='eccn.functions.my_waveform_generator', webdir=None, zero_noise=False)
+11:16 bilby_pipe INFO    : Sampling seed set to 411504
+11:16 bilby_pipe INFO    : No calibration_model model provided, calibration marginalization will not be used
+11:16 bilby_pipe INFO    : Found data for detectors = ['H1', 'L1']
+11:16 bilby_pipe INFO    : Using data for detectors = ['H1', 'L1']
+11:16 bilby_pipe INFO    : H1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+11:16 bilby_pipe INFO    : L1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+11:16 bilby INFO    : Waveform generator initiated with
+  frequency_domain_source_model: eccn.functions.eccentric_waveform
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+11:16 bilby INFO    : Running for label 'eccn_data0_1126259463-9_analysis_H1L1_dynesty', output will be saved to 'outdir_com/result'
+11:16 bilby INFO    : Using lal version 7.1.2
+11:16 bilby INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+11:16 bilby INFO    : Using lalsimulation version 2.5.1
+11:16 bilby INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+11:16 bilby INFO    : Search parameters:
+11:16 bilby INFO    :   chirp_mass = Uniform(minimum=17.411, maximum=21.764, name='chirp_mass', latex_label='$\\mathcal{M}$', unit=None, boundary=None)
+11:16 bilby INFO    :   mass_ratio = Uniform(minimum=0.5, maximum=1, name='mass_ratio', latex_label='$q$', unit=None, boundary=None)
+11:16 bilby INFO    :   initial_eccentricity = LogUniform(minimum=0.01, maximum=0.2, name='eccentricity', latex_label='eccentricity', unit=None, boundary=None)
+11:16 bilby INFO    :   mass_1 = Constraint(minimum=10, maximum=80, name='mass_1', latex_label='$m_1$', unit=None)
+11:16 bilby INFO    :   mass_2 = Constraint(minimum=10, maximum=80, name='mass_2', latex_label='$m_2$', unit=None)
+11:16 bilby INFO    :   a_1 = 0.0
+11:16 bilby INFO    :   a_2 = 0.0
+11:16 bilby INFO    :   tilt_1 = 0.0
+11:16 bilby INFO    :   tilt_2 = 0.0
+11:16 bilby INFO    :   phi_12 = 0.0
+11:16 bilby INFO    :   phi_jl = 0.0
+11:16 bilby INFO    :   luminosity_distance = 400.0
+11:16 bilby INFO    :   theta_jn = 0.4
+11:16 bilby INFO    :   psi = 0.1
+11:16 bilby INFO    :   phase = 1.2
+11:16 bilby INFO    :   geocent_time = 1126259462.4
+11:16 bilby INFO    :   ra = 45.0
+11:16 bilby INFO    :   dec = 5.73
+11:16 bilby INFO    : Generating frequency domain strain from given time domain strain.
+11:16 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+11:16 bilby INFO    : Generating frequency domain strain from given time domain strain.
+11:16 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+11:17 bilby INFO    : Single likelihood evaluation took 7.029e-01 s
+11:17 bilby INFO    : Using sampler Dynesty with kwargs {'bound': 'multi', 'sample': 'rwalk', 'verbose': True, 'periodic': None, 'reflective': None, 'check_point_delta_t': 600, 'nlive': 500, 'first_update': None, 'walks': 100, 'npdim': None, 'rstate': None, 'queue_size': 16, 'pool': None, 'use_pool': None, 'live_points': None, 'logl_args': None, 'logl_kwargs': None, 'ptform_args': None, 'ptform_kwargs': None, 'enlarge': 1.5, 'bootstrap': None, 'vol_dec': 0.5, 'vol_check': 8.0, 'facc': 0.2, 'slices': 5, 'update_interval': 300, 'print_func': <bound method Dynesty._print_func of <bilby.core.sampler.dynesty.Dynesty object at 0x2b3302e37590>>, 'dlogz': 0.1, 'maxiter': None, 'maxcall': None, 'logl_max': inf, 'add_live': True, 'print_progress': True, 'save_bounds': False, 'n_effective': None, 'maxmcmc': 5000, 'nact': 5}
+11:17 bilby INFO    : Checkpoint every check_point_delta_t = 600s
+11:17 bilby INFO    : Using dynesty version 1.0.1
+11:17 bilby INFO    : Generating initial points from the prior
+11:23 bilby INFO    : Using the bilby-implemented rwalk sample method with ACT estimated walks
+11:23 bilby INFO    : Setting up multiproccesing pool with 16 processes.
+11:23 bilby INFO    : Reading resume file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+11:23 bilby INFO    : Resume file successfully loaded.
+11:31 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+11:48 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+12:05 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+12:21 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+12:38 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+12:54 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+13:12 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+13:29 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+13:45 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+14:02 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+14:18 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+14:34 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+14:51 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+14:57 bilby_pipe INFO    : Running bilby_pipe version: 1.0.1: (CLEAN) c4c6d92 2020-08-26 02:52:43 -0500
+14:57 bilby_pipe INFO    : Running bilby: 1.0.1: release
+14:57 bilby_pipe INFO    : Command line arguments: Namespace(accounting='ligo.dev.o3.cbc.pe.lalinference', calibration_model=None, catch_waveform_errors=False, channel_dict='{H1:GWOSC, L1:GWOSC}', coherence_test=False, condor_job_priority=0, convert_to_flat_in_component_mass=False, create_plots=False, create_summary=False, data_dict=None, data_dump_file='outdir_com/data/eccn_data0_1126259463-9_generation_data_dump.pickle', data_format=None, default_prior='BBHPriorDict', deltaT=0.2, detectors=['H1', 'L1'], distance_marginalization=False, distance_marginalization_lookup_table=None, duration=4.0, email=None, existing_dir=None, extra_likelihood_kwargs=None, frequency_domain_source_model='eccn.functions.eccentric_waveform', gaussian_noise=False, generation_seed=None, gps_file=None, gps_tuple=None, idx=0, ignore_gwpy_data_quality_check=True, ini='eccn_config_complete.ini', injection=True, injection_dict="{'mass_1':23.5, 'mass_2':21.5, 'chirp_mass':19.564163812778446, 'mass_ratio':0.9148936170212766, 'initial_eccentricity':0.1, 'a_1':0., 'a_2':0., 'tilt_1':0., 'tilt_2':0., 'phi_12':0., 'phi_jl':0., 'luminosity_distance':400., 'theta_jn':0.4, 'psi':0.1, 'phase':1.2, 'geocent_time':1126259462.4, 'ra':45., 'dec':5.73,}", injection_file=None, injection_numbers=['None'], injection_waveform_approximant=None, jitter_time=True, label='eccn_data0_1126259463-9_analysis_H1L1_dynesty', likelihood_type='GravitationalWaveTransient', local=False, local_generation=False, local_plot=False, log_directory=None, maximum_frequency='107.0', minimum_frequency='23.0', mode_array=[None], n_parallel=1, n_simulation=1, notification='Never', online_pe=False, osg=False, outdir='outdir_com', periodic_restart_time=28800, phase_marginalization=False, plot_calibration=False, plot_corner=False, plot_format='png', plot_marginal=False, plot_skymap=False, plot_waveform=False, pn_amplitude_order=0, pn_phase_order=-1, pn_spin_order=-1, pn_tidal_order=-1, post_trigger_duration=2.0, postprocessing_arguments=None, postprocessing_executable=None, prior_dict="{mass-1: Constraint(name='mass_1', minimum=10, maximum=80), mass-2: Constraint(name='mass_2', minimum=10, maximum=80), chirp-mass: Uniform(name='chirp_mass', minimum=17.411,maximum=21.764), mass-ratio: Uniform(name='mass_ratio', minimum=0.5, maximum=1), initial-eccentricity: LogUniform(name='eccentricity', minimum=0.01, maximum=0.2), a-1: 0., a-2: 0., tilt-1: 0., tilt-2: 0., phi-12: 0., phi-jl: 0., luminosity-distance: 400., theta-jn: 0.4, psi: 0.1, phase: 1.2, geocent-time: 1126259462.4, ra: 45.0, dec: 5.73, }", prior_file=None, psd_dict=None, psd_fractional_overlap=0.5, psd_length=32, psd_maximum_duration=1024, psd_method='median', psd_start_time=None, reference_frame='sky', reference_frequency=20.0, request_cpus=16, request_memory=4.0, request_memory_generation=None, resampling_method='lal', roq_folder=None, roq_scale_factor=1.0, roq_weights=None, sampler='dynesty', sampler_kwargs="{'nlive': 500, 'npool': 16}", sampling_frequency=1024.0, sampling_seed=None, scheduler='condor', scheduler_analysis_time='7-00:00:00', scheduler_args=None, scheduler_env=None, scheduler_module=[None], single_postprocessing_arguments=None, single_postprocessing_executable=None, singularity_image=None, spline_calibration_amplitude_uncertainty_dict=None, spline_calibration_envelope_dict=None, spline_calibration_nodes=5, spline_calibration_phase_uncertainty_dict=None, submit=False, summarypages_arguments=None, time_marginalization=False, time_reference='geocent', timeslide_dict=None, timeslide_file=None, transfer_files=True, trigger_time='1126259463.9', tukey_roll_off=0.4, verbose=False, waveform_approximant='IMRPhenomPv2', waveform_generator='eccn.functions.my_waveform_generator', webdir=None, zero_noise=False)
+14:57 bilby_pipe INFO    : Sampling seed set to 51943
+14:57 bilby_pipe INFO    : No calibration_model model provided, calibration marginalization will not be used
+14:57 bilby_pipe INFO    : Found data for detectors = ['H1', 'L1']
+14:57 bilby_pipe INFO    : Using data for detectors = ['H1', 'L1']
+14:57 bilby_pipe INFO    : H1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+14:57 bilby_pipe INFO    : L1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+14:57 bilby INFO    : Waveform generator initiated with
+  frequency_domain_source_model: eccn.functions.eccentric_waveform
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+14:57 bilby INFO    : Running for label 'eccn_data0_1126259463-9_analysis_H1L1_dynesty', output will be saved to 'outdir_com/result'
+14:57 bilby INFO    : Using lal version 7.1.2
+14:57 bilby INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+14:57 bilby INFO    : Using lalsimulation version 2.5.1
+14:57 bilby INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+14:57 bilby INFO    : Search parameters:
+14:57 bilby INFO    :   chirp_mass = Uniform(minimum=17.411, maximum=21.764, name='chirp_mass', latex_label='$\\mathcal{M}$', unit=None, boundary=None)
+14:57 bilby INFO    :   mass_ratio = Uniform(minimum=0.5, maximum=1, name='mass_ratio', latex_label='$q$', unit=None, boundary=None)
+14:57 bilby INFO    :   initial_eccentricity = LogUniform(minimum=0.01, maximum=0.2, name='eccentricity', latex_label='eccentricity', unit=None, boundary=None)
+14:57 bilby INFO    :   mass_1 = Constraint(minimum=10, maximum=80, name='mass_1', latex_label='$m_1$', unit=None)
+14:57 bilby INFO    :   mass_2 = Constraint(minimum=10, maximum=80, name='mass_2', latex_label='$m_2$', unit=None)
+14:57 bilby INFO    :   a_1 = 0.0
+14:57 bilby INFO    :   a_2 = 0.0
+14:57 bilby INFO    :   tilt_1 = 0.0
+14:57 bilby INFO    :   tilt_2 = 0.0
+14:57 bilby INFO    :   phi_12 = 0.0
+14:57 bilby INFO    :   phi_jl = 0.0
+14:57 bilby INFO    :   luminosity_distance = 400.0
+14:57 bilby INFO    :   theta_jn = 0.4
+14:57 bilby INFO    :   psi = 0.1
+14:57 bilby INFO    :   phase = 1.2
+14:57 bilby INFO    :   geocent_time = 1126259462.4
+14:57 bilby INFO    :   ra = 45.0
+14:57 bilby INFO    :   dec = 5.73
+14:57 bilby INFO    : Generating frequency domain strain from given time domain strain.
+14:57 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+14:57 bilby INFO    : Generating frequency domain strain from given time domain strain.
+14:57 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+14:58 bilby INFO    : Single likelihood evaluation took 7.138e-01 s
+14:58 bilby INFO    : Using sampler Dynesty with kwargs {'bound': 'multi', 'sample': 'rwalk', 'verbose': True, 'periodic': None, 'reflective': None, 'check_point_delta_t': 600, 'nlive': 500, 'first_update': None, 'walks': 100, 'npdim': None, 'rstate': None, 'queue_size': 16, 'pool': None, 'use_pool': None, 'live_points': None, 'logl_args': None, 'logl_kwargs': None, 'ptform_args': None, 'ptform_kwargs': None, 'enlarge': 1.5, 'bootstrap': None, 'vol_dec': 0.5, 'vol_check': 8.0, 'facc': 0.2, 'slices': 5, 'update_interval': 300, 'print_func': <bound method Dynesty._print_func of <bilby.core.sampler.dynesty.Dynesty object at 0x2ac09a92c6d0>>, 'dlogz': 0.1, 'maxiter': None, 'maxcall': None, 'logl_max': inf, 'add_live': True, 'print_progress': True, 'save_bounds': False, 'n_effective': None, 'maxmcmc': 5000, 'nact': 5}
+14:58 bilby INFO    : Checkpoint every check_point_delta_t = 600s
+14:58 bilby INFO    : Using dynesty version 1.0.1
+14:58 bilby INFO    : Generating initial points from the prior
+15:04 bilby INFO    : Using the bilby-implemented rwalk sample method with ACT estimated walks
+15:04 bilby INFO    : Setting up multiproccesing pool with 16 processes.
+15:04 bilby INFO    : Reading resume file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+15:04 bilby INFO    : Resume file successfully loaded.
+15:12 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+15:42 bilby_pipe INFO    : Running bilby_pipe version: 1.0.1: (CLEAN) c4c6d92 2020-08-26 02:52:43 -0500
+15:42 bilby_pipe INFO    : Running bilby: 1.0.1: release
+15:42 bilby_pipe INFO    : Command line arguments: Namespace(accounting='ligo.dev.o3.cbc.pe.lalinference', calibration_model=None, catch_waveform_errors=False, channel_dict='{H1:GWOSC, L1:GWOSC}', coherence_test=False, condor_job_priority=0, convert_to_flat_in_component_mass=False, create_plots=False, create_summary=False, data_dict=None, data_dump_file='outdir_com/data/eccn_data0_1126259463-9_generation_data_dump.pickle', data_format=None, default_prior='BBHPriorDict', deltaT=0.2, detectors=['H1', 'L1'], distance_marginalization=False, distance_marginalization_lookup_table=None, duration=4.0, email=None, existing_dir=None, extra_likelihood_kwargs=None, frequency_domain_source_model='eccn.functions.eccentric_waveform', gaussian_noise=False, generation_seed=None, gps_file=None, gps_tuple=None, idx=0, ignore_gwpy_data_quality_check=True, ini='eccn_config_complete.ini', injection=True, injection_dict="{'mass_1':23.5, 'mass_2':21.5, 'chirp_mass':19.564163812778446, 'mass_ratio':0.9148936170212766, 'initial_eccentricity':0.1, 'a_1':0., 'a_2':0., 'tilt_1':0., 'tilt_2':0., 'phi_12':0., 'phi_jl':0., 'luminosity_distance':400., 'theta_jn':0.4, 'psi':0.1, 'phase':1.2, 'geocent_time':1126259462.4, 'ra':45., 'dec':5.73,}", injection_file=None, injection_numbers=['None'], injection_waveform_approximant=None, jitter_time=True, label='eccn_data0_1126259463-9_analysis_H1L1_dynesty', likelihood_type='GravitationalWaveTransient', local=False, local_generation=False, local_plot=False, log_directory=None, maximum_frequency='107.0', minimum_frequency='23.0', mode_array=[None], n_parallel=1, n_simulation=1, notification='Never', online_pe=False, osg=False, outdir='outdir_com', periodic_restart_time=28800, phase_marginalization=False, plot_calibration=False, plot_corner=False, plot_format='png', plot_marginal=False, plot_skymap=False, plot_waveform=False, pn_amplitude_order=0, pn_phase_order=-1, pn_spin_order=-1, pn_tidal_order=-1, post_trigger_duration=2.0, postprocessing_arguments=None, postprocessing_executable=None, prior_dict="{mass-1: Constraint(name='mass_1', minimum=10, maximum=80), mass-2: Constraint(name='mass_2', minimum=10, maximum=80), chirp-mass: Uniform(name='chirp_mass', minimum=17.411,maximum=21.764), mass-ratio: Uniform(name='mass_ratio', minimum=0.5, maximum=1), initial-eccentricity: LogUniform(name='eccentricity', minimum=0.01, maximum=0.2), a-1: 0., a-2: 0., tilt-1: 0., tilt-2: 0., phi-12: 0., phi-jl: 0., luminosity-distance: 400., theta-jn: 0.4, psi: 0.1, phase: 1.2, geocent-time: 1126259462.4, ra: 45.0, dec: 5.73, }", prior_file=None, psd_dict=None, psd_fractional_overlap=0.5, psd_length=32, psd_maximum_duration=1024, psd_method='median', psd_start_time=None, reference_frame='sky', reference_frequency=20.0, request_cpus=16, request_memory=4.0, request_memory_generation=None, resampling_method='lal', roq_folder=None, roq_scale_factor=1.0, roq_weights=None, sampler='dynesty', sampler_kwargs="{'nlive': 500, 'npool': 16}", sampling_frequency=1024.0, sampling_seed=None, scheduler='condor', scheduler_analysis_time='7-00:00:00', scheduler_args=None, scheduler_env=None, scheduler_module=[None], single_postprocessing_arguments=None, single_postprocessing_executable=None, singularity_image=None, spline_calibration_amplitude_uncertainty_dict=None, spline_calibration_envelope_dict=None, spline_calibration_nodes=5, spline_calibration_phase_uncertainty_dict=None, submit=False, summarypages_arguments=None, time_marginalization=False, time_reference='geocent', timeslide_dict=None, timeslide_file=None, transfer_files=True, trigger_time='1126259463.9', tukey_roll_off=0.4, verbose=False, waveform_approximant='IMRPhenomPv2', waveform_generator='eccn.functions.my_waveform_generator', webdir=None, zero_noise=False)
+15:42 bilby_pipe INFO    : Sampling seed set to 193910
+15:42 bilby_pipe INFO    : No calibration_model model provided, calibration marginalization will not be used
+15:42 bilby_pipe INFO    : Found data for detectors = ['H1', 'L1']
+15:42 bilby_pipe INFO    : Using data for detectors = ['H1', 'L1']
+15:42 bilby_pipe INFO    : H1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+15:42 bilby_pipe INFO    : L1: sampling-frequency=1024.0, segment-start-time=1126259461.8999023, duration=4.0
+15:42 bilby INFO    : Waveform generator initiated with
+  frequency_domain_source_model: eccn.functions.eccentric_waveform
+  time_domain_source_model: None
+  parameter_conversion: bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters
+15:42 bilby INFO    : Running for label 'eccn_data0_1126259463-9_analysis_H1L1_dynesty', output will be saved to 'outdir_com/result'
+15:42 bilby INFO    : Using lal version 7.1.2
+15:42 bilby INFO    : Using lal git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+15:42 bilby INFO    : Using lalsimulation version 2.5.1
+15:42 bilby INFO    : Using lalsimulation git version Branch: None;Tag: lalsuite-v6.82;Id: cf792129c2473f42ce6c6ee21d8234254cefd337;;Builder: Unknown User <>;Repository status: UNCLEAN: Modified working tree
+15:42 bilby INFO    : Search parameters:
+15:42 bilby INFO    :   chirp_mass = Uniform(minimum=17.411, maximum=21.764, name='chirp_mass', latex_label='$\\mathcal{M}$', unit=None, boundary=None)
+15:42 bilby INFO    :   mass_ratio = Uniform(minimum=0.5, maximum=1, name='mass_ratio', latex_label='$q$', unit=None, boundary=None)
+15:42 bilby INFO    :   initial_eccentricity = LogUniform(minimum=0.01, maximum=0.2, name='eccentricity', latex_label='eccentricity', unit=None, boundary=None)
+15:42 bilby INFO    :   mass_1 = Constraint(minimum=10, maximum=80, name='mass_1', latex_label='$m_1$', unit=None)
+15:42 bilby INFO    :   mass_2 = Constraint(minimum=10, maximum=80, name='mass_2', latex_label='$m_2$', unit=None)
+15:42 bilby INFO    :   a_1 = 0.0
+15:42 bilby INFO    :   a_2 = 0.0
+15:42 bilby INFO    :   tilt_1 = 0.0
+15:42 bilby INFO    :   tilt_2 = 0.0
+15:42 bilby INFO    :   phi_12 = 0.0
+15:42 bilby INFO    :   phi_jl = 0.0
+15:42 bilby INFO    :   luminosity_distance = 400.0
+15:42 bilby INFO    :   theta_jn = 0.4
+15:42 bilby INFO    :   psi = 0.1
+15:42 bilby INFO    :   phase = 1.2
+15:42 bilby INFO    :   geocent_time = 1126259462.4
+15:42 bilby INFO    :   ra = 45.0
+15:42 bilby INFO    :   dec = 5.73
+15:42 bilby INFO    : Generating frequency domain strain from given time domain strain.
+15:42 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+15:42 bilby INFO    : Generating frequency domain strain from given time domain strain.
+15:42 bilby INFO    : Applying a tukey window with alpha=0.2, roll off=0.4
+15:43 bilby INFO    : Single likelihood evaluation took 7.076e-01 s
+15:43 bilby INFO    : Using sampler Dynesty with kwargs {'bound': 'multi', 'sample': 'rwalk', 'verbose': True, 'periodic': None, 'reflective': None, 'check_point_delta_t': 600, 'nlive': 500, 'first_update': None, 'walks': 100, 'npdim': None, 'rstate': None, 'queue_size': 16, 'pool': None, 'use_pool': None, 'live_points': None, 'logl_args': None, 'logl_kwargs': None, 'ptform_args': None, 'ptform_kwargs': None, 'enlarge': 1.5, 'bootstrap': None, 'vol_dec': 0.5, 'vol_check': 8.0, 'facc': 0.2, 'slices': 5, 'update_interval': 300, 'print_func': <bound method Dynesty._print_func of <bilby.core.sampler.dynesty.Dynesty object at 0x2b99da130590>>, 'dlogz': 0.1, 'maxiter': None, 'maxcall': None, 'logl_max': inf, 'add_live': True, 'print_progress': True, 'save_bounds': False, 'n_effective': None, 'maxmcmc': 5000, 'nact': 5}
+15:43 bilby INFO    : Checkpoint every check_point_delta_t = 600s
+15:43 bilby INFO    : Using dynesty version 1.0.1
+15:43 bilby INFO    : Generating initial points from the prior
+15:49 bilby INFO    : Using the bilby-implemented rwalk sample method with ACT estimated walks
+15:49 bilby INFO    : Setting up multiproccesing pool with 16 processes.
+15:49 bilby INFO    : Reading resume file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+15:49 bilby INFO    : Resume file successfully loaded.
+15:57 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+16:11 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+16:26 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+16:40 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+16:54 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+17:10 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+17:26 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+17:42 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+17:58 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+18:15 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+18:33 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle
+18:50 bilby INFO    : Written checkpoint file outdir_com/result/eccn_data0_1126259463-9_analysis_H1L1_dynesty_resume.pickle

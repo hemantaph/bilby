@@ -1,0 +1,7 @@
+JOB eccn_data0_1126259643-913_generation_arg_0 outdir_com/submit/eccn_data0_1126259643-913_generation.submit
+VARS eccn_data0_1126259643-913_generation_arg_0 ARGS="outdir_com/eccn_config_complete.ini --label eccn_data0_1126259643-913_generation --idx 0 --trigger-time 1126259643.913"
+JOB eccn_data0_1126259643-913_analysis_H1L1_dynesty_arg_0 outdir_com/submit/eccn_data0_1126259643-913_analysis_H1L1_dynesty.submit
+VARS eccn_data0_1126259643-913_analysis_H1L1_dynesty_arg_0 ARGS="outdir_com/eccn_config_complete.ini --outdir outdir_com --detectors H1 --detectors L1 --label eccn_data0_1126259643-913_analysis_H1L1_dynesty --data-dump-file outdir_com/data/eccn_data0_1126259643-913_generation_data_dump.pickle --sampler dynesty"
+
+#Inter-job dependencies
+Parent eccn_data0_1126259643-913_generation_arg_0 Child eccn_data0_1126259643-913_analysis_H1L1_dynesty_arg_0
