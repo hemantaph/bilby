@@ -743,3 +743,267 @@
 07/05/21 18:52:52 11415 seconds since last log event
 07/05/21 18:52:52 Pending DAG nodes:
 07/05/21 18:52:52   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 19:02:52 12015 seconds since last log event
+07/05/21 19:02:52 Pending DAG nodes:
+07/05/21 19:02:52   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 19:12:52 12615 seconds since last log event
+07/05/21 19:12:52 Pending DAG nodes:
+07/05/21 19:12:52   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 19:22:53 13216 seconds since last log event
+07/05/21 19:22:53 Pending DAG nodes:
+07/05/21 19:22:53   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 19:32:54 13817 seconds since last log event
+07/05/21 19:32:54 Pending DAG nodes:
+07/05/21 19:32:54   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 19:42:55 14418 seconds since last log event
+07/05/21 19:42:55 Pending DAG nodes:
+07/05/21 19:42:55   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 19:52:55 15018 seconds since last log event
+07/05/21 19:52:55 Pending DAG nodes:
+07/05/21 19:52:55   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 20:02:56 15619 seconds since last log event
+07/05/21 20:02:56 Pending DAG nodes:
+07/05/21 20:02:56   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 20:12:57 16220 seconds since last log event
+07/05/21 20:12:57 Pending DAG nodes:
+07/05/21 20:12:57   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 20:22:58 16821 seconds since last log event
+07/05/21 20:22:58 Pending DAG nodes:
+07/05/21 20:22:58   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 20:32:58 17421 seconds since last log event
+07/05/21 20:32:58 Pending DAG nodes:
+07/05/21 20:32:58   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 20:42:58 18021 seconds since last log event
+07/05/21 20:42:58 Pending DAG nodes:
+07/05/21 20:42:58   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 20:52:59 18622 seconds since last log event
+07/05/21 20:52:59 Pending DAG nodes:
+07/05/21 20:52:59   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 21:03:00 19223 seconds since last log event
+07/05/21 21:03:00 Pending DAG nodes:
+07/05/21 21:03:00   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 21:13:00 19823 seconds since last log event
+07/05/21 21:13:00 Pending DAG nodes:
+07/05/21 21:13:00   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 21:23:01 20424 seconds since last log event
+07/05/21 21:23:01 Pending DAG nodes:
+07/05/21 21:23:01   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 21:33:02 21025 seconds since last log event
+07/05/21 21:33:02 Pending DAG nodes:
+07/05/21 21:33:02   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 21:43:03 21626 seconds since last log event
+07/05/21 21:43:03 Pending DAG nodes:
+07/05/21 21:43:03   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 21:53:03 22226 seconds since last log event
+07/05/21 21:53:03 Pending DAG nodes:
+07/05/21 21:53:03   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 22:03:05 22828 seconds since last log event
+07/05/21 22:03:05 Pending DAG nodes:
+07/05/21 22:03:05   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 22:13:05 23428 seconds since last log event
+07/05/21 22:13:05 Pending DAG nodes:
+07/05/21 22:13:05   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 22:23:07 24030 seconds since last log event
+07/05/21 22:23:07 Pending DAG nodes:
+07/05/21 22:23:07   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 22:33:08 24631 seconds since last log event
+07/05/21 22:33:08 Pending DAG nodes:
+07/05/21 22:33:08   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 22:43:08 25231 seconds since last log event
+07/05/21 22:43:08 Pending DAG nodes:
+07/05/21 22:43:08   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 22:53:09 25832 seconds since last log event
+07/05/21 22:53:09 Pending DAG nodes:
+07/05/21 22:53:09   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 23:03:09 26432 seconds since last log event
+07/05/21 23:03:09 Pending DAG nodes:
+07/05/21 23:03:09   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 23:13:10 27033 seconds since last log event
+07/05/21 23:13:10 Pending DAG nodes:
+07/05/21 23:13:10   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 23:23:10 27633 seconds since last log event
+07/05/21 23:23:10 Pending DAG nodes:
+07/05/21 23:23:10   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 23:33:11 28234 seconds since last log event
+07/05/21 23:33:11 Pending DAG nodes:
+07/05/21 23:33:11   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 23:43:12 28835 seconds since last log event
+07/05/21 23:43:12 Pending DAG nodes:
+07/05/21 23:43:12   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/05/21 23:53:12 29435 seconds since last log event
+07/05/21 23:53:12 Pending DAG nodes:
+07/05/21 23:53:12   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 00:03:13 30036 seconds since last log event
+07/06/21 00:03:13 Pending DAG nodes:
+07/06/21 00:03:13   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 00:13:14 30637 seconds since last log event
+07/06/21 00:13:14 Pending DAG nodes:
+07/06/21 00:13:14   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 00:23:15 31238 seconds since last log event
+07/06/21 00:23:15 Pending DAG nodes:
+07/06/21 00:23:15   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 00:33:15 31838 seconds since last log event
+07/06/21 00:33:15 Pending DAG nodes:
+07/06/21 00:33:15   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 00:43:15 32438 seconds since last log event
+07/06/21 00:43:15 Pending DAG nodes:
+07/06/21 00:43:15   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 00:53:16 33039 seconds since last log event
+07/06/21 00:53:16 Pending DAG nodes:
+07/06/21 00:53:16   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 01:03:17 33640 seconds since last log event
+07/06/21 01:03:17 Pending DAG nodes:
+07/06/21 01:03:17   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 01:13:17 34240 seconds since last log event
+07/06/21 01:13:17 Pending DAG nodes:
+07/06/21 01:13:17   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 01:23:18 34841 seconds since last log event
+07/06/21 01:23:18 Pending DAG nodes:
+07/06/21 01:23:18   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 01:33:18 35441 seconds since last log event
+07/06/21 01:33:18 Pending DAG nodes:
+07/06/21 01:33:18   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 01:43:19 36042 seconds since last log event
+07/06/21 01:43:19 Pending DAG nodes:
+07/06/21 01:43:19   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 01:53:20 36643 seconds since last log event
+07/06/21 01:53:20 Pending DAG nodes:
+07/06/21 01:53:20   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 02:03:21 37244 seconds since last log event
+07/06/21 02:03:21 Pending DAG nodes:
+07/06/21 02:03:21   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 02:13:21 37844 seconds since last log event
+07/06/21 02:13:21 Pending DAG nodes:
+07/06/21 02:13:21   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 02:23:22 38445 seconds since last log event
+07/06/21 02:23:22 Pending DAG nodes:
+07/06/21 02:23:22   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 02:33:23 39046 seconds since last log event
+07/06/21 02:33:23 Pending DAG nodes:
+07/06/21 02:33:23   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 02:43:24 39647 seconds since last log event
+07/06/21 02:43:24 Pending DAG nodes:
+07/06/21 02:43:24   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 02:53:24 40247 seconds since last log event
+07/06/21 02:53:24 Pending DAG nodes:
+07/06/21 02:53:24   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 03:03:25 40848 seconds since last log event
+07/06/21 03:03:25 Pending DAG nodes:
+07/06/21 03:03:25   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 03:13:26 41449 seconds since last log event
+07/06/21 03:13:26 Pending DAG nodes:
+07/06/21 03:13:26   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 03:23:27 42050 seconds since last log event
+07/06/21 03:23:27 Pending DAG nodes:
+07/06/21 03:23:27   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 03:33:27 42650 seconds since last log event
+07/06/21 03:33:27 Pending DAG nodes:
+07/06/21 03:33:27   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 03:43:28 43251 seconds since last log event
+07/06/21 03:43:28 Pending DAG nodes:
+07/06/21 03:43:28   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 03:53:29 43852 seconds since last log event
+07/06/21 03:53:29 Pending DAG nodes:
+07/06/21 03:53:29   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 04:03:32 44455 seconds since last log event
+07/06/21 04:03:32 Pending DAG nodes:
+07/06/21 04:03:32   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 04:13:33 45056 seconds since last log event
+07/06/21 04:13:33 Pending DAG nodes:
+07/06/21 04:13:33   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 04:23:34 45657 seconds since last log event
+07/06/21 04:23:34 Pending DAG nodes:
+07/06/21 04:23:34   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 04:33:34 46257 seconds since last log event
+07/06/21 04:33:34 Pending DAG nodes:
+07/06/21 04:33:34   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 04:43:35 46858 seconds since last log event
+07/06/21 04:43:35 Pending DAG nodes:
+07/06/21 04:43:35   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 04:53:36 47459 seconds since last log event
+07/06/21 04:53:36 Pending DAG nodes:
+07/06/21 04:53:36   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 05:03:36 48059 seconds since last log event
+07/06/21 05:03:36 Pending DAG nodes:
+07/06/21 05:03:36   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 05:13:37 48660 seconds since last log event
+07/06/21 05:13:37 Pending DAG nodes:
+07/06/21 05:13:37   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 05:23:38 49261 seconds since last log event
+07/06/21 05:23:38 Pending DAG nodes:
+07/06/21 05:23:38   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 05:33:38 49861 seconds since last log event
+07/06/21 05:33:38 Pending DAG nodes:
+07/06/21 05:33:38   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 05:43:39 50462 seconds since last log event
+07/06/21 05:43:39 Pending DAG nodes:
+07/06/21 05:43:39   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 05:53:40 51063 seconds since last log event
+07/06/21 05:53:40 Pending DAG nodes:
+07/06/21 05:53:40   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 06:03:41 51664 seconds since last log event
+07/06/21 06:03:41 Pending DAG nodes:
+07/06/21 06:03:41   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 06:13:41 52264 seconds since last log event
+07/06/21 06:13:41 Pending DAG nodes:
+07/06/21 06:13:41   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 06:23:42 52865 seconds since last log event
+07/06/21 06:23:42 Pending DAG nodes:
+07/06/21 06:23:42   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 06:33:43 53466 seconds since last log event
+07/06/21 06:33:43 Pending DAG nodes:
+07/06/21 06:33:43   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 06:43:44 54067 seconds since last log event
+07/06/21 06:43:44 Pending DAG nodes:
+07/06/21 06:43:44   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 06:53:44 54667 seconds since last log event
+07/06/21 06:53:44 Pending DAG nodes:
+07/06/21 06:53:44   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 07:03:45 55268 seconds since last log event
+07/06/21 07:03:45 Pending DAG nodes:
+07/06/21 07:03:45   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 07:13:46 55869 seconds since last log event
+07/06/21 07:13:46 Pending DAG nodes:
+07/06/21 07:13:46   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 07:23:46 56469 seconds since last log event
+07/06/21 07:23:46 Pending DAG nodes:
+07/06/21 07:23:46   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 07:33:47 57070 seconds since last log event
+07/06/21 07:33:47 Pending DAG nodes:
+07/06/21 07:33:47   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 07:43:48 57671 seconds since last log event
+07/06/21 07:43:48 Pending DAG nodes:
+07/06/21 07:43:48   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 07:53:49 58272 seconds since last log event
+07/06/21 07:53:49 Pending DAG nodes:
+07/06/21 07:53:49   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 08:03:49 58872 seconds since last log event
+07/06/21 08:03:49 Pending DAG nodes:
+07/06/21 08:03:49   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 08:13:50 59473 seconds since last log event
+07/06/21 08:13:50 Pending DAG nodes:
+07/06/21 08:13:50   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 08:23:51 60074 seconds since last log event
+07/06/21 08:23:51 Pending DAG nodes:
+07/06/21 08:23:51   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 08:33:52 60675 seconds since last log event
+07/06/21 08:33:52 Pending DAG nodes:
+07/06/21 08:33:52   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 08:43:53 61276 seconds since last log event
+07/06/21 08:43:53 Pending DAG nodes:
+07/06/21 08:43:53   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 08:53:53 61876 seconds since last log event
+07/06/21 08:53:53 Pending DAG nodes:
+07/06/21 08:53:53   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 09:03:54 62477 seconds since last log event
+07/06/21 09:03:54 Pending DAG nodes:
+07/06/21 09:03:54   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 09:13:55 63078 seconds since last log event
+07/06/21 09:13:55 Pending DAG nodes:
+07/06/21 09:13:55   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 09:23:56 63679 seconds since last log event
+07/06/21 09:23:56 Pending DAG nodes:
+07/06/21 09:23:56   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 09:33:56 64279 seconds since last log event
+07/06/21 09:33:56 Pending DAG nodes:
+07/06/21 09:33:56   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
