@@ -1007,3 +1007,181 @@
 07/06/21 09:33:56 64279 seconds since last log event
 07/06/21 09:33:56 Pending DAG nodes:
 07/06/21 09:33:56   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 09:43:57 64880 seconds since last log event
+07/06/21 09:43:57 Pending DAG nodes:
+07/06/21 09:43:57   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 09:53:58 65481 seconds since last log event
+07/06/21 09:53:58 Pending DAG nodes:
+07/06/21 09:53:58   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 10:03:59 66082 seconds since last log event
+07/06/21 10:03:59 Pending DAG nodes:
+07/06/21 10:03:59   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 10:14:02 66685 seconds since last log event
+07/06/21 10:14:02 Pending DAG nodes:
+07/06/21 10:14:02   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 10:24:02 67285 seconds since last log event
+07/06/21 10:24:02 Pending DAG nodes:
+07/06/21 10:24:02   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 10:34:03 67886 seconds since last log event
+07/06/21 10:34:03 Pending DAG nodes:
+07/06/21 10:34:03   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 10:44:04 68487 seconds since last log event
+07/06/21 10:44:04 Pending DAG nodes:
+07/06/21 10:44:04   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 10:54:08 69091 seconds since last log event
+07/06/21 10:54:08 Pending DAG nodes:
+07/06/21 10:54:08   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 11:01:29 Can't open directory "/etc/condor/passwords.d" as PRIV_ROOT, errno: 13 (Permission denied)
+07/06/21 11:01:29 Can't open directory "/etc/condor/passwords.d" as PRIV_ROOT, errno: 13 (Permission denied)
+07/06/21 11:04:09 69692 seconds since last log event
+07/06/21 11:04:09 Pending DAG nodes:
+07/06/21 11:04:09   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 11:14:10 70293 seconds since last log event
+07/06/21 11:14:10 Pending DAG nodes:
+07/06/21 11:14:10   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 11:24:10 70893 seconds since last log event
+07/06/21 11:24:10 Pending DAG nodes:
+07/06/21 11:24:10   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 11:34:11 71494 seconds since last log event
+07/06/21 11:34:11 Pending DAG nodes:
+07/06/21 11:34:11   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 11:44:12 72095 seconds since last log event
+07/06/21 11:44:12 Pending DAG nodes:
+07/06/21 11:44:12   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 11:54:13 72696 seconds since last log event
+07/06/21 11:54:13 Pending DAG nodes:
+07/06/21 11:54:13   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 12:04:13 73296 seconds since last log event
+07/06/21 12:04:13 Pending DAG nodes:
+07/06/21 12:04:13   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 12:14:14 73897 seconds since last log event
+07/06/21 12:14:14 Pending DAG nodes:
+07/06/21 12:14:14   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 12:24:15 74498 seconds since last log event
+07/06/21 12:24:15 Pending DAG nodes:
+07/06/21 12:24:15   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 12:34:16 75099 seconds since last log event
+07/06/21 12:34:16 Pending DAG nodes:
+07/06/21 12:34:16   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 12:44:16 75699 seconds since last log event
+07/06/21 12:44:16 Pending DAG nodes:
+07/06/21 12:44:16   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 12:54:17 76300 seconds since last log event
+07/06/21 12:54:17 Pending DAG nodes:
+07/06/21 12:54:17   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 13:04:18 76901 seconds since last log event
+07/06/21 13:04:18 Pending DAG nodes:
+07/06/21 13:04:18   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 13:14:19 77502 seconds since last log event
+07/06/21 13:14:19 Pending DAG nodes:
+07/06/21 13:14:19   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 13:24:20 78103 seconds since last log event
+07/06/21 13:24:20 Pending DAG nodes:
+07/06/21 13:24:20   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 13:34:20 78703 seconds since last log event
+07/06/21 13:34:20 Pending DAG nodes:
+07/06/21 13:34:20   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 13:44:20 79303 seconds since last log event
+07/06/21 13:44:20 Pending DAG nodes:
+07/06/21 13:44:20   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 13:54:21 79904 seconds since last log event
+07/06/21 13:54:21 Pending DAG nodes:
+07/06/21 13:54:21   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 14:04:22 80505 seconds since last log event
+07/06/21 14:04:22 Pending DAG nodes:
+07/06/21 14:04:22   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 14:14:23 81106 seconds since last log event
+07/06/21 14:14:23 Pending DAG nodes:
+07/06/21 14:14:23   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 14:24:24 81707 seconds since last log event
+07/06/21 14:24:24 Pending DAG nodes:
+07/06/21 14:24:24   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 14:34:24 82307 seconds since last log event
+07/06/21 14:34:24 Pending DAG nodes:
+07/06/21 14:34:24   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 14:44:25 82908 seconds since last log event
+07/06/21 14:44:25 Pending DAG nodes:
+07/06/21 14:44:25   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 14:54:27 83510 seconds since last log event
+07/06/21 14:54:27 Pending DAG nodes:
+07/06/21 14:54:27   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 15:04:27 84110 seconds since last log event
+07/06/21 15:04:27 Pending DAG nodes:
+07/06/21 15:04:27   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 15:14:28 84711 seconds since last log event
+07/06/21 15:14:28 Pending DAG nodes:
+07/06/21 15:14:28   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 15:24:29 85312 seconds since last log event
+07/06/21 15:24:29 Pending DAG nodes:
+07/06/21 15:24:29   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 15:34:30 85913 seconds since last log event
+07/06/21 15:34:30 Pending DAG nodes:
+07/06/21 15:34:30   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 15:44:31 86514 seconds since last log event
+07/06/21 15:44:31 Pending DAG nodes:
+07/06/21 15:44:31   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 15:54:31 87114 seconds since last log event
+07/06/21 15:54:31 Pending DAG nodes:
+07/06/21 15:54:31   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 16:04:33 87716 seconds since last log event
+07/06/21 16:04:33 Pending DAG nodes:
+07/06/21 16:04:33   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 16:14:34 88317 seconds since last log event
+07/06/21 16:14:34 Pending DAG nodes:
+07/06/21 16:14:34   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 16:24:35 88918 seconds since last log event
+07/06/21 16:24:35 Pending DAG nodes:
+07/06/21 16:24:35   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 16:34:35 89518 seconds since last log event
+07/06/21 16:34:35 Pending DAG nodes:
+07/06/21 16:34:35   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 16:44:36 90119 seconds since last log event
+07/06/21 16:44:36 Pending DAG nodes:
+07/06/21 16:44:36   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 16:54:36 90719 seconds since last log event
+07/06/21 16:54:36 Pending DAG nodes:
+07/06/21 16:54:36   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 17:04:37 91320 seconds since last log event
+07/06/21 17:04:37 Pending DAG nodes:
+07/06/21 17:04:37   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 17:14:38 91921 seconds since last log event
+07/06/21 17:14:38 Pending DAG nodes:
+07/06/21 17:14:38   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 17:24:39 92522 seconds since last log event
+07/06/21 17:24:39 Pending DAG nodes:
+07/06/21 17:24:39   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 17:34:40 93123 seconds since last log event
+07/06/21 17:34:40 Pending DAG nodes:
+07/06/21 17:34:40   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 17:44:41 93724 seconds since last log event
+07/06/21 17:44:41 Pending DAG nodes:
+07/06/21 17:44:41   Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0, HTCondor ID 7815385, status STATUS_SUBMITTED
+07/06/21 17:52:17 Currently monitoring 1 HTCondor log file(s)
+07/06/21 17:52:17 Event: ULOG_JOB_TERMINATED for HTCondor Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0 (7815385.0.0) {07/06/21 17:52:13}
+07/06/21 17:52:17 Number of idle job procs: 0
+07/06/21 17:52:17 Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0 job proc (7815385.0.0) completed successfully.
+07/06/21 17:52:17 Node eccn_data0_1126259463-9_analysis_H1L1_dynesty_arg_0 job completed
+07/06/21 17:52:17 DAG status: 0 (DAG_STATUS_OK)
+07/06/21 17:52:17 Of 2 nodes total:
+07/06/21 17:52:17  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/06/21 17:52:17   ===     ===      ===     ===     ===        ===      ===
+07/06/21 17:52:17     2       0        0       0       0          0        0
+07/06/21 17:52:17 0 job proc(s) currently held
+07/06/21 17:52:17 DAGMan Runtime Statistics: [ EventCycleTimeAvg = 0.05144057409331932; EventCycleTimeCount = 39001.0; EventCycleTimeMax = 1313.729351997375; EventCycleTimeMin = 1.096725463867188E-05; EventCycleTimeStd = 6.711805164297273; EventCycleTimeSum = 2006.233830213547; LogProcessCycleTimeAvg = 0.05580215454101563; LogProcessCycleTimeCount = 10.0; LogProcessCycleTimeMax = 0.5503189563751221; LogProcessCycleTimeMin = 0.0001528263092041016; LogProcessCycleTimeStd = 0.1737569277602617; LogProcessCycleTimeSum = 0.5580215454101562; SleepCycleTimeAvg = 5.014910160298562; SleepCycleTimeCount = 39001.0; SleepCycleTimeMax = 106.9502758979797; SleepCycleTimeMin = 4.004002094268799; SleepCycleTimeStd = 0.8082044535879912; SleepCycleTimeSum = 195586.5111618042; SubmitCycleTimeAvg = 0.04045453792804021; SubmitCycleTimeCount = 39002.0; SubmitCycleTimeMax = 1308.942754030228; SubmitCycleTimeMin = 3.814697265625E-06; SubmitCycleTimeStd = 6.638492015839606; SubmitCycleTimeSum = 1577.807888269424; ]
+07/06/21 17:52:17 All jobs Completed!
+07/06/21 17:52:17 Note: 0 total job deferrals because of -MaxJobs limit (12000)
+07/06/21 17:52:17 Note: 0 total job deferrals because of -MaxIdle limit (1000)
+07/06/21 17:52:17 Note: 0 total job deferrals because of node category throttles
+07/06/21 17:52:17 Note: 0 total PRE script deferrals because of -MaxPre limit (20) or DEFER
+07/06/21 17:52:17 Note: 0 total POST script deferrals because of -MaxPost limit (20) or DEFER
+07/06/21 17:52:17 Note: 0 total HOLD script deferrals because of -MaxHold limit (20) or DEFER
+07/06/21 17:52:17 DAG status: 0 (DAG_STATUS_OK)
+07/06/21 17:52:17 Of 2 nodes total:
+07/06/21 17:52:17  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/06/21 17:52:17   ===     ===      ===     ===     ===        ===      ===
+07/06/21 17:52:17     2       0        0       0       0          0        0
+07/06/21 17:52:17 0 job proc(s) currently held
+07/06/21 17:52:17 DAGMan Runtime Statistics: [ EventCycleTimeAvg = 0.05144057409331932; EventCycleTimeCount = 39001.0; EventCycleTimeMax = 1313.729351997375; EventCycleTimeMin = 1.096725463867188E-05; EventCycleTimeStd = 6.711805164297273; EventCycleTimeSum = 2006.233830213547; LogProcessCycleTimeAvg = 0.05580215454101563; LogProcessCycleTimeCount = 10.0; LogProcessCycleTimeMax = 0.5503189563751221; LogProcessCycleTimeMin = 0.0001528263092041016; LogProcessCycleTimeStd = 0.1737569277602617; LogProcessCycleTimeSum = 0.5580215454101562; SleepCycleTimeAvg = 5.014910160298562; SleepCycleTimeCount = 39001.0; SleepCycleTimeMax = 106.9502758979797; SleepCycleTimeMin = 4.004002094268799; SleepCycleTimeStd = 0.8082044535879912; SleepCycleTimeSum = 195586.5111618042; SubmitCycleTimeAvg = 0.04045453792804021; SubmitCycleTimeCount = 39002.0; SubmitCycleTimeMax = 1308.942754030228; SubmitCycleTimeMin = 3.814697265625E-06; SubmitCycleTimeStd = 6.638492015839606; SubmitCycleTimeSum = 1577.807888269424; ]
+07/06/21 17:52:17 Wrote metrics file outdir_com/submit/dag_eccn.submit.metrics.
+07/06/21 17:52:17 DAGMan Runtime Statistics: [ EventCycleTimeAvg = 0.05144057409331932; EventCycleTimeCount = 39001.0; EventCycleTimeMax = 1313.729351997375; EventCycleTimeMin = 1.096725463867188E-05; EventCycleTimeStd = 6.711805164297273; EventCycleTimeSum = 2006.233830213547; LogProcessCycleTimeAvg = 0.05580215454101563; LogProcessCycleTimeCount = 10.0; LogProcessCycleTimeMax = 0.5503189563751221; LogProcessCycleTimeMin = 0.0001528263092041016; LogProcessCycleTimeStd = 0.1737569277602617; LogProcessCycleTimeSum = 0.5580215454101562; SleepCycleTimeAvg = 5.014910160298562; SleepCycleTimeCount = 39001.0; SleepCycleTimeMax = 106.9502758979797; SleepCycleTimeMin = 4.004002094268799; SleepCycleTimeStd = 0.8082044535879912; SleepCycleTimeSum = 195586.5111618042; SubmitCycleTimeAvg = 0.04045453792804021; SubmitCycleTimeCount = 39002.0; SubmitCycleTimeMax = 1308.942754030228; SubmitCycleTimeMin = 3.814697265625E-06; SubmitCycleTimeStd = 6.638492015839606; SubmitCycleTimeSum = 1577.807888269424; ]
+07/06/21 17:52:17 **** condor_scheduniv_exec.7814747.0 (condor_DAGMAN) pid 16339 EXITING WITH STATUS 0

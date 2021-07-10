@@ -2,3 +2,14 @@
 ...
 001 (7814747.000.000) 2021-07-04 10:59:02 Job executing on host: <10.14.0.99:9618?addrs=10.14.0.99-9618&alias=ldas-pcdev1.ligo.caltech.edu&noUDP&sock=schedd_11200_d8ce>
 ...
+005 (7814747.000.000) 2021-07-06 17:52:17 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...

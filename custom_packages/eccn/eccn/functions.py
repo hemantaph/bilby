@@ -18,9 +18,9 @@ def eccentric_waveform(frequency_array_, chirp_mass, mass_ratio, initial_eccentr
     #last stable orbit
     lso_f = (C**3)/( G*(mass_1+mass_2)*Mo*np.pi*6**(3/2) )
     mass_diff = (mass_1-mass_2)*Mo
-    f_min = 20.
+    f_min = 10.
     #f_max is set according to the prior we choose, depends on total_mass. 
-    f_max = 110.
+    f_max = 175.
     #time of coalescence is taken to be 0 for convenience
     tc = 0.
     
@@ -29,12 +29,6 @@ def eccentric_waveform(frequency_array_, chirp_mass, mass_ratio, initial_eccentr
     h_plus,h_cross = hphc.htilde(foo, total_mass, symmetric_mass_ratio, mass_diff, initial_eccentricity, luminosity_distance, theta_jn, psi, phase, tc, f_min, lso_f, f_max)
 
     return {'plus': h_plus, 'cross': h_cross}
-#####################################################################
-
-def my_waveform_generator(duration, sampling_frequency, frequency_domain_source_model, **kwargs):
-    
-    return WaveformGenerator(duration=duration, sampling_frequency=sampling_frequency, frequency_domain_source_model=frequency_domain_source_model, **kwargs)
-
 #####################################################################
 
 

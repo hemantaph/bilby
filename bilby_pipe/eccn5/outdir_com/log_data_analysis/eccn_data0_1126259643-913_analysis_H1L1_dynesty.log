@@ -100,3 +100,78 @@
 ...
 040 (7862188.000.000) 2021-07-06 07:48:38 Finished transferring output files
 ...
+040 (7862188.000.000) 2021-07-06 15:56:14 Started transferring output files
+...
+040 (7862188.000.000) 2021-07-06 15:56:14 Finished transferring output files
+...
+004 (7862188.000.000) 2021-07-06 18:59:55 Job was evicted.
+	(0) CPU times
+		Usr 8 03:08:07, Sys 0 00:03:31  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	5880281  -  Run Bytes Sent By Job
+	345611  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     7.97        8         8 
+	   Disk (KB)            :  2877        2000    102120 
+	   GPUs                 :                           0 
+	   Memory (MB)          :   269        4096      4096 
+...
+040 (7862188.000.000) 2021-07-06 19:01:41 Started transferring input files
+	Transferring to host: <10.14.3.244:9618?addrs=10.14.3.244-9618&alias=node744.cluster.ldas.cit&noUDP&sock=slot1_1_1200798_91f7_35745>
+...
+040 (7862188.000.000) 2021-07-06 19:01:41 Finished transferring input files
+...
+001 (7862188.000.000) 2021-07-06 19:01:41 Job executing on host: <10.14.3.244:9618?addrs=10.14.3.244-9618&alias=node744.cluster.ldas.cit&noUDP&sock=startd_1200656_ba6a>
+...
+040 (7862188.000.000) 2021-07-07 03:08:22 Started transferring output files
+...
+040 (7862188.000.000) 2021-07-07 03:08:22 Finished transferring output files
+...
+007 (7862188.000.000) 2021-07-07 10:45:08 Shadow exception!
+	Assertion ERROR on (result)
+	2528060  -  Run Bytes Sent By Job
+	2613933  -  Run Bytes Received By Job
+...
+040 (7862188.000.000) 2021-07-07 16:07:13 Started transferring input files
+	Transferring to host: <10.14.9.62:9618?addrs=10.14.9.62-9618&alias=node2062.cluster.ldas.cit&noUDP&sock=slot1_4_1693936_e70c_36526>
+...
+040 (7862188.000.000) 2021-07-07 16:07:13 Finished transferring input files
+...
+001 (7862188.000.000) 2021-07-07 16:07:13 Job executing on host: <10.14.9.62:9618?addrs=10.14.9.62-9618&alias=node2062.cluster.ldas.cit&noUDP&sock=startd_1693781_7639>
+...
+040 (7862188.000.000) 2021-07-08 00:10:37 Started transferring output files
+...
+040 (7862188.000.000) 2021-07-08 00:10:37 Finished transferring output files
+...
+040 (7862188.000.000) 2021-07-08 07:31:33 Started transferring input files
+	Transferring to host: <10.14.9.82:9618?addrs=10.14.9.82-9618&alias=node2082.cluster.ldas.cit&noUDP&sock=slot1_1_2426713_96d3_41566>
+...
+040 (7862188.000.000) 2021-07-08 07:31:33 Finished transferring input files
+...
+001 (7862188.000.000) 2021-07-08 07:31:33 Job executing on host: <10.14.9.82:9618?addrs=10.14.9.82-9618&alias=node2082.cluster.ldas.cit&noUDP&sock=startd_2426511_4bc3>
+...
+022 (7862188.000.000) 2021-07-08 08:20:54 Job disconnected, attempting to reconnect
+    Local schedd and job shadow died, schedd now running again
+    Trying to reconnect to slot1_1@node2082.cluster.ldas.cit <10.14.9.82:9618?addrs=10.14.9.82-9618&alias=node2082.cluster.ldas.cit&noUDP&sock=startd_2426511_4bc3>
+...
+023 (7862188.000.000) 2021-07-08 08:21:37 Job reconnected to slot1_1@node2082.cluster.ldas.cit
+    startd address: <10.14.9.82:9618?addrs=10.14.9.82-9618&alias=node2082.cluster.ldas.cit&noUDP&sock=startd_2426511_4bc3>
+    starter address: <10.14.9.82:9618?addrs=10.14.9.82-9618&alias=node2082.cluster.ldas.cit&noUDP&sock=slot1_1_2426713_96d3_41566>
+...
+005 (7862188.000.000) 2021-07-08 12:39:16 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 1 14:18:19, Sys 0 00:02:33  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 18 07:07:19, Sys 0 00:09:08  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	7120409  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	18291612  -  Total Bytes Sent By Job
+	9287316  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     7.98        8         8 
+	   Disk (KB)            :  7323        7323    102120 
+	   Memory (MB)          :   293        4096      4096 
+
+	Job terminated of its own accord at 2021-07-08T19:39:16Z.
+...

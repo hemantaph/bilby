@@ -47,3 +47,21 @@
 ...
 001 (7815385.000.000) 2021-07-05 15:42:36 Job executing on host: <10.14.9.104:9618?addrs=10.14.9.104-9618&alias=node2104.cluster.ldas.cit&noUDP&sock=startd_3684530_b142>
 ...
+005 (7815385.000.000) 2021-07-06 17:52:13 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 16 06:48:16, Sys 0 00:12:31  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 32 08:40:47, Sys 0 00:19:35  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	21429680  -  Run Bytes Sent By Job
+	3149306  -  Run Bytes Received By Job
+	28481080  -  Total Bytes Sent By Job
+	6644210  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :    15.68       16        16 
+	   Disk (KB)            : 10545        3250    102119 
+	   GPUs                 :                           0 
+	   Memory (MB)          :   342        4096      4096 
+
+	Job terminated of its own accord at 2021-07-07T00:52:12Z.
+...

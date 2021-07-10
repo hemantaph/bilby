@@ -518,16 +518,3 @@ def htilde(farray, M, eta, delta, et0, D, iota, beta, phic, tc, f0, ff, f_max):
 
     # return(format(hp, '.6g'),format(hc, '.6g')) if you want toround off
     return(hp,hc)
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
